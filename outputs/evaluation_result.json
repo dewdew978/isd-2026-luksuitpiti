@@ -1,8 +1,0 @@
-{
-  "file": "sample.png",
-  "cer": 0.23846153846153847,
-  "wer": 1.1363636363636365,
-  "exact_match": false,
-  "reference_chars": 1105,
-  "prediction_chars": 1352
-}
