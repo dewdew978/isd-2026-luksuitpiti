@@ -43,6 +43,33 @@ def evaluate_text(reference: str, prediction: str, file_name: str = "") -> Evalu
         prediction_chars=len(hyp),
     )
 
+def build_reference_text_from_courses(courses: list[dict], prediction_text: str | None = None) -> str:
+    matched = []
+    for c in courses:
+        code = c.get("code")
+        name_th = c.get("name_th")
+        if not code or not name_th:
+            continue
+        if prediction_text is not None:
+            pos = prediction_text.find(code)
+            if pos == -1:
+                continue  # วิชานี้ไม่ได้อยู่ในหน้าที่ scan
+            matched.append((pos, c))
+        else:
+            matched.append((0, c))
+
+    # เรียงตามตำแหน่งที่ปรากฏจริงในหน้า ไม่ใช่ลำดับตามแผนการเรียน
+    matched.sort(key=lambda x: x[0])
+
+    lines = []
+    for _, c in matched:
+        credits = c.get("credits")
+        name_en = c.get("name_en")
+        lines.append(f"{c['code']} {c['name_th']} {credits}".strip())
+        if name_en:
+            lines.append(name_en.replace("\n", " "))
+    return "\n".join(lines)
+
 
 def evaluate_from_files(ground_truth_json: str | Path, prediction_json: str | Path) -> dict:
     with Path(ground_truth_json).open("r", encoding="utf-8") as f:
@@ -51,9 +78,13 @@ def evaluate_from_files(ground_truth_json: str | Path, prediction_json: str | Pa
         prediction = json.load(f)
 
     source_name = Path(prediction["source_path"]).name
-    reference = ground_truth.get(source_name) or ground_truth.get(Path(source_name).stem)
-    if reference is None:
-        raise KeyError(f"No ground truth found for {source_name}")
+
+    if isinstance(ground_truth, dict) and "courses" in ground_truth:
+        reference = build_reference_text_from_courses(ground_truth["courses"], prediction["text"])
+    else:
+        reference = ground_truth.get(source_name) or ground_truth.get(Path(source_name).stem)
+        if reference is None:
+            raise KeyError(f"No ground truth found for {source_name}")
 
     result = evaluate_text(reference, prediction["text"], file_name=source_name)
     return asdict(result)
