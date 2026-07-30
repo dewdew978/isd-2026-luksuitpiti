@@ -3,3 +3,8 @@ __pycache__/
 *.pyc
 .venv/
 EOF
+.DS_Store
+*.egg-info/
+.DS_Store
+__pycache__/
+*.pyc
