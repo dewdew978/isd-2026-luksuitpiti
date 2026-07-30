@@ -1,0 +1,8 @@
+{
+  "file": "dsba_input_v2.pdf",
+  "cer": 16.813499111900533,
+  "wer": 14.526315789473685,
+  "exact_match": false,
+  "reference_chars": 6028,
+  "prediction_chars": 106228
+}

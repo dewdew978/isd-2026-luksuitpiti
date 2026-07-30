@@ -1,0 +1,1344 @@
+--- Page 1 ---
+14
+มค อ . 2
+3.1.3 รายวิชา
+ก. หมวดวิชาศึกษาทั่วไป 30 หน่วยกิต
+1) กลุ่มวิชาพื้นฐาน 6 หน่วยกิตรหัสวิชาชื่อวิชาหน่วยกิต (บรรยาย -ปฏิบัติ- ศึกษาด้วยตนเอง)
+90641001 โรงเรียนสร้างเสน่ห์ 2 (1-2-3)
+CHARM SCHOOL
+90641002 ความฉลาดทางดิจิทัล 3 (3-0-6)
+DIGITAL INTELLIGENCE QUOTIENT
+90641003 กีฬาและนันทนาการ 1 (0-3-2)
+SPORTS AND RECREATIONAL ACTIVITIES
+- การประเมินผลในรายวิชาทั้ง3 รายวิชาจะใช้เกณฑ์ผลการเรียนเป็นผ่าน (5) หรือไม่ผ่าน (U)
+2) กลุ่มวิชาด้านภาษาและการสื่อสาร 9 หน่วยกิตรหัสวิชาชื่อวิชาหน่วยกิต (บรรยาย -ปฏิบัติ- ศึกษาด้วยตนเอง)
+90644007 ภาษาอังกฤษพื้นฐาน 1 3 (3-0-6)
+FOUNDATION ENGLISH 1
+90644008 ภาษาอังกฤษพื้นฐาน 2 3 (3-0-6)
+FOUNDATION ENGLISH 2
+90644๓๐วิชาเลือกด้านภาษาและการสื่อสาร* 3 (3-0-6)
+ELECTIVE IN LANGUAGEAND COMMUNICATION หรือ 3 (2-2-5)
+- การประเมินผลในรายวิชาทั้ง2 รายวิชาจะใช้เกณฑ์ผลการเรียนเป็นผ่าน (5 หรือไม่ผ่าน (บ)
+* ให้นักศึกษาเลือกเรียนในกลุ่มวิชาด้านภาษาและการสือสารตามรายวิชาที่สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบังเปิดสอน (ภาคผนวก ง) อีก 1 รายวิชา
+3) กลุ่มวิชาตามเกณฑ์ของคณะ 9 หน่วยกิตรหัสวิชาชื่อวิชาหน่วยกิต (บรรยาย -ปฏิบัติ- ศึกษาด้วยตนเอง)
+90642033 กฎหมายสําหรับคนรุ่นใหม่ 3 (3-0-6)
+LAW FOR NEWGENERATION
+90643021 ผู้ประกอบการสมัยใหม่ 3 (3-0-6)
+MODERN ENTREPRENEURS
+90644042 การสื่อสารและการนําเสนออย่างมืออาชีพ 3 (3-0-6)
+PROFESSIONALCOMMUNICATION AND
+PRESENTATION
+คณะเทคโนโลยีสารสนเทศ ava.
+
+--- Page 2 ---
+15
+มคอ . 2
+4) กลุ่มวิชาเลือกหมวดวิชาการศึกษาทั่วไป 6 หน่วยกิตรหัสวิชาชื่อวิชาหน่วยกิต (บรรยาย -ปฏิบัติ-ศึกษาด้วยตนเอง )
+9064x0x วิชาเลือกหมวดวิชาศึกษาทั่วไป* 3 (3-0-6)
+ELECTIVE IN GENERAL EDUCATION หรือ 3 (2-2-5)
+* ให้นักศึกษาเลือกเรียนในหมวดวิชาศึกษาทั่วไปตามรายวิชาที่สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบังเปิดสอน (ภาคผนวก ง) อีก 1 รายวิชา
+ข. หมวดวิชาเฉพาะ 96 หน่วยกิต
+1) กลุ่มวิชาแกน 45 หน่วยกิต
+- กลุ่มคณิตศาสตร์และสถิติ 15 หน่วยกิตรหัสวิชาชื่อวิชาหน่วยกิต (บรรยาย -ปฏิบัติ- ศึกษาด้วยตนเอง )
+06026200 แคลคูลัส 1 3 (3-0-6)
+CALCULUS 1
+06026201 แคลคูลัส 2 3 (3-0-6)
+CALCULUS 2
+06026202 พีชคณิตเชิงเส้น 3 (3-0-6)
+LINEARALGEBRA
+06066000 คณิตศาสตร์ไม่ต่อเนื่อง 3 (3-0-6)
+DISCRETE MATHEMATICS
+06066001 ความน่าจะเป็นและสถิติ 3 (3-0-6)
+PROBABILITYAND STATISTICS
+- กลุ่มพื้นฐานเทคโนโลยีสารสนเทศ 30 หน่วยกิตรหัสวิชาชื่อวิชาหน่วยกิต (บรรยาย -ปฏิบัติ-ศึกษาด้วยตนเอง )
+06026203 การโปรแกรมคอมพิวเตอร์ 3 (2-2-5)
+COMPUTER PROGRAMMING
+06026204 เครือข่ายและความมั้นคงทางไซเบอร์เบื้องต้น 3 (3-0-6)
+INTRODUCTION TO NETWORKSAND
+CYBERSECURITY
+06066100 การบริหารโครงการเทคโนโลยีสารสนเทศ 3 (3-0-6)
+INFORMATION TECHNOLOGY PROJECT
+MANAGEMENT
+06066101 พื้นฐานทางธุรกิจสําหรับเทคโนโลยีสารสนเทศ 3 (3-0-6)
+BUSINESS FUNDAMENTALS FOR INFORMATION
+TECHNOLOGY
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 3 ---
+16
+มค อ . 2
+06066102 ระบบสารสนเทศเพื่อการจัดการ 3 (3-0-6)
+MANAGEMENT INFORMATION SYSTEMS
+06066300 แนวคิดระบบฐานข้อมูล 3 (2-2-5)
+DATABASE SYSTEM CONCEPTS
+06066301 โครงสร้างข้อมูลและอัลกอริทีม 3 (2-2-5)
+DATA STRUCTURESAND ALGORITHMS
+06066302 การเขียนโปรแกรมเว็บพื้นฐาน 3 (2-2-5)
+FUNDAMENTALWEB PROGRAMMING
+06066303 การแก้ปัญหาและการโปรแกรมคอมพิวเตอร์ 3 (2-2-5)
+PROBLEM SOLVING AND COMPUTER
+PROGRAMMING
+06066304 การวิเคราะห์และออกแบบระบบสารสนเทศ 3 (3-0-6)
+INFORMATION SYSTEM ANALYSIS AND DESIGN
+2) กลุ่มพื้นฐานวิชาชีพ 33 หน่วยกิตรหัสวิชาชื่อวิชาหน่วยกิต (บรรยาย -ปฏิบัติ-ศึกษาด้วยตนเอง )
+06026205 การตลาดเบื้องต้น 3 (3-0-6)
+INTRODUCTION TO MARKETING
+06026206 การวิเคราะห์ข้อมูลและการโปรแกรม 3 (2-2-5)
+DATAANALYTICSAND PROGRAMMING
+06026207 ระบบฐานข้อมูลแบบโนเอสคิวแอล 3 (2-2-5)
+NOSQL DATABASE SYSTEMS
+06026208 พื้นฐานวิทยาการข้อมูล 3 (3-0-6)
+FUNDAMENTALS OF DATA SCIENCE
+06026209 การแสดงข้อมูลด้วยแผนภาพ 3 (2-2-5)
+DATAVISUALIZATION
+06026210 การหาค่าที่เหมาะที่สุด 3 (3-0-6)
+OPTIMIZATION
+06026211 การเรียนรู้ของเครื่องเชิงประยุกต์ 3 (2-2-5)
+APPLIED MACHINE LEARNING
+06026212 การสร้างคลังข้อมูล 3 (2-2-5)
+DATA WAREHOUSING
+06026213 ระบบข้อมูลมหัต 3 (2-2-5)
+BIG DATA SYSTEMS
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 4 ---
+17
+มค อ . 2
+06026214 โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 1 3 (0-9-0)
+PROJECT IN DATA SCIENCE AND BUSINESS
+ANALYTICS 1
+06026215 โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 2 3 (0-9-0)
+PROJECT IN DATA SCIENCE AND BUSINESS
+ANALYTICS 2
+3) กลุ่มวิชาชีพเฉพาะด้าน 12 หน่วยกิต
+- กลุ่มวิทยาการข้อมูล 12 หน่วยกิตรหัสวิชาชื่อวิชาหน่วยกิต (บรรยาย -ปฏิบัติ-ศึกษาด้วยตนเอง)
+06026216 ปัญญาประดิษฐ์ 3 (3-0-6)
+ARTIFICIAL INTELLIGENCE
+06026217 การเรียนรู้ของเครื่อง 3 (3-0-6)
+MACHINE LEARNING
+06026218 การเรียนรู้เชิงลึก 3 (2-2-5)
+DEEP LEARNING
+06026219 การประมวลผลภาษาธรรมชาติ 3 (3-0-6)
+NATURAL LANGUAGE PROCESSING
+06026220 การทําเหมืองข้อมูลกระบวนการ 3 (3-0-6)
+PROCESS MINING
+06026221 การค้นคืนสารสนเทศ 3 (3-0-6)
+INFORMATION RETRIEVAL
+06026222 คอมพิวเตอร์วิชัน 3 (3-0-6)
+COMPUTERVISION
+06026223 การประมวลผลภาพ 3 (3-0-6)
+IMAGE PROCESSING
+06026224 การแปลงข้อมูลและการรู้จํารูปภาพ 3 (3-0-6)
+IMAGETRANSFORMATION AND RECOGNITION
+06026225 การเรียนรู้เชิงลึกสําหรับการวิเคราะห์ภาพและวีดิโอทางการ »3(2-2-5)
+แพทย์
+DEEP LEARNING IN MEDICAL IMAGE AND VIDEO
+ANALYSIS
+06026226 หัวข้อพิเศษทางวิทยาการข้อมูล 1 3 (3-0-6)
+SPECIAL TOPICS IN DATA SCIENCE 1
+06026227 หัวข้อพิเศษทางวิทยาการข้อมูล 2 3 (3-0-6)
+SPECIAL TOPICS IN DATA SCIENCE 2
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 5 ---
+18
+มคอ . 2
+06026228 ปปฏิบัติการพิเศษทางวิทยาการข้อมูล 1 3 (2-2-5)
+SPECIAL WORKSHOP IN DATA SCIENCE 1
+06026229 ปปฏิบัติการพิเศษทางวิทยาการข้อมูล 2 3 (2-2-5)
+SPECIAL WORKSHOP IN DATA SCIENCE 2
+- กลุ่มการวิเคราะห์เชิงสถิติ 12 หน่วยกิตรหัสวิชาชื่อวิชาหน่วยกิต (บรรยาย -ปฏิบัติ-ศึกษาด้วยตนเอง )
+06026230 อนุกรมเวลาและการพยากรณ์ 3 (3-0-6)
+TIME SERIES AND FORECASTING
+06026231 สถิติเชิงเบย์ 3 (3-0-6)
+BAYESIAN STATISTICS
+06026232 กระบวนการสโตแคสติกเบื้องต้น 3 (3-0-6)
+INTRODUCTION TO STOCHASTIC PROCESS
+06026233 การวิเคราห์ข้อมูลหลายตัวแปร 3 (3-0-6)
+MULTIVARIATE DATAANALYSIS
+06026234 การออกแบบการทดลอง 3 (3-0-6)
+EXPERIMENTAL DESIGN
+06026235 หัวข้อพิเศษทางการวิเคราะห์เชิงสถิติ 1 3 (3-0-6)
+SPECIAL TOPICS IN STATISTICAL ANALYTICS 1
+06026236 หัวข้อพิเศษทางการวิเคราะห์เชิงสถิติ 2 3 (3-0-6)
+SPECIAL TOPICS IN STATISTICAL ANALYTICS 2
+06026237 ปฏิบัติการพิเศษทางการวิเคราะห์เชิงสถิติ 1 3 (2-2-5)
+SPECIAL WORKSHOP IN STATISTICAL ANALYTICS 1
+06026238 ปฏิบัติการพิเศษทางการวิเคราะห์เชิงสถิติ 2 3 (2-2-5)
+SPECIAL WORKSHOP IN STATISTICAL ANALYTICS 2
+- กลุ่มวิศวกรรมข้อมูล 12 หน่วยกิตรหัสวิชาชื่อวิชาหน่วยกิต (บรรยาย -ปฏิบัติ-ศึกษาด้วยตนเอง )
+06026239 สถาปัตยกรรมข้อมูลแบบไปป์ไลน์ 3 (3-0-6)
+DATA PIPELINE ARCHITECTURE
+06026240 การพัฒนาระบบอัจฉริยะ 3 (2-2-5)
+INTELLIGENT SYSTEM DEVELOPMENT
+06026241 การดําเนินงานการเรียนรู้ของเครื่อง 3 (3-0-6)
+MACHINE LEARNING OPERATIONS
+06026242 โครงสร้างพื้นฐานด้านเทคโนโลยีกลุ่มเมฆ 3 (3-0-6)
+CLOUDTECHNOLOGY INFRASTRUCTURE
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 6 ---
+19
+มคอ . 2
+06026243 ระบบฐานข้อมูลขันสูง 3 (3-0-6)
+ADVANCED DATABASE SYSTEMS
+06026244 การดูแลและบํารุงรักษาระบบฐานข้อมูล 3 (2-2-5)
+DATABASE SYSTEM MAINTENANCE AND
+ADMINISTRATION
+06026245 ระบบฐานข้อมูลแบบกระจาย 3 (3-0-6)
+DISTRIBUTED DATABASE SYSTEMS
+06026246 หัวข้อพิเศษทางวิศวกรรมข้อมูล 1 3 (3-0-6)
+SPECIAL TOPICS IN DATA ENGINEERING 1
+06026247 หัวข้อพิเศษทางวิศวกรรมข้อมูล 2 3 (3-0-6)
+SPECIAL TOPICS IN DATA ENGINEERING 2
+06026248 ปปฏิบัติการพิเศษทางวิศวกรรมข้อมูล 1 3 (2-2-5)
+SPECIAL WORKSHOP IN DATA ENGINEERING 1
+06026249 ปฏิบัติการพิเศษทางวิศวกรรมข้อมูล 2 3 (2-2-5)
+SPECIAL WORKSHOP IN DATA ENGINEERING 2
+4) กลุ่มวิชาการศึกษาทางเลือก 6 หน่วยกิตสําหรับแผนการศึกษาที่ไม่เข้าร่วมโครงการสหกิจศึกษา
+- กลุ่มวิชาเลือก 6 หน่วยกิตรหัสวิชาชื่อวิชาหน่วยกิต (บรรยาย -ปฏิบัติ-ศึกษาด้วยตนเอง )
+06026250 วิทยาการข้อมูลสําหรับธุรกิจ 3 (2-2-5)
+DATA SCIENCE FOR BUSINESS
+06026251 บัญชีการเงิน 3 (3-0-6)
+FINANCIAL ACCOUNTING
+06026252 การวิเคราะห์ด้านการเงิน 3 (2-2-5)
+FINANCIAL ANALYTICS
+06026253 การวิเคราะห์ด้านการตลาด 3 (2-2-5)
+MARKETING ANALYTICS
+06026254 เทคโนโลยีสุขภาพสนเทศศาสตร์เบื้องต้น 3 (2-2-5)
+INTRODUCTION TO HEALTH ANALYTICS
+06026255 การได้มาและการจัดการข้อมูลทางด้านคลินิก 3 (2-2-5)
+CLINICAL DATAACQUISITION AND MANAGEMENT
+06026256 การจัดการการปฏิบัติการ 3 (3-0-6)
+OPERATIONS MANAGEMENT
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 7 ---
+20
+มคอ . 2
+06026257 การบริหารเชิงกลยุทธ์และสมรรถะของธุรกิจ 3 (3-0-6)
+BUSINESS STRATEGIC AND PERFORMANCE
+MANAGEMENT
+06026258 การวิเคราะห์เครือข่ายสังคม 3 (3-0-6)
+SOCIAL NETWORKANALYSIS
+นักศึกษาเลือกลงทะเบียนเรียนวิชาในกลุ่มวิชาเลือกหรือกลุ่มวิชาชีพเฉพาะด้านกลุ่มใดก็ได้จํานวนรวม 6 หน่วยกิตสําหรับแผนการศึกษาที่เข้าร่วมโครงการสหกิจศึกษา
+- สหกิจศึกษา 6 หน่วยกิตรหัสวิชาชื่อวิชาหน่วยกิต (บรรยาย -ปฏิบัติ-ศึกษาด้วยตนเอง )
+06026259 สหกิจศึกษาทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 6 (0-35-0)
+COOPERATIVE EDUCATION IN DATA SCIENCE AND
+BUSINESS ANALYTICS
+06026260 สหกิจศึกษาต่างประเทศทางวิทยาการข้อมูลและการวิเคราะห์ 6(0-35-0)
+เชิงธุรกิจ
+OVERSEA COOPERATIVE EDUCATION IN DATA SCIENCE
+AND BUSINESS ANALYTICS
+นักศึกษาเลือกลงทะเบียนเรียนวิชาสหกิจศึกษาหรือสหกิจศึกษาต่างประเทศทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจวิชาใดวิชาหนึ่งจํานวนรวม 6 หน่วยกิตกําหนดระยะเวลาในการทําสหกิจศึกษาเป็นเวลาอย่างน้อย 16 สัปดาห์หรือ 1 ภาคการศึกษา
+A. หมวดวิชาเลือกเสรีนักศึกษาสามารถเลือกเรียนในรายวิชาที่เปิดสอนในสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบังจํานวนไม่น้อยกว่า 6 หน่วยกิตวท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 8 ---
+21
+มค อ . 2
+ความหมายของรหัสประจํารายวิชารหัสวิชาที่ใช้กําหนดให้เป็นตัวเลขและตัวอักษร 8 van
+รหัสตัวที่1,2 ได้แก่เลข 06 หมายลึงคณะเทคโนโลยีสารสนเทศรหัสตัวที่3,4 ได้แก่เลข 02 หมายถึงสาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจได้แก่เลข 06 หมายลึงวิชาเรียนรวมรหัสตัวที่5 ได้แก่เลข 6 หมายถึงระดับปริญญาตรีรหัสตัวที่6,7,8 หมายถึงลําดับที่ของรายวิชา
+3.1.4. แผนการศึกษา
+3.1.4.1 แผนการศึกษาที่ไม่เข้าโครงการสหกิจศึกษาปีที่ 1 ภาคการศึกษาที่ 1
+”' dia หน่วยกิต
+CALCULUS 1
+LINEAR ALGEBRA
+06066101 พื้นฐานทางธุรกิจสําหรับเทคโนโลยีสารสนเทศ 3 (3-0-6)
+BUSINESS FUNDAMENTALS FOR INFORMATION
+TECHNOLOGY
+06066303 | การแก้ปัญหาและการโปรแกรมคอมพิวเตอร์ 3 (2-2-5)
+PROBLEM SOLVING AND COMPUTER
+PROGRAMMING
+CHARM SCHOOL
+SPORTS AND RECREATIONAL ACTIVITIES
+FOUNDATION ENGLISH 1
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล.
+
+--- Page 9 ---
+22
+มคอ. 2
+ปีที่ 1 ภาคการศึกษาที่ 2
+(บรรยาย-ปฏิบัติ-ศึกษาด้วยตนเอง)
+CALCULUS 2
+COMPUTER PROGRAMMING
+INTRODUCTION TO MARKETING
+PROBABILITY AND STATISTICS
+DIGITAL INTELLIGENCE QUOTIENT
+90642033 | กลุ่มวิชาที่กําหนดโดยคณะ* 3 (3-0-6)
+กฎหมายสําหรับคนรุ่นใหม่
+LAW FOR NEWGENERATION
+FOUNDATION ENGLISH 2
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 10 ---
+23
+มคอ. 2
+ปีที่ 2 ภาคการศึกษาที่ 1
+(บรรยาย-ปฏิบัติ-ศึกษาด้วยตนเอง)
+DATAANALYTICSAND PROGRAMMING
+DISCRETE MATHEMATICS
+DATABASE SYSTEM CONCEPTS
+FUNDAMENTALWEB PROGRAMMING
+INFORMATION SYSTEM ANALYSIS AND DESIGN
+ELECTIVE IN LANGUAGEANDCOMMUNICATION
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 11 ---
+24
+มคอ . 2
+ปีที่ 2 ภาคการศึกษาที่ 2
+(บรรยาย-ปฏิบัติ-ศึกษาด้วยตนเอง)
+06026204 | เครือข่ายและความมั่นคงทางไซเบอร์เบื้องต้น 3 (3-0-6)
+—— =
+CYBERSECURITY
+NOSQL DATABASE SYSTEMS
+FUNDAMENTALS OF DATA SCIENCE
+DATAVISUALIZATION
+OPTIMIZATION
+MANAGEMENTINFORMATION SYSTEMS
+DATA STRUCTURES AND ALGORITHMS
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 12 ---
+25
+มคอ . 2
+ปีที่ 3 ภาคการศึกษาที่ 1
+(บรรยาย-ปฏิบัติ-ศึกษาด้วยตนเอง)
+APPLIED MACHINE LEARNING
+06026212 | การสร้างคลังข้อมูล
+cere [แนนลอณัณะต
+06026xxx | วิชาเลือกกลุ่มวิทยาการข้อมูล 1 3 (3-0-6)
+ELECTIVE IN DATA SCIENCE หรือวิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 1 3 (2-2-5)
+ELECTIVE IN STATISTICAL ANALYSIS 1
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 1
+ELECTIVE IN DATA ENGINEERING 1
+06026xxx |วิชาเลือกกลุ่มวิทยาการข้อมูล 2 3 (3-0-6)
+ELECTIVE IN DATA SCIENCE 2 หรือวิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 2 3 (2-2-5)
+ELECTIVE IN STATISTICAL ANALYTICS 2
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 2
+ELECTIVE IN DATA ENGINEERING 2
+9066๐๐๐ | วิชาเลือกหมวดวิชาศึกษาทั่วไป 3 (3-0-6)
+ELECTIVE IN GENERAL EDUCATION หรือ
+3 (2-2-5)
+90644042 | กลุ่มวิชาที่กําหนดโดยคณะ* 3 (3-0-6)
+การสื่อสารและการนําเสนออย่างมืออาชีพ
+PROFESSIONAL COMMUNICATION AND
+PRESENTATION
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 13 ---
+26
+มค อ . 2
+ปีที่ 3 ภาคการศึกษาที่ 2
+รหัสวิชาชื่อวิชาหน่วยกิตม
+06026213 | ระบบข้อมูลมหัตเกศ
+06026214 | โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 1
+PROJECT IN DATA SCIENCE AND BUSINESS
+รณ์.
+06026xxx | วิชาเลือกกลุ่มวิทยาการข้อมูล 3 3 (3-0-6)
+ELECTIVE IN DATA SCIENCE 3 หรือวิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 3 3 (2-2-5)
+ELECTIVE IN STATISTICAL ANALYTICS 3
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 3
+ELECTIVE IN DATA ENGINEERING 3
+06026xxx |วิชาเลือกกลุ่มวิทยาการข้อมูล 4 3 (3-0-6)
+ELECTIVE IN DATA SCIENCE 4 หรือวิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 4 3 (2-2-5)
+ELECTIVE IN STATISTICAL ANALYTICS 4
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 4
+ELECTIVE IN DATA ENGINEERING 4
+06066100 | การบริหารโครงการเทคโนโลยีสารสนเทศ 3 (3-0-6)
+=
+MANAGEMENT
+90643021 |กลุ่มวิชาที่กําหนดโดยคณะ* 3 (3-0-6)
+ผู้ประกอบการสมัยใหม่
+MODERN ENTREPRENEURS
+คณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 14 ---
+27
+มคอ . 2
+ปีที่ 4 ภาคการศึกษาที่ 1
+(บรรยาย-ปฏิบัติ-ศึกษาด้วยตนเอง)
+06026215 | โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 2 3 (0-9-0)
+PROJECT IN DATA SCIENCE AND BUSINESS
+ANALYTICS 2
+06026xxx | วิชาเลือกในกลุ่มวิชาเลือกหรือกลุ่มวิชาชีพเฉพาะด้าน 1 3 (3-0-6)
+ELECTIVE IN ELECTIVE OR SPECIFIC หรือ
+PROFESSIONAL COURSES 1 3 (2-2-5)
+06026xxx | วิชาเลือกในกลุ่มวิชาเลือกหรือกลุ่มวิชาชีพเฉพาะด้าน 2 3 (3-0-6)
+ELECTIVE IN ELECTIVE OR SPECIFIC PROFESSIONAL หรือ
+COURSES 2 3 (2-2-5)
+[08ไวรว70[ ยปีที่ 4 ภาคการศึกษาที่ 2
+(บรรยาย-ปฏิบัติ-ศึกษาด้วยตนเอง)
+9064๒๐๐ |วิชาเลือกหมวดวิชาศึกษาทั่วไป 3 (3-0-6)
+ELECTIVE IN GENERAL EDUCATION หรือ
+3 (2-2-5)
+%๐๐๐๐๐๐ | วิชาเลือกเสรี 1 3 (3-0-6)
+FREE ELECTIVE COURSE 1 หรือ
+3 (2-2-5)
+2๐๐๐๐๐๐๕ | วิชาเลือกเสรี 2 3 (3-0-6)
+FREE ELECTIVE COURSE 2 หรือ
+3 (2-2-5))
+mmรไไฟรวมตลอดหลักสูตร 132 หน่วยกิตวท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 15 ---
+28
+มคอ . 2
+3.1.4.2 แผนการศึกษาที่เข้าโครงการสหกิจศึกษาปีที่ 1 ภาคการศึกษาที่ 1
+(บรรยาย-ปฏิบัติ-ศึกษาด้วยตนเอง)
+06026200 | แคลคูลัส 1 3 (3-0-6)
+eeelass
+LINEAR ALGEBRA
+06066101 | พื้นฐานทางธุรกิจสําหรับเทคโนโลยีสารสนเทศ 3 (3-0-6)
+BUSINESS FUNDAMENTALS FOR INFORMATION
+a
+PROBLEM SOLVINGAND COMPUTER PROGRAMMING
+CHARM SCHOOL
+SPORTS AND RECREATIONAL ACTIVITIES
+FOUNDATION ENGLISH 1
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 16 ---
+29
+มค อ . 2
+ปีที่ 1 ภาคการศึกษาที่ 2
+(บรรยาย-ปฏิบัติ-ศึกษาด้วยตนเอง)
+06026201 | แคลคูลัส 2 3 (3-0-6)
+นส2กท
+COMPUTER PROGRAMMING
+INTRODUCTION TO MARKETING
+PROBABILITYAND STATISTICS
+DIGITAL INTELLIGENCE QUOTIENT
+90642033 |กลุ่มวิชาที่กําหนดโดยคณะ* 3 (3-0-6)
+กฎหมายสําหรับคนรุ่นใหม่
+LAW FOR NEWGENERATION
+FOUNDATION ENGLISH 2
+คณะเทคโนโลยีสารสนเทศ ava.
+
+--- Page 17 ---
+30
+มคอ. 2
+ปีที่ 2 ภาคการศึกษาที่ 1
+(บรรยาย-ปฏิบัติ-ศึกษาด้วยตนเอง)
+DATAANALYTICS AND PROGRAMMING
+DISCRETE MATHEMATICS
+DATABASE SYSTEM CONCEPTS
+FUNDAMENTALWEB PROGRAMMING
+INFORMATION SYSTEM ANALYSIS AND DESIGN
+90644xxx | วิชาเลือกด้านภาษาและการสื่อสาร 3 (3-0-6)
+ELECTIVE IN LANGUAGEAND COMMUNICATION หรือ
+3 (2-2-5)
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 18 ---
+31
+มคอ. 2
+ปีที่ 2 ภาคการศึกษาที่ 2
+(บรรยาย-ปฏิบัติ-ศึกษาด้วยตนเอง)
+INTRODUCTION TO NETWORKS AND CYBERSECURITY
+NOSQL DATABASE SYSTEMS
+FUNDAMENTALS OF DATA SCIENCE
+DATAVISUALIZATION
+OPTIMIZATION
+MANAGEMENTINFORMATION SYSTEMS
+06066301 | โครงสร้างข้อมูลและอัลกอริทีม 3 (2-2-5)
+wen ปนณะมอม๓๓พ6 |
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 19 ---
+32
+มคอ . 2
+ปีที่ 3 ภาคการศึกษาที่ 1
+(บรรยาย-ปฏิบัติ-ศึกษาด้วยตนเอง)
+APPLIED MACHINE LEARNING
+DATAWAREHOUSING
+06026xxx |วิชาเลือกกลุ่มวิทยาการข้อมูล 1 3 (3-0-6)
+ELECTIVE IN DATA SCIENCE หรือวิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 1 3 (2-2-5)
+ELECTIVE IN STATISTICAL ANALYSIS 1
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 1
+ELECTIVE IN DATA ENGINEERING 1
+06026xxx |วิชาเลือกกลุ่มวิทยาการข้อมูล 2 3 (3-0-6)
+ELECTIVE IN DATA SCIENCE 2 หรือวิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 2 3 (2-2-5)
+ELECTIVE IN STATISTICAL ANALYTICS 2
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 2
+ELECTIVE IN DATA ENGINEERING 2
+9064๒๐๐« |วิชาเลือกหมวดวิชาศึกษาทั่วไป 3 (3-0-6)
+ELECTIVE IN GENERAL EDUCATION หรือ
+3 (2-2-5)
+90644042 | กลุ่มวิชาที่กําหนดโดยคณะ* 3 (3-0-6)
+การสื่อสารและการนําเสนออย่างมืออาชีพ
+PROFESSIONAL COMMUNICATION AND
+PRESENTATION
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 20 ---
+33
+มค อ . 2
+ปีที่ 3 ภาคการศึกษาที่ 2
+รหัสวิชาชื่อวิชาหน่วยกิตมnema
+BIG DATA SYSTEMS
+06026214 | โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 1 3 (0-9-0)
+PROJECT IN DATA SCIENCE AND BUSINESS
+ANALYTICS 1
+06026๒๓ |วิชาเลือกกลุ่มวิทยาการข้อมูล 3 3 (3-0-6)
+ELECTIVE IN DATA SCIENCE 3 หรือวิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 3 3 (2-2-5)
+ELECTIVE IN STATISTICAL ANALYTICS 3
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 3
+ELECTIVE IN DATA ENGINEERING 3
+06026๒๓ |วิชาเลือกกลุ่มวิทยาการข้อมูล 4 3 (3-0-6)
+ELECTIVE IN DATA SCIENCE 4 หรือวิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 4 3 (2-2-5)
+ELECTIVE IN STATISTICAL ANALYTICS 4
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 4
+ELECTIVE IN DATA ENGINEERING 4
+06066100 | การบริหารโครงการเทคโนโลยีสารสนเทศ 3 (3-0-6)
+——
+MANAGEMENT
+90643021 |กลุ่มวิชาที่กําหนดโดยคณะ* 3 (3-0-6)
+ผู้ประกอบการสมัยใหม่
+MODERN ENTREPRENEURS
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 21 ---
+34
+มคอ . 2
+ปีที่ 4 ภาคการศึกษาที่ 1
+(บรรยาย-ปฏิบัติ-ศึกษาด้วยตนเอง)
+06026215 | โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 2 3 (0-9-0)
+PROJECT IN DATA SCIENCE AND BUSINESS
+ANALYTICS 2
+9064x0x |วิชาเลือกหมวดวิชาศึกษาทั่วไป 3 (3-0-6)
+ELECTIVE IN GENERAL EDUCATION หรือ
+3 (2-2-5)
+%๐๐๐๐๐ | วิชาเลือกเสรี 1 3 (3-0-6)
+FREE ELECTIVE COURSE 1 หรือ
+3 (2-2-5)
+2๐๐๐๐๕ | วิชาเลือกเสรี 2 3 (3-0-6)
+FREE ELECTIVE COURSE 2 หรือ
+3 (2-2-5))
+ปีที่ 4 ภาคการศึกษาที่ 2
+(บรรยาย-ปฏิบัติ-ศึกษาด้วยตนเอง)
+06026259 | สหกิจศึกษาทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 6 (0-35-0)
+COOPERATIVE EDUCATION IN DATA SCIENCE AND
+หรือ BUSINESS ANALYTICS
+06026260 | สหกิจศึกษาต่างประเทศทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ
+OVERSEA COOPERATIVE EDUCATION IN DATA
+SCIENCE AND BUSINESS ANALYTICS
+[0ค๓ยณย202ไสไชพพรวมตลอดหลักสูตร 132 หน่วยกิต
+3.1.5 คําอธิบายรายวิชาคําอธิบายรายวิชา (ภาคผนวก ฉ)
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 22 ---
+312
+มคอ . 2
+คําอธิบายรายวิชากลุ่มวิชาแกน - กลุ่มคณิตศาสตร์และสถิติ 15 หน่วยกิต
+06026200 แคลคูลัส 1 3(3-0-6)
+CALCULUS 1
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ฟังก์ชัน, ลิมิต, ความต่อเนื่องและการประยุกต์ใช้อุปนัยเชิงคณิตศาสตร์แนะนําอนุพันธ์การหาอนุพันธ์การประยุกต์ใช้อนุพันธ์ปริพันธ์จํากัดเขตการปริพันธ์ด้วยปฏิยานุพันธ์การประยุกต์ใช้ปริพันธ์จํากัดเขตรูปแบบของการปริพันธ์ที่หาค่าไม่ได้ปริพันธ์ไม่ตรงแบบการหาปริพันธ์ด้วยวิธีเชิงตัวเลขอันดับและอนุกรมของจํานวนการกระจายอนุกรมเทเลอร์ของฟังก์ชันพื้นฐานการวิเคราะห์เวกเตอร์
+Function, Limit, Continuity and their applications, Mathematical
+induction, Introduction to derivative, Differentiation, Applications of derivative, Definite
+integrals, Antiderivative integration, Application of definite integral, Indeterminate
+forms, Improper integrals, Numerical integration, Sequences and series of numbers,
+Taylor series expansions of elementary functions vector analysis.
+06026201 แคลคูลัส 2 3(3-0-6)
+CALCULUS 2
+วิชาบังคับก่อน : 06026200 แคลคูลัส 1
+PREREQUISITE : 06026200 CALCULUS 1
+ฟังก์ชันหลายตัวแปรและการประยุกต์ใช้พีชคณิตของเวกเตอร์ในสามมิติพิกัดเชิงขั้วแคลคูลัสของฟังก์ชันจํานวนจริงสองตัวแปรการหาอบนุพันธ์และปริพันธ์ของฟังก์ชันจํานวนจริงและฟังก์ชันเวกเตอร์จํานวนจริงหลายตัวแปรแนะนําปริพันธ์เส้นเส้นระนาบและพื้นผิวในปริภูมิสามมิติแคลคูลัสของฟังก์ชันจํานวนจริงในปริภูมิสามมิติทฤษฎีบทหลักที่เกี่ยวกับการประยุกต์เช่นทฤษฎีบทของกรีนทฤษฎีไดเวอร์เจนซ์ทฎษฎีบทของเกาส์ทฤษฎีบทของสโตกส์เป็นต้น
+Functions of several variables and theirs applications, Vector algebra in
+three dimensions, Polar coordinates, Calculus of real - valued functions of two
+variables, Differentiation and integration of real - valued and vector - valued functions
+of multiple real variables, Introduction to line integrals, Lines, planes and surfaces in
+three-dimensional space, Calculus of real - valued functions in three-dimensional
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 23 ---
+313
+มคอ . 2
+space, Principal theory for applications such as Green’s theorem, divergence theorem,
+Gauss theorem, Stokes theorem, etc.
+06026202 พีชคณิตเชิงเส้น 3(3-0-6)
+LINEARALGEBRA
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ระบบสมการเชิงเส่นการดําเนินการมูลฐานการกําจัดเกาส์เซียนการกําจัดเกาส์ -
+จอร์แดนค่าลําดับชั้นการดําเนินการของเมทริกซ์ผกผันของเมทริกข์เมทริกซ์มูลฐานเมทริกซ์ย่อยและผลแบ่งส่วนเมทริกข์การแยกแบบแอลยูดีเทอร์มิแนนต์ตัวประกอบร่วมเกี่ยวเมทริกข์ผูกพันกฎคราเมอร์ปริภูมิเวกเตอร์ปริภูมิย่อยค่าลักษณะเฉพาะเวกเตอร์ลักษณะเฉพาะการทําให้เป็นเมริกซ์ทแยงมุมการแปลงเชิงเส้นเคอร์เนลเรนจ์
+System of linear equations, matrix operations, Gaussian elimination,
+Gauss- Jordan elimination, rank, elementary operations, inverse of matrix, elementary
+matrix, submatrices and partition matrix, LU decomposition, determinant, cofactor,
+adjoint matrix, Cramer’s rule, vector space, subspace, eigenvalue, eigenvector,
+diagonalization, linear transformation, kernel, range.
+06066000 คณิตศาสตร์ไม่ต่อเนื่อง 3(3-0-6)
+DISCRETE MATHEMATICS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ระบบตัวเลขตรรกะและเซตความสัมพันธ์และฟังก์ชันลําดับและอนุกรมอุปนัยเชิงคณิตศาสตร์คอมบินาทอรี่ส์กราฟระบบพีชคณิตทฤษฎีสารสนเทศและการเข้ารหัสและระบบสถานะจํากัด
+Number systems, logic and sets, relations and functions, sequences and
+series, mathematical induction, combinatories, graphs, algebraic systems, coding and
+information theories, and finite state automata.
+06066001 ความน่าจะเป็นและสถิติ 3(3-0-6)
+PROBABILITYAND STATISTICS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ความน่าจะเป็นและตัวแปรสุ่มการแจกแจงความน่าจะเป็นแบบไม่ต่อเนื่องและแบบต่อเนื่องฟังก์ชันของตัวแปรสุ่มการแจกแจงของตัวอย่างช่วงความเชื่อมั่นการทดสอบสมมติฐานการถดถอยอย่างง่ายและการถดถอยเชิงซ้อนในตัวแบบเชิงเส้นการวิเคราะห์สหสัมพันธ์คณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 24 ---
+314
+มคอ . 2
+Probability and random variables, discrete and continuous probability
+distributions, functions of random variables, sampling distribution, confidence
+intervals, hypothesis testing, simple and multiple linear regression, correlation analysis.
+กลุ่มวิชาแกน - กลุ่มพื้นฐานเทคโนโลยีสารสนเทศ 30 หน่วยกิต
+06026203 การโปรแกรมคอมพิวเตอร์ 3(2-2-5)
+COMPUTER PROGRAMMING
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+แนะนําภาษาการสร้างโปรแกรมเชิงโครงสร้างและเชิงวัตถุการเขียนผังงานแนวคิดของโปรแกรมฟังก์ชันเบื้องต้นและข้อความสั่งกําหนดค่าโครงสร้างการวนข้้าและเงื่อนไขอาร์เรย์การประมวลผลสตริงการเขียนการเขียนฟังก์ชันการเขียนข้อมูลชนิดโครงสร้างการเขียนข้อมูลเชนิดอ็อบเจกต์หลักการห่อหุ้มคลาสและอ็อบเจกต์เมธอดและการส่งสารการสืบทอดคุณลักษณะภาวะพหุสัณฐาน
+Introduction to programming languages, structured programming, object
+oriented programming, assignment statement and basic functions, conditional and
+loop structures, array, string, function, pointer, structure, class, object, Object Oriented
+design, encapsulation, classes and objects, methods and message passing, inheritance
+and polymorphism
+06026204 เครือข่ายและความมั่นคงทางไซเบอร์เบื้องต้น 3(3-0-6)
+INTRODUCTIONTO NETWORKSAND CYBERSECURITY
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+แนวคิดพื้นฐานเกี่ยวกับเครือข่ายคอมพิวเตอร์และความมั่นคงทางไซเบอร์พื้นฐานการสื่อสารข้อมูลและการเชื่อมโยงเครือข่ายสถาปัตยกรรมเครื่อข่ายและอินเทอร์เน็ตแอปพลิเคชันและบริการบนเครือข่ายภัยคุกคามและการโจมตีทางไซเบอร์ช่องโหว่และความเสี่ยงพื้นฐานมัลแวร์การป้องกันความปลอดภัยการเข้ารหัสลับและการพิสูจน์ตัวตนการควบคุมการเข้าถึงกฎหมายและจริยธรรมทางไซเบอร์
+Basic computer network ลทย cybersecurity concepts, data
+communications and internetworking fundamentals, network architectures and
+Internet, network applications and services, cyber threats and attacks, vulnerabilities
+and risks, malware fundamentals, security safeguards, cryptography and
+authentications, access control, cyber laws and ethics.
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 25 ---
+315
+มคอ . 2
+6066100 การบริหารโครงการเทคโนโลยีสารสนเทศ 3(3-0-6)
+INFORMATION TECHNOLOGYPROJECTMANAGEMENT
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ธรรมชาติและวงจรชีวิตของโครงการการศึกษาความเป็นไปได้ของโครงการเทคนิคการเลือกโครงการองค์ความรู้สําหรับการบริหารโครงการกลุ่มกระบวนการบริหารโครงการการจัดการขอบเขตของโครงการการจัดการตารางเวลาการจัดการค่าใช้จ่ายโครงการการจัดการคุณภาพการจัดทีมงานและทรัพยากรการจัดการงานสื่อสารการจัดการความเสี่ยงการควบคุมโครงการและประเมินผลโครงการ
+Nature and life cycle of information technology (IT) projects, project
+feasibility, project selection techniques, project management body of knowledge, PM
+process groups, project scope management, project cost, project scheduling, quality
+management, team and resources management, communication management, risk
+management, project controlling, project evaluation.
+06066101 พื้นฐานทางธุรกิจสําหรับเทคโนโลยีสารสนเทศ 3(3-0-6)
+BUSINESS FUNDAMENTALS FOR INFORMATION
+TECHNOLOGY
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+สภาพแวดล้อมทางธุรกิจและระบบเศรษฐกิจพื้นฐานของการบริหารการเงินมูลค่าของเงินและต้นทุนของเงินทุนงบการเงินการบริหารการผลิตการควบคุมสินค้าคงคลังการตลาดพื้นฐานการจัดการการจัดองค์กรการบริหารงานบุคคลจริยธรรมทางธุรกิจและความรับผิดชอบต่อสังคม
+Business environment and economic system, foundations of financial
+management, valuation and cost of capital, financial statement, production
+management, inventory control, marketing concept and management, management
+perspectives and processes, organization management, human resource management,
+business ethics and social responsibility.
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 26 ---
+316
+มคอ . 2
+06066102 ระบบสารสนเทศเพื่อการจัดการ 3(3-0-6)
+MANAGEMENT INFORMATION SYSTEMS
+วิชาบังคับก่อน : 06066101พื้นฐานทางธุรกิจสําหรับเทคโนโลยีสารสนก
+PREREQUISITE : 06066101 BUSINESS FUNDAMENTALS FOR
+INFORMATION TECHNOLOGY
+บทบาทของเทคโนโลยีสารสนเทศในธุรกิจแนวคิดระบบสารสนเทศและการจัดการการวางแผนเทคโนโลยีสารสนเทศเชิงกลยุทธ์ความสอดคล้องของเทคโนโลยีสารสนเทศกับกลยุทธ์ทางธุรกิจการได้มาซึ่งระบบสารสนเทศระบบสารสนเทศตามลักษณะที่สนับสนุนการทํางานระบบสารสนเทศระดับองค์กรแนวโน้มการประยุกต์ใช้เทคโนโลยีสารสนเทศจริยธรรมและประเด็นทางสังคม
+Roles of information technology in business, information system
+concepts and management, strategic information technology planning, aligning ITwith
+business strategy, inforrnation system acquisition, functional information systems,
+enterprise systems, trends in applications of information technology, ethical and social
+issues.
+06066300 แนวคิดระบบฐานข้อมูล 3(2-2-5)
+DATABASESYSTEM CONCEPTS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+แนะนําฐานข้อมูลและระบบจัดการฐานข้อมูลระบบฐานข้อมูลและสภาพแวดล้อมระบบจัดการฐานข้อมูลชนิดของฐานข้อมูลแบบจําลองข้อมูลแบบจําลองฐานข้อมูลเชิงสัมพันธ์สกีมาอินแสตนรีเลชันชิปกฎบูรณภาพพจนานุกรมข้อมูลแบบจําลองความสัมพันธ์ระหว่างเอนทิตีฟังก์ชันดีเพนเดนซีนอร์มัลไลซ์เซชันพีชคณิตเชิงสัมพันธ์เอสคิวแอลการประมวลผลทรานแซคชันแนวคิดคลังข้อมูลและการออกแบบปฏิบัติการด้านการจําลองข้อมูลและภาษาฐานข้อมูล
+Introduction to the database system and DBMS, database systems and
+environment, database management systems, types of databases, data models,
+relational model, schemas, instances, relationships, integrity rules, data dictionary,
+relational database modeling, entity relationship model, logical design, functional
+dependencies, normalization, relational algebra, SQL, transaction processing, data
+warehouse concepts and design, data modeling and database language laboratory.
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 27 ---
+317
+มค อ . 2
+06066301 โครงสร้างข้อมูลและอัลกอริทีม 3(2-2-5)
+DATASTRUCTURESANDALGORITHMS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ชนิดของข้อมูลโครงสร้างข้อมูลและชนิดข้อมูลแบบนามธรรมโครงสร้างข้อมูลพื้นฐานเช่นลิสท์สแต็กและคิวโครงสร้างข้อมูลแบบพลวัตคําศัพท์เฉพาะเกี่ยวกับทรีไบนารีทรีไบนารีเสิร์ชทรีเอวีแอลทรีกราฟการวิเคราะห์โปรแกรมเชิงเวลาและพื้นที่อัลกอริทีมการเรียงลําดับและการค้นหาข้อมูลอัลกอริทีมแบบละโมบอัลกอริทีมแบบแบ่งเพื่อเอาชนะอัลกอริทีมเกี่ยวกับกราฟและการเขียนโปรแกรมพลวัต
+Data types, data structures and abstract data types, basic data
+structures e.g. list, stack, and queue, dynamic data structures, terminology of trees,
+binarytrees, binary search trees, AVLtrees, graph, time and space analysis ofprograms,
+sorting and searching algorithms, greedy algorithm, divide and conquer algorithm,
+graph algorithms, and dynamic programming.
+06066302 การเขียนโปรแกรมเว็บพื้นฐาน 3(2-2-5)
+FUNDAMENTALWEB PROGRAMMING
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+แนวคิดพื้นฐานและหลักการทํางานของระบบเว็บเครื่องมือสําหรับการออกแบบและพัฒนาเว็บการเขียนโปรแกรมเว็บฝั่งไคลแอนท์ HTML CSS JavaScript กระบวนการออกแบบส่วนต่อประสานกับผู้ใช้การจัดการกับ Events การจัดการโครงสร้างเอกสารและ DOM การเขียนโปรแกรมเว็บฝั่งเซิร์ฟเวอร์ PHP การจัดการและการใช้งานฐานข้อมูลการใช้งานเฟรมเวิร์ค
+Concepts of Web system and Web development, Web development
+and design tools, Client-side scripting: HTML, CSS, JavaScript, User Interface Design
+process, Event driven programming, Web document structure and site management,
+Understanding the document object model, Server-side scripting, PHP programming,
+Introduction to database management in web development, Implementing web
+development frameworks.
+06066303 การแก้ปัญหาและการโปรแกรมคอมพิวเตอร์ 3(2-2-5)
+PROBLEMSOLVING AND COMPUTER PROGRAMMING
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+กลยุทธ์และหลักการแก้ปัญหาการคิดแบบขั้นตอนวิธีผังงานแนวคิดและเกริ่นนําการเขียนโปรแกรมคอมพิวเตอร์คณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 28 ---
+318
+มค อ . 2
+Problem solving strategies and concepts, algorithmicthinking, flowchart,
+concepts and introduction to computer programming.
+06066304 การวิเคราะห์และออกแบบระบบสารสนเทศ 3(3-0-6)
+INFORMATION SYSTEM ANALYSIS AND DESIGN
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+การพัฒนาโดยใช้แนวคิดเชิงวัตถุการวิเคราะห์และออกแบบการเลือกโครงการและการจัดการโครงการสารสนเทศกําหนดความต้องการระบบการวิเคราะห์ด้วยยูสเคสแบบจําลองกระบวนการแบบจําลองข้อมูลการออกแบบสถาปัตยกรรมและกลยุทธการออกการออกแบบส่วนติดต่อกับผู้ใช้การออกแบบส่วนจัดเก็บข้อมูลการออกแบบโปรแกรมคลาสและเมธอดการสร้างและการติดตั้งระบบ
+Object-oriented approaches to system development, system analysis
+and design, project selection and management, system requirement determination,
+use case analysis, process model, data model, design strategy and architecture design,
+user interface design, data storage design, program, class, and method design, system
+implementation and installation.
+กลุ่มวิชาแกน - กลุ่มพื้นฐานวิชาชีพ 33 หน่วยกิต
+06026205 การตลาดเบื้องต้น 3(3-0-6)
+INTRODUCTION TO MARKETING
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+วิชานี้ศึกษาเกี่ยวกับพฤติกรรมของผู้บริโภคการกําหนดกลยุทธ์ส่วนแบ่งตลาดการกําหนดกลุ่มเป้าหมายและการกําหนดตําแหน่งทางการตลาดรวมถึงการดําเนินการสร้างผลิตภัณฑ์การกําหนดราคาการเลือกใช้ช่องทางจัดจําหน่ายตลอดจนการใช้การส่งเสริมการตลาดโดยคํานึงความรับผิดชอบสังคมเป็นหลักแนวคิดและกลยุทธ์การตลาดดิจิทัลการตลาดผ่านสื่อดิจิทัล
+A study of consumer behaviors, the definition of specific strategy in
+segmentation, target group and positioning, product implementation pricing product
+distribution and promotion regarding social responsibility, digital marketing concepts
+and strategies, marketing through digital media.
+คณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 29 ---
+319
+มคอ . 2
+06026206 การวิเคราะห์ข้อมูลและการโปรแกรม 3(2-2-5)
+DATAANALYTICSAND PROGRAMMING
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ในภาคทฤษฎีแนะนําการวิเคราะห์ข้อมูลเชิงธุรกิจและการตัดสินใจสถิติเชิงพรรณนาการวิเคราะห์ความแปรปรวนหลายตัวแปรการวิเคราะห์ความถดถอยเชิงเส้นอย่างง่ายการวิเคราะห์ความถดถอยเชิงซ้อนการวิเคราะห์จําแนกกลุ่ม(0156ทกาโกลท Analysis) การวิเคราะห์ความถดถอยโลจิสติกการพยากรณ์และอนุกรมเวลาการหาค่าที่เหมาะสมที่สุดในภาคปฏิบัติแนะนําการเขียนโปรแกรมทางสถิติเช่นภาษาอาร์ประเภทข้อมูลข้อมูลตัวแปรเดี่ยวข้อมูลตัวแปรคู่ข้อมูลหลายตัวแปรสถิติเชิงพรรณาตัวแปรอาร์เรย์เมตริกข์ข้อมูลรายการและเฟรมข้อมูลโครงสร้างการควบคุมการวนลูปการพล้อตกราฟและกราฟฟิคการจัดการข้อมูลการสร้างฟังก์ชันและแพคเกจรวมทั้งการใช้โปรแกรมสําเร็จรูปทางสถิติในการวิเคราะห์ข้อมูล
+Introduction to business data analytics and decision making, descriptive
+statistics, multivariate analysis of variance, simple regression analysis, multiple
+regression analysis, discriminant analysis , logistic regression analysis, forecasting and
+time series, optimization, overview of statistical programming, e.g., R programming,
+numerical arithmetic, data type, univariate data, bivariate data, multivariate data,
+descriptive statistics, arrays and matrices, lists and dataframes, control structures, loop
+functions, plotting and graphics, data management, function and package
+development, statistical package software for data analysis.
+06026207 ระบบฐานข้อมูลแบบโนเอสคิวแอล 3(2-2-5)
+NOSQL DATABASE SYSTEMS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+แนะนําระบบฐานข้อมูลแบบไม่ใช่เชิงสัมพันธ์ความแตกต่างจากระบบฐานข้อมูลเชิงสัมพันธ์ข้อดีและข้อเสียของฐานข้อมูลแบบไม่ใช่เชิงสัมพันธ์ชนิดและโครงสร้างฐานข้อมูลแบบไม่ใช่เชิงสัมพันธ์แบบคอลัมน์แบบคีย์แวลยูแบบเอกสารและแบบกราฟตัวอย่างการออกแบบฐานข้อมูลแบบไม่ใช่เชิงสัมพันธ์การใช้ภาษาเจสันกับฐานข้อมูลแบบไม่ใช่เชิงสัมพันธ์แนะนําภาษาเจสันไวยากรณ์ของเจสันชนิดข้อมูลของเจสัน
+Introduction to NoSQL database system, differences between NoSQL
+database system and relational database system, advantages and disadvantages of
+NoSQL database system, types of NoSQL database system: column-oriented key-
+value, document and graph, example of NoSQL database design, JSON & NoSQL
+database, introduction to JavaScript Object Notation SON), JSON syntax, JSON data
+types.
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจ ล .
+
+--- Page 30 ---
+320
+มค อ . 2
+06026208 พื้นฐานวิทยาการข้อมูล 3(3-0-6)
+FUNDAMENTALS OF DATASCIENCE
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+วิทยาการข้อมูลกับแรงจูงใจเชิงธุรกิจนิยามของวิทยาการข้อมูลกระบวนการทําวิทยาการข้อมูลเช่นกระบวนการคิรสดีเอ็มการทําความเข้าใจข้อมูลการเตรียมข้อมูลดึงข้อมูลจากเว็บไซต์การดึงข้อมูลจากเอพีไอนิยามของปัญญาประดิษฐ์การแทนความรู้การใช้เหตุผลแบบตรรกศาสตร์และความน่าจะเป็นคอมพิวเตอร์วิทัศน์การประมวลผลภาษาธรรมชาติการเรียนรู้ของเครื่องจักรภาษาไพธอนสําหรับวิทยาการข้อมูล
+Data science motivation for business, Definition of Data Science, Data
+Science Lifecycle: CRISDM, Data Understanding, Data Preparation, Web Scaping, API
+Request ,Definition of Artificial Intelligence, Major subfields of Al: Knowledge
+Representation, Logical and Probabilistic reasoning, ComputerVision, Natural Language
+Processing, Machine Learning, Python Programing for Data Science.
+06026209 การแสดงข้อมูลด้วยแผนภาพ 3(2-2-5)
+DATAVISUALIZATION
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+หลักการการแสดงข้อมูลด้วยแผนภาพการออกแบบการแสดงข้อมูลด้วยแผนภาพเครื่องมือที่ใช้การแสดงข้อมูลด้วยแผนภาพการได้มาซึ่งข้อมูลการจัดระเบียบข้อมูลการเลือกแผนภูมิต่างๆที่เหมาะสมเช่นฮีทโตรแกรมแผนภูมิการกระจายแผนภูมิเส้นแผนภูมิแท่งแผนภูมิวงกลมแผนภูมิต้นไม้แผนภูมิแบบเครือข่ายกราฟสตรีมแผนภูมิตัวชี้วัดผลงานแผนที่แผนภูมิแบบปฏิสัมพันธ์การอธิบายแผนภูมิหลักการเล่าเรื่องด้วยภาพ
+Principles of data visualization, data visualization design, data
+visualization tools, data acquisition, data organization, choosing the appropriate chart
+type, e.g., histogram, scatter plot, line chart, bar chart, pie chart, tree diagram, network
+chart, stream graph, KPI Chart, map, interaction chart, chart description, Storytelling
+with data.
+06026210 การหาค่าเหมาะที่สุด 3(3-0-6)
+OPTIMIZATION
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+การสร้างตัวแบบกําหนดการเชิงเส้นวิธีแก้ปัญหากําหนดการเชิงเส้นปัญหาควบคู่ในกําหนดการเชิงเส้นกําหนดการเชิงเส้นและตัวแบบถดถอยควอนไทล์การหาค่าเหมาะที่สุดกับปัญหากําลังสองการหาค่าเหมาะสมที่สุดกับปัญหาคอนวิธีเกรเดียนต์เพื่อแก้ปัญหาการหาค่าเหมาะคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 31 ---
+321
+una, 2
+ที่สุดกับปัญหาคอนเวกซ์การหาค่าเหมาะที่สุดกับปัญหาสโทแคสติกวิธีสโทแคสติกเกรเดียนต์วิธีการเมตาฮิวริสติก
+Linear programming formulation, solution methods for linear
+programming, duality in linear programs, linear programming and quantile regression
+models, quadratic optimization, gradient methods for solving convex optimization
+problems, stochastic optimization, stochastic gradient methods, metaheuristic
+algorithm.
+06026211 การเรียนรู้ของเครื่องเชิงประยุกต์ 3(2-2-5)
+APPLIED MACHINE LEARNING
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+กระบวนการทําเหมืองข้อมูลการแบ่งกลุ่มข้อมูลการแบ่งกลุ่มแบบเคมีนการแบ่งกลุ่มแบบเด็นซิตี้การตรวจสอบความเหมาะสมของการแบ่งกลุ่มข้อมูลการจัดกลุ่มข้อมูลต้นไม้ตัดสินใจโครงข่ายประสาทเทียมเคเนียร์เรสเนเบอร์เทคนิคที่ใช้แบบจําลองการจัดกลุ่มข้อมูลหลายๆแบบจําลองการตรวจสอบความถูกต้องและการประเมินแบบจําลองการค้นหากฎความสัมพันธ์ของข้อมูลอพริโอริอัลกอริทีมเอฟพีทีอัลกอริทีมการสืบค้นรูปแบบลําดับเหตุการณ์การวิเคราะห์แบบให้คําแนะนําเครื่องมือการทําเหมืองข้อมูลต่างๆกระบวนการทําเอ็มแอลอือพการประยุกตี์ใช้งานเหมืองข้อมูล
+Data mining process, Database Segmentation: K-means, Density Based
+Clustering, ClusterValidation, Classification: Decision Trees, Neural Networks, K-Nearest
+Neighbor, Ensemble Classifier, Model Validation and Evaluation, Association Rule
+Discovery: Ariori Algorithm, FPT Algorithm, Sequential Pattern Discovery, Prescriptive
+Analytics, Data Mining Tools, MLOps Lifecycle, Data Mining Applications.
+06026212 การสร้างคลังข้อมูล 3(2-2-5)
+DATAWAREHOUSING
+วิชาบังคับก่อน : 06066300 แนวคิดระบบฐานข้อมูล
+PREREQUISITE : 06066300 DATABASE SYSTEM
+CONCEPTS
+ลักษณะของคลังข้อมูลกระบวนการสร้างคลังข้อมูลสถาปัตยกรรมของคลังข้อมูลการค้นหาความต้องการคลังข้อมูลการออกแบบแบบจําลองข้อมูลสตาร์และแบบสโนเฟคการออกแบบแบบจําลองข้อมูลเพื่อติดตามการเปลี่ยนแปลงของมิติข้อมูลการสกัดข้อมูลการแปลงข้อมูลและการนําข้อมูลเข้าระบบคลังข้อมูลแนวคิดการสร้างคลังข้อมูลบคลาวด์แพลตฟอร์มสถาปัตยกรรมของคลังข้อมูลบนคลาวด์แพลตฟอร์มวท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 32 ---
+322
+มคอ . 2
+Characteristics of Data warehouse (DW), DW Lifecycle, DWArchitecture,
+Gathering Requirements, Designing Star Schema and Snowflake Schema, Designing
+Slowly changing Dimensions, Extraction Transformation and Loading (ETL), Cloud-
+Based Data Warehouses Concepts, Cloud-Based Data Warehouse Architecture.
+06026213 ระบบข้อมูลมหัต 3(2-2-5)
+BIG DATASYSTEMS
+วิชาบังคับก่อน : 06066300 แนวคิดระบบฐานข้อมูล
+PREREQUISITE : 06066300 DATABASE SYSTEM
+CONCEPTS
+การติดตั้งการพัฒนาการซ่อมบํารุงและการจัดการข้อมูลขนาดใหญ่พื้นฐานการเขียนโปรแกรมเพื่อวิเคราะห์ข้อมูลด้วยภาษา SOL การประมวลผลแบบแมบรีติ้วและการประมวลผลข้อมูลบนหน่วยความจําบนคลัสเตอร์การวิเคราะห์ข้อมูลจากระบบฐานข้อมูลแบบมีโครงสร้างและฐานข้อมูลแบบไม่มีโครงสร้างและการใช้งานระบบฐานข้อมูลขนาดใหญ่บน Cloud
+Installation, development, maintenance and management of Big Data.
+Basic Data Analysis using SQL, MapReduce, and in-memory processing on cluster. Data
+Analysis on structued data and unstrucutured data. Big Data on cloud computing.
+06026214 โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 1 3(0-9-0)
+PROJECT IN DATA SCIENCEAND BUSINESS
+ANALYTIC 1
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ศึกษาค้นคว้าหรือวิจัยในหัวข้อปัจจุบันที่น่าสนใจทางวิทยาการข้อมูลในรูปแบบโครงการที่สามารถประยุกต์ใช้ทฤษฎีที่เกี่ยวข้องทางการศึกษาด้านเทคโนโลยีสารสนเทศภายใต้การดูแลและแนะนําของอาจารย์ที่ปรึกษาสามารถนําเสนอหัวข้อและผลการทดลองเบื้องต้นที่ได้จากการแก้ปัญหาเชิงปฏิบัติการหรือจากการวิเคราะห์เชิงวิชาการ
+Study or research of interesting current topics in data science and
+business analytics undertaking a work project based by applying the theoretical
+aspects ofthe information technology under the supervision of a faculty member, be
+able to present a project proposal and preliminary result from practical solving or
+academic analysis.
+คณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 33 ---
+323
+มคอ . 2
+06026215 โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 2 3(0-9-0)
+PROJECT IN DATASCIENCE AND BUSINESS
+ANALYTIC 2
+วิชาบังคับก่อน : 06026214 โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 1
+PREREQUISITE : 06026214 PROJECT IN DATA SCIENCE
+AND BUSINESS ANALYTIC 1
+ศึกษาค้นคว้าหรือวิจัยในหัวข้อปัจจุบันที่น่าสนใจทางวิทยาการข้อมูลในรูปแบบโครงการที่สามารถประยุกต์ใช้ทฤษฎีที่เกี่ยวข้องทางการศึกษาด้านเทคโนโลยีสารสนเทศภายใต้การดูแลและแนะนําของอาจารย์ที่ปรึกษาสามารถนําเสนอผลการทดลองที่สมบูรณ์ในหัวข้อที่ได้เสนอและศึกษาต่อเนื่องมาจากวิชาโครงงานวิทยาการข้อมูล 1
+Study or research of interesting current topics in data science and
+business analytics undertaking a work project based by applying the theoretical
+aspects ofthe information technology under the supervision of a faculty member, be
+able to present a complete result ofthe proposed topic as continued from the project
+in data science and business analytics 1.
+กลุ่มวิชาชีพเฉพาะด้าน - กลุ่มวิทยาการข้อมูลเลือก 12 หน่วยกิต
+06026216 ชปัญญาประดิษฐ์ 3(3-0-6)
+ARTIFICIAL INTELLIGENCE
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+นิยามของปัญญาประดิษฐ์และศาสตร์ที่เกี่ยวข้องการแก้ปัญหาโดยใช้ปัญญาประดิษฐ์การค้นหาและเกมปริภูมิปัญหาและปริภูมิคําตอบการแทนความรู้กลไกการอนุมานโอกาสและความน่าจะเป็นกฎของเบส์การแบ่งกลุ่มด้วยนาอีฟเบส์การเรียนรู้ด้วยเครื่องจักรตัวแบ่งกลุ่มแบบเคเพื่อนบ้านใกล้สุดโครงข่ายประสาทเทียมอัลกอริทีมการเคลื่อนลงตามความชันตรรกศาสตร์คลุมเครือต้นไม้ตัดสินใจ
+Al definition and related fields, problem solving with Al, search and
+game, problem space and solution space, knowledge representation, inference engine,
+odd and probability, bayes rule, naive bayes classification, machine learning, nearest
+neighbor classifier, artificial neural networks, gradient descent algorithm, fuzzy logic,
+decision tree
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 34 ---
+324
+มคอ . 2
+06026217 การเรียนรู้ของเครื่อง 3(3-0-6)
+MACHINE LEARNING
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ความรู้พื้นฐานของการเรียนรู้ของเครื่องการเรียนรู้แบบมีผู้สอนการถดถอยเชิงเส้นวิธีกําลังสองน้อยที่สุดการถดถอยโลจิสติกอัลกอริทีมเพื่อนบ้านที่ใกล้ที่สุดโครงข่ายประสาทเทียมซัพพอร์ทเวกเตอร์แมชชีนการเรียนรู้แบบไม่มีผู้สอนการจัดกลุ่มแบบเคมีนอัลกอริทีมการหาค่าความคาดหวังสูงสุดการลดมิติข้อมูลการวิเคราะห์องค์ประกอบหลักการตรวจสอบไขว้การประเมินประสิทธิภาพของแบบจําลองการประยุกต์ใช้ของการเรียนรู้ของเครื่อง
+Basic of machine learning, supervised learning, linear regression, least
+squares, logistic regression, k-nearest neighbour, neural network, support vector
+machine, unsupervised learning, k-mean_ clustering, expectation-maximization
+algorithm, dimensionality reduction, principal component analysis, cross-validation,
+evaluating model performance, machine learning applications.
+06026218 การเรียนรู้เชิงลึก 3(2-2-5)
+DEEP LEARNING
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+คณิตศาสตร์ที่จําเป็นสําหรับการเรียนรู้เชิงลึก , การคํานวเวกเตอร์, การสลายตัวของเมทริกข์, เข้าใจแนวคิดเกี่ยวกับความน่าจะเป็ น, โครงข่ายประสาทเทียม , โครงข่ายประสาทเทียมแบบป้อนไปข้างหน้า , โครงข่ายประสาทเทียมที่มีโครงสร้างหลายชั้น , ฟังก์ชันคํานวณค่าผิดพลาด ,
+โครงข่ายประสาทเทียมแบบคอนโวลูขัน, โครงข่ายประสาทเทียมแบบวนซ้้า
+Essential mathematics for deep learning, vector calculus, matrix
+decomposition, understanding the concepts in probability, neural network, feed-
+forward neural network, multiplayer-perceptron neural network, loss function,
+convolution neural network, recurrent neural network
+06026219 การประมวลผลภาษาธรรมชาติ 3(3-0-6)
+NATURAL LANGUAGE PROCESSING
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ภาพรวมโมดูลการประมวลผลภาษาธรรมชาติงานด้านการแบ่งกลุ่มข้อความเช่นการจัดกลุ่มข่าวภารจําแนกอารมณ์การกรองสแปมตัวแบ่งกลุ่มแบบดั้งเดิมเทคนิคการเรียนรู้เชิงลึกแบบจําลองภาษาและการกํากับข้อความที่มีลําดับการแทนข้อความในแบบจําลองเวคเตอร์งานด้านการสร้างแบบรูปของงานที่มีลําดับเช่นการแปลภาษาด้วยเครื่องการย่อความการตอบคําถามวท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล.
+
+--- Page 35 ---
+325
+มคอ . 2
+Overview of natural language processing module, text classification
+tasks such as news classification, sentiment analysis, spam filtering, traditional
+classifiers, deep learning techniques, language modeling and sequence tagging, text
+representation in vector space models, formulate sequence to sequence tasks such
+as machine translation, summarization, question answering.
+06026220 การทําเหมืองข้อมูลกระบวนการ 3(3-0-6)
+PROCESS MINING
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+แบบจําลองกระบวนการเพ็ททริเน็ตเวอกร์โฟลว์เน็ตอัลกอริทีมในการค้นหากระบวนการอัลฟาอัลกอริทีมดีเพนเด็นซีกราฟอัลกอริทีมแคชชวลเน็ตอัลกอริทีมการตรวจสอบความสอดคล้องของกระบวนการการค้นหาจุดบกพร่องของกระบวนการโปรแกรมในการทําเหมืองกระบวนการ
+Process Model: Petri Nets, Workflow Nets, Process Discovery Algorithm:
+Alpha Algorithm, Dependency Graphs, Causal Nets, Conformance Checking Concepts,
+Mining Bottlenecks, Process Mining Software.
+06026221 การค้นคืนสารสนเทศ 3(3-0-6)
+INFORMATION RETRIEVAL
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ความรู้เบื้องต้นเกี่ยวกับการค้นคืนสารสนเทศสถาปัตยกรรมของระบบค้นคืนสารสนเทศเครื่องมือและการประเมินผลการค้นคืนสารสนเทศแบบจําลองการจัดลําดับแบบพื้นฐานของการค้นคืนสารสนเทศคําศัพท์และรายการของการจัดตําแหน่งการสร้างดัชนีค้นหาการถ่วงค่าน้าหนักของคําการปฏิสัมพันธ์ระหว่างระบบค้นคืนสารสนเทศกับผู้ใช้การค้นคืนสารสนเทศซึ่งเน้นความหลากหลายของข้อมูลและการประเมินผลการตอบสนองที่เกี่ยวข้องความต้องการสารสนเทศแบบจําลองการจัดลําดับขั้นสูงของการค้นคืนสารสนเทศการจัดกลุ่มและการจําแนกข้อความการกรองข้อมูลสารสนเทศการแนะนําและกรองข้อมูลสารสนเทศแบบความร่วมมือการรวบรวมข้อมูลบนเว็บการวิเคราะห์ข้อมูลบนเว็บและการสืบค้นข้อมูลบนเว็บ
+Introduction to Information Retrieval (IR), Architecture of IR Systems, IR
+Evaluation and Tools, Basic IR Ranking Models, Term Vocabulary and Postings List,
+Search Index Construction, Term Weighting, Interactive IR, Diversity IR and Evaluation,
+Relevance Feedback, Advanced IR Ranking Models, Text Clustering and Categorization,
+Information Filtering, Collaborative Recommendations/Filtering, Web Crawling, Web
+Analysis and Web Retrieval.
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 36 ---
+326
+มคอ . 2
+06026222 คอมพิวเตอร์วิชัน 3(3-0-6)
+COMPUTER VISION
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+เทคนิคพื้นฐานในการประมวลผลภาพและวีดิทัศน์ความเข้มแสงและสีการแปลงภาพการคอนโวลูชันภาพรูปทรงและเส้นแสดงรูปร่างฮิสโตแกรมการแบ่งส่วนภาพการสกัดวัตถุการตรวจจับและจับคู่คุณลักษณะเด่นการลบฉากหลังการเผ้าติดตามการรู้จําวัตถุวิชัน 3 มิติการเรียนรู้ของเครื่องในคอมพิวเตอร์วิชันการประยุกต์ใช้เช่นระบบตรวจสอบสินค้าการวิเคราะห์ภาพทางการแพทย์การยืนยันตัวตนโดยใช้ชีวมิติพาหนะอัจฉริยะและระบบรักษาความปลอดภัย
+Basic image and video processing, intensity and color, image
+transformation, image convolution, shape and contour, histogram, image
+segmentation, foreground extraction, feature detection and matching, background
+subtraction, tracking, object recognition, 3D vision, machine learning in computer
+vision, some applications such as product inspection system, biomedical image
+analysis, biometric authentication, intelligent vehicle, and security system.
+06026223) การประมวลผลภาพ 3(3-0-6)
+IMAGE PROCESSING
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+พื้นฐานของการประมวลผลภาพการแปลงความเข็มแสงและการกรองในขอบเขตสเปเชียลการประมวลผลในขอบเขตความถี่การพื้นฟูภาพการประมวลผลภาพแบบมอร์โฟโลยีการแบ่งส่วนภาพ
+Fundamentals of image processing, Intensity transformations and
+spatial filtering, Frequency domain processing, Image restoration, Morphological image
+processing, Image segmentation.
+06026224 การแปลงข้อมูลและการรู้จํารูปภาพ 3(3-0-6)
+IMAGETRANSFORMATION AND RECOGNITION
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+แนะนําการประมวลผลภาพติจิตอลสองระดับภาพสีเทาและภาพสีการประมวลผลด้วยตัวกรองเฉพาะถิ่นการลดมิติของข้อมูลภาพการแปลงรูปแบบของข้อมูลอาทิเช่นการแปลงฟรีเยแบบไม่ต่อเนื่องการวิเคราะห์องค์ประกอบหลักการวิเคราะห์การจําแนกประเภทเชิงเส้นการแปลงข้อมูลสองมิติแบบเวฟเล็ตเชิงประจักษ์การแยกองค์ประกอบข้อมูลสองมิติแบบเชิงประจักษ์วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 37 ---
+327
+มค อ . 2
+และการแยกองค์ประกอบเดี่ยวของภาพเชิงประจักษ์แนะนําการรู้จําภาพเบื้องต้นด้วยวิธีการแบบถําหนดเองและการเรียนรู้ของเครื่องจักร
+Introduction to digital image processing for binary, gray and color
+images, local image filtering, dimensionality reduction, transformation: discrete Fourier
+transform, principal components analysis, linear discriminant analysis, 2D wavelet
+transform, bi-dimensional empirical mode decomposition, 2D empirical wavelet
+transform and empirical monocomponent image decomposition, introduction to
+image recognition: handcraft-based and learning-based approaches.
+06026225 การเรียนรู้เชิงลึกสําหรับการวิเคราะห์ภาพและวีดิโอทางการ 3(2-2-5)
+แพทย์
+DEEP LEARNING IN MEDICAL IMAGE AND VIDEO
+ANALYSIS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+แนะนําหลักการและแนวทางการทํางานของโครงข่ายประสาทเทียมและเทคนิคการเรียนรู้เชิงลึกการประยุกต์ใช้งานการเรียนรู้เชิงลึกสําหรับการวิเคราะห์ปัญหาภาพและวิดีโอทางการแพทย์อาทิเช่นการตรวจจับวัตถุการแบ่งส่วนการรู้จําและการวิเคราะห์ลักษณะและชนิดของข้อมูลภาพและวิดีโอทางการแพทย์และความท้าทายของการประมวลผลภาพและวิดีโอทางการแพทย์
+Introduction to concepts and principles of artificial neural network and
+deep learningtechniques, applying deep learningfor medical image and video analysis
+problems such as detection, segmentation, recognition, and analysis, characteristics
+and types of medical image and video, challenges in medical image and video
+computing.
+06026226 หัวข้อพิเศษทางด้านวิทยาการข้อมูล 1 3(3-0-6)
+SPECIAL TOPICS IN DATA SCIENCE1
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+วิชานี้จะศึกษาถึงหัวข้อและความถ้าวหน้าทางวิชาการที่น่าสนใจโดยอาจารย์ผู้สอนทางด้านวิทยาการข้อมูลเป็นผู้คัดเลือก
+This course will cover recent advances and other topics of interest
+selected by the instructors in the field of data science.
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 38 ---
+328
+มคอ . 2
+06026227 หัวข้อพิเศษทางด้านวิทยาการข้อมูล 2 3(3-0-6)
+SPECIAL TOPICS IN DATA SCIENCE2
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+วิชานี้จะศึกษาถึงหัวข้อและความก้าวหน้าทางวิชาการที่น่าสนใจโดยอาจารย์ผู้สอนทางด้านวิทยาการข้อมูลเป็นผู้คัดเลือก
+This course will cover recent advances and other topics of interest
+selected by the instructors in the field of data science.
+06026228 ปฏิบัติการพิเศษทางด้านวิทยาการข้อมูล 1 3(2-2-5)
+SPECIAL WORKSHOP IN DATA SCIENCE 1
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ศึกษาและการฝึกภาคปฏิบัติในหัวข้อและความก้าวหน้าทางวิชาการที่น่าสนใจโดยอาจารย์ผู้สอนทางด้านวิทยาการข้อมูลเป็นผู้คัดเลือก
+This course focuses on selected topics and practical workshop in data
+science, which selected bya lecturer.
+06026229 ปปฏิบัติการพิเศษทางด้านวิทยาการข้อมูล 2 3(2-2-5)
+SPECIAL WORKSHOP IN DATA SCIENCE 2
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ศึกษาและการฝึกภาคปฏิบัติในหัวข้อและความก้าวหน้าทางวิชาการที่น่าสนใจโดยอาจารย์ผู้สอนทางด้านวิทยาการข้อมูลเป็นผู้คัดเลือก
+This course focuses on selected topics and practical workshop in data
+science, which selected bya lecturer.
+กลุ่มวิชาชีพเฉพาะด้าน -กลุ่มการวิเคราะห์เชิงสถิติเลือก 12 หน่วยกิต
+06026230 อยนุกรมเวลาและการพยากรณ์เบื้องต้น 3(3-0-6)
+INTRODUCTION TOTIME SERIES AND FORECASTING
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+บทนําการพยากรณ์ข้อมูลอนุกรมเวลาการได้มาซึ่งข้อมูลและการจัดการข้อมูลในการพยากรณ์การพยากรณ์ด้วยเทคนิคการปรับให้เรียบการพยากรณ์ด้วยเทคนิคการถดถอยการวท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 39 ---
+329
+มคอ . 2
+พยากรณ์อนุกรมเวลาด้วยวิธีการแยกองค์ประกอบวิธีการพยากรณ์แบบบอกซ์-เจนกินส์การประเมินเทคนิคการพยากรณ์
+An overview of forecasting, Time Series Data, Data acquisition and
+handling in forecasting, Forecasting with smoothing techniques, Forecasting by
+regression techniques, The decomposition method oftime series forecasting, The box-
+Jenkins method offorecasting, The evaluation offorecasting techniques.
+06026231 สถิติเชิงเบย์ 3(3-0-6)
+BAYESIAN STATISTICS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+บทนําการวิเคราะห์ข้อมูลแบบเบส์การแจกแจงความน่าจะเป็นก่อนการแจกแจงความน่าจะเป็นภายหลังการแจกแจงความน่าจะเป็นแบบสังยุคตัวแบบการอนุมานแบบเพส์ที่มีพารามิเตอร์เดียวและแบบหลายพารามิเตอร์
+Introduction to Bayesian data analysis, prior probability distribution,
+posterior probability distribution, conjugate probability distribution, Bayesian inference
+single and multiple parameter models.
+06026232 กระบวนการสโตแคสติกเบื้องต้น 3(3-0-6)
+INTRODUCTION TO STOCHASTIC PROCESS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+กระบวนการสุ่มลูกโซ่มาร์คอฟแบบเวลาไม่ต่อเนื่องลูกโซ่มาร์คอฟแบบเวลาต่อเนื่องระบบแถวคอยกระบวนการปัวซงกระบวนการเกิดและตายกระบวนการเวียนบังเกิดและกระบวนการแตกกิ่งและการประยุกต์กระบวนการสโตแคสติก
+Random processes, Discrete time Markov chains, Continuous time
+Markov chains Queuing systems Poisson processes, Birth-and-death processes,
+Renewal processes and branching processes, Applications of stochastic processes.
+06026233 การวิเคราะห์ข้อมูลหลายตัวแปร 3(3-0-6)
+MULTIVARIATE DATAANALYSIS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+บทนําการวิเคราะห์ข้อมูลหลายตัวแปรการแจกแจงแบบปกติหลายตัวแปรการวิเคราะห์ความแปรปรวนหลายตัวแปรการวิเคราะห์ตัวประกอบหลักการวิเคราะห์ปัจจัยการคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 40 ---
+330
+มคอ . 2
+วิเคราะห์กลุ่มการวิเคราะห์สหสัมพันธ์แคนนอนนิคัลการวิเคราะห์จําแนกประเภทการวิเคราะห์ความถดถอยโลจิสติค
+Introduction to Multivariate Analysis, The Multivariate Normal
+Distribution, Multivariate Analysis of Variance, Principal Component Analysis, Factor
+Analysis, Cluster Analysis, Canonical Correlation Analysis, Discriminant Analysis, Logistic
+Regression Analysis.
+06026234 การออกแบบการทดลอง 3(3-0-6)
+EXPERIMENTAL DESIGN
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+หลักการของการวางแผนการทดลองการตรวจสอบความเหมาะสมของตัวแบบการแปลงข้อมูลการทดลองปัจจัยเดียวแผนการทดลองแบบสมสมบูรณ์การเปรียบเทียบเชิงพหุแผนการทดลองแบบสุ่มในบล็อคสมบูรณ์แผนการทดลองแบบลาตินสแควร์การทดลองแบบแฟคทอเรียลและแบบสปลิทพลอทการวิเคราะห์ความแปรปรวนร่วม
+Principle of experimental design, Model adequacy checking, Data
+transformation, Single-factor experiments, completely randomized design, multiple
+comparison tests, randomized complete block design, Latin square design, factorial
+and split-plot experiments, and analysis of covariance.
+06026235 หัวข้อพิเศษทางการวิเคราะห์เชิงสถิติ 1 3(3-0-6)
+SPECIAL TOPICS IN STATISTICAL ANALYTICS 1
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+วิชานี้จะศึกษาถึงหัวข้อและความก้าวหน้าทางวิชาการที่น่าสนใจโดยอาจารย์ผู้สอนทางด้านการวิเคราะห์เชิงสถิติเป็นผู้คัดเลือก
+This course will cover recent advances and other topics of interest
+selected by the instructors in the field of statistical data analysis.
+06026236 หัวข้อพิเศษทางการวิเคราะห์เชิงสถิติ 2 3(3-0-6)
+SPECIAL TOPICS IN STATISTICAL ANALYTICS 2
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+วิชานี้จะศึกษาถึงหัวข้อและความก้าวหน้าทางวิชาการที่น่าสนใจโดยอาจารย์ผู้สอนทางด้านการวิเคราะห์เชิงสถิติเป็นผู้คัดเลือกวท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 41 ---
+331
+มคอ . 2
+This course will cover recent advances and other topics of interest
+selected by the instructors in the field of statistical data analysis.
+06026237 ปฏิบัติการพิเศษทางการวิเคราะห์เชิงสถิติ 1 3(2-2-5)
+SPECIAL WORKSHOP IN STATISTICAL ANALYTICS 1
+วิชาบังคับถ่อน : ไม่มี
+PREREQUISITE : None
+ศึกษาและการฝึกภาคปฏิบัติในหัวข้อและความก้าวหน้าทางวิชาการที่น่าสนใจโดยอาจารย์ผู้สอนทางด้านการวิเคราะห์เชิงสถิติเป็นผู้คัดเลือก
+This course focuses on selected topics and practical workshop in
+statistical data analysis, which selected by a lecturer.
+06026238 ปฏิบัติการพิเศษทางการวิเคราะห์เชิงสถิติ 2 3(2-2-5)
+SPECIAL WORKSHOP IN STATISTICAL ANALYTICS 2
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ศึกษาและการฝึกภาคปฏิบัติในหัวข้อและความก้าวหน้าทางวิชาการที่น่าสนใจโดยอาจารย์ผู้สอนทางด้านการวิเคราะห์เชิงสถิติเป็นผู้คัดเลือก
+This course focuses on selected topics and practical workshop in
+statistical data analysis, which selected by a lecturer.
+กลุ่มวิชาชีพเฉพาะด้าน - กลุ่มวิศวกรรมข้อมูลเลือก 12 หน่วยกิต
+06026239 สถาปัตยกรรมข้อมูลแบบไปป์ไลน์ 3(3-0-6)
+DATA PIPELINE ARCHITECTURE
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+สถาปัตยกรรมข้อมูลแบบไปป์ไลน์คือการออกแบบขั้นตอนในการย้ายข้อมูลจากต้นทางไปยังปลายทางที่อยู่ในรูปแบบที่พร้อมใช้งานโดยมี 4 ขั้นตอนหลักได้แก่การนําเข้าข้อมูล , เก็บข้อมูล, จัดการข้อมูลและนําข้อมูลไปใช้รวมถึงการสร้างดาต้าเลคการจัดการข้อมูลด้วย ETL vita
+สร้าง Data Warehouse, Data Mart
+Data pipeline architecture is the design and structure of code and
+systems that can drive data from data source to destination (ready-to-use format). This
+included data ingest, data store, data process and data consume. Development of
+data lake, create data warehouse and data mart using ETL
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 42 ---
+332
+มค อ . 2
+06026240 การพัฒนาระบบอัจฉริยะ 3(2-2-5)
+INTELLIGENTSYSTEM DEVELOPMENT
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+การพัฒนาระบบสารสนเทศที่มีการทํางานร่วมกับระบบปัญญาประดิษฐ์ในรูปแบบต่างๆการประยุกต์ใช้งานการเรียนรู้ของเครื่องในแอปพลิเคชันการสร้างและออกแบบ /0|สําหรับการเรียนรู้ของเครื่อง
+Intelligent system development, apply artificial intelligence and
+machine learning model to application. Design, create and deploy machine learning
+model to Application Programming Interface (API)
+06026241 การดําเนินงานการเรียนรู้ของเครื่อง 3(3-0-6)
+MACHINE LEARNING OPERATIONS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+กระบวนการทําเอ็มแอลอือพกระบวนการสร้างแบบจําลองเช่นการนําเข้าข้อมูลการสอนแบบจําลองการเตรียมแบบจําลองเพื่อสําหรับนําไปใช้งานกระบวนการสําหรับการนําแบบจําลองไปใช้งานเช่นการทดสอบโปรแกรมกระบวนการตรวจสอบแบบจําลองเช่นการตรวจสอบแบบจําลองการวิเคราะห์ประสิทภาพของแบบจําลองการกํากับควบคุมการใช้แบบจําลอง
+MLOps Lifecycle, Build Pipeline: Data Ingestion, Model Training, Model
+Testing, Model Packaging and Registering, Deploy Pipeline: Application Testing,
+Monitoring Pipeline: Monitoring, Analysis, Governance.
+06026242 โครงสร้างพื้นฐานด้านเทคโนโลยีกลุ่มเมฆ 3(3-0-6)
+CLOUD TECHNOLOGYINFRASTRUCTURE
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+คุณลักษณะที่สําคัญของระบบคลาวด์, รูปแบบการให้บริการของระบบคลาวด์ ,
+รูปแบบการประมวลผลบนระบบคลาวด์, รูปแบบการจัดเก็บข้อมูลบนระบบคลาวด์, รูปแบบของฐานข้อมูลบนระบบคลาวด์, การจัดการระบบเครือข่ายบนระบบคลาวด์, ความปลอดภัยสําหรับระบบคลาวด์ , การติดตั้งระบบการทํางานในขั้นพื้นฐานบนระบบคลาวด์ , การบริหารจัดการการทํางานและการจัดการเกี่ยวกับค่าใช้จ่ายบนระบบคลาวด์
+Key characteristics of cloud computing, Cloud delivery models,
+Compute services in the cloud, Storage services in the cloud, Database services in the
+cloud, Networking services in the cloud, Security services in the cloud, Implementing
+basic system on public cloud environment, Operation and cost management in the
+cloud
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 43 ---
+333
+มค อ . 2
+06026243 ระบบฐานข้อมูลขั้นสูง 3(3-0-6)
+ADVANCED DATABASE SYSTEMS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+การจัดการรายการเปลี่ยนแปลงการกู้คืนโดยใช้เทคนิคลงบันทึกและการใช้แชโดว์เพจจิ้งการจัดการบัฟเฟอร์เทคนิคการควบคุมภาวะพร้อมกันแบบต่างๆการกู้คืนจากความขัดข้องของรายการเปลี่ยนแปลงการแก้ปัญหาภาวะติดตายการประมวลผลข้อคําถามการปรับข้อคําถามให้เหมาะที่สุดฐานข้อมูลแบบกระจายคลังข้อมูลหรือหัวข้ออื่นที่ผู้สอนเลือกตามความเหมาะสมกับเทคโนโลยีในปัจจุบัน
+Transaction management, crash recovery using various log-based
+techniques and shadow paging, buffer management, various concurrency control
+techniques, transaction failure recovery, deadlock handling, query processing, query
+optimization, distributed database, data warehouses, topics selected by instructors
+based on current technology.
+06026244 การดูแลและบํารุงรักษาระบบฐานข้อมูล 3(2-2-5)
+DATABASE SYSTEM MAINTENANCEAND
+ADMINISTRATION
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+การสร้างวิวและลําดับตัวดําเนินการของเช็ตการสร้างพีแอล/เอสคิวแอลการจัดการกับสิ่งผิดปรกติกระบวนงานและฟังก์ชันการจัดการกับโปรแกรมย่อยแพ็คเก็จการจัดการกับอ็อบเจกต์ขนาดใหญ่ทริกเกอร์สถาปัตยกรรมตัวบริการฐานข้อมูลการจัดการฐานข้อมูลที่เครื่องรับบริการการสร้างฐานข้อมูลพจนานุกรมข้อมูลและวิวแสดงการปฏิบัติการแบบพลวัตแฟ้มควบคุมแฟ้มรายการทําข้้าการบํารุงรักษาเทเบิลสเปซและแฟ้มข้อมูลโครงสร้างหน่วยเก็บข้อมูลทํากลับการบํารุงรักษาตารางการบํารุงรักษาดรรชนีบูรณภาพของข้อมูลการจัดการผู้ใช้งานสิทธิ์การใช้งานและบทบาทการนําข้อมูลเข้าฐานข้อมูลการสํารองและการกู้ฐานข้อมูลโปรแกรมอรรถประโยชน์สําหรับการนําเข้าและส่งออกข้อมูล
+Creating views and sequence, set operators, creating PL/SQL, handling
+exceptions, procedures and functions, managing subprograms, packages, manipulating
+large objects, triggers, database server architecture, client database management,
+creating databases, data dictionary and dynamic performance views, controlfiles, redo
+log files, maintaining tablespaces and data files, storage structures, undo data,
+maintaining tables, maintaining indexes, managing users, privileges and roles, loading
+data into a database, database backup and recovery, import and export utility.
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 44 ---
+334
+มคอ . 2
+06026245 ระบบฐานข้อมูลแบบกระจาย 3 (3-0-6)
+DISTRIBUTED DATABASE SYSTEMS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+วิชานี้จัดการเกี่ยวกับการเพิ่มความสามารถของฐานข้อมูลที่มีความสัมพันธ์เชิงตรรกะโดยกระจายฐานข้อมูลผ่านเครือข่ายคอมพิวเตอร์เพื่อให้สามารถประมวลผลข้อมูลที่ปรับขนาดได้หลักสูตรนี้จะกล่าวถึงส่วนประกอบของระบบครอบคลุมหัวข้อหลักต่อไปนี้: สถาปัตยกรรมฐานข้อมูลแบบกระจายการจัดเก็บและการจัดทําดัชนีข้อมูลแบบกระจายการประมวลผล/การเพิ่มประสิทธิภาพการสืบค้นแบบกระจายและแบบคู่ขนานและการควบคุมการทํางานพร้อมกันในระบบฐานข้อมูลแบบคู่ขนานแบบกระจายและการออกแบบและอิมพลีเม้นท์ระบบต้นแบบ
+This course will deal with the increased capabilities of a collection of
+logically interrelated databases distributed over a computer network to enable
+scalable data processing. This course addresses the components of these systems,
+covering the following main topics: distributed database architectures, distributed data
+storage, and indexing, distributed and parallel query processing/optimization,
+concurrency control in distributed Parallel Database Systems, and design and
+implementation of prototype systems.
+06026246 หัวข้อพิเศษทางวิศวกรรมข้อมูล 1 3(3-0-6)
+SPECIAL TOPICS IN DATA ENGINEERING 1
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+วิชานี้จะศึกษาถึงหัวข้อและความก้าวหน้าทางวิชาการที่น่าสนใจโดยอาจารย์ผู้สอนทางด้านวิศวกรรมข้อมูลเป็นผู้คัดเลือก
+This course will cover recent advances and other topics of interest
+selected by the instructors in the field of data engineering.
+06026247 ทหัวข้อพิเศษทางวิศวกรรมข้อมูล 2 3(3-0-6)
+SPECIAL TOPICS IN DATA ENGINEERING 2
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+วิชานี้จะศึกษาถึงหัวข้อและความก้าวหน้าทางวิชาการที่น่าสนใจโดยอาจารย์ผู้สอนทางด้านวิศวกรรมข้อมูลเป็นผู้คัดเลือก
+This course will cover recent advances and other topics of interest
+selected by the instructors in the field of data engineering.
+คณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 45 ---
+335
+มค อ . 2
+06026248 ปฏิบัติการพิเศษทางวิศวกรรมข้อมูล 1 3(2-2-5)
+SPECIAL WORKSHOP IN DATA ENGINEERING 1
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ศึกษาและการฝึกภาคปฏิบัติในหัวข้อและความก้าวหน้าทางวิชาการที่น่าสนใจโดยอาจารย์ผู้สอนทางด้านวิศวกรรมข้อมูลเป็นผู้คัดเลือก
+This course focuses on selected topics and practical workshop in data
+engineering, which selected by a lecturer.
+06026249 ปฏิบัติการพิเศษทางวิศวกรรมข้อมูล 2 3(2-2-5)
+SPECIAL WORKSHOP IN DATA ENGINEERING 2
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ศึกษาและการฝึกภาคปฏิบัติในหัวข้อและความก้าวหน้าทางวิชาการที่น่าสนใจโดยอาจารย์ผู้สอนทางด้านวิศวกรรมข้อมูลเป็นผู้คัดเลือก
+This course focuses on selected topics and practical workshop in data
+engineering, which selected by a lecturer.
+กลุ่มวิชาการศึกษาทางเลือก -กลุ่มวิชาเลือกเลือก 6 หน่วยกิต
+06026250 ววิทยาการข้อมูลสําหรับธุรกิจ 3(2-2-5)
+DATASCIENCE FOR BUSINESS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ภาพรวมของวิทยาการข้อมูลการสร้างโมเดลการทํา นายการแบ่งส่วนแบบมีผู้สอนฟังก์ชันดิสคริมิแนนต์การวิเคราะห์การปฏิบัติงานของโมเดลการทําเหมืองและแทนข้อความอักษรการจัดกลุ่มและทําเหมืองข้อมูลแบบไม่มีผู้สอนเทคนิคและงานต่างๆในวิทยาการข้อมูลกลยุทธ์เชิงธุรกิจและวิทยาการข้อมูลแอพลิเคชันที่ใช้วิทยาการข้อมูลในการวิเคราะห์สื่อสังคมออนไลน์วิทยาการข้อมูลในการจัดการการปฏิบัติงาน
+Overview of the Data Science: predictive modeling, discriminant
+functions, model performance analytics, text representation and mining, clustering,
+Applications of Data Science To Marketing Analytics, Applications of Data Science To
+Financial Analytics, Applications of Data Science To Social Network Analytics, Data
+Science in Operations Management.
+วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 46 ---
+336
+มคอ . 2
+06026251 บัญชีการเงิน 3(3-0-6)
+FINANCIALACCOUNTING
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+แนะนําการบัญชีวิธีการทางบัญชีและธุรกรรมภาพรวมวงจรบัญชี (บันทึกรายวันบัญชีแยกประเภทปรับปรุงรายการบัญชีและปิดบัญชี) ต้นทุนสินค้าการบัญชีสําหรับธุรกิจซื้อขายสินค้าการบัญชีสินทรัพย์การบัญชีหนี้สินการบัญชีส่วนของเจ้าของการจัดทํางบการเงินงบกําไรขาดทุนและงบดุลการวิเคราะห์ทางการเงินการวิเคราะห์แนวตั้งการวิเคราะห์แนวนอนและการวิเคราะห์อัตราส่วน
+An introduction to accounting, accounting methods and transactions,
+accounting cycle overview: journals, ledgers, adjusting, and closing entries, inventory
+cost, merchandising businesses, asset, liability, shareholder equity, financial statement:
+income statement, balance sheet, and cash flow, financial analysis, vertical analysis,
+horizontal analysis, and ratio analysis.
+06026252 การวิเคราะห์ด้านการเงิน 3(2-2-5)
+FINANCIALANALYTICS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+แนะนําและภาพรวมของการวิเคราะห์ทางการเงินการประยุกต์การวิเคราะห์ทางการเงินในสถานการจริงเทคนิควิเคราะห์ข้อมูลอนุกรมเวลาการวัดประสิทธิภาพการพยากรณ์การพัฒนาโมเดลพยากรณ์ ARIMA ประเมินความสมดุลของเสี่ยงและผลตอบแทนในทฤษฎีพอร์ตโฟลิโอสมัยใหม่ราคาผลตอบแทนและความเสี่ยงของหุ้นเทคนิคการวิเคราะห์ในบริบทอื่นๆแนะนําอัลกอริทีมการเทรดหลักทรัพย์
+Introduction and overview of financial analytics, apply financial
+analytics in real-world situations, techniques to analyze time series data, forecasting
+performance measures, building an ARIMAforecasting model using R, evaluatethe risk-
+reward trade-off in modern portfolio theory, prices, returns, and risk of corporate
+stocks, analytical techniques in other domains, introduction to algorithmic trading
+06026253 การวิเคราะห์ด้านการตลาด 3(2-2-5)
+MARKETING ANALYTICS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+การวิเคราะห์การตลาด, ขนาดตลาดและการวิเคราะห์แนวโน้ม, การแบ่งส่วนตลาด ,
+การวิเคราะห์การแข่งขัน, กลยุทธ์ทางธุรกิจและการปฏิบัติการทางธุรกิจ- การพยากรณ์การวิเคราะห์เชิงคาดการณ์และการทําเหมืองข้อมูล, การวิเคราะห์ผลิตภัณฑ์และบริการ, การวิเคราะห์ราคา , การคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 47 ---
+337
+มคอ . 2
+วิเคราะห์ช่องทางการจัดจําหน่าย , การวิเคราะห์การส่งเสริมการขาย , การวิเคราะห์การขาย , การลงมือวิเคราะห์และการนําเสนอที่ขับเคลื่อนด้วยข้อมูล
+Marketing analytics, Market sizing and trend analysis, Market
+Segmentation, Competitive Analysis, Business Strategy and Operations- Forecasting,
+predictive analytics, and data mining, Product and Service Analytics, Price Analytics,
+Distribution Analytics, Promotion Analytics, Sales Analytics, Analytics in Action and
+data-driven presentations.
+06026254 เทคโนโลยีสุขภาพสนเทศศาสตร์เบื้องต้น 3(2-2-5)
+INTRODUCTION TO HEALTH ANALYTICS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ความรู้เบื้องต้นการวิเคราะห์ข้อมูลด้านสุขภาพเทคโนโลยีและเครื่องมือทั่วไปแหล่งข้อมูลด้านการดูแลสุขภาพมาตรฐานด้านข้อมูลการดูแลสุขภาพโครงสร้างข้อมูลทางคลินิกการทําเหมืองข้อมูลด้านสุขภาพการจําแนกประเภทและการเลือกคุณสมบัติเทคนิค supervised
+และ unsupervised แบบจําลองการคาดการณ์การวิเคราะห์ข้อมูลสุขภาพเชิงสํารวจ (EDA) และเทคนิคการสร้าง visualization ของข้อมูลเชิงวิทยาศาสตร์สุขภาพประเภทข้อมูลทางคลินิกของข้อมูลด้านสุขภาพจากแฟ้มบันทึกการดูแลสุขภาพอิเล็กทรอนิกส์และการแลกเปลี่ยนข้อมูลด้านสุขภาพการวิเคราะห์ข้อมูลอนุกรมเวลา
+Introduction to Health Data Analysis, Common technologies and tools,
+Healthcare Data Sources, Standards in Healthcare Data, Clinical data structure, health
+data mining, Classification and Feature Selection, Supervised and Unsupervised
+Techniques, Prediction model Exploratory data analysis (EDA) and common
+visualization techniques in health care science, Clinical data type of health data in
+Electronic Healthcare Record and Healthcare Information Exchange, Time series data
+analysis.
+06026255 การได้มาและการจัดการข้อมูลทางด้านคลินิก 3(2-2-5)
+CLINICAL DATAACQUISITION AND MANAGEMENT
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+มาตรฐานข้อมูลสุขภาพและโครงสร้างการวิเคราะห์ข้อมูลวิทยาศาสตร์สุขภาพการเชื่อมต่อของระบบสุขภาพในแง่มุมของผู้ใช้ประเภทข้อมูลสุขภาพของแฟ้มการดูแลสุขภาพอิเล็กทรอนิกส์และการแลกเปลี่ยนข้อมูลการดูแลสุขภาพที่มาของแหล่งข้อมูลและการเตรียมข้อมูลทางคลินิกเทคนิคการแบ่งส่วนของฟลิ๊มเอ็กซ์เรย์การเตรียมข้อมูลและแก้ไขข้อมูลภาพทางการแพทย์การเตรียมข้อมูลรูปแบบคลื่นและอื่นๆการใช้เทคนิคประมวลภาษาธรรมชาติเชิงการแพทย์วท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 48 ---
+338
+มคอ . 2
+การวิเคราะห์จากโซเชียลมีเดียการใช้เทคนิคเรียนรู้เชิงลึกสําหรับการสร้างแบบจําลองการทํา นายทางคลินิกระบบสนับสนุนการตัดสินใจทางคลินิก
+Standard of Health data and Structure, Health Science Data Analytics,
+Human aspect ofthe system, Data type ofhealth data in Electronic Healthcare Record
+and Healthcare Information Exchange, Clinical data acquisition and preparation, X-Ray
+segmentation technique, Medical image preparation and correction, Wave form data
+preparation and others Medical data example, Natural Language Processing in
+medicine, Social Media Analytics, Deep Learning in Clinical Prediction Models, Clinical
+Decision Support System
+06026256 การจัดการการปฏิบัติการ 3(3-0-6)
+OPERATIONS MANAGEMENT
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+ภาพรวมของการจัดการการปฏิบัติการโปรแกรมเชิงเส้นโปรแกรมเชิงจํานวนเต็มการเลือกทําเลที่ตั้งการวางแผนผังสถานที่ประกอบการการจัดการสินค้าคงคลังการควบคุมคุณภาพการจัดการโครงการการพยากรณ์
+Overview of operations management, linear programming, integer
+programming, location planning, facility layout, inventory management, quality
+management, project management, forecasting.
+06026257 การบริหารเชิงกลยุทธ์และสมรรถะของธุรกิจ 3(3-0-6)
+BUSINESS STRATEGICAND PERFORMANCE
+MANAGEMENT
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+แนะนําการวางแผนเชิงกลยุทธ์ของธุรกิจการกําหนดสมรรถนะของธุรกิจและการเลือกหลักการวัดสมรรถนะกระบวนการบริหารสมรรถนะของธุรกิจการวางแผนสมรรถนะการนําแผนไปสู่การปฏิบัติการประเมินสมรรถนะและการพิจารณาทบทวนสมรรถนะการแนะนําระบบการบริหารสมรรถนะของธุรกิจและแนวทางปฏิบัติที่ดีของการบริหารสมรรถนะของธุรกิจ
+Strategic planning, defining business performance and choosing a
+measurement approach, performance management process, performance planning,
+performance execution, performance assessment, performance review, introduction
+of performance management system, performance management best practices.
+คณะเทคโนโลยีสารสนเทศสจล .
+
+--- Page 49 ---
+339
+มค อ . 2
+06026258 กการวิเคราะห์เครือข่ายสังคม 3(3-0-6)
+SOCIAL NETWORKANALYTICS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+เพื่อเรียนรู้สภาพแวดล้อมผู้บริโภคและโครงสร้างเครือข่ายของสื่อสังคมเรียนรู้ทฤษฎีกราฟการวัดเครือข่ายและแบบจําลองเครือข่ายในเครือข่ายสังคมพื้นฐานจิตวิทยาของเครือข่ายสังคมการวิเคราะห์เครือข่ายสังคมการทําเหมืองสื่อสังคมเพื่อการทําการตลาดทางสื่อสังคม
+Environment, Consumers and Network structure ofSocial Media. Graph
+theory, Network measures and network models in social network. Psychological
+foundations of social network and social network analysis. Social media mining for
+social media marketing.
+06026259 สหกิจศึกษาทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 6(0-35-0)
+COOPERATIVE EDUCATION IN DATA SCIENCE AND
+BUSINESSANALYTICS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+วิชาสหกิจศึกษาเป็นโปรแกรมความร่วมมือทางด้านวิชาการระหว่างสถานศึกษากับหน่วยงานต่างๆที่ยินยอมให้นักศึกษาได้นําความรู้ที่ได้เรียนในห้องเรียนไปประยุกต์ใช้ในการปฏิบัติงานจริงที่หน่วยงานนั้นๆโดยโครงการของนักศึกษาที่ทําระหว่างปฏิบัติงานจะต้องเป็นไปตามที่ได้กําหนดไว้ร่วมกันระหว่างคณะฯและหน่วยงานที่ไปปฏิบัติงานโดยเมื่อปฏิบัติงานครบแล้วนักศึกษาจําเป็นที่จะต้องนําเสนอผลงานของโครงการต่อคณะกรรมการสอบ
+Cooperative education is a collaborated education program between
+educational institutes and enterprises that allows students to apply their knowledge
+in the classroom with practical work experience. The student’s project work must be
+approved by the faculty and the enterprises. After completion, students need to
+present their works to the examination committee.
+06026260 สหกิจศึกษาต่างประเทศทางวิทยาการข้อมูลและการวิเคราะห์เชิง 6(0-35-0)
+ธุรกิจ
+OVERSEA COOPERATIVE EDUCATION IN DATASCIENCE
+AND BUSINESS ANALYTICS
+วิชาบังคับก่อน : ไม่มี
+PREREQUISITE : None
+วิชาสหกิจศึกษาเป็นโปรแกรมความร่วมมือทางด้านวิชาการระหว่างสถานศึกษากับหน่วยงานต่างๆในต่างประเทศที่ยินยอมให้นักศึกษาได้นําความรู้ที่ได้เรียนในห้องเรียนไปประยุกต์ใช้ในการปฏิบัติงานจริงที่หน่วยงานนั้นๆโดยโครงการของนักศึกษาที่ทําระหว่างปฏิบัติงานจะต้องวท .บ (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิ จ) สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจคณะเทคโนโลยีสารสนเทศสจล .
