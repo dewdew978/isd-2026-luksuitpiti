@@ -5,7 +5,14 @@ from rich import print
 from .config import OCRConfig
 from .pipeline import run_ocr
 from .evaluation import evaluate_from_files
-from .field_extraction import extract_common_fields, extract_courses, format_extraction_output
+from .field_extraction import (
+    extract_common_fields,
+    extract_courses,
+    format_extraction_output,
+    filter_courses_by_ground_truth,
+    filter_text_by_ground_truth,
+)
+from .evaluation import load_ground_truth_courses
 from .utils.io import save_json
 
 
@@ -34,6 +41,14 @@ def parse_args():
     ex = sub.add_parser("extract", help="Reformat an existing OCR JSON (Lab 3 output) into GT-shaped course JSON")
     ex.add_argument("ocr_json", help="Path to a *_ocr.json file produced by the 'ocr' command")
     ex.add_argument("--output", default=None, help="Where to save the extracted courses JSON (default: outputs/<stem>_extracted.json)")
+
+    fg = sub.add_parser(
+        "filter-gt",
+        help="Keep only OCR text/courses that match a ground-truth file; drop everything else",
+    )
+    fg.add_argument("prediction_json", help="A *_ocr.json (has 'text') or *_extracted.json (has 'courses') file")
+    fg.add_argument("ground_truth_json", help="Ground truth JSON, e.g. data/ground_truth/DSBA/DSBA_academic_plan_coop.json")
+    fg.add_argument("--output", default=None, help="Where to save the filtered JSON (default: outputs/<stem>_filtered.json)")
 
     run = sub.add_parser("run", help="End-to-end: OCR -> reformat to GT shape -> (optional) evaluate")
     run.add_argument("input_path")
@@ -91,6 +106,35 @@ def main():
         output_path = args.output or f"outputs/{Path(ocr_result['source_path']).stem}_extracted.json"
         save_json(formatted, output_path)
         print(f"[green]Extracted {len(courses)} course(s)[/green] -> {output_path}")
+
+    elif args.command == "filter-gt":
+        with open(args.prediction_json, "r", encoding="utf-8") as f:
+            prediction = json.load(f)
+        gt_courses = load_ground_truth_courses(args.ground_truth_json)
+
+        if "courses" in prediction:
+            before = len(prediction["courses"])
+            filtered_courses = filter_courses_by_ground_truth(prediction["courses"], gt_courses)
+            result = dict(prediction)
+            result["courses"] = filtered_courses
+        elif "text" in prediction:
+            all_courses = extract_courses(prediction["text"])
+            before = len(all_courses)
+            filtered_text, filtered_courses = filter_text_by_ground_truth(prediction["text"], gt_courses)
+            result = format_extraction_output(
+                filtered_courses, prediction.get("source_path", args.prediction_json), prediction.get("engine")
+            )
+            result["text"] = filtered_text
+        else:
+            raise KeyError("Prediction file has neither 'courses' nor 'text' — nothing to filter.")
+
+        stem = Path(args.prediction_json).stem
+        output_path = args.output or f"outputs/{stem}_filtered.json"
+        save_json(result, output_path)
+        print(
+            f"[green]Filtered to ground truth[/green]: kept {len(filtered_courses)} of {before} "
+            f"extracted course(s) ({len(gt_courses)} real code(s) in GT) -> {output_path}"
+        )
 
     elif args.command == "run":
         output_dir = Path(args.output_dir)

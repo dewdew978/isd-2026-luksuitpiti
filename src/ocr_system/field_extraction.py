@@ -146,7 +146,7 @@ _FOOTER_RE = re.compile(r"(วท\s*\.\s*บ|คณะ|สาขาวิชา|
 # Page numbers / OCR watermark garbage that pollute name_en continuation
 # lines (e.g. "151", "เขนนฑฑคคคคคคคฉฉลลล๒๒๒๒๒-----------้-้-").
 _PAGE_NUMBER_LINE_RE = re.compile(r"^\d{1,4}$")
-_WATERMARK_LINE_RE = re.compile(r"^[^\wก-๙]{6,}$|^(?:[A-Za-z]{1,3}){4,}$")
+_WATERMARK_LINE_RE = re.compile(r"^[^\wก-๙]{6,}$|^[A-Za-z]{4,}$")
 
 
 def _normalize_ws(value: str) -> str:
@@ -363,6 +363,60 @@ def extract_courses(text: str) -> list[dict]:
         if c["code"] not in seen:
             seen[c["code"]] = c
     return list(seen.values())
+
+
+def _placeholder_field_extraction_marker():
+    pass
+
+
+# ---------------------------------------------------------------------------
+# Ground-truth filtering: keep only OCR content that actually matches GT
+# ---------------------------------------------------------------------------
+#
+# `extract_courses` (above) parses *everything* that looks like a course row
+# in the document, which is normally correct (a scanned plan may legitimately
+# contain more tables/electives than a single GT file lists). But sometimes
+# what's wanted is the opposite view: "of everything OCR read, keep only the
+# parts that are actually in this ground-truth file, drop the rest" — e.g. to
+# sanity-check OCR quality on just the courses we have an answer key for,
+# without noise from unrelated tables/electives on the same page.
+
+_REAL_CODE_RE = re.compile(r"^\d{8}$")
+
+
+def _is_real_course_code(code: str | None) -> bool:
+    if not code:
+        return False
+    return bool(_REAL_CODE_RE.fullmatch(code.strip()))
+
+
+def ground_truth_codes(gt_courses: list[dict]) -> set[str]:
+    """Set of real (non-placeholder) 8-digit course codes from a GT course list."""
+    return {c["code"].strip() for c in gt_courses if _is_real_course_code(c.get("code"))}
+
+
+def filter_courses_by_ground_truth(courses: list[dict], gt_courses: list[dict]) -> list[dict]:
+    """Keep only extracted courses whose code appears in the ground truth."""
+    gt_codes = ground_truth_codes(gt_courses)
+    return [c for c in courses if c.get("code") in gt_codes]
+
+
+def filter_text_by_ground_truth(text: str, gt_courses: list[dict]) -> tuple[str, list[dict]]:
+    """Parse raw OCR text, then keep only the course entries whose code is in
+    the ground truth, rebuilt back into text (in original reading order).
+
+    Returns (filtered_text, filtered_courses).
+    """
+    all_courses = extract_courses(text)
+    filtered = filter_courses_by_ground_truth(all_courses, gt_courses)
+
+    lines = []
+    for c in filtered:
+        credits = c.get("credits")
+        lines.append(f"{c['code']} {c['name_th']} {credits}".strip())
+        if c.get("name_en"):
+            lines.append(c["name_en"].replace("\n", " "))
+    return "\n".join(lines), filtered
 
 
 def format_extraction_output(courses: list[dict], source_path: str, engine: str | None = None) -> dict:
