@@ -1,0 +1,5 @@
+﻿category,n_items,page_avg_precision,page_avg_recall,page_avg_f1,page_exact_match_rate,field_accuracy
+DSBA coop (academic_plan_coop),88,1.0,0.964,0.976,0.92,0.988
+DSBA no_coop (academic_plan_no_coop),87,1.0,0.964,0.975,0.92,0.988
+ข้อบังคับ (rules_ground_truth),12,0.083,0.125,0.097,0.0,0.0
+หมวดศึกษาทั่วไป (general_education_ground_truth),8,1.0,1.0,1.0,1.0,0.03
