@@ -1,10 +1,10 @@
 cat >> .gitignore << 'EOF'
+# Python
 __pycache__/
 *.pyc
 .venv/
-EOF
-.DS_Store
 *.egg-info/
+
+# macOS
 .DS_Store
-__pycache__/
-*.pyc
+EOF
