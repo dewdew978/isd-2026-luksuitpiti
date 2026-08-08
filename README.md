@@ -1,9 +1,6 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Tesseract](https://img.shields.io/badge/Tesseract%20OCR-4B5FBF?style=for-the-badge&logo=google&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
  
 ![Semester](https://img.shields.io/badge/Semester-1%2F2569-9b59b6)
 ![Programs](https://img.shields.io/badge/Programs-AIT%20%7C%20IT%20%7C%20DSBA-2196f3)
