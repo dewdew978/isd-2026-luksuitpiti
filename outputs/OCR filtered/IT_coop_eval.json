@@ -1,0 +1,9 @@
+{
+  "file": "IT_coop_filtered.json",
+  "gt_fixed_course_count": 98,
+  "codes_found": 98,
+  "codes_missing": [],
+  "code_recall": 1.0,
+  "credits_exact_match": 97,
+  "credits_checked": 98
+}

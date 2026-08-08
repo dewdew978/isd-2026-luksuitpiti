@@ -252,12 +252,25 @@ def evaluate_from_files(ground_truth_json: str | Path, prediction_json: str | Pa
             "Prediction file has neither 'courses' nor 'text' — nothing to evaluate."
         )
 
+    prediction_text = prediction["text"]
+
     if isinstance(ground_truth, dict) and "courses" in ground_truth:
-        reference = build_reference_text_from_courses(ground_truth["courses"], prediction["text"])
+        if "pages" in prediction and isinstance(prediction["pages"], list):
+            gt_codes = {c["code"] for c in ground_truth["courses"] if is_real_course_code(c.get("code"))}
+            relevant_texts = []
+            for page in prediction["pages"]:
+                page_text = page.get("text", "")
+                if any(code in page_text for code in gt_codes):
+                    relevant_texts.append(page_text)
+            
+            if relevant_texts:
+                prediction_text = "\n".join(relevant_texts)
+
+        reference = build_reference_text_from_courses(ground_truth["courses"], prediction_text)
     else:
         reference = ground_truth.get(file_name) or ground_truth.get(Path(file_name).stem)
         if reference is None:
             raise KeyError(f"No ground truth found for {file_name}")
 
-    result = evaluate_text(reference, prediction["text"], file_name=file_name)
+    result = evaluate_text(reference, prediction_text, file_name=file_name)
     return asdict(result)

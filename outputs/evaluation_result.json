@@ -1,0 +1,11 @@
+{
+  "file": "fulldoc_AIT_ocr_filtered.json",
+  "gt_fixed_course_count": 49,
+  "codes_found": 48,
+  "codes_missing": [
+    "06016401"
+  ],
+  "code_recall": 0.9795918367346939,
+  "credits_exact_match": 33,
+  "credits_checked": 48
+}

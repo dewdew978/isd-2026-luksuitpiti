@@ -337,6 +337,9 @@ CER = 0.05 หมายถึงผิดประมาณ 5% ระดับ�
 WER = 0.12 หมายถึงผิดประมาณ 12% ระดับคำ
 exact_match = false หมายถึงยังไม่ตรง 100%
 ```
+
+> **ข้อแนะนำ:** หากหน้าเอกสารมีข้อความอื่นๆ ปนอยู่มาก (เช่น หัวกระดาษ, คำบรรยาย) ซึ่งไม่มีใน Ground Truth จะทำให้ค่า CER/WER สูงเกินจริง แนะนำให้ใช้คำสั่ง `filter-gt` เพื่อกรองเนื้อหาและประเมินผลเฉพาะรหัสวิชา (Course-level Evaluation) ดูวิธีได้ในหัวข้อ "คำสั่งที่ใช้บ่อย"
+
 ---
 
 ## คำสั่งที่ใช้บ่อย
@@ -355,13 +358,23 @@ OCR รูปภาพด้วย Tesseract:
 python -m ocr_system.cli ocr data/input/sample.jpg --engine tesseract --languages tha+eng
 ```
 
-Evaluate ผล OCR:
+Evaluate ผล OCR (แบบข้อความทั้งหน้า):
 ```bash
 python -m ocr_system.cli evaluate data/ground_truth/example_ground_truth.json outputs/sample_ocr.json
 
 python -m ocr_system.cli evaluate data/ground_truth/DSBA_academic_plan_coop.json outputs/sample_ocr.json
-
 ```
+
+**Evaluate ผล OCR แบบ Course-level (แนะนำสำหรับหลักสูตร):**
+การประเมินความแม่นยำในการดึง "รหัสวิชา" (Code Recall) ให้ทำการกรองข้อความก่อน (ใช้ `filter-gt`):
+```bash
+# 1. กรองข้อความ OCR ดิบให้ตรงกับวิชาใน Ground Truth
+python -m ocr_system.cli filter-gt outputs/fulldoc_AIT_ocr.json data/ground_truth/AIT/AIT_academic_plan.json
+
+# 2. ประเมินผล (ไฟล์ผลลัพธ์จะลงท้ายด้วย _filtered.json)
+python -m ocr_system.cli evaluate data/ground_truth/AIT/AIT_academic_plan.json outputs/fulldoc_AIT_ocr_filtered.json
+```
+*(ค่าชี้วัดหลักที่ได้คือ `code_recall` ซึ่งสะท้อนความสามารถในการหารหัสวิชาที่ถูกต้อง)*
 
 ---
 

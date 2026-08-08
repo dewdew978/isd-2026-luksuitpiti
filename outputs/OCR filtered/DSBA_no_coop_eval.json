@@ -1,0 +1,11 @@
+{
+  "file": "DSBA_no_coop_filtered.json",
+  "gt_fixed_course_count": 80,
+  "codes_found": 79,
+  "codes_missing": [
+    "06016401"
+  ],
+  "code_recall": 0.9875,
+  "credits_exact_match": 77,
+  "credits_checked": 79
+}
