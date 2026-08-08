@@ -1,3 +1,18 @@
+<div align="center">
+![header](https://capsule-render.vercel.app/api?type=waving&color=0:4B5FBF,100:8B5FA8&height=180&section=header&text=ISD-2026%20%7C%20Luksuitpiti&fontSize=40&fontColor=cccccc&fontAlignY=35&desc=OCR%20Evaluation%20Pipeline%20for%20Thai%20University%20Curriculum%20Documents&descAlignY=55&descSize=16)
+ 
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Tesseract](https://img.shields.io/badge/Tesseract%20OCR-4B5FBF?style=for-the-badge&logo=google&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+ 
+![Semester](https://img.shields.io/badge/Semester-1%2F2569-9b59b6)
+![Programs](https://img.shields.io/badge/Programs-AIT%20%7C%20IT%20%7C%20DSBA-2196f3)
+![Language](https://img.shields.io/badge/Language-Python-2196f3)
+![Status](https://img.shields.io/badge/Status-Active-4caf50)
+ 
+</div>
 # isd-2026-luksuitpiti
 โปรเจคที่เลือก 2 ocr เล่มหลักสูตร  
 67070098 _drews.  
