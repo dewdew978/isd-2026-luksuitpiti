@@ -1,7 +1,9 @@
-
+<div align="center">
+ 
+![header](https://capsule-render.vercel.app/api?type=transparent&color=0:4B5FBF,100:8B5FA8&height=180&section=header&text=ISD%20Luksuitpiti&fontSize=42&fontColor=cccccc&fontAlignY=35&desc=OCR%20Evaluation%20Pipeline%20For%20School%20of%20Information%20Technology&descAlignY=55&descSize=16)  
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Tesseract](https://img.shields.io/badge/Tesseract%20OCR-4B5FBF?style=for-the-badge&logo=google&logoColor=white)
- 
+
 ![Semester](https://img.shields.io/badge/Semester-1%2F2569-9b59b6)
 ![Programs](https://img.shields.io/badge/Programs-AIT%20%7C%20IT%20%7C%20DSBA-2196f3)
 ![Language](https://img.shields.io/badge/Language-Python-2196f3)
