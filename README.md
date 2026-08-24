@@ -39,7 +39,8 @@ ocr_system/
 ├── pyproject.toml
 ├── data/
 │   ├── input/                 # ใส่ไฟล์ภาพหรือ PDF ที่ต้องการ OCR
-│   └── ground_truth/          # ไฟล์เฉลยสำหรับ evaluate
+│   ├── ground_truth/          # ไฟล์เฉลยสำหรับ evaluate
+│   └── QA/                    # โฟลเดอร์สำหรับทดสอบ QA
 ├── outputs/                   # ผลลัพธ์ OCR และ evaluation
 └── src/
     └── ocr_system/
