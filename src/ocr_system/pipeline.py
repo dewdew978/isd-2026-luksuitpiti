@@ -16,7 +16,11 @@ def run_ocr(config: OCRConfig) -> OCRDocumentResult:
     engine = build_engine(config)
 
     page_results: list[OCRPageResult] = []
+    total_pages = len(pages)
+    print(f"Starting OCR on {total_pages} pages...", flush=True)
     for page_no, image_path in enumerate(pages, start=1):
+        if page_no % 10 == 1 or page_no == total_pages:
+            print(f"[{page_no}/{total_pages}] Processing {image_path.name}...", flush=True)
         image = read_image(image_path)
         if config.preprocess:
             image_for_ocr = preprocess_image(image, deskew=config.deskew)

@@ -5,7 +5,7 @@
 ![Tesseract](https://img.shields.io/badge/Tesseract%20OCR-4B5FBF?style=for-the-badge&logo=google&logoColor=white)
 
 ![Semester](https://img.shields.io/badge/Semester-1%2F2569-9b59b6)
-![Programs](https://img.shields.io/badge/Programs-AIT%20%7C%20IT%20%7C%20DSBA-2196f3)
+![Programs](https://img.shields.io/badge/Programs-AIT%20%7C%20IT%20%7C%20DSBA%20%7C%20BIT-2196f3)
 ![Language](https://img.shields.io/badge/Language-Python-2196f3)
 ![Status](https://img.shields.io/badge/Status-Active-4caf50)
  

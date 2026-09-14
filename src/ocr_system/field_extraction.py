@@ -111,7 +111,7 @@ _COMPARISON_ROW_RE = re.compile(
 )
 
 # Same department-prefix validation used for single-code rows.
-_VALID_CODE_PREFIXES = ("06", "90")
+_VALID_CODE_PREFIXES = ("06", "90", "96")
 _VALID_CODE_RE = re.compile(
     r"\b(" + "|".join(re.escape(p) for p in _VALID_CODE_PREFIXES) + r")\d{6}\b"
 )
