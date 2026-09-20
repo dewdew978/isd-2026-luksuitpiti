@@ -8,3 +8,8 @@ __pycache__/
 .DS_Store
 outputs/pages/
 outputs/debug/
+
+# Environment variables
+.env
+*.env
+!.env.example
