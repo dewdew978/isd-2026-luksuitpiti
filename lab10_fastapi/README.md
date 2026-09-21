@@ -189,14 +189,15 @@ python -m uvicorn lab10_fastapi.transcript_app.main:app --reload --host 127.0.0.
 
 ### Curriculum API
 
-| Method | Path             | หน้าที่                                    |
-| ------ | ---------------- | ------------------------------------------------- |
-| GET    | `/api/health`  | ตรวจ DB และ Ollama                         |
-| GET    | `/api/program` | อ่านข้อมูลหลักสูตร              |
-| GET    | `/api/courses` | อ่าน/ค้นหารายวิชา                 |
-| POST   | `/api/courses` | เพิ่มรายวิชาลง SQLite               |
-| GET    | `/api/plan`    | อ่านแผนการเรียนรายปี/เทอม/สาขา   |
-| POST   | `/api/ask`     | ให้ Qwen สร้าง SQL และตอบคำถาม |
+| Method | Path                | หน้าที่                                                        |
+| ------ | ------------------- | ------------------------------------------------------------- |
+| GET    | `/api/health`       | ตรวจ DB และ Ollama                                             |
+| GET    | `/api/program`      | อ่านข้อมูลหลักสูตร                                              |
+| GET    | `/api/courses`      | อ่าน/ค้นหารายวิชา                                             |
+| POST   | `/api/courses`      | เพิ่มรายวิชาลง SQLite                                           |
+| GET    | `/api/plan`         | อ่านแผนการเรียนรายปี/เทอม/สาขา                               |
+| GET    | `/api/plan/summary` | ดึงสรุปหน่วยกิตและจำนวนวิชาแต่ละเทอม (จาก v_semester_credits) |
+| POST   | `/api/ask`          | ให้ Qwen สร้าง SQL และตอบคำถาม                                 |
 
 ### Transcript API
 

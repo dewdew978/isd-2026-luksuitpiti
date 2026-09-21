@@ -25,8 +25,9 @@ from .database import CurriculumDatabase  # noqa: E402
 from .model_service import QwenTextToSQL  # noqa: E402
 from .schemas import (  # noqa: E402
     AskRequest, AskResponse, CourseCreate, CourseResponse, HealthResponse,
-    PlanItemResponse,
+    PlanItemResponse, PlanSummaryResponse,
 )
+
 
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
@@ -103,6 +104,19 @@ def get_plan(
         return database.plan(year=year, semester=semester, program_id=program_id)
     except FileNotFoundError as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+
+@app.get("/api/plan/summary", response_model=list[PlanSummaryResponse])
+def get_plan_summary(
+    year: int | None = Query(default=None, ge=1, le=8, description="ชั้นปี เช่น 1, 2, 3, 4"),
+    semester: int | None = Query(default=None, ge=1, le=3, description="ภาคการศึกษา เช่น 1, 2, 3"),
+    program_id: str | None = Query(default=None, max_length=20, description="รหัสหลักสูตร เช่น IT, DSBA, BIT, AIT"),
+) -> list[dict]:
+    try:
+        return database.plan_summary(year=year, semester=semester, program_id=program_id)
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
 
 
 @app.post("/api/ask", response_model=AskResponse)

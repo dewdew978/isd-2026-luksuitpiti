@@ -86,6 +86,34 @@ class CurriculumDatabase:
         finally:
             conn.close()
 
+    def plan_summary(
+        self,
+        year: int | None = None,
+        semester: int | None = None,
+        program_id: str | None = None,
+    ) -> list[dict]:
+        self._require_db()
+        sql = "SELECT * FROM v_semester_credits"
+        conditions: list[str] = []
+        params: list[object] = []
+        if program_id and program_id.strip():
+            conditions.append("program_id = ?")
+            params.append(program_id.strip().upper())
+        if year is not None:
+            conditions.append("year = ?")
+            params.append(year)
+        if semester is not None:
+            conditions.append("semester = ?")
+            params.append(semester)
+        if conditions:
+            sql += " WHERE " + " AND ".join(conditions)
+        sql += " ORDER BY program_id, year, semester"
+        conn = self.lab8b.open_db(self.path, readonly=True)
+        try:
+            return [dict(row) for row in conn.execute(sql, params).fetchall()]
+        finally:
+            conn.close()
+
     def query_from_model(self, sql: str) -> tuple[str, list[dict]]:
         """Use Lab 8B's SQL guard and read-only connection directly."""
         self._require_db()
@@ -103,7 +131,8 @@ program(program_id, name_th, name_en, degree, total_credits, years)
 course(code, name_th, name_en, credits, lecture_h, lab_h, self_h, description_th)
 plan_item(id, program_id, year, semester, code, credits, alt_group, note)
 prerequisite(code, requires, kind)
-v_plan(id, year, semester, code, name_th, name_en, credits, alt_group, note)
-v_semester_credits(year, semester, credits, n_courses)
+v_plan(id, program_id, year, semester, code, name_th, name_en, credits, alt_group, note)
+v_semester_credits(program_id, year, semester, credits, n_courses)
 """.strip()
+
 

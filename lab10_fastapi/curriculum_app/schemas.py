@@ -54,3 +54,12 @@ class PlanItemResponse(BaseModel):
     alt_group: str | None = None
     note: str | None = None
 
+
+class PlanSummaryResponse(BaseModel):
+    program_id: str | None = None
+    year: int
+    semester: int
+    credits: int
+    n_courses: int
+
+
