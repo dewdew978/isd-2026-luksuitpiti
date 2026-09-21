@@ -29,6 +29,16 @@
     <h3>SQL ที่ใช้</h3><pre id="sql">-</pre>
   </section>
 
+  <section>
+    <h2>ตรวจสอบวิชาบังคับก่อน (Prerequisite Graph)</h2>
+    <p class="muted">ดูเงื่อนไขว่าต้องผ่านวิชาอะไรมาก่อน และเป็นวิชาบังคับก่อนของวิชาใดบ้าง</p>
+    <form id="prereq-form" style="display: flex; gap: 8px; align-items: center;">
+      <input type="text" id="course-code" placeholder="รหัสวิชา 8 หลัก เช่น 06026201" value="06026201" style="padding: 8px 12px; font-size: 14px; width: 220px;" required>
+      <button type="submit" style="margin-top: 0;">ค้นหา</button>
+    </form>
+    <div id="prereq-result" style="margin-top: 14px;"></div>
+  </section>
+
   <script>
     document.getElementById("ask-form").addEventListener("submit", async (event) => {
       event.preventDefault();
@@ -47,6 +57,47 @@
       } catch (error) {
         answer.textContent = `ผิดพลาด: ${error.message}`;
       }
+    });
+
+    async function fetchPrereq(code) {
+      const resultDiv = document.getElementById("prereq-result");
+      resultDiv.innerHTML = "กำลังค้นหา...";
+      try {
+        const response = await fetch(`/api/courses/${encodeURIComponent(code)}/prerequisites`);
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.detail || "เกิดข้อผิดพลาด");
+        
+        let html = `<h4>วิชา: ${data.code} - ${data.name_th || data.name_en || '-'} ${data.credits != null ? '(' + data.credits + ' หน่วยกิต)' : ''}</h4>`;
+        
+        html += `<strong>1. วิชาที่ต้องเรียนมาก่อน (Requires):</strong>`;
+        if (data.requires && data.requires.length > 0) {
+          html += `<ul>` + data.requires.map(c => `<li><a href="#" onclick="searchPrereq('${c.code}'); return false;"><b>${c.code}</b></a> ${c.name_th || c.name_en || ''} (${c.credits != null ? c.credits + ' หน่วยกิต, ' : ''}ประเภท: ${c.kind})</li>`).join("") + `</ul>`;
+        } else {
+          html += `<p class="muted">ไม่มีวิชาบังคับก่อน</p>`;
+        }
+
+        html += `<strong>2. เป็นวิชาบังคับก่อนของ (Required By):</strong>`;
+        if (data.required_by && data.required_by.length > 0) {
+          html += `<ul>` + data.required_by.map(c => `<li><a href="#" onclick="searchPrereq('${c.code}'); return false;"><b>${c.code}</b></a> ${c.name_th || c.name_en || ''} (${c.credits != null ? c.credits + ' หน่วยกิต, ' : ''}ประเภท: ${c.kind})</li>`).join("") + `</ul>`;
+        } else {
+          html += `<p class="muted">ไม่มีวิชาที่ต้องใช้วิชานี้เป็นวิชาบังคับก่อน</p>`;
+        }
+
+        resultDiv.innerHTML = html;
+      } catch (error) {
+        resultDiv.innerHTML = `<span style="color: red;">ผิดพลาด: ${error.message}</span>`;
+      }
+    }
+
+    function searchPrereq(code) {
+      document.getElementById("course-code").value = code;
+      fetchPrereq(code);
+    }
+
+    document.getElementById("prereq-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const code = document.getElementById("course-code").value.trim();
+      fetchPrereq(code);
     });
   </script>
 </body>

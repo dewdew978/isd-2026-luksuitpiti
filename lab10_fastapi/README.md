@@ -195,6 +195,7 @@ python -m uvicorn lab10_fastapi.transcript_app.main:app --reload --host 127.0.0.
 | GET    | `/api/program`      | อ่านข้อมูลหลักสูตร                                              |
 | GET    | `/api/courses`      | อ่าน/ค้นหารายวิชา                                             |
 | POST   | `/api/courses`      | เพิ่มรายวิชาลง SQLite                                           |
+| GET    | `/api/courses/{code}/prerequisites` | เช็คเงื่อนไขวิชานี้ (วิชาบังคับก่อน / วิชาที่ต้องเรียนต่อ)         |
 | GET    | `/api/plan`         | อ่านแผนการเรียนรายปี/เทอม/สาขา                               |
 | GET    | `/api/plan/summary` | ดึงสรุปหน่วยกิตและจำนวนวิชาแต่ละเทอม (จาก v_semester_credits) |
 | GET    | `/api/stats`        | สรุปภาพรวมสถิติรายวิชา/หน่วยกิต/ชม.                           |
@@ -211,6 +212,7 @@ python -m uvicorn lab10_fastapi.transcript_app.main:app --reload --host 127.0.0.
 
 ```text
 http://127.0.0.1:8000/api/courses?search=06026200
+http://127.0.0.1:8000/api/courses/06026201/prerequisites
 ```
 
 ทดลอง POST แนะนำให้เปิด `/docs`, เลือก endpoint แล้วกด **Try it out**

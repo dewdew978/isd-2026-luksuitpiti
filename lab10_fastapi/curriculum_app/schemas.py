@@ -71,3 +71,31 @@ class StatsResponse(BaseModel):
     total_lab_hours: int
     total_self_hours: int = 0
 
+
+class PrerequisiteItem(BaseModel):
+    code: str = Field(description="รหัสวิชา")
+    name_th: str | None = Field(default=None, description="ชื่อวิชา (ภาษาไทย)")
+    name_en: str | None = Field(default=None, description="ชื่อวิชา (ภาษาอังกฤษ)")
+    kind: str = Field(default="pre", description="ประเภทเงื่อนไข (pre หรือ co)")
+    credits: int | None = Field(default=None, description="หน่วยกิต")
+
+
+class CoursePrerequisitesResponse(BaseModel):
+    code: str = Field(description="รหัสวิชา")
+    name_th: str | None = Field(default=None, description="ชื่อวิชา (ภาษาไทย)")
+    name_en: str | None = Field(default=None, description="ชื่อวิชา (ภาษาอังกฤษ)")
+    credits: int | None = Field(default=None, description="หน่วยกิตของวิชานี้")
+    requires: list[PrerequisiteItem] = Field(
+        default_factory=list,
+        description="วิชาที่ต้องเรียนมาก่อนวิชานี้ (prerequisites)",
+    )
+    prerequisites: list[PrerequisiteItem] = Field(
+        default_factory=list,
+        description="วิชาที่ต้องเรียนมาก่อนวิชานี้ (alias for requires)",
+    )
+    required_by: list[PrerequisiteItem] = Field(
+        default_factory=list,
+        description="วิชาที่วิชานี้เป็นวิชาบังคับก่อนให้ (courses that require this course)",
+    )
+
+

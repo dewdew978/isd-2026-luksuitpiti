@@ -24,8 +24,9 @@ from ocr_system import lab8b_curriculum_db as lab8b  # noqa: E402
 from .database import CurriculumDatabase  # noqa: E402
 from .model_service import QwenTextToSQL  # noqa: E402
 from .schemas import (  # noqa: E402
-    AskRequest, AskResponse, CourseCreate, CourseResponse, HealthResponse,
-    PlanItemResponse, PlanSummaryResponse, StatsResponse,
+    AskRequest, AskResponse, CourseCreate, CoursePrerequisitesResponse,
+    CourseResponse, HealthResponse, PlanItemResponse, PlanSummaryResponse,
+    StatsResponse,
 )
 
 
@@ -92,6 +93,22 @@ def post_course(course: CourseCreate) -> dict:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
     except sqlite3.IntegrityError as exc:
         raise HTTPException(status_code=409, detail="รหัสวิชานี้มีอยู่แล้ว") from exc
+
+
+@app.get(
+    "/api/courses/{code}/prerequisites",
+    response_model=CoursePrerequisitesResponse,
+    summary="เช็คเงื่อนไขวิชานี้ (Prerequisite Graph)",
+    description="ดึงว่าวิชานี้ ต้องเรียนวิชาอะไรมาก่อน (requires) และ เป็นวิชาบังคับก่อนของวิชาอะไรบ้าง (required_by)",
+)
+def get_course_prerequisites(code: str) -> dict:
+    try:
+        result = database.course_prerequisites(code)
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+    if result is None:
+        raise HTTPException(status_code=404, detail=f"ไม่พบข้อมูลรายวิชา {code}")
+    return result
 
 
 @app.get("/api/plan", response_model=list[PlanItemResponse])

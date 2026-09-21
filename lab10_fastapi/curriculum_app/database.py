@@ -58,6 +58,82 @@ class CurriculumDatabase:
         finally:
             conn.close()
 
+    def course_prerequisites(self, code: str) -> dict | None:
+        self._require_db()
+        code = code.strip()
+        if not code:
+            return None
+        conn = self.lab8b.open_db(self.path, readonly=True)
+        try:
+            course = conn.execute(
+                "SELECT code, name_th, name_en, credits FROM course WHERE code = ?",
+                (code,),
+            ).fetchone()
+
+            if course is None:
+                has_prereq = conn.execute(
+                    "SELECT 1 FROM prerequisite WHERE code = ? OR requires = ? LIMIT 1",
+                    (code, code),
+                ).fetchone()
+                if not has_prereq:
+                    return None
+                name_th = None
+                name_en = None
+                credits = None
+            else:
+                code = course["code"]
+                name_th = course["name_th"]
+                name_en = course["name_en"]
+                credits = course["credits"]
+
+            req_rows = conn.execute(
+                """
+                SELECT 
+                    p.requires AS code,
+                    c.name_th,
+                    c.name_en,
+                    p.kind,
+                    c.credits
+                FROM prerequisite p
+                LEFT JOIN course c ON c.code = p.requires
+                WHERE p.code = ?
+                ORDER BY p.requires
+                """,
+                (code,),
+            ).fetchall()
+
+            req_by_rows = conn.execute(
+                """
+                SELECT 
+                    p.code AS code,
+                    c.name_th,
+                    c.name_en,
+                    p.kind,
+                    c.credits
+                FROM prerequisite p
+                LEFT JOIN course c ON c.code = p.code
+                WHERE p.requires = ?
+                ORDER BY p.code
+                """,
+                (code,),
+            ).fetchall()
+
+            requires_list = [dict(r) for r in req_rows]
+            required_by_list = [dict(r) for r in req_by_rows]
+
+            return {
+                "code": code,
+                "name_th": name_th,
+                "name_en": name_en,
+                "credits": credits,
+                "requires": requires_list,
+                "prerequisites": requires_list,
+                "required_by": required_by_list,
+            }
+        finally:
+            conn.close()
+
+
     def plan(
         self,
         year: int | None = None,
