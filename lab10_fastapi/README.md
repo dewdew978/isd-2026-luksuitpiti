@@ -197,6 +197,7 @@ python -m uvicorn lab10_fastapi.transcript_app.main:app --reload --host 127.0.0.
 | POST   | `/api/courses`      | เพิ่มรายวิชาลง SQLite                                           |
 | GET    | `/api/plan`         | อ่านแผนการเรียนรายปี/เทอม/สาขา                               |
 | GET    | `/api/plan/summary` | ดึงสรุปหน่วยกิตและจำนวนวิชาแต่ละเทอม (จาก v_semester_credits) |
+| GET    | `/api/stats`        | สรุปภาพรวมสถิติรายวิชา/หน่วยกิต/ชม.                           |
 | POST   | `/api/ask`          | ให้ Qwen สร้าง SQL และตอบคำถาม                                 |
 
 ### Transcript API

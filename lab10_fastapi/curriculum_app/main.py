@@ -25,7 +25,7 @@ from .database import CurriculumDatabase  # noqa: E402
 from .model_service import QwenTextToSQL  # noqa: E402
 from .schemas import (  # noqa: E402
     AskRequest, AskResponse, CourseCreate, CourseResponse, HealthResponse,
-    PlanItemResponse, PlanSummaryResponse,
+    PlanItemResponse, PlanSummaryResponse, StatsResponse,
 )
 
 
@@ -117,6 +117,15 @@ def get_plan_summary(
     except FileNotFoundError as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
 
+
+@app.get("/api/stats", response_model=StatsResponse)
+def get_stats(
+    program_id: str | None = Query(default=None, max_length=20, description="รหัสหลักสูตร (ถ้าไม่ใส่จะคำนวณทั้งหมด) เช่น IT, DSBA"),
+) -> dict:
+    try:
+        return database.stats(program_id=program_id)
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
 
 
 @app.post("/api/ask", response_model=AskResponse)

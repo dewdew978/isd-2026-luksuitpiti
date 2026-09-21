@@ -114,6 +114,50 @@ class CurriculumDatabase:
         finally:
             conn.close()
 
+    def stats(self, program_id: str | None = None) -> dict:
+        self._require_db()
+        conn = self.lab8b.open_db(self.path, readonly=True)
+        try:
+            if program_id and program_id.strip():
+                prog = program_id.strip().upper()
+                sql = """
+                    SELECT 
+                        COUNT(DISTINCT c.code) AS total_courses,
+                        COALESCE(SUM(c.credits), 0) AS total_credits,
+                        COALESCE(SUM(c.lecture_h), 0) AS total_lecture_hours,
+                        COALESCE(SUM(c.lab_h), 0) AS total_lab_hours,
+                        COALESCE(SUM(c.self_h), 0) AS total_self_hours
+                    FROM plan_item p
+                    JOIN course c ON c.code = p.code
+                    WHERE p.program_id = ?
+                """
+                row = conn.execute(sql, (prog,)).fetchone()
+                res = dict(row) if row else {
+                    "total_courses": 0, "total_credits": 0,
+                    "total_lecture_hours": 0, "total_lab_hours": 0, "total_self_hours": 0,
+                }
+                res["program_id"] = prog
+                return res
+            else:
+                sql = """
+                    SELECT 
+                        COUNT(*) AS total_courses,
+                        COALESCE(SUM(credits), 0) AS total_credits,
+                        COALESCE(SUM(lecture_h), 0) AS total_lecture_hours,
+                        COALESCE(SUM(lab_h), 0) AS total_lab_hours,
+                        COALESCE(SUM(self_h), 0) AS total_self_hours
+                    FROM course
+                """
+                row = conn.execute(sql).fetchone()
+                res = dict(row) if row else {
+                    "total_courses": 0, "total_credits": 0,
+                    "total_lecture_hours": 0, "total_lab_hours": 0, "total_self_hours": 0,
+                }
+                res["program_id"] = None
+                return res
+        finally:
+            conn.close()
+
     def query_from_model(self, sql: str) -> tuple[str, list[dict]]:
         """Use Lab 8B's SQL guard and read-only connection directly."""
         self._require_db()

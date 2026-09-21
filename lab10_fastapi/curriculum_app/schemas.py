@@ -63,3 +63,11 @@ class PlanSummaryResponse(BaseModel):
     n_courses: int
 
 
+class StatsResponse(BaseModel):
+    program_id: str | None = None
+    total_courses: int
+    total_credits: int
+    total_lecture_hours: int
+    total_lab_hours: int
+    total_self_hours: int = 0
+
