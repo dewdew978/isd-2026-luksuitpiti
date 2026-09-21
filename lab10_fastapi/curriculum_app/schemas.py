@@ -39,3 +39,18 @@ class HealthResponse(BaseModel):
     ollama_ready: bool
     lab8b_module: str
 
+
+class PlanItemResponse(BaseModel):
+    program_id: str | None = None
+    year: int
+    semester: int
+    code: str
+    name_th: str | None = None
+    name_en: str | None = None
+    credits: int
+    lecture_h: int | None = None
+    lab_h: int | None = None
+    self_h: int | None = None
+    alt_group: str | None = None
+    note: str | None = None
+

@@ -58,6 +58,34 @@ class CurriculumDatabase:
         finally:
             conn.close()
 
+    def plan(
+        self,
+        year: int | None = None,
+        semester: int | None = None,
+        program_id: str | None = None,
+    ) -> list[dict]:
+        self._require_db()
+        sql = "SELECT * FROM v_plan"
+        conditions: list[str] = []
+        params: list[object] = []
+        if program_id and program_id.strip():
+            conditions.append("program_id = ?")
+            params.append(program_id.strip().upper())
+        if year is not None:
+            conditions.append("year = ?")
+            params.append(year)
+        if semester is not None:
+            conditions.append("semester = ?")
+            params.append(semester)
+        if conditions:
+            sql += " WHERE " + " AND ".join(conditions)
+        sql += " ORDER BY program_id, year, semester, code"
+        conn = self.lab8b.open_db(self.path, readonly=True)
+        try:
+            return [dict(row) for row in conn.execute(sql, params).fetchall()]
+        finally:
+            conn.close()
+
     def query_from_model(self, sql: str) -> tuple[str, list[dict]]:
         """Use Lab 8B's SQL guard and read-only connection directly."""
         self._require_db()

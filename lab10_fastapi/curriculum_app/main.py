@@ -25,6 +25,7 @@ from .database import CurriculumDatabase  # noqa: E402
 from .model_service import QwenTextToSQL  # noqa: E402
 from .schemas import (  # noqa: E402
     AskRequest, AskResponse, CourseCreate, CourseResponse, HealthResponse,
+    PlanItemResponse,
 )
 
 
@@ -90,6 +91,18 @@ def post_course(course: CourseCreate) -> dict:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
     except sqlite3.IntegrityError as exc:
         raise HTTPException(status_code=409, detail="รหัสวิชานี้มีอยู่แล้ว") from exc
+
+
+@app.get("/api/plan", response_model=list[PlanItemResponse])
+def get_plan(
+    year: int | None = Query(default=None, ge=1, le=8, description="ชั้นปี เช่น 1, 2, 3, 4"),
+    semester: int | None = Query(default=None, ge=1, le=3, description="ภาคการศึกษา เช่น 1, 2, 3"),
+    program_id: str | None = Query(default=None, max_length=20, description="รหัสหลักสูตร เช่น IT, DSBA, BIT, AIT"),
+) -> list[dict]:
+    try:
+        return database.plan(year=year, semester=semester, program_id=program_id)
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
 
 
 @app.post("/api/ask", response_model=AskResponse)

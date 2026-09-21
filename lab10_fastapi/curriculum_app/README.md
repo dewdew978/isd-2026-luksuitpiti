@@ -27,7 +27,7 @@ ollama pull qwen3:4b
 python -m uvicorn lab10_fastapi.curriculum_app.main:app --reload --port 8000
 ```
 
-เปิด <http://127.0.0.1:8000/> หรือ <http://127.0.0.1:8000/docs>
+เปิด [http://127.0.0.1:8000/](http://127.0.0.1:8000/) หรือ [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
 ก่อนรันต้องมี:
 

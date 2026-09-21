@@ -167,9 +167,9 @@ python -m uvicorn lab10_fastapi.curriculum_app.main:app --reload --host 127.0.0.
 
 เปิดเบราว์เซอร์:
 
-- หน้าเว็บ: <http://127.0.0.1:8000/>
-- Swagger API: <http://127.0.0.1:8000/docs>
-- ตรวจสถานะ: <http://127.0.0.1:8000/api/health>
+- หน้าเว็บ: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+- Swagger API: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+- ตรวจสถานะ: [http://127.0.0.1:8000/api/health](http://127.0.0.1:8000/api/health)
 
 ### Transcript Application
 
@@ -179,9 +179,9 @@ python -m uvicorn lab10_fastapi.curriculum_app.main:app --reload --host 127.0.0.
 python -m uvicorn lab10_fastapi.transcript_app.main:app --reload --host 127.0.0.1 --port 8001
 ```
 
-- หน้า upload: <http://127.0.0.1:8001/>
-- Swagger API: <http://127.0.0.1:8001/docs>
-- ตรวจสถานะ: <http://127.0.0.1:8001/api/health>
+- หน้า upload: [http://127.0.0.1:8001/](http://127.0.0.1:8001/)
+- Swagger API: [http://127.0.0.1:8001/docs](http://127.0.0.1:8001/docs)
+- ตรวจสถานะ: [http://127.0.0.1:8001/api/health](http://127.0.0.1:8001/api/health)
 
 หยุด server ด้วย `Ctrl+C`
 
@@ -189,20 +189,21 @@ python -m uvicorn lab10_fastapi.transcript_app.main:app --reload --host 127.0.0.
 
 ### Curriculum API
 
-| Method | Path | หน้าที่ |
-|---|---|---|
-| GET | `/api/health` | ตรวจ DB และ Ollama |
-| GET | `/api/program` | อ่านข้อมูลหลักสูตร |
-| GET | `/api/courses` | อ่าน/ค้นหารายวิชา |
-| POST | `/api/courses` | เพิ่มรายวิชาลง SQLite |
-| POST | `/api/ask` | ให้ Qwen สร้าง SQL และตอบคำถาม |
+| Method | Path             | หน้าที่                                    |
+| ------ | ---------------- | ------------------------------------------------- |
+| GET    | `/api/health`  | ตรวจ DB และ Ollama                         |
+| GET    | `/api/program` | อ่านข้อมูลหลักสูตร              |
+| GET    | `/api/courses` | อ่าน/ค้นหารายวิชา                 |
+| POST   | `/api/courses` | เพิ่มรายวิชาลง SQLite               |
+| GET    | `/api/plan`    | อ่านแผนการเรียนรายปี/เทอม/สาขา   |
+| POST   | `/api/ask`     | ให้ Qwen สร้าง SQL และตอบคำถาม |
 
 ### Transcript API
 
-| Method | Path | หน้าที่ |
-|---|---|---|
-| GET | `/api/health` | ตรวจ config ของ Transcript App |
-| POST | `/api/transcript/extract` | อัปโหลดและสกัด Transcript |
+| Method | Path                        | หน้าที่                          |
+| ------ | --------------------------- | --------------------------------------- |
+| GET    | `/api/health`             | ตรวจ config ของ Transcript App   |
+| POST   | `/api/transcript/extract` | อัปโหลดและสกัด Transcript |
 
 ทดลอง GET:
 
