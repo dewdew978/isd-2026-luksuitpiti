@@ -55,13 +55,42 @@ class QwenTextToSQL:
 - ตอบ SELECT หรือ WITH คำสั่งเดียว
 - ถามหน่วยกิตรายเทอมให้ใช้ v_semester_credits
 - ถามรายวิชาตามแผนให้ใช้ v_plan
+- ถามกฎระเบียบ เกียรตินิยม ภาคทัณฑ์ พ้นสภาพ การทุจริตสอบ การลงทะเบียน ให้ใช้ regulation
+- หากคำถามไม่ได้ระบุชื่อหลักสูตร (เช่น IT, DSBA, BIT, AIT) ห้ามใส่เงื่อนไข program_id หรือ subquery หา program เด็ดขาด
+- หากคำถามระบุชื่อหลักสูตร ให้ใส่เงื่อนไข program_id LIKE 'IT%' หรือ 'DSBA%' หรือ 'BIT%' หรือ 'AIT%' ใน WHERE เสมอ (เนื่องจากรหัสในระบบคือ IT-coop, DSBA-coop, BIT-coop, AIT)
 - ห้ามแก้ไขฐานข้อมูล
 
 ตัวอย่าง:
 คำถาม: หลักสูตรนี้มีกี่หน่วยกิต
-SQL: SELECT total_credits FROM program
+SQL: SELECT total_credits FROM program LIMIT 1
+คำถาม: หลักสูตร IT มีกี่หน่วยกิต
+SQL: SELECT total_credits FROM program WHERE program_id LIKE 'IT%' LIMIT 1
+คำถาม: ปี 1 เทอม 1 เรียนกี่หน่วยกิต
+SQL: SELECT credits FROM v_semester_credits WHERE year = 1 AND semester = 1 LIMIT 1
+คำถาม: หลักสูตร IT ปี 1 เทอม 1 เรียนกี่หน่วยกิต
+SQL: SELECT credits FROM v_semester_credits WHERE program_id LIKE 'IT%' AND year = 1 AND semester = 1 LIMIT 1
+คำถาม: ปี 1 เทอม 1 เรียนกี่วิชา
+SQL: SELECT n_courses FROM v_semester_credits WHERE year = 1 AND semester = 1 LIMIT 1
+คำถาม: ปี 1 เทอม 1 เรียนวิชาอะไรบ้าง
+SQL: SELECT code, name_th FROM v_plan WHERE year = 1 AND semester = 1 LIMIT 10
 คำถาม: ต้องเรียนวิชาอะไรมาก่อนจึงจะลงเรียน 06026215 ได้
 SQL: SELECT requires FROM prerequisite WHERE code='06026215' AND kind='pre'
+คำถาม: เกียรตินิยมอันดับ 1 เหรียญทองต้องได้เกรดเท่าไร
+SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic LIKE '%เหรียญทอง%' LIMIT 1
+คำถาม: เกียรตินิยมอันดับ 1 ต้องได้เกรดเท่าไร
+SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic = 'เกียรตินิยมอันดับ 1' LIMIT 1
+คำถาม: ทุจริตในการสอบจะถูกลงโทษอย่างไร
+SQL: SELECT condition_desc, penalty_action, article_no FROM regulation WHERE category = 'เกณฑ์การทุจริตในการสอบ' LIMIT 1
+คำถาม: การทุจริตในการสอบอ้างอิงข้อบังคับข้อใด
+SQL: SELECT article_no FROM regulation WHERE category = 'เกณฑ์การทุจริตในการสอบ' LIMIT 1
+คำถาม: นักศึกษาที่ได้ GPA ต่ำกว่าเท่าไรถึงจะถูกภาคทัณฑ์
+SQL: SELECT condition_desc, max_gpa FROM regulation WHERE category = 'เกณฑ์ภาคทัณฑ์' AND topic LIKE '%ติดภาคทัณฑ์%' LIMIT 1
+คำถาม: ลงทะเบียนเรียนภาคปกติได้ต่ำสุดกี่หน่วยกิต
+SQL: SELECT min_credits FROM regulation WHERE category = 'เกณฑ์การลงทะเบียน' LIMIT 1
+คำถาม: ลงทะเบียนเรียนภาคปกติได้สูงสุดกี่หน่วยกิต
+SQL: SELECT max_credits FROM regulation WHERE category = 'เกณฑ์การลงทะเบียน' LIMIT 1
+คำถาม: เกณฑ์การสำเร็จการศึกษาต้องได้ GPA เท่าไร
+SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์การสำเร็จการศึกษา' AND min_gpa IS NOT NULL LIMIT 1
 
 คำถาม: {question}
 ตอบ JSON ที่มี key ชื่อ sql"""

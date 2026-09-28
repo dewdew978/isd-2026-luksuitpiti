@@ -1,0 +1,869 @@
+{
+  "program": {
+    "program_id": "DSBA",
+    "name_th": "วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ (สหกิจศึกษา)",
+    "name_en": "Data Science and Business Analytics (DSBA)",
+    "degree": null,
+    "total_credits": 135,
+    "years": 4
+  },
+  "courses": [
+    {
+      "code": "06026200",
+      "name_th": "แคลคูลัส 1",
+      "name_en": "CALCULUS 1",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06026202",
+      "name_th": "พีชคณิตเชิงเส้น",
+      "name_en": "LINEAR ALGEBRA",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06066101",
+      "name_th": "พื้นฐานทางธุรกิจสำหรับเทคโนโลยีสารสนเทศ",
+      "name_en": "BUSINESS FUNDAMENTALS FOR INFORMATION TECHNOLOGY",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06066303",
+      "name_th": "การแก้ปัญหาและการโปรแกรมคอมพิวเตอร์",
+      "name_en": "PROBLEM SOLVING AND COMPUTER PROGRAMMING",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "90641001",
+      "name_th": "โรงเรียนสร้างเสน่ห์",
+      "name_en": "CHARM SCHOOL",
+      "credits": 2,
+      "lecture_h": 1,
+      "lab_h": 2,
+      "self_h": 3,
+      "description_th": null
+    },
+    {
+      "code": "90641003",
+      "name_th": "กีฬาและนันทนาการ",
+      "name_en": "SPORTS AND RECREATIONAL ACTIVITIES",
+      "credits": 1,
+      "lecture_h": 3,
+      "lab_h": 3,
+      "self_h": 2,
+      "description_th": null
+    },
+    {
+      "code": "90644007",
+      "name_th": "ภาษาอังกฤษพื้นฐาน 1",
+      "name_en": "FOUNDATION ENGLISH 1",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06026201",
+      "name_th": "แคลคูลัส 2",
+      "name_en": "CALCULUS 2",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06026203",
+      "name_th": "การโปรแกรมคอมพิวเตอร์",
+      "name_en": "COMPUTER PROGRAMMING",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06026205",
+      "name_th": "การตลาดเบื้องต้น",
+      "name_en": "INTRODUCTION TO MARKETING",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06066001",
+      "name_th": "ความน่าจะเป็นและสถิติ",
+      "name_en": "PROBABILITY AND STATISTICS",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "90641002",
+      "name_th": "ความฉลาดทางดิจิทัล",
+      "name_en": "DIGITAL INTELLIGENCE QUOTIENT",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "90642033",
+      "name_th": "กลุ่มวิชาที่กำหนดโดยคณะ*",
+      "name_en": "LAW FOR NEW GENERATION",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "90644008",
+      "name_th": "ภาษาอังกฤษพื้นฐาน 2",
+      "name_en": "FOUNDATION ENGLISH 2",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06026206",
+      "name_th": "การวิเคราะห์ข้อมูลและการโปรแกรม",
+      "name_en": "DATA ANALYTICS AND PROGRAMMING",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06066000",
+      "name_th": "คณิตศาสตร์ไม่ต่อเนื่อง",
+      "name_en": "DISCRETE MATHEMATICS",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06066300",
+      "name_th": "แนวคิดระบบฐานข้อมูล",
+      "name_en": "DATABASE SYSTEM CONCEPTS",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06066302",
+      "name_th": "การเขียนโปรแกรมเว็บพื้นฐาน",
+      "name_en": "FUNDAMENTAL WEB PROGRAMMING",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06066304",
+      "name_th": "การวิเคราะห์และออกแบบระบบสารสนเทศ",
+      "name_en": "INFORMATION SYSTEM ANALYSIS AND DESIGN",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "90649019",
+      "name_th": "วิชาเลือกด้านภาษาและการสื่อสาร",
+      "name_en": "Elective Course (Placeholder)",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "06026204",
+      "name_th": "เครือข่ายและความมั่นคงทางไซเบอร์เบื้องต้น",
+      "name_en": "INTRODUCTION TO NETWORKS AND CYBERSECURITY",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06026207",
+      "name_th": "ระบบฐานข้อมูลแบบโนเอสคิวแอล",
+      "name_en": "NOSQL DATABASE SYSTEMS",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06026208",
+      "name_th": "พื้นฐานวิทยาการข้อมูล",
+      "name_en": "FUNDAMENTALS OF DATA SCIENCE",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06026209",
+      "name_th": "การแสดงข้อมูลด้วยแผนภาพ",
+      "name_en": "DATA VISUALIZATION",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06026210",
+      "name_th": "การหาค่าที่เหมาะที่สุด",
+      "name_en": "OPTIMIZATION",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06066102",
+      "name_th": "ระบบสารสนเทศเพื่อการจัดการ",
+      "name_en": "MANAGEMENT INFORMATION SYSTEMS",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06066301",
+      "name_th": "โครงสร้างข้อมูลและอัลกอริทึม",
+      "name_en": "DATA STRUCTURES AND ALGORITHMS",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06026211",
+      "name_th": "การเรียนรู้ของเครื่องเชิงประยุกต์",
+      "name_en": "APPLIED MACHINE LEARNING",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06026212",
+      "name_th": "การสร้างคลังข้อมูล",
+      "name_en": "DATA WAREHOUSING",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06029029",
+      "name_th": "วิชาเลือกกลุ่มวิทยาการข้อมูล 1",
+      "name_en": "Elective Course (Placeholder)",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "06029030",
+      "name_th": "วิชาเลือกกลุ่มวิทยาการข้อมูล 2",
+      "name_en": "Elective Course (Placeholder)",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "90649031",
+      "name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป",
+      "name_en": "Elective Course (Placeholder)",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "90644042",
+      "name_th": "กลุ่มวิชาที่กำหนดโดยคณะ*",
+      "name_en": "PROFESSIONAL COMMUNICATION AND",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06026213",
+      "name_th": "ระบบข้อมูลมหัต",
+      "name_en": "BIG DATA SYSTEMS",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06026214",
+      "name_th": "โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 1",
+      "name_en": "PROJECT IN DATA SCIENCE AND BUSINESS ANALYTICS 1",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 9,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06029035",
+      "name_th": "วิชาเลือกกลุ่มวิทยาการข้อมูล 3",
+      "name_en": "Elective Course (Placeholder)",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "06029036",
+      "name_th": "วิชาเลือกกลุ่มวิทยาการข้อมูล 4",
+      "name_en": "Elective Course (Placeholder)",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "06066100",
+      "name_th": "การบริหารโครงการเทคโนโลยีสารสนเทศ",
+      "name_en": "INFORMATION TECHNOLOGY PROJECT MANAGEMENT",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "90643021",
+      "name_th": "กลุ่มวิชาที่กำหนดโดยคณะ*",
+      "name_en": "MODERN ENTREPRENEURS",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06026215",
+      "name_th": "โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 2",
+      "name_en": "PROJECT IN DATA SCIENCE AND BUSINESS ANALYTICS 2",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 9,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "90649040",
+      "name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป",
+      "name_en": "Elective Course (Placeholder)",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "99999041",
+      "name_th": "วิชาเลือกเสรี 1",
+      "name_en": "Elective Course (Placeholder)",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "99999042",
+      "name_th": "วิชาเลือกเสรี 2",
+      "name_en": "Elective Course (Placeholder)",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "06026259",
+      "name_th": "สหกิจศึกษาทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ",
+      "name_en": "COOPERATIVE EDUCATION IN DATA SCIENCE AND",
+      "credits": 6,
+      "lecture_h": 3,
+      "lab_h": 35,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06026260",
+      "name_th": "สหกิจศึกษาต่างประเทศทางวิทยาการข้อมูลและการ",
+      "name_en": "OVERSEA COOPERATIVE EDUCATION IN DATA SCIENCE",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06016401",
+      "name_th": "คณิตศาสตร์สำหรับเทคโนโลยีสารสนเทศ",
+      "name_en": "MATHEMATICS FOR INFORMATION TECHNOLOGY",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "เซต ความสัมพันธ์และฟังก์ชัน ตรรกศาสตร์ การพิสูจน์"
+    }
+  ],
+  "plan": [
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "06016401",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "06026200",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "06026202",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "06066101",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "06066303",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "90641001",
+      "credits": 2,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "90641003",
+      "credits": 1,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "90644007",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "code": "06026201",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "code": "06026203",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "code": "06026205",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "code": "06066001",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "code": "90641002",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "code": "90642033",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "code": "90644008",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "code": "06026206",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "code": "06066000",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "code": "06066300",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "code": "06066302",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "code": "06066304",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "code": "90649019",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "code": "06026204",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "code": "06026207",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "code": "06026208",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "code": "06026209",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "code": "06026210",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "code": "06066102",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "code": "06066301",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 1,
+      "code": "06026211",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 1,
+      "code": "06026212",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 1,
+      "code": "06029029",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | เลือก"
+    },
+    {
+      "year": 3,
+      "semester": 1,
+      "code": "06029030",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | เลือก"
+    },
+    {
+      "year": 3,
+      "semester": 1,
+      "code": "90649031",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
+    },
+    {
+      "year": 3,
+      "semester": 1,
+      "code": "90644042",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 2,
+      "code": "06026213",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 2,
+      "code": "06026214",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 2,
+      "code": "06029035",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | เลือก"
+    },
+    {
+      "year": 3,
+      "semester": 2,
+      "code": "06029036",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | เลือก"
+    },
+    {
+      "year": 3,
+      "semester": 2,
+      "code": "06066100",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 2,
+      "code": "90643021",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 4,
+      "semester": 1,
+      "code": "06026215",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 4,
+      "semester": 1,
+      "code": "90649040",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
+    },
+    {
+      "year": 4,
+      "semester": 1,
+      "code": "99999041",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเลือกเสรี | เลือก"
+    },
+    {
+      "year": 4,
+      "semester": 1,
+      "code": "99999042",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเลือกเสรี | เลือก"
+    },
+    {
+      "year": 4,
+      "semester": 2,
+      "code": "06026259",
+      "credits": 6,
+      "alt_group": "alt_coop_4_2",
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 4,
+      "semester": 2,
+      "code": "06026260",
+      "credits": 3,
+      "alt_group": "alt_coop_4_2",
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    }
+  ],
+  "prerequisites": [
+    {
+      "code": "06026201",
+      "requires": "06026200",
+      "kind": "pre"
+    },
+    {
+      "code": "06066102",
+      "requires": "06066101",
+      "kind": "pre"
+    },
+    {
+      "code": "06026212",
+      "requires": "06066300",
+      "kind": "pre"
+    },
+    {
+      "code": "06026213",
+      "requires": "06066300",
+      "kind": "pre"
+    },
+    {
+      "code": "06026215",
+      "requires": "06026214",
+      "kind": "pre"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "source_courses": 53,
+  "converted_courses": 53,
+  "plan_items": 53,
+  "prerequisites": 8,
+  "skipped_wildcards": 0,
+  "skipped_flexible_plan_items": 0,
+  "warnings": [
+    "060164xx: หน่วยกิตมีหลายแบบ; ใช้แบบแรก"
+  ]
+}

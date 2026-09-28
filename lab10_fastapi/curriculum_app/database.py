@@ -245,6 +245,33 @@ class CurriculumDatabase:
         finally:
             conn.close()
 
+    def regulations(
+        self,
+        category: str | None = None,
+        search: str = "",
+        limit: int = 50,
+    ) -> list[dict]:
+        self._require_db()
+        sql = "SELECT * FROM regulation"
+        conditions: list[str] = []
+        params: list[object] = []
+        if category and category.strip():
+            conditions.append("category = ?")
+            params.append(category.strip())
+        if search and search.strip():
+            conditions.append("(topic LIKE ? OR condition_desc LIKE ? OR penalty_action LIKE ?)")
+            pattern = f"%{search.strip()}%"
+            params.extend([pattern, pattern, pattern])
+        if conditions:
+            sql += " WHERE " + " AND ".join(conditions)
+        sql += " ORDER BY id LIMIT ?"
+        params.append(min(max(limit, 1), self.max_rows))
+        conn = self.lab8b.open_db(self.path, readonly=True)
+        try:
+            return [dict(row) for row in conn.execute(sql, params).fetchall()]
+        finally:
+            conn.close()
+
 
 SQL_SCHEMA_CONTEXT = """
 program(program_id, name_th, name_en, degree, total_credits, years)
@@ -253,6 +280,7 @@ plan_item(id, program_id, year, semester, code, credits, alt_group, note)
 prerequisite(code, requires, kind)
 v_plan(id, program_id, year, semester, code, name_th, name_en, credits, alt_group, note)
 v_semester_credits(program_id, year, semester, credits, n_courses)
+regulation(id, program_id, category, topic, condition_desc, min_gpa, max_gpa, min_credits, max_credits, penalty_action, article_no, source_page)
 """.strip()
 
 

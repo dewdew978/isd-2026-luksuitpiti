@@ -277,7 +277,8 @@ CREATE VIEW IF NOT EXISTS v_plan AS
 SELECT p.id, p.program_id, p.year, p.semester, p.code, c.name_th, c.name_en,
        p.credits, p.alt_group, p.note
 FROM plan_item p
-LEFT JOIN course c ON c.code = p.code;
+LEFT JOIN course c ON c.code = p.code
+ORDER BY CASE WHEN p.program_id LIKE 'DSBA%' THEN 0 ELSE 1 END, p.id;
 
 -- VIEW ที่สองนี้สำคัญกว่าที่เห็น
 --
@@ -296,11 +297,31 @@ SELECT program_id, year, semester, SUM(credits) AS credits, COUNT(*) AS n_course
 FROM (
     SELECT program_id, year, semester,
            COALESCE(alt_group, 'x' || id) AS grp,
-           MIN(credits) AS credits
+           MAX(credits) AS credits
     FROM plan_item
     GROUP BY program_id, year, semester, COALESCE(alt_group, 'x' || id)
 )
-GROUP BY program_id, year, semester;
+GROUP BY program_id, year, semester
+ORDER BY CASE WHEN program_id LIKE 'DSBA%' THEN 0 ELSE 1 END, program_id;
+
+-- ตารางข้อบังคับและกฎระเบียบการศึกษา (Academic Regulations)
+CREATE TABLE IF NOT EXISTS regulation (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    program_id      TEXT DEFAULT 'ALL',
+    category        TEXT NOT NULL,
+    topic           TEXT NOT NULL,
+    condition_desc  TEXT,
+    min_gpa         REAL,
+    max_gpa         REAL,
+    min_credits     INTEGER,
+    max_credits     INTEGER,
+    penalty_action  TEXT,
+    article_no      TEXT,
+    source_page     INTEGER
+);
+
+CREATE INDEX IF NOT EXISTS ix_reg_cat ON regulation(category);
+CREATE INDEX IF NOT EXISTS ix_reg_top ON regulation(topic);
 """
 
 
@@ -536,10 +557,27 @@ def convert_lab7b(data: dict, *, program_id: str | None = None,
     for index, src in enumerate(data.get("courses") or []):
         raw_code = str(src.get("code") or "").strip()
         codes = _lab7b_codes(raw_code)
+        is_placeholder = False
         if not codes:
-            skipped_wildcards += 1
-            warnings.append(f"courses[{index}] ข้ามรหัสที่ไม่ใช่ตัวเลข 8 หลัก: {raw_code!r}")
-            continue
+            try:
+                year = int(src.get("year"))
+                semester = int(src.get("semester"))
+            except (TypeError, ValueError):
+                year = semester = 0
+            if 1 <= year <= 8 and 1 <= semester <= 3:
+                # แปลง wildcard/วิชาเลือกในแผนเป็นรหัสตัวแทน 8 หลัก
+                prefix = "99999"
+                for pre in ("9064", "9664", "0601", "0602", "0603", "0604"):
+                    if pre in raw_code:
+                        prefix = f"{pre}9"
+                        break
+                placeholder = f"{prefix[:5]}{index:03d}"
+                codes = [placeholder]
+                is_placeholder = True
+            else:
+                skipped_wildcards += 1
+                warnings.append(f"courses[{index}] ข้ามรหัสที่ไม่ใช่ตัวเลข 8 หลัก: {raw_code!r}")
+                continue
         try:
             credit, lecture, lab, self_h = _credit_parts(src.get("credits"))
         except ValueError as exc:
@@ -549,16 +587,26 @@ def convert_lab7b(data: dict, *, program_id: str | None = None,
             warnings.append(f"{raw_code}: หน่วยกิตมีหลายแบบ; ใช้แบบแรก")
 
         for code in codes:
+            if is_placeholder:
+                name_th_val = str(src.get("name_th") or code).strip() or "วิชาเลือก"
+                name_en_val = (str(src["name_en"]).replace("\n", " ").strip()
+                               if src.get("name_en") else "Elective Course (Placeholder)")
+                desc_th_val = src.get("description_th") or "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+            else:
+                name_th_val = str(src.get("name_th") or code).strip()
+                name_en_val = (str(src["name_en"]).replace("\n", " ").strip()
+                               if src.get("name_en") else None)
+                desc_th_val = src.get("description_th")
+
             candidate = {
                 "code": code,
-                "name_th": str(src.get("name_th") or code).strip(),
-                "name_en": (str(src["name_en"]).replace("\n", " ").strip()
-                            if src.get("name_en") else None),
+                "name_th": name_th_val,
+                "name_en": name_en_val,
                 "credits": credit,
-                "lecture_h": lecture,
-                "lab_h": lab,
-                "self_h": self_h,
-                "description_th": src.get("description_th"),
+                "lecture_h": lecture or 3,
+                "lab_h": lab or 0,
+                "self_h": self_h or 6,
+                "description_th": desc_th_val,
             }
             old = course_by_code.get(code)
             if old is None:
@@ -577,7 +625,8 @@ def convert_lab7b(data: dict, *, program_id: str | None = None,
             skipped_flexible += 1
             warnings.append(f"{raw_code}: ไม่ใส่ในแผนเพราะปี/เทอม={year}/{semester}")
         else:
-            alt_group = (f"lab7b_alt_{index}" if len(codes) > 1 else None)
+            # ดึง alt_group จากผลลัพธ์ของ Lab 7B โดยตรง
+            alt_group = src.get("alt_group") or (f"lab7b_alt_{index}" if len(codes) > 1 else None)
             notes = [str(x).strip() for x in
                      (src.get("category"), src.get("type"), src.get("note")) if x]
             note = " | ".join(notes) or None
@@ -600,6 +649,23 @@ def convert_lab7b(data: dict, *, program_id: str | None = None,
                     prerequisites.append({"code": code, "requires": required,
                                           "kind": "pre"})
                     seen_pre.add(key)
+
+    if program_id in ("DSBA", "DSBA-coop") and "06016401" not in course_by_code:
+        course_by_code["06016401"] = {
+            "code": "06016401",
+            "name_th": "คณิตศาสตร์สำหรับเทคโนโลยีสารสนเทศ",
+            "name_en": "MATHEMATICS FOR INFORMATION TECHNOLOGY",
+            "credits": 3,
+            "lecture_h": 3,
+            "lab_h": 0,
+            "self_h": 6,
+            "description_th": "เซต ความสัมพันธ์และฟังก์ชัน ตรรกศาสตร์ การพิสูจน์",
+        }
+        plan.insert(0, {
+            "year": 1, "semester": 1,
+            "code": "06016401", "credits": 3,
+            "alt_group": None, "note": "หมวดวิชาเฉพาะ | บังคับ"
+        })
 
     max_year = max((p["year"] for p in plan), default=4)
     effective_years = years or max_year
@@ -1075,9 +1141,37 @@ SQL: SELECT requires FROM prerequisite WHERE code = '06026215' AND kind = 'pre'
 คำถาม: วิชา 06046401 ต้องเรียนวิชาอะไรมาก่อน
 SQL: SELECT requires FROM prerequisite WHERE code = '06046401' AND kind = 'pre'
 
+คำถาม: เกียรตินิยมอันดับ 1 เหรียญทองต้องได้เกรดเท่าไร
+SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic LIKE '%เหรียญทอง%' LIMIT 1
+
+คำถาม: เกียรตินิยมอันดับ 1 ต้องได้ GPA เท่าไร
+SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic = 'เกียรตินิยมอันดับ 1' LIMIT 1
+
+คำถาม: ทุจริตในการสอบจะถูกลงโทษอย่างไร
+SQL: SELECT condition_desc, penalty_action, article_no FROM regulation WHERE category = 'เกณฑ์การทุจริตในการสอบ' LIMIT 1
+
+คำถาม: การทุจริตในการสอบอ้างอิงข้อบังคับข้อใด
+SQL: SELECT article_no FROM regulation WHERE category = 'เกณฑ์การทุจริตในการสอบ' LIMIT 1
+
+คำถาม: นักศึกษาที่ได้ GPA ต่ำกว่าเท่าไรถึงจะถูกภาคทัณฑ์
+SQL: SELECT condition_desc, max_gpa FROM regulation WHERE category = 'เกณฑ์ภาคทัณฑ์' AND topic LIKE '%ติดภาคทัณฑ์%' LIMIT 1
+
+คำถาม: ลงทะเบียนเรียนภาคปกติได้ต่ำสุดและสูงสุดกี่หน่วยกิต
+SQL: SELECT min_credits, max_credits FROM regulation WHERE category = 'เกณฑ์การลงทะเบียน' LIMIT 1
+
+คำถาม: ลงทะเบียนเรียนภาคปกติได้ต่ำสุดกี่หน่วยกิต
+SQL: SELECT min_credits FROM regulation WHERE category = 'เกณฑ์การลงทะเบียน' LIMIT 1
+
+คำถาม: ลงทะเบียนเรียนภาคปกติได้สูงสุดกี่หน่วยกิต
+SQL: SELECT max_credits FROM regulation WHERE category = 'เกณฑ์การลงทะเบียน' LIMIT 1
+
+คำถาม: เกณฑ์การสำเร็จการศึกษาต้องได้ GPA เท่าไร
+SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์การสำเร็จการศึกษา' AND min_gpa IS NOT NULL LIMIT 1
+
 กติกา
 - เขียน SQL คำสั่งเดียว ขึ้นต้นด้วย SELECT หรือ WITH เท่านั้น
 - ห้ามใช้ INSERT UPDATE DELETE DROP หรือคำสั่งที่แก้ไขข้อมูล
+- ถามเกี่ยวกับข้อบังคับ กฎระเบียบ (เกียรตินิยม, ทุจริต, ภาคทัณฑ์, พ้นสภาพ, การลงทะเบียนต่ำสุด-สูงสุด) ให้ใช้ตาราง regulation
 - ถามว่าภาคเรียนไหนมีกี่หน่วยกิต ให้ใช้ v_semester_credits เสมอ
   ห้ามใช้ SUM(credits) จาก v_plan เพราะจะนับวิชาเลือกซ้ำ
 - ถามว่าวิชามีกี่หน่วยกิต ให้ใช้ course หรือ v_plan จากรหัสวิชา code (ห้ามใช้ v_semester_credits)
@@ -1085,6 +1179,9 @@ SQL: SELECT requires FROM prerequisite WHERE code = '06046401' AND kind = 'pre'
 - ถามว่าเรียนภาคการศึกษาใด ให้ SELECT semester FROM plan_item WHERE code = ...
 - ถามว่ามีชั่วโมงปฏิบัติการกี่ชั่วโมง ให้ SELECT lab_h FROM course WHERE code = ...
 - ถามว่าเรียนวิชาอะไรบ้าง ให้ใช้ v_plan เพราะมีชื่อวิชาอยู่แล้ว
+- ถามว่าวิชาไหนบ้างต้องเรียน X มาก่อน (วิชาที่ต้องผ่าน X): ให้ SELECT code FROM prerequisite WHERE requires = 'X' AND kind = 'pre'
+- ถามว่าวิชา X ต้องเรียนวิชาใดมาก่อน หรือ ต้องเรียนวิชาใดก่อนถึงจะลง X ได้ (วิชาบังคับก่อนของ X): ให้ SELECT requires FROM prerequisite WHERE code = 'X' AND kind = 'pre'
+- ในตาราง program, v_plan, v_semester_credits, plan_item มีเฉพาะ program_id: 'DSBA', 'IT', 'AIT', 'BIT' เท่านั้น ห้ามใช้ program_id = 'ALL' กับตารางเหล่านี้เด็ดขาด ('ALL' มีเฉพาะในตาราง regulation)
 - หากในคำถามระบุชื่อหลักสูตร ให้เพิ่มเงื่อนไขระบุ program_id ใน WHERE เสมอ
 - หากในคำถามไม่ได้ระบุชื่อหลักสูตร ห้ามใส่เงื่อนไข program_id ใน WHERE เด็ดขาด
 - ตอบเป็น SQL ล้วน ไม่ต้องมีคำอธิบายและไม่ต้องมี markdown fence

@@ -1,0 +1,805 @@
+{
+  "program": {
+    "program_id": "BIT",
+    "name_th": "เทคโนโลยีสารสนเทศทางธุรกิจ (สหกิจศึกษา)",
+    "name_en": "Business Information Technology (BIT)",
+    "degree": null,
+    "total_credits": 126,
+    "years": 4
+  },
+  "courses": [
+    {
+      "code": "06036100",
+      "name_th": "06036100",
+      "name_en": "INFORMATION TECHNOLOGY FUNDAMENTALS",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06036101",
+      "name_th": "06036101",
+      "name_en": "MATHEMATICS FOR BUSINESS",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036118",
+      "name_th": "06036118",
+      "name_en": "PROBLEM SOLVING IN INFORMATION TECHNOLOGY",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "96641001",
+      "name_th": "96641001",
+      "name_en": "CHARM SCHOOL",
+      "credits": 2,
+      "lecture_h": 1,
+      "lab_h": 2,
+      "self_h": 3,
+      "description_th": null
+    },
+    {
+      "code": "96641003",
+      "name_th": "96641003",
+      "name_en": "SPORTS AND RECREATIONAL ACTIVITIES",
+      "credits": 1,
+      "lecture_h": 3,
+      "lab_h": 3,
+      "self_h": 2,
+      "description_th": null
+    },
+    {
+      "code": "96644007",
+      "name_th": "96644007",
+      "name_en": "FOUNDATION ENGLISH 1",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "96644042",
+      "name_th": "การสื่อสารและการนำเสนออยางมืออาชีพ",
+      "name_en": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036102",
+      "name_th": "06036102",
+      "name_en": "STATISTICAL ANALYSIS FOR BUSINESS",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036109",
+      "name_th": "06036109",
+      "name_en": "BUSINESS PROCESSES AND BUSINESS MODEL",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036119",
+      "name_th": "06036119",
+      "name_en": "PROGRAMMING FUNDAMENTALS",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06036125",
+      "name_th": "06036125",
+      "name_en": "COMPUTER ARCHITECTURE AND OPERATING SYSTEM",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "96644008",
+      "name_th": "96644008",
+      "name_en": "FOUNDATION ENGLISH 2",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "96641002",
+      "name_th": "96641002",
+      "name_en": "DIGITAL INTELLIGENCE QUOTIENT",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036103",
+      "name_th": "INTEGRATION OF STATISTICAL TECHNIQUES FOR",
+      "name_en": "BUSINESS",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036104",
+      "name_th": "06036104",
+      "name_en": "MANAGEMENT AND ORGANIZATIONS",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036105",
+      "name_th": "06036105",
+      "name_en": "FINANCIAL ACCOUNTING FOR NON-ACCOUNTANTS",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036117",
+      "name_th": "06036117",
+      "name_en": "BUSINESS INTELLIGENCE AND BIG DATA",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036120",
+      "name_th": "06036120",
+      "name_en": "DATA STRUCTURES AND ALGORITHMS PRINCIPLES",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036122",
+      "name_th": "06036122",
+      "name_en": "VISUAL COMMUNICATION FOR BUSINESS",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06036108",
+      "name_th": "06036108",
+      "name_en": "ECONOMICS OF INFORMATION TECHNOLOGY",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036111",
+      "name_th": "06036111",
+      "name_en": "DIGITAL TECHNOLOGY FOR BUSINESS",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036112",
+      "name_th": "06036112",
+      "name_en": "DATABASE SYSTEM CONCEPTS",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06036113",
+      "name_th": "06036113",
+      "name_en": "HUMAN INTERFACE DESIGN",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036124",
+      "name_th": "INTRODUCTION TO COMPUTER NETWORK AND",
+      "name_en": "CYBERSECURITY",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "96649024",
+      "name_th": "96649024",
+      "name_en": "GE ELECTIVE COURSE REQUIREMENT 1",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "06036107",
+      "name_th": "06036107",
+      "name_en": "INFORMATION TECHNOLOGY PROJECT MANAGEMENT",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036110",
+      "name_th": "06036110",
+      "name_en": "ENTERPRISE RESOURCE PLANNING",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036114",
+      "name_th": "06036114",
+      "name_en": "WEB APPLICATION DEVELOPMENT USING FRAMEWORKS",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "06036121",
+      "name_th": "BUSINESS INFORMATION SYSTEM ANALYSIS AND",
+      "name_en": "DESIGN",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036123",
+      "name_th": "06036123",
+      "name_en": "CLOUD TECHNOLOGY",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "96649030",
+      "name_th": "ELECTIVE IN LANGUAGE AND COMMUNICATION  หรือ 3 (2-2-5)",
+      "name_en": "Elective Course (Placeholder)",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "06036106",
+      "name_th": "MANAGING BUSINESS INFORMATION AND EMERGING",
+      "name_en": "TECHNOLOGIES",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036116",
+      "name_th": "06036116",
+      "name_en": "DIGITAL MARKETING",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": null
+    },
+    {
+      "code": "96643021",
+      "name_th": "ผูประกอบการสมัยใหม่",
+      "name_en": "MODERN ENTREPRENEURS",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06039034",
+      "name_th": "หรือ",
+      "name_en": "ELECTIVE COURSE IN BUSINESS INFORMATION",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "99999035",
+      "name_th": "99999035",
+      "name_en": "FREE ELECTIVE COURSE 1",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "06036115",
+      "name_th": "06036115",
+      "name_en": "INFORMATION SYSTEM SECURITY",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "96642033",
+      "name_th": "กฎหมายสำหรับคนรุนใหม่",
+      "name_en": "LAW FOR NEW GENERATION",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06039038",
+      "name_th": "หรือ",
+      "name_en": "ELECTIVE COURSE IN BUSINESS INFORMATION",
+      "credits": 3,
+      "lecture_h": 2,
+      "lab_h": 2,
+      "self_h": 5,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "99999039",
+      "name_th": "99999039",
+      "name_en": "FREE ELECTIVE COURSE 2",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "96649040",
+      "name_th": "96649040",
+      "name_en": "GE ELECTIVE COURSE REQUIREMENT 2",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
+    },
+    {
+      "code": "06036147",
+      "name_th": "สหกิจศึกษา",
+      "name_en": "COOPERATIVE EDUCATION",
+      "credits": 6,
+      "lecture_h": 3,
+      "lab_h": 35,
+      "self_h": 6,
+      "description_th": null
+    },
+    {
+      "code": "06036148",
+      "name_th": "สหกิจศึกษาต่างประเทศ",
+      "name_en": "OVERSEA COOPERATIVE EDUCATION",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null
+    }
+  ],
+  "plan": [
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "06036100",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "06036101",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "06036118",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "96641001",
+      "credits": 2,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "96641003",
+      "credits": 1,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "96644007",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 1,
+      "code": "96644042",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "code": "06036102",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "code": "06036109",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "code": "06036119",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "code": "06036125",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "code": "96644008",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 1,
+      "semester": 2,
+      "code": "96641002",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "code": "06036103",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "code": "06036104",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "code": "06036105",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "code": "06036117",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "code": "06036120",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 1,
+      "code": "06036122",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "code": "06036108",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "code": "06036111",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "code": "06036112",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "code": "06036113",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "code": "06036124",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 2,
+      "semester": 2,
+      "code": "96649024",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
+    },
+    {
+      "year": 3,
+      "semester": 1,
+      "code": "06036107",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 1,
+      "code": "06036110",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 1,
+      "code": "06036114",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 1,
+      "code": "06036121",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 1,
+      "code": "06036123",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 1,
+      "code": "96649030",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 2,
+      "code": "06036106",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 2,
+      "code": "06036116",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 2,
+      "code": "96643021",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 3,
+      "semester": 2,
+      "code": "06039034",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | เลือก"
+    },
+    {
+      "year": 3,
+      "semester": 2,
+      "code": "99999035",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเลือกเสรี | เลือก"
+    },
+    {
+      "year": 4,
+      "semester": 1,
+      "code": "06036115",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 4,
+      "semester": 1,
+      "code": "96642033",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "year": 4,
+      "semester": 1,
+      "code": "06039038",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเฉพาะ | เลือก"
+    },
+    {
+      "year": 4,
+      "semester": 1,
+      "code": "99999039",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาเลือกเสรี | เลือก"
+    },
+    {
+      "year": 4,
+      "semester": 1,
+      "code": "96649040",
+      "credits": 3,
+      "alt_group": null,
+      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
+    },
+    {
+      "year": 4,
+      "semester": 2,
+      "code": "06036147",
+      "credits": 6,
+      "alt_group": "alt_coop_4_2",
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    },
+    {
+      "year": 4,
+      "semester": 2,
+      "code": "06036148",
+      "credits": 3,
+      "alt_group": "alt_coop_4_2",
+      "note": "หมวดวิชาเฉพาะ | บังคับ"
+    }
+  ],
+  "prerequisites": [
+    {
+      "code": "06036122",
+      "requires": "06036119",
+      "kind": "pre"
+    },
+    {
+      "code": "06036114",
+      "requires": "06036119",
+      "kind": "pre"
+    },
+    {
+      "code": "06036114",
+      "requires": "06036122",
+      "kind": "pre"
+    }
+  ]
+}

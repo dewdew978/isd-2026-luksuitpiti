@@ -99,3 +99,16 @@ class CoursePrerequisitesResponse(BaseModel):
     )
 
 
+class RegulationResponse(BaseModel):
+    id: int
+    program_id: str | None = None
+    category: str
+    topic: str
+    condition_desc: str | None = None
+    min_gpa: float | None = None
+    max_gpa: float | None = None
+    min_credits: int | None = None
+    max_credits: int | None = None
+    penalty_action: str | None = None
+    article_no: str | None = None
+    source_page: int | None = None

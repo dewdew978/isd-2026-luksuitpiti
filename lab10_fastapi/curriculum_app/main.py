@@ -26,7 +26,7 @@ from .model_service import QwenTextToSQL  # noqa: E402
 from .schemas import (  # noqa: E402
     AskRequest, AskResponse, CourseCreate, CoursePrerequisitesResponse,
     CourseResponse, HealthResponse, PlanItemResponse, PlanSummaryResponse,
-    StatsResponse,
+    RegulationResponse, StatsResponse,
 )
 
 
@@ -141,6 +141,23 @@ def get_stats(
 ) -> dict:
     try:
         return database.stats(program_id=program_id)
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+
+@app.get(
+    "/api/regulations",
+    response_model=list[RegulationResponse],
+    summary="ค้นหาข้อบังคับและกฎระเบียบการศึกษา",
+    description="ดึงข้อมูลกฎระเบียบ (เกียรตินิยม, ภาคทัณฑ์, พ้นสภาพ, การทุจริตสอบ, เกณฑ์หน่วยกิต) พร้อมเงื่อนไขและบทลงโทษ",
+)
+def get_regulations(
+    category: str | None = Query(default=None, description="หมวดหมู่ เช่น เกณฑ์เกียรตินิยม, เกณฑ์ภาคทัณฑ์, เกณฑ์การทุจริตในการสอบ, เกณฑ์การลงทะเบียน"),
+    search: str = Query(default="", max_length=100, description="คำค้นหาในหัวข้อ หรือบทลงโทษ"),
+    limit: int = Query(default=50, ge=1, le=100),
+) -> list[dict]:
+    try:
+        return database.regulations(category=category, search=search, limit=limit)
     except FileNotFoundError as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
 
