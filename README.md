@@ -438,3 +438,29 @@ python -m ocr_system.cli ocr data/input/sample.jpg --engine tesseract --no-prepr
 ```
 
 ---
+
+## Lab 11: Front-End Development & API Contract
+
+### โครงสร้างไฟล์ Frontend
+แยกไฟล์ตาม Best Practice (สไลด์หน้า 7 และ 28):
+```text
+lab10_fastapi/curriculum_app/static/
+├── index.html   # โครงสร้างหน้าเว็บหลัก
+├── style.css    # จัดรูปแบบสไตล์, เลย์เอาต์ และ 4 สถานะของระบบ AI
+└── app.js       # ตัวควบคุมตรรกะ, async fetch และ 4 สถานะของระบบ AI
+```
+
+### การจัดการ 4 สถานะ UI (AI System UX)
+1. **Idle**: คำแนะนำการใช้งานพร้อมปุ่มชิปตัวอย่างคำถาม
+2. **Loading**: แสดง Spinner และข้อความกำลังประมวลผล พร้อม `disabled` ปุ่มเพื่อป้องกันการกดซ้ำ
+3. **Success**: แสดงคำตอบภาษาธรรมชาติจาก AI พร้อมรายละเอียด SQL และตารางข้อมูล (ปลอดภัยจาก XSS ด้วย `textContent`)
+4. **Error**: แสดงกล่องเตือนสีแดง แจ้งรายละเอียดข้อผิดพลาดและข้อแนะนำสิ่งที่ผู้ใช้ควรดำเนินการแก้ไข
+
+### API Contract สรุป
+| Endpoint | Method | Request Body / Param | Response 200 OK | Response Error |
+| :--- | :---: | :--- | :--- | :--- |
+| `/api/ask` | POST | `{"question": "string"}` | `{"question", "sql", "rows", "answer"}` | `422` (Invalid/SQL Error), `503` (Ollama/DB offline) |
+| `/api/courses/{code}/prerequisites` | GET | `code`: รหัสวิชา 8 หลัก | `{"code", "name_th", "requires", "required_by"}` | `404` (ไม่พบรายวิชา) |
+| `/api/health` | GET | - | `{"status", "database_ready", "ollama_ready", "model"}` | `200` (Status: degraded if not ready) |
+
+> ดูรายละเอียดสัญญา API Contract และตัวอย่าง payload ฉบับสมบูรณ์ได้ที่ [lab10_fastapi/curriculum_app/README.md](file:///C:/Users/thewh/Downloads/isd-2026-luksuitpiti/lab10_fastapi/curriculum_app/README.md)

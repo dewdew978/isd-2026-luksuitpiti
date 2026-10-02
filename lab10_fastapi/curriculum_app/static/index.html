@@ -7,340 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f8fafc;
-      --card-bg: #ffffff;
-      --text-main: #0f172a;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-      --border-focus: #0f172a;
-      --primary: #0f172a;
-      --primary-hover: #1e293b;
-      --primary-text: #ffffff;
-      --accent: #2563eb;
-      --accent-soft: #eff6ff;
-      --code-bg: #f1f5f9;
-      --radius: 12px;
-      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-      --font-family: "Google Sans", "Manrope", "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-family);
-      background-color: var(--bg);
-      color: var(--text-main);
-      line-height: 1.6;
-      padding: 40px 20px 80px;
-    }
-
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    /* Header */
-    header {
-      margin-bottom: 28px;
-    }
-
-    .header-content h1 {
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--text-main);
-      margin-bottom: 4px;
-    }
-
-    .header-content p {
-      font-size: 14px;
-      color: var(--text-muted);
-    }
-
-    /* Cards */
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
-      margin-bottom: 20px;
-      box-shadow: var(--shadow-sm);
-      transition: box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      box-shadow: var(--shadow-md);
-    }
-
-    .card-title {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text-main);
-      margin-bottom: 4px;
-      letter-spacing: -0.01em;
-    }
-
-    .card-subtitle {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 14px;
-    }
-
-    /* Quick Chips */
-    .chips-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 12px;
-    }
-
-    .chip {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 9999px;
-      padding: 4px 12px;
-      font-size: 12px;
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: all 0.15s ease;
-      font-family: inherit;
-    }
-
-    .chip:hover {
-      border-color: var(--primary);
-      color: var(--text-main);
-      background: #ffffff;
-    }
-
-    /* Forms */
-    textarea {
-      width: 100%;
-      min-height: 84px;
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 14px;
-      font-family: inherit;
-      color: var(--text-main);
-      background-color: #ffffff;
-      resize: vertical;
-      outline: none;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    textarea:focus, input[type="text"]:focus {
-      border-color: var(--border-focus);
-      box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.06);
-    }
-
-    .form-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 10px;
-    }
-
-    .hint {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px 18px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--primary-text);
-      background-color: var(--primary);
-      border: 1px solid var(--primary);
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.15s ease;
-      font-family: inherit;
-    }
-
-    button:hover {
-      background-color: var(--primary-hover);
-    }
-
-    button:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    /* Prereq form inline */
-    .inline-form {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .inline-form input[type="text"] {
-      flex: 1;
-      padding: 8px 12px;
-      font-size: 14px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      outline: none;
-      font-family: inherit;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    /* Result Box */
-    .answer-box {
-      margin-top: 20px;
-      padding: 16px;
-      background-color: #f8fafc;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    .answer-label {
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .answer-text {
-      color: var(--text-main);
-      white-space: pre-line;
-      font-size: 14px;
-    }
-
-    /* Details Collapsible */
-    details {
-      margin-top: 14px;
-      border-top: 1px solid var(--border);
-      padding-top: 10px;
-    }
-
-    details summary {
-      font-size: 12px;
-      color: var(--text-muted);
-      cursor: pointer;
-      user-select: none;
-      font-weight: 500;
-    }
-
-    details summary:hover {
-      color: var(--text-main);
-    }
-
-    pre {
-      background: var(--code-bg);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 12px;
-      margin-top: 8px;
-      font-size: 12px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      color: #334155;
-      overflow-x: auto;
-      white-space: pre-wrap;
-      word-break: break-all;
-    }
-
-    /* Prereq Details */
-    .prereq-course-header {
-      background: var(--accent-soft);
-      border-left: 3px solid var(--accent);
-      padding: 10px 14px;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 16px;
-      color: #1e3a8a;
-    }
-
-    .prereq-group {
-      margin-bottom: 14px;
-    }
-
-    .prereq-group-title {
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-
-    .course-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .course-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      padding: 8px 12px;
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 13px;
-      transition: border-color 0.15s ease;
-    }
-
-    .course-item:hover {
-      border-color: #cbd5e1;
-    }
-
-    .course-item a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-      font-family: ui-monospace, monospace;
-    }
-
-    .course-item a:hover {
-      text-decoration: underline;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 2px 7px;
-      font-size: 11px;
-      border-radius: 4px;
-      background: #e2e8f0;
-      color: #475569;
-      font-weight: 500;
-    }
-
-    .tag.pre {
-      background: #e0f2fe;
-      color: #0369a1;
-    }
-
-    .tag.co {
-      background: #fef3c7;
-      color: #b45309;
-    }
-
-    .empty-state {
-      font-size: 13px;
-      color: var(--text-muted);
-      font-style: italic;
-      padding: 4px 0;
-    }
-  </style>
+  <link rel="stylesheet" href="/static/style.css?v=3">
 </head>
 <body>
   <div class="container">
@@ -351,10 +18,10 @@
       </div>
     </header>
 
-    <!-- Card 1: Ask AI -->
+    <!-- Card 1: Ask AI (รองรับครบ 4 สถานะ: Idle, Loading, Success, Error) -->
     <div class="card">
       <div class="card-title">ถาม-ตอบข้อมูลหลักสูตร (Text-to-SQL)</div>
-      <div class="card-subtitle">พิมพ์คำถามภาษาธรรมชาติ โมเดลจะแปลงเป็นคำสั่ง SQL เพื่อค้นหาข้อมูลจริง</div>
+      <div class="card-subtitle">พิมพ์คำถามภาษาธรรมชาติ โมเดลจะแปลงเป็นคำสั่ง SQL เพื่อค้นหาข้อมูลจริงจากฐานข้อมูล</div>
 
       <div class="chips-group">
         <button type="button" class="chip" onclick="setQuestion('หลักสูตรนี้มีหน่วยกิตรวมทั้งหมดเท่าไร')">หน่วยกิตรวมทั้งหมด</button>
@@ -363,26 +30,54 @@
       </div>
 
       <form id="ask-form">
-        <textarea id="question" placeholder="พิมพ์คำถามที่ต้องการ เช่น ปี 1 เทอม 1 เรียนวิชาอะไรบ้าง..." required>หลักสูตรนี้มีหน่วยกิตรวมทั้งหมดเท่าไร</textarea>
+        <textarea id="question" placeholder="พิมพ์คำถามที่ต้องการ เช่น ปี 1 เทอม 1 เรียนวิชาอะไรบ้าง หรือ หลักสูตรนี้มีกี่หน่วยกิต..." required>หลักสูตรนี้มีหน่วยกิตรวมทั้งหมดเท่าไร</textarea>
         <div class="form-footer">
           <span class="hint">กด Ctrl + Enter เพื่อส่งคำถาม</span>
           <button type="submit" id="ask-btn">ส่งคำถาม</button>
         </div>
       </form>
 
-      <div class="answer-box" id="answer-container" style="display: none;">
-        <div class="answer-label">คำตอบ</div>
-        <div class="answer-text" id="answer">รอคำถาม...</div>
+      <!-- คอนเทนเนอร์แสดงผลตาม 4 สถานะของ AI -->
+      <div class="state-container">
+        <!-- สถานะ 1: Idle (พร้อมรับคำถาม) -->
+        <div id="ask-idle-box" class="state-box-idle">
+          <span>พร้อมรับคำถาม — สามารถพิมพ์คำถามเกี่ยวกับวิชา แผนการเรียน หรือหน่วยกิต แล้วกด <strong>ส่งคำถาม</strong></span>
+        </div>
 
-        <details>
-          <summary>ดูคำสั่ง SQL ที่ใช้</summary>
-          <pre id="sql">-</pre>
-        </details>
+        <!-- สถานะ 2: Loading (รอโมเดลประมวลผล) -->
+        <div id="ask-loading-box" class="state-box-loading" style="display: none;">
+          <span class="spinner"></span>
+          <span>กำลังประมวลผลคำถาม... (กำลังแปลงคำถามเป็น SQL และดึงข้อมูลจาก SQLite)</span>
+        </div>
 
-        <details>
-          <summary>ดูข้อมูลที่ได้จากฐานข้อมูล (Rows)</summary>
-          <pre id="rows">-</pre>
-        </details>
+        <!-- สถานะ 3: Success (ได้รับคำตอบสำเร็จ) -->
+        <div id="ask-success-box" class="answer-box" style="display: none;">
+          <div class="answer-label">
+            <span>คำตอบจากระบบ</span>
+            <span class="state-badge success">Success</span>
+          </div>
+          <div class="answer-text" id="answer-text">-</div>
+
+          <details>
+            <summary>ดูคำสั่ง SQL ที่ใช้</summary>
+            <pre id="answer-sql">-</pre>
+          </details>
+
+          <details>
+            <summary>ดูข้อมูลที่ได้จากฐานข้อมูล (Rows)</summary>
+            <pre id="answer-rows">-</pre>
+          </details>
+        </div>
+
+        <!-- สถานะ 4: Error (เกิดข้อผิดพลาดในการประมวลผล) -->
+        <div id="ask-error-box" class="state-box-error" style="display: none;">
+          <div class="error-title">
+            <span>⚠️ เกิดข้อผิดพลาดในการประมวลผล</span>
+            <span class="state-badge error">Error</span>
+          </div>
+          <div class="error-message" id="ask-error-msg">-</div>
+          <div class="error-action" id="ask-error-action">-</div>
+        </div>
       </div>
     </div>
 
@@ -407,126 +102,6 @@
     </div>
   </div>
 
-  <script>
-    // ตัวช่วยเลือกคำถามตัวอย่าง
-    function setQuestion(q) {
-      const textarea = document.getElementById("question");
-      textarea.value = q;
-      textarea.focus();
-    }
-
-    // รองรับการกด Ctrl+Enter / Cmd+Enter ใน textarea
-    document.getElementById("question").addEventListener("keydown", (e) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
-        e.preventDefault();
-        document.getElementById("ask-form").requestSubmit();
-      }
-    });
-
-    // ถามคำถาม AI
-    document.getElementById("ask-form").addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const btn = document.getElementById("ask-btn");
-      const answer = document.getElementById("answer");
-      const container = document.getElementById("answer-container");
-      
-      container.style.display = "block";
-      answer.textContent = "กำลังประมวลผลคำถาม...";
-      btn.disabled = true;
-      btn.textContent = "กำลังคิด...";
-
-      try {
-        const response = await fetch("/api/ask", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ question: document.getElementById("question").value })
-        });
-        const data = await response.json();
-        if (!response.ok) throw new Error(data.detail || "เกิดข้อผิดพลาดในการประมวลผล");
-
-        answer.textContent = data.answer || "ไม่มีข้อความตอบกลับ";
-        document.getElementById("rows").textContent = JSON.stringify(data.rows, null, 2);
-        document.getElementById("sql").textContent = data.sql || "-";
-      } catch (error) {
-        answer.textContent = `เกิดข้อผิดพลาด: ${error.message}`;
-      } finally {
-        btn.disabled = false;
-        btn.textContent = "ส่งคำถาม";
-      }
-    });
-
-    // Prerequisite Graph Search
-    async function fetchPrereq(code) {
-      const resultDiv = document.getElementById("prereq-result");
-      const btn = document.getElementById("prereq-btn");
-      resultDiv.innerHTML = "<div class='empty-state'>กำลังตรวจสอบข้อมูล...</div>";
-      btn.disabled = true;
-
-      try {
-        const response = await fetch(`/api/courses/${encodeURIComponent(code)}/prerequisites`);
-        const data = await response.json();
-        if (!response.ok) throw new Error(data.detail || "ไม่พบข้อมูลวิชานี้");
-
-        const courseTitle = `${data.code} — ${data.name_th || data.name_en || '-'} ${data.credits != null ? `(${data.credits} หน่วยกิต)` : ''}`;
-        
-        let html = `<div class="prereq-course-header">${courseTitle}</div>`;
-
-        // 1. Requires
-        html += `<div class="prereq-group">
-          <div class="prereq-group-title">1. วิชาที่ต้องเรียนมาก่อน (Requires)</div>`;
-        if (data.requires && data.requires.length > 0) {
-          html += `<ul class="course-list">` + data.requires.map(c => `
-            <li class="course-item">
-              <div>
-                <a href="javascript:void(0)" onclick="searchPrereq('${c.code}')">${c.code}</a>
-                <span style="margin-left: 6px;">${c.name_th || c.name_en || ''}</span>
-                ${c.credits != null ? `<span style="color: var(--text-muted); font-size: 12px;">(${c.credits} นก.)</span>` : ''}
-              </div>
-              <span class="tag ${c.kind}">${c.kind.toUpperCase()}</span>
-            </li>
-          `).join("") + `</ul>`;
-        } else {
-          html += `<div class="empty-state">ไม่มีเงื่อนไขวิชาบังคับก่อน</div>`;
-        }
-        html += `</div>`;
-
-        // 2. Required By
-        html += `<div class="prereq-group">
-          <div class="prereq-group-title">2. เป็นวิชาบังคับก่อนของ (Required By)</div>`;
-        if (data.required_by && data.required_by.length > 0) {
-          html += `<ul class="course-list">` + data.required_by.map(c => `
-            <li class="course-item">
-              <div>
-                <a href="javascript:void(0)" onclick="searchPrereq('${c.code}')">${c.code}</a>
-                <span style="margin-left: 6px;">${c.name_th || c.name_en || ''}</span>
-                ${c.credits != null ? `<span style="color: var(--text-muted); font-size: 12px;">(${c.credits} นก.)</span>` : ''}
-              </div>
-              <span class="tag ${c.kind}">${c.kind.toUpperCase()}</span>
-            </li>
-          `).join("") + `</ul>`;
-        } else {
-          html += `<div class="empty-state">ไม่มีวิชาที่ต้องใช้วิชานี้เป็นวิชาบังคับก่อน</div>`;
-        }
-        html += `</div>`;
-
-        resultDiv.innerHTML = html;
-      } catch (error) {
-        resultDiv.innerHTML = `<div class="empty-state" style="color: #ef4444; font-style: normal;">${error.message}</div>`;
-      } finally {
-        btn.disabled = false;
-      }
-    }
-
-    function searchPrereq(code) {
-      document.getElementById("course-code").value = code;
-      fetchPrereq(code);
-    }
-
-    document.getElementById("prereq-form").addEventListener("submit", (event) => {
-      event.preventDefault();
-      const code = document.getElementById("course-code").value.trim();
-      fetchPrereq(code);
-    });
-  </script>
+  <script src="/static/app.js?v=2" defer></script>
 </body>
 </html>
