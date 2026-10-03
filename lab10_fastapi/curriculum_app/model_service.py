@@ -56,13 +56,28 @@ class QwenTextToSQL:
 - ถามหน่วยกิตรายเทอมให้ใช้ v_semester_credits
 - ถามรายวิชาตามแผนให้ใช้ v_plan
 - ถามกฎระเบียบ เกียรตินิยม ภาคทัณฑ์ พ้นสภาพ การทุจริตสอบ การลงทะเบียน ให้ใช้ regulation
+- ถามว่าวิชามีกี่หน่วยกิต ให้ใช้ course จากรหัสวิชา code (ตาราง course ไม่มีคอลัมน์ program_id ห้ามใส่ program_id ใน WHERE ของตาราง course) หรือใช้ v_plan
 - หากคำถามไม่ได้ระบุชื่อหลักสูตร (เช่น IT, DSBA, BIT, AIT) ห้ามใส่เงื่อนไข program_id หรือ subquery หา program เด็ดขาด
-- หากคำถามระบุชื่อหลักสูตร ให้ใส่เงื่อนไข program_id LIKE 'IT%' หรือ 'DSBA%' หรือ 'BIT%' หรือ 'AIT%' ใน WHERE เสมอ (เนื่องจากรหัสในระบบคือ IT-coop, DSBA-coop, BIT-coop, AIT)
+- หากใช้ alias ให้ตาราง (เช่น prerequisite p หรือ course c) ต้องอ้างอิงคอลัมน์ผ่าน alias นั้นเสมอ ห้ามผสมชื่อตารางเดิม เช่น p.requires ห้ามเขียน prerequisite.requires
+- ตาราง prerequisite มีคอลัมน์ code (วิชาที่ต้องเรียน), requires (วิชาบังคับก่อน), kind ('pre' หรือ 'co')
+- ตาราง v_semester_credits เก็บหน่วยกิตของแต่ละปีและเทอมไว้แล้ว (คอลัมน์ credits คือหน่วยกิตของเทอมนั้น) หากถามว่าเทอมไหนเรียนหนักสุดหรือมีหน่วยกิตมากที่สุด ให้ SELECT year, semester, credits, n_courses FROM v_semester_credits ORDER BY credits DESC LIMIT 1 (ห้ามใช้ SUM(credits) หรือ GROUP BY semester เด็ดขาด)
 - ห้ามแก้ไขฐานข้อมูล
 
 ตัวอย่าง:
 คำถาม: หลักสูตรนี้มีกี่หน่วยกิต
 SQL: SELECT total_credits FROM program LIMIT 1
+คำถาม: เทอมไหนเรียนหนักที่สุด
+SQL: SELECT year, semester, credits, n_courses FROM v_semester_credits ORDER BY credits DESC LIMIT 1
+คำถาม: เทอมไหนมีจำนวนหน่วยกิตรวมให้เรียนหนักที่สุด
+SQL: SELECT year, semester, credits, n_courses FROM v_semester_credits ORDER BY credits DESC LIMIT 1
+คำถาม: วิชาไหนเป็นวิชาบังคับก่อนให้วิชาอื่นมากที่สุด
+SQL: SELECT c.code, c.name_th, COUNT(p.code) AS cnt FROM prerequisite p JOIN course c ON p.requires = c.code GROUP BY p.requires ORDER BY cnt DESC LIMIT 5
+คำถาม: วิชาไหนเป็นวิชาบังคับก่อน (Prerequisite) ให้วิชาอื่นมากที่สุด 5 อันดับแรก
+SQL: SELECT c.code, c.name_th, COUNT(p.code) AS cnt FROM prerequisite p JOIN course c ON p.requires = c.code GROUP BY p.requires ORDER BY cnt DESC LIMIT 5
+คำถาม: วิชา 06036100 ในหลักสูตร BIT มีกี่หน่วยกิต
+SQL: SELECT credits FROM course WHERE code = '06036100' LIMIT 1
+คำถาม: วิชา 06036100 ในหลักสูตร BIT เรียนชั้นปีที่เท่าไร
+SQL: SELECT year FROM plan_item WHERE code = '06036100' AND program_id LIKE 'BIT%' LIMIT 1
 คำถาม: หลักสูตร IT มีกี่หน่วยกิต
 SQL: SELECT total_credits FROM program WHERE program_id LIKE 'IT%' LIMIT 1
 คำถาม: ปี 1 เทอม 1 เรียนกี่หน่วยกิต

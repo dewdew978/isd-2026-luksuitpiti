@@ -3,7 +3,7 @@
  * ควบคุมสถานะ UI 4 ขั้นตอน: Idle, Loading, Success, Error
  * ปฏิบัติตามแนวทาง Best Practice:
  * - ใช้ async/await และ try/catch พร้อมตรวจสอบ response.ok
- * - ควบคุมผ่าน State และ Class แทนการแก้ inline styles ทีละบรรทัด
+ * - ควบคุมผ่าน State และ Class แทนการแก้ inline styles ทีละบรรทัด (ตามแนวทาง Lab 11)
  * - ใช้ textContent สำหรับข้อความจากโมเดลเพื่อป้องกัน XSS
  */
 
@@ -27,50 +27,31 @@ function setAskState(state, payload = {}) {
   const successBox = document.getElementById("ask-success-box");
   const errorBox = document.getElementById("ask-error-box");
 
-  // ซ่อนทุกกล่องก่อนเปลี่ยนสถานะ
-  idleBox.style.display = "none";
-  loadingBox.style.display = "none";
-  successBox.style.display = "none";
-  errorBox.style.display = "none";
+  // ควบคุมการแสดงผลตามสถานะด้วย CSS class (.hidden) 
+  idleBox.classList.toggle("hidden", state !== UI_STATE.IDLE);
+  loadingBox.classList.toggle("hidden", state !== UI_STATE.LOADING);
+  successBox.classList.toggle("hidden", state !== UI_STATE.SUCCESS);
+  errorBox.classList.toggle("hidden", state !== UI_STATE.ERROR);
 
-  switch (state) {
-    case UI_STATE.IDLE:
-      idleBox.style.display = "flex";
-      btn.disabled = false;
-      btn.textContent = "ส่งคำถาม";
-      break;
+  btn.disabled = (state === UI_STATE.LOADING);
+  btn.innerHTML = (state === UI_STATE.LOADING)
+    ? `<span class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span> <span>กำลังคิด...</span>`
+    : `ส่งคำถาม`;
 
-    case UI_STATE.LOADING:
-      loadingBox.style.display = "flex";
-      btn.disabled = true;
-      btn.innerHTML = `<span class="spinner"></span> กำลังคิด...`;
-      break;
-
-    case UI_STATE.SUCCESS:
-      successBox.style.display = "block";
-      btn.disabled = false;
-      btn.textContent = "ส่งคำถาม";
-
-      // แสดงคำตอบอย่างปลอดภัยด้วย textContent (ป้องกัน XSS ตามสไลด์หน้า 18)
-      document.getElementById("answer-text").textContent =
-        payload.answer || "ไม่มีข้อความตอบกลับ";
-      document.getElementById("answer-sql").textContent = payload.sql || "-";
-      document.getElementById("answer-rows").textContent = payload.rows
-        ? JSON.stringify(payload.rows, null, 2)
-        : "-";
-      break;
-
-    case UI_STATE.ERROR:
-      errorBox.style.display = "block";
-      btn.disabled = false;
-      btn.textContent = "ส่งคำถาม";
-
-      document.getElementById("ask-error-msg").textContent =
-        payload.errorMsg || "เกิดข้อผิดพลาดในการประมวลผล";
-      document.getElementById("ask-error-action").textContent =
-        payload.errorAction ||
-        "คำแนะนำ: ตรวจสอบว่าได้รัน Ollama และ uvicorn เรียบร้อยแล้ว หรือลองปรับคำถามให้กระชับขึ้น";
-      break;
+  if (state === UI_STATE.SUCCESS) {
+    // แสดงคำตอบอย่างปลอดภัยด้วย textContent (ป้องกัน XSS ตามแนวทาง Lab 11)
+    document.getElementById("answer-text").textContent =
+      payload.answer || "ไม่มีข้อความตอบกลับ";
+    document.getElementById("answer-sql").textContent = payload.sql || "-";
+    document.getElementById("answer-rows").textContent = payload.rows
+      ? JSON.stringify(payload.rows, null, 2)
+      : "-";
+  } else if (state === UI_STATE.ERROR) {
+    document.getElementById("ask-error-msg").textContent =
+      payload.errorMsg || "เกิดข้อผิดพลาดในการประมวลผล";
+    document.getElementById("ask-error-action").textContent =
+      payload.errorAction ||
+      "คำแนะนำ: ตรวจสอบว่าได้รัน Ollama และ uvicorn เรียบร้อยแล้ว หรือลองปรับคำถามให้กระชับขึ้น";
   }
 }
 
@@ -79,8 +60,16 @@ function setAskState(state, payload = {}) {
  */
 function setQuestion(questionText) {
   const textarea = document.getElementById("question");
-  textarea.value = questionText;
-  textarea.focus();
+  if (textarea) {
+    textarea.value = questionText;
+    textarea.focus();
+  }
+
+  // ปรับ class 'active' ตามหัวข้อที่เลือก (JS เปลี่ยน class, CSS แสดงผลตาม class)
+  const askChips = document.querySelectorAll("#ask-chips .chip");
+  askChips.forEach((c) => {
+    c.classList.toggle("active", c.getAttribute("data-question") === questionText);
+  });
 }
 
 /**
@@ -144,8 +133,8 @@ async function fetchPrereq(code) {
 
   // 1. Loading State
   resultDiv.innerHTML = `
-    <div class="state-box-loading">
-      <span class="spinner"></span>
+    <div class="p-4 bg-blue-50/80 border border-blue-200 rounded-xl flex items-center gap-3 text-blue-700 text-sm font-medium">
+      <span class="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin flex-shrink-0"></span>
       <span>กำลังตรวจสอบเงื่อนไขวิชา ${escapeHtml(code)}...</span>
     </div>
   `;
@@ -164,7 +153,7 @@ async function fetchPrereq(code) {
       data.name_th || data.name_en || "-"
     )} ${data.credits != null ? `(${data.credits} หน่วยกิต)` : ""}`;
 
-    let html = `<div class="prereq-course-header" style="background: none !important; border: none !important; padding: 0 !important; font-size: 15px; font-weight: 600; color: var(--text-main); margin-bottom: 16px;">${courseTitle}</div>`;
+    let html = `<div class="prereq-course-header">${courseTitle}</div>`;
 
     // 1. Requires (วิชาที่ต้องเรียนมาก่อน)
     html += `
@@ -179,10 +168,10 @@ async function fetchPrereq(code) {
           <li class="course-item">
             <div>
               <a href="javascript:void(0)" onclick="searchPrereq('${escapeHtml(c.code)}')">${escapeHtml(c.code)}</a>
-              <span style="margin-left: 6px;">${escapeHtml(c.name_th || c.name_en || "")}</span>
+              <span class="course-name">${escapeHtml(c.name_th || c.name_en || "")}</span>
               ${
                 c.credits != null
-                  ? `<span style="color: var(--text-muted); font-size: 12px;">(${c.credits} นก.)</span>`
+                  ? `<span class="course-credits-badge">(${c.credits} นก.)</span>`
                   : ""
               }
             </div>
@@ -210,10 +199,10 @@ async function fetchPrereq(code) {
           <li class="course-item">
             <div>
               <a href="javascript:void(0)" onclick="searchPrereq('${escapeHtml(c.code)}')">${escapeHtml(c.code)}</a>
-              <span style="margin-left: 6px;">${escapeHtml(c.name_th || c.name_en || "")}</span>
+              <span class="course-name">${escapeHtml(c.name_th || c.name_en || "")}</span>
               ${
                 c.credits != null
-                  ? `<span style="color: var(--text-muted); font-size: 12px;">(${c.credits} นก.)</span>`
+                  ? `<span class="course-credits-badge">(${c.credits} นก.)</span>`
                   : ""
               }
             </div>
@@ -232,10 +221,13 @@ async function fetchPrereq(code) {
   } catch (error) {
     // 3. Error State
     resultDiv.innerHTML = `
-      <div class="state-box-error">
-        <div class="error-title">⚠️ ไม่สามารถดึงข้อมูลเงื่อนไขวิชาได้</div>
-        <div class="error-message">${escapeHtml(error.message)}</div>
-        <div class="error-action">คำแนะนำ: ตรวจสอบความถูกต้องของรหัสวิชา (ต้องเป็นตัวเลข 8 หลัก เช่น 06026201)</div>
+      <div class="p-4 bg-rose-50 border border-rose-200 rounded-xl text-sm space-y-2">
+        <div class="flex items-center justify-between font-semibold text-rose-900 text-sm">
+          <span>ไม่สามารถดึงข้อมูลเงื่อนไขวิชาได้</span>
+          <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">Error</span>
+        </div>
+        <div class="text-rose-700 font-mono text-xs bg-rose-100/70 p-2.5 rounded-lg border border-rose-200/60 break-words">${escapeHtml(error.message)}</div>
+        <div class="text-xs text-rose-600">คำแนะนำ: ตรวจสอบความถูกต้องของรหัสวิชา (ต้องเป็นตัวเลข 8 หลัก เช่น 06026201)</div>
       </div>
     `;
   } finally {
@@ -260,8 +252,15 @@ function searchPrereq(code) {
   const input = document.getElementById("course-code");
   if (input) {
     input.value = code;
-    fetchPrereq(code);
   }
+
+  // ปรับ class 'active' ตามรหัสวิชาที่เลือก (JS เปลี่ยน class, CSS แสดงผลตาม class)
+  const prereqChips = document.querySelectorAll("#prereq-chips .chip");
+  prereqChips.forEach((c) => {
+    c.classList.toggle("active", c.getAttribute("data-code") === code);
+  });
+
+  fetchPrereq(code);
 }
 
 // ตั้งค่า Event Listeners เมื่อ DOM พร้อมทำงาน
@@ -289,6 +288,48 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const code = document.getElementById("course-code").value.trim();
       fetchPrereq(code);
+    });
+  }
+
+  // ตัวอย่างการใช้ Pattern:
+  // 1. JS ตรวจจับเหตุการณ์ (Event)
+  // 2. JS เปลี่ยน class ของ HTML (classList.toggle('active'))
+  // 3. CSS แสดงผลตาม class ที่เปลี่ยน (.chip.active)
+  const askChips = document.querySelectorAll("#ask-chips .chip");
+  askChips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const questionText = chip.getAttribute("data-question");
+      if (questionText) {
+        setQuestion(questionText);
+      }
+    });
+  });
+
+  const prereqChips = document.querySelectorAll("#prereq-chips .chip");
+  prereqChips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const code = chip.getAttribute("data-code");
+      if (code) {
+        searchPrereq(code);
+      }
+    });
+  });
+
+  // จัดการปุ่มคัดลอก SQL
+  const copyBtn = document.getElementById("copy-sql-btn");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", () => {
+      const sqlText = document.getElementById("answer-sql").textContent.trim();
+      if (!sqlText || sqlText === "-") return;
+      navigator.clipboard.writeText(sqlText).then(() => {
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = "คัดลอกเรียบร้อย!";
+        copyBtn.classList.add("bg-emerald-50", "text-emerald-700", "border-emerald-300");
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+          copyBtn.classList.remove("bg-emerald-50", "text-emerald-700", "border-emerald-300");
+        }, 2000);
+      });
     });
   }
 
