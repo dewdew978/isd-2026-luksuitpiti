@@ -1,0 +1,317 @@
+[
+  {
+    "question": "หลักสูตร AIT มีทั้งหมดกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 120
+    }
+  },
+  {
+    "question": "หลักสูตร AIT ใช้เวลาเรียนกี่ปี",
+    "expect": {
+      "type": "value",
+      "value": 4
+    }
+  },
+  {
+    "question": "วิชา 06016401 ในหลักสูตร AIT มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06016401 ในหลักสูตร AIT เรียนชั้นปีที่เท่าไร",
+    "expect": {
+      "type": "value",
+      "value": 1
+    }
+  },
+  {
+    "question": "วิชา 06016401 ในหลักสูตร AIT เรียนภาคการศึกษาใด",
+    "expect": {
+      "type": "value",
+      "value": 1
+    }
+  },
+  {
+    "question": "วิชา 06046400 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06046400 เรียนชั้นปีที่เท่าไร",
+    "expect": {
+      "type": "value",
+      "value": 1
+    }
+  },
+  {
+    "question": "วิชา 06046400 เรียนภาคการศึกษาใด",
+    "expect": {
+      "type": "value",
+      "value": 1
+    }
+  },
+  {
+    "question": "วิชา 06046402 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06046402 เรียนชั้นปีที่เท่าไร",
+    "expect": {
+      "type": "value",
+      "value": 1
+    }
+  },
+  {
+    "question": "วิชา 06046402 เรียนภาคการศึกษาใด",
+    "expect": {
+      "type": "value",
+      "value": 1
+    }
+  },
+  {
+    "question": "วิชา 06066000 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06066000 เรียนชั้นปีที่เท่าไร",
+    "expect": {
+      "type": "value",
+      "value": 1
+    }
+  },
+  {
+    "question": "วิชา 06066000 เรียนภาคการศึกษาใด",
+    "expect": {
+      "type": "value",
+      "value": 1
+    }
+  },
+  {
+    "question": "วิชา 06046401 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06046401 เรียนชั้นปีที่เท่าไร",
+    "expect": {
+      "type": "value",
+      "value": 1
+    }
+  },
+  {
+    "question": "วิชา 06046401 เรียนภาคการศึกษาใด",
+    "expect": {
+      "type": "value",
+      "value": 2
+    }
+  },
+  {
+    "question": "วิชา 06046403 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06046403 เรียนชั้นปีที่เท่าไร",
+    "expect": {
+      "type": "value",
+      "value": 1
+    }
+  },
+  {
+    "question": "วิชา 06046403 เรียนภาคการศึกษาใด",
+    "expect": {
+      "type": "value",
+      "value": 2
+    }
+  },
+  {
+    "question": "วิชา 06066301 ในหลักสูตร AIT มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06066301 ในหลักสูตร AIT เรียนชั้นปีที่เท่าไร",
+    "expect": {
+      "type": "value",
+      "value": 1
+    }
+  },
+  {
+    "question": "วิชา 06066301 ในหลักสูตร AIT เรียนภาคการศึกษาใด",
+    "expect": {
+      "type": "value",
+      "value": 2
+    }
+  },
+  {
+    "question": "วิชา 06046401 ต้องเรียนวิชาใดมาก่อน",
+    "expect": {
+      "type": "value",
+      "value": "06046400"
+    }
+  },
+  {
+    "question": "วิชา 06046405 ต้องเรียนวิชาใดมาก่อน",
+    "expect": {
+      "type": "value",
+      "value": "06066001"
+    }
+  },
+  {
+    "question": "วิชา 06046406 ต้องเรียนวิชาใดมาก่อน",
+    "expect": {
+      "type": "value",
+      "value": "06046401"
+    }
+  },
+  {
+    "question": "วิชา 06046404 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06046408 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "หลักสูตร AIT ปี 1 เทอม 1 เรียนกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 18
+    }
+  },
+  {
+    "question": "หลักสูตร AIT ปี 1 เทอม 2 เรียนกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 16
+    }
+  },
+  {
+    "question": "วิชา 06046405 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06046405 เรียนชั้นปีที่เท่าไร",
+    "expect": {
+      "type": "value",
+      "value": 2
+    }
+  },
+  {
+    "question": "วิชา 06046405 เรียนภาคการศึกษาใด",
+    "expect": {
+      "type": "value",
+      "value": 1
+    }
+  },
+  {
+    "question": "วิชา 06046406 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06046407 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06046407 เรียนชั้นปีที่เท่าไร",
+    "expect": {
+      "type": "value",
+      "value": 2
+    }
+  },
+  {
+    "question": "วิชา 06046407 เรียนภาคการศึกษาใด",
+    "expect": {
+      "type": "value",
+      "value": 2
+    }
+  },
+  {
+    "question": "วิชา 06046410 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06046415 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06046415 เรียนชั้นปีที่เท่าไร",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06046441 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  {
+    "question": "วิชา 06046443 มีกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 6
+    }
+  },
+  {
+    "question": "หลักสูตร AIT ปี 2 เทอม 1 เรียนกี่หน่วยกิต",
+    "expect": {
+      "type": "value",
+      "value": 18
+    }
+  },
+  {
+    "question": "วิชา 88888888 ในหลักสูตร AIT มีกี่หน่วยกิต",
+    "expect": {
+      "type": "none",
+      "value": null
+    }
+  },
+  {
+    "question": "ปี 7 เทอม 1 ในหลักสูตร AIT เรียนวิชาอะไรบ้าง",
+    "expect": {
+      "type": "none",
+      "value": null
+    }
+  }
+]

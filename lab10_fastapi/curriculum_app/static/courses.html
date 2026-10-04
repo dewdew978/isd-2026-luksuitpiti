@@ -51,20 +51,15 @@
       </div>
     </nav>
 
-    <!-- Header with Program Info Badge -->
-    <header class="mb-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-      <div>
-        <h1 class="text-2xl font-bold tracking-tight text-slate-900 mb-1">จัดการรายวิชา</h1>
-        <p class="text-sm text-slate-500">เพิ่มรายวิชาใหม่และค้นหารายวิชาในหลักสูตร เชื่อมต่อกับ SQLite แบบ Real-time</p>
-      </div>
-      <div id="program-badge" class="self-start sm:self-auto px-3 py-1.5 bg-slate-100 border border-slate-200 rounded-xl text-xs text-slate-600 font-medium">
-        กำลังโหลดหลักสูตร...
-      </div>
+    <!-- Header -->
+    <header class="mb-7">
+      <h1 class="text-2xl font-bold tracking-tight text-slate-900 mb-1">จัดการรายวิชา</h1>
+      <p class="text-sm text-slate-500">เพิ่มรายวิชาใหม่และค้นหารายวิชาในหลักสูตร เชื่อมต่อกับ SQLite แบบ Real-time</p>
     </header>
 
-    <!-- Card 1: เพิ่มรายวิชาใหม่ (POST /api/courses) -->
+    <!-- Card 1: เพิ่มรายวิชาใหม่ -->
     <div class="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-sm mb-6 transition hover:shadow-md">
-      <div class="text-base font-semibold text-slate-900 mb-0.5">เพิ่มรายวิชาใหม่ (POST /api/courses)</div>
+      <div class="text-base font-semibold text-slate-900 mb-0.5">เพิ่มรายวิชาใหม่</div>
       <div class="text-xs text-slate-500 mb-5">เมื่อบันทึกแล้ว รายวิชาจะลงฐานข้อมูลทันที และสามารถถาม AI ในหน้านู้นได้ทันทีโดยไม่ต้อง Retrain โมเดล</div>
 
       <form id="create-course-form" class="space-y-4">
@@ -160,11 +155,11 @@
       </div>
     </div>
 
-    <!-- Card 2: ค้นหาและดูรายชื่อวิชาในหลักสูตร (GET /api/courses) -->
+    <!-- Card 2: ค้นหาและดูรายชื่อวิชาในหลักสูตร -->
     <div class="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-sm mb-6 transition hover:shadow-md">
       <div class="flex items-center justify-between mb-4">
         <div>
-          <div class="text-base font-semibold text-slate-900 mb-0.5">ค้นหารายวิชาในหลักสูตร (GET /api/courses)</div>
+          <div class="text-base font-semibold text-slate-900 mb-0.5">ค้นหารายวิชาในหลักสูตร</div>
           <div class="text-xs text-slate-500">พิมพ์ค้นหาด้วยรหัสวิชา หรือชื่อวิชา (ภาษาไทย/อังกฤษ)</div>
         </div>
         <span id="courses-count-badge" class="px-2.5 py-1 bg-slate-100 rounded-lg text-xs font-medium text-slate-600">

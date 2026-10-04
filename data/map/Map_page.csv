@@ -1,0 +1,1260 @@
+﻿source_gt,program,code,name_th,name_en,year,semester,pages
+DSBA coop (academic_plan_coop),DSBA,06016401,คณิตศาสตร์สำหรับเทคโนโลยีสารสนเทศ,MATHEMATICS FOR INFORMATION TECHNOLOGY,1,1,
+DSBA coop (academic_plan_coop),DSBA,06026200,แคลคูลัส 1,CALCULUS 1,1,1,15;28;66;312;351
+DSBA coop (academic_plan_coop),DSBA,06026202,พีชคณิตเชิงเส้น,LINEAR ALGEBRA,1,1,15;67;313;351
+DSBA coop (academic_plan_coop),DSBA,06066101,พื้นฐานทางธุรกิจสำหรับเทคโนโลยีสารสนเทศ,"BUSINESS FUNDAMENTALS FOR INFORMATION
+TECHNOLOGY",1,1,15;21;28;71;315;316;351
+DSBA coop (academic_plan_coop),DSBA,06066303,การแก้ปัญหาและโปรแกรมคอมพิวเตอร์,"PROBLEM SOLVING AND COMPUTER
+PROGRAMMING",1,1,16;21;71;317;351
+DSBA coop (academic_plan_coop),DSBA,90641001,โรงเรียนสร้างเสน่าห์,CHARM SCHOOL,1,1,14;121;123;149;232;260;350
+DSBA coop (academic_plan_coop),DSBA,90641003,กีฬาและนันทนาการ,SPORTS AND RECREATIONAL ACTIVITIES,1,1,14;121;123;149;232;260;350
+DSBA coop (academic_plan_coop),DSBA,90644007,ภาษาอังกฤษพื้นฐาน 1,FOUNDATION ENGLISH 1,1,1,14;121;134;207;211;350
+DSBA coop (academic_plan_coop),DSBA,06026201,แคลคูลัส 2,CALCULUS 2,1,2,15;29;312;351
+DSBA coop (academic_plan_coop),DSBA,06026203,การโปรแกรมคอมพิวเตอร์,COMPUTER PROGRAMMING,1,2,15;66;314;351
+DSBA coop (academic_plan_coop),DSBA,06026205,การตลาดเบื้อต้น,INTRODUCTION TO MARKETING,1,2,16;318;352
+DSBA coop (academic_plan_coop),DSBA,06066001,ความน่าจะเป็นและสถิติ,PROBABILITY AND STATISTICS,1,2,15;71;313;351
+DSBA coop (academic_plan_coop),DSBA,90641002,ความฉลาดทางดิจิทัล,DIGITAL INTELLIGENCE QUOTIENT,1,2,14;121;123;149;232;260;350
+DSBA coop (academic_plan_coop),DSBA,90642033,กฎหมายสำหรับคนรุ่นใหม่,LAW FOR NEW GENERATION,1,2,14;22;29;124;159;256;262;351
+DSBA coop (academic_plan_coop),DSBA,90644008,ภาษาอังกฤษพื้นฐาน 2,FOUNDATION ENGLISH 2,1,2,14;121;134;207;211;350
+DSBA coop (academic_plan_coop),DSBA,06026206,การวิเคราะห์ข้อมูลและการโปรแกรม,DATA ANALYTICS AND PROGRAMMING,2,1,16;319;352
+DSBA coop (academic_plan_coop),DSBA,06066000,คณิตศาสตร์ไม่ต่อเนื่อง,DISCRETE MATHEMATICS,2,1,15;71;313;351
+DSBA coop (academic_plan_coop),DSBA,06066300,แนวคิดระบบฐานข้อมูล,DATABASE SYSTEM CONCEPTS,2,1,16;71;316;321;322;351
+DSBA coop (academic_plan_coop),DSBA,06066302,การเขียนโปรแกรมเว็บพื้นฐาน,FUNDAMENTAL WEB PROGRAMMING,2,1,16;71;317;351
+DSBA coop (academic_plan_coop),DSBA,06066304,การวิเคราะห์และอออกแบบระบบสารสนเทศ,INFORMATION SYSTEM ANALYSIS AND DESIGN,2,1,16;318;351
+DSBA coop (academic_plan_coop),DSBA,90644xxx,วิชาเลือกภาษาและการสื่อสาร,ELECTIVE IN LANGUAGE AND COMMUNICATION,2,1,30
+DSBA coop (academic_plan_coop),DSBA,06026204,เครือข่ายและความมั่นคงทางไซเบอร์เบื่องต้น,"INTRODUCTION TO NETWORKS AND
+CYBERSECURITY",2,2,15;24;66;314
+DSBA coop (academic_plan_coop),DSBA,06026207,ระบบฐานข้อมูลแบบโนเอสคิวแอล,NOSQL DATABASE SYSTEMS,2,2,16;66;319;352
+DSBA coop (academic_plan_coop),DSBA,06026208,พื้นฐานวิทยาการข้อมูล,FUNDAMENTALS OF DATA SCIENCE,2,2,16;66;320;352
+DSBA coop (academic_plan_coop),DSBA,06026209,การแสดงข้อมูลด้วยแผนภาพ,DATA VISUALIZATION,2,2,16;66;320;352
+DSBA coop (academic_plan_coop),DSBA,06026210,การหาค่าที่เหมาะที่สุด,OPTIMIZATION,2,2,16;320;352
+DSBA coop (academic_plan_coop),DSBA,06066102,ระบบสารสนเทศเพื่อการจัดการ,MANAGEMENT INFORMATION SYSTEMS,2,2,16;71;316;351
+DSBA coop (academic_plan_coop),DSBA,06066301,โครงสร้างข้อมูลและอัลกอริทึม,DATA STRUCTURES AND ALGORITHMS,2,2,16;31;71;317;351
+DSBA coop (academic_plan_coop),DSBA,06026211,การเรียนรู้ของเครื่องเชิงประยุกต์,APPLIED MACHINE LEARNING,3,1,16;66;321;352
+DSBA coop (academic_plan_coop),DSBA,06026212,การสร้างคลังข้อมูล,DATA WAREHOUSING,3,1,16;25;321;352
+DSBA coop (academic_plan_coop),DSBA,06026xxx,"วิชาเลือกกลุ่มวิทยาการข้อมูล 1
+วิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 1
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 1","ELECTIVE IN DATA SCIENCE
+ELECTIVE IN STATISTICAL ANALYSIS 1
+ELECTIVE IN DATA ENGINEERING 1",3,1,25;26;27;32
+DSBA coop (academic_plan_coop),DSBA,06026xxx,"วิชาเลือกกลุ่มวิทยาการข้อมูล 2
+วิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 2
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 2","ELECTIVE IN DATA SCIENCE 2
+ELECTIVE IN STATISTICAL ANALYTICS 2
+ELECTIVE IN DATA ENGINEERING 2",3,1,25;26;27;32
+DSBA coop (academic_plan_coop),DSBA,9064xxxx,วิชาเลือกหมวดวิชาศึกษาทั่วไป,ELECTIVE IN GENERAL EDUCATION,3,1,351
+DSBA coop (academic_plan_coop),DSBA,90644042,การสื่อสารและการนำเสนออย่างมืออาชีพ,"PROFESSIONAL COMMUNICATION AND
+PRESENTATION",3,1,14;25;32;135;216;256;257;274;351
+DSBA coop (academic_plan_coop),DSBA,06026213,ระบบข้อมูลมหัต,BIG DATA SYSTEMS,3,2,16;26;67;322
+DSBA coop (academic_plan_coop),DSBA,06026214,โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 1,"PROJECT IN DATA SCIENCE AND BUSINESS
+ANALYTICS 1",3,2,17;26;33;67;322;323;352
+DSBA coop (academic_plan_coop),DSBA,06026xxx,"วิชาเลือกกลุ่มวิทยาการข้อมูล 3
+วิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 3
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 3","ELECTIVE IN DATA SCIENCE 3
+ELECTIVE IN STATISTICAL ANALYTICS 3
+ELECTIVE IN DATA ENGINEERING 3",3,2,25;26;27;32
+DSBA coop (academic_plan_coop),DSBA,06026xxx,"วิชาเลือกกลุ่มวิทยาการข้อมูล 4
+วิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 4
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 4","ELECTIVE IN DATA SCIENCE 4
+ELECTIVE IN STATISTICAL ANALYTICS 4
+ELECTIVE IN DATA ENGINEERING 4",3,2,25;26;27;32
+DSBA coop (academic_plan_coop),DSBA,06066100,การบริหารโครงการเทคโนโลยีสารสนเทศ,"INFORMATION TECHNOLOGY PROJECT
+MANAGEMENT",3,2,15;26;33;71;351
+DSBA coop (academic_plan_coop),DSBA,90643021,ผู้ประกอบการสมัยใหม่,MODERN ENTREPRENEURS,3,2,14;26;33;132;199;253;255;256;351
+DSBA coop (academic_plan_coop),DSBA,06026215,โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 2,"PROJECT IN DATA SCIENCE AND BUSINESS
+ANALYTICS 2",4,1,17;27;34;67;323;352
+DSBA coop (academic_plan_coop),DSBA,9064xxxx,วิชาเลือกหมวดวิชาศึกษาทั่วไป,ELECTIVE IN GENERAL EDUCATION,4,1,351
+DSBA coop (academic_plan_coop),DSBA,xxxxxxxx,วิชาเลือกเสรี 1,FREE ELECTIVE COURSE 1,4,1,
+DSBA coop (academic_plan_coop),DSBA,xxxxxxxx,วิชาเลือกเสรี 2,FREE ELECTIVE COURSE 2,4,1,
+DSBA coop (academic_plan_coop),DSBA,06026259 หรือ 06026260,"สหกิจศึกษาทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ
+สหกิจศึกษาต่างประเทศทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ","COOPERATIVE EDUCATION IN DATA
+SCIENCE AND BUSINESS ANALYTICS
+OVERSEA COOPERATIVE EDUCATION IN DATA
+SCIENCE AND BUSINESS ANALYTICS",4,2,
+DSBA coop (academic_plan_coop),DSBA,06026216,ปัญญาประดิษฐ์,ARTIFICIAL INTELLIGENCE,,,17;323;352
+DSBA coop (academic_plan_coop),DSBA,06026217,การเรียนรู้ของเครื่อง,MACHINE LEARNING,,,17;324;352
+DSBA coop (academic_plan_coop),DSBA,06026218,การเรียนรู้เชิงลึก,DEEP LEARNING,,,17;67;324;352
+DSBA coop (academic_plan_coop),DSBA,06026219,การประมวลผลภาษาธรรมชาติ,NATURAL LANGUAGE PROCESSING,,,17;67;324;352
+DSBA coop (academic_plan_coop),DSBA,06026220,การทำเหมืองข้อมูลกระบวนการ,PROCESS MINING,,,17;67;325;352
+DSBA coop (academic_plan_coop),DSBA,06026221,การค้นคืนสารสนเทศ,INFORMATION RETRIEVAL,,,17;67;325;352
+DSBA coop (academic_plan_coop),DSBA,06026222,คอมพิวเตอร์วิชัน,COMPUTER VISION,,,17;326;352
+DSBA coop (academic_plan_coop),DSBA,06026223,การประมวลผลภาพ,IMAGE PROCESSING,,,17;326;352
+DSBA coop (academic_plan_coop),DSBA,06026224,การแปลงข้อมูลและการรู้จำรูปภาพ,IMAGE TRANSFORMATION AND RECOGNITION,,,17;67;326;352
+DSBA coop (academic_plan_coop),DSBA,06026225,การเรียนรู้เชิงลึกสำหรับการวิเคราะห์ภาพและวิดีโอทางการแพทย์,"DEEP LEARNING IN MEDICAL IMAGE AND VIDEO
+ANALYSIS",,,17;68;327;352
+DSBA coop (academic_plan_coop),DSBA,06026226,หัวข้อพิเศษทางวิทยาการข้อมูล 1,SPECIAL TOPICS IN DATA SCIENCE 1,,,17;327;352
+DSBA coop (academic_plan_coop),DSBA,06026227,หัวข้อพิเศษทางวิทยาการข้อมูล 2,SPECIAL TOPICS IN DATA SCIENCE 2,,,17;68;328;352
+DSBA coop (academic_plan_coop),DSBA,06026228,ปฏิบัติการพิเศษทางวิทยาการข้อมูล 1,SPECIAL WORKSHOP IN DATA SCIENCE 1,,,18;68;328;353
+DSBA coop (academic_plan_coop),DSBA,06026229,ปฏิบัติการพิเศษทางวิทยาการข้อมูล 2,SPECIAL WORKSHOP IN DATA SCIENCE 2,,,18;68;328;353
+DSBA coop (academic_plan_coop),DSBA,06026230,อนุกรมเวลาและการพยากรณ์,TIME SERIES AND FORECASTING,,,18;328;353
+DSBA coop (academic_plan_coop),DSBA,06026231,สถิติเชิงเบย์,BAYESIAN STATISTICS,,,18;329;353
+DSBA coop (academic_plan_coop),DSBA,06026232,กระบวนการสโตแคสติกเบื้องต้น,INTRODUCTION TO STOCHASTIC PROCESS,,,18;329;353
+DSBA coop (academic_plan_coop),DSBA,06026233,การวิเคราะห์ข้อมูลหลายตัวแปร,MULTIVARIATE DATA ANALYSIS,,,18;68;329;353
+DSBA coop (academic_plan_coop),DSBA,06026234,การออกแบบการทดลอง,EXPERIMENTAL DESIGN,,,18;330;353
+DSBA coop (academic_plan_coop),DSBA,06026235,หัวข้อพิเศษทางการวิเคราะห์เชิงสถิติ 1,SPECIAL TOPICS IN STATISTICAL ANALYTICS 1,,,18;68;330;353
+DSBA coop (academic_plan_coop),DSBA,06026236,หัวข้อพิเศษทางการวิเคราะห์เชิงสถิติ 2,SPECIAL TOPICS IN STATISTICAL ANALYTICS 2,,,18;68;330;353
+DSBA coop (academic_plan_coop),DSBA,06026237,ปฏิบัติการพิเศษทางการวิเคราะห์เชิงสถิติ 1,SPECIAL WORKSHOP IN STATISTICAL ANALYTICS 1,,,18;331;353
+DSBA coop (academic_plan_coop),DSBA,06026238,ปฏิบัติการพิเศษทางการวิเคราะห์เชิงสถิติ 2,SPECIAL WORKSHOP IN STATISTICAL ANALYTICS 2,,,18;69;331;353
+DSBA coop (academic_plan_coop),DSBA,06026239,สถิาปัตยกรรมข้อมูลแบบไปป์ไลน์,DATA PIPELINE ARCHITECTURE,,,18;331;353
+DSBA coop (academic_plan_coop),DSBA,06026240,การพัฒนาระบบอัจฉริยะ,INTELLIGENT SYSTEM DEVELOPMENT,,,18;332;353
+DSBA coop (academic_plan_coop),DSBA,06026241,การดำเนินงานการเรียนรู้ของเครื่อง,MACHINE LEARNING OPERATIONS,,,18;69;332;353
+DSBA coop (academic_plan_coop),DSBA,06026242,โครงสร้างพื้นฐานด้านเทคโนโลยีกลุ่มเมฆ,CLOUD TECHNOLOGY INFRASTRUCTURE,,,18;332;353
+DSBA coop (academic_plan_coop),DSBA,06026243,ระบบฐานข้อมูลขั้นสูง,ADVANCED DATABASE SYSTEMS,,,19;333;353
+DSBA coop (academic_plan_coop),DSBA,06026244,การดูแลและบำรุงรักษาระบบฐานข้อมูล,"DATABASE SYSTEM MAINTENANCE AND
+ADMINISTRATION",,,19;333
+DSBA coop (academic_plan_coop),DSBA,06026245,ระบบข้อมูลแบบกระจาย,DISTRIBUTED DATABASE SYSTEMS,,,19;334;353
+DSBA coop (academic_plan_coop),DSBA,06026246,หัวข้อพิเศษทางวิศวกรรมข้อมูล 1,SPECIAL TOPICS IN DATA ENGINEERING 1,,,19;69;334;353
+DSBA coop (academic_plan_coop),DSBA,06026247,หัวข้อพิเศษทางวิศวกรรมข้อมูล 2,SPECIAL TOPICS IN DATA ENGINEERING 2,,,19;69;334;353
+DSBA coop (academic_plan_coop),DSBA,06026248,ปฏิบัติการพิเศษทางวิศวกรรมข้อมูล 1,SPECIAL WORKSHOP IN DATA ENGINEERING 1,,,19;335;353
+DSBA coop (academic_plan_coop),DSBA,06026249,ปฏิบัติการพิเศษทางวิศวกรรมข้อมูล 2,SPECIAL WORKSHOP IN DATA ENGINEERING 2,,,19;69;335;353
+DSBA coop (academic_plan_coop),DSBA,06026250,วิทยาการข้อมูลสำหรับธุรกิจ,DATA SCIENCE FOR BUSINESS,,,19;70;335;353
+DSBA coop (academic_plan_coop),DSBA,06026251,บัญชีการเงิน,FINANCIAL ACCOUNTING,,,19;336;353
+DSBA coop (academic_plan_coop),DSBA,06026252,การวิเคราะห์ด้านการเงิน,FINANCIAL ANALYTICS,,,19;70;336;354
+DSBA coop (academic_plan_coop),DSBA,06026253,การวิเคราะห์ด้านการตลาด,MARKETING ANALYTICS,,,19;70;336;354
+DSBA coop (academic_plan_coop),DSBA,06026254,เทคโนโลยีสุขภาพสนเทศศาสตร์เบื้องต้น,INTRODUCTION TO HEALTH ANALYTICS,,,19;337;354
+DSBA coop (academic_plan_coop),DSBA,06026255,การได้มาและการจัดการข้อมูลทางด้านคลินิก,CLINICAL DATA ACQUISITION AND MANAGEMENT,,,19;337;354
+DSBA coop (academic_plan_coop),DSBA,06026256,การจัดการการปฏิบัติการ,OPERATIONS MANAGEMENT,,,19;70;338;354
+DSBA coop (academic_plan_coop),DSBA,06026257,การบริหารเชิงกลยุทธ์และสมรรถะของธุรกิจ,"BUSINESS STRATEGIC AND PERFORMANCE
+MANAGEMENT",,,20;70;338;354
+DSBA coop (academic_plan_coop),DSBA,06026258,การวิเคราะห์เครือข่ายสังคม,SOCIAL NETWORK ANALYSIS,,,20;70;339;354
+DSBA coop (academic_plan_coop),DSBA,06026259,สหกิจศึกษาทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ,"COOPERATIVE EDUCATION IN DATA
+SCIENCE AND BUSINESS ANALYTICS",,,20;34;70;339;354
+DSBA coop (academic_plan_coop),DSBA,06026260,สหกิจศึกษาต่างประเทศทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ,"OVERSEA COOPERATIVE EDUCATION IN DATA
+SCIENCE AND BUSINESS ANALYTICS",,,20;34;69;70;339;354
+DSBA coop (academic_plan_coop),DSBA,"หมายเหตุ: คอลัมน์ ""ตัวเลือกปี/เทอม (flexible)"" กรอกเฉพาะแถวที่ ปี=0 และ เทอม=0 เท่านั้น (เซลล์จะเปลี่ยนเป็นสีเหลืองอัตโนมัติ) — ใส่เป็น ""ปี/เทอม"" คั่นด้วยจุลภาค เช่น ""3/2, 4/1, 4/2""",,,,,
+DSBA no_coop (academic_plan_no_coop),DSBA,06016401,คณิตศาสตร์สำหรับเทคโนโลยีสารสนเทศ,MATHEMATICS FOR INFORMATION TECHNOLOGY,1,1,
+DSBA no_coop (academic_plan_no_coop),DSBA,06026200,แคลคูลัส 1,CALCULUS 1,1,1,15;28;66;312;351
+DSBA no_coop (academic_plan_no_coop),DSBA,06026202,พีชคณิตเชิงเส้น,LINEAR ALGEBRA,1,1,15;67;313;351
+DSBA no_coop (academic_plan_no_coop),DSBA,06066101,พื้นฐานทางธุรกิจสำหรับเทคโนโลยีสารสนเทศ,"BUSINESS FUNDAMENTALS FOR INFORMATION
+TECHNOLOGY",1,1,15;21;28;71;315;316;351
+DSBA no_coop (academic_plan_no_coop),DSBA,06066303,การแก้ปัญหาและโปรแกรมคอมพิวเตอร์,"PROBLEM SOLVING AND COMPUTER
+PROGRAMMING",1,1,16;21;71;317;351
+DSBA no_coop (academic_plan_no_coop),DSBA,90641001,โรงเรียนสร้างเสน่าห์,CHARM SCHOOL,1,1,14;121;123;149;232;260;350
+DSBA no_coop (academic_plan_no_coop),DSBA,90641003,กีฬาและนันทนาการ,SPORTS AND RECREATIONAL ACTIVITIES,1,1,14;121;123;149;232;260;350
+DSBA no_coop (academic_plan_no_coop),DSBA,90644007,ภาษาอังกฤษพื้นฐาน 1,FOUNDATION ENGLISH 1,1,1,14;121;134;207;211;350
+DSBA no_coop (academic_plan_no_coop),DSBA,06026201,แคลคูลัส 2,CALCULUS 2,1,2,15;29;312;351
+DSBA no_coop (academic_plan_no_coop),DSBA,06026203,การโปรแกรมคอมพิวเตอร์,COMPUTER PROGRAMMING,1,2,15;66;314;351
+DSBA no_coop (academic_plan_no_coop),DSBA,06026205,การตลาดเบื้อต้น,INTRODUCTION TO MARKETING,1,2,16;318;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06066001,ความน่าจะเป็นและสถิติ,PROBABILITY AND STATISTICS,1,2,15;71;313;351
+DSBA no_coop (academic_plan_no_coop),DSBA,90641002,ความฉลาดทางดิจิทัล,DIGITAL INTELLIGENCE QUOTIENT,1,2,14;121;123;149;232;260;350
+DSBA no_coop (academic_plan_no_coop),DSBA,90642033,กฎหมายสำหรับคนรุ่นใหม่,LAW FOR NEW GENERATION,1,2,14;22;29;124;159;256;262;351
+DSBA no_coop (academic_plan_no_coop),DSBA,90644008,ภาษาอังกฤษพื้นฐาน 2,FOUNDATION ENGLISH 2,1,2,14;121;134;207;211;350
+DSBA no_coop (academic_plan_no_coop),DSBA,06026206,การวิเคราะห์ข้อมูลและการโปรแกรม,DATA ANALYTICS AND PROGRAMMING,2,1,16;319;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06066000,คณิตศาสตร์ไม่ต่อเนื่อง,DISCRETE MATHEMATICS,2,1,15;71;313;351
+DSBA no_coop (academic_plan_no_coop),DSBA,06066300,แนวคิดระบบฐานข้อมูล,DATABASE SYSTEM CONCEPTS,2,1,16;71;316;321;322;351
+DSBA no_coop (academic_plan_no_coop),DSBA,06066302,การเขียนโปรแกรมเว็บพื้นฐาน,FUNDAMENTAL WEB PROGRAMMING,2,1,16;71;317;351
+DSBA no_coop (academic_plan_no_coop),DSBA,06066304,การวิเคราะห์และอออกแบบระบบสารสนเทศ,INFORMATION SYSTEM ANALYSIS AND DESIGN,2,1,16;318;351
+DSBA no_coop (academic_plan_no_coop),DSBA,90644xxx,วิชาเลือกภาษาและการสื่อสาร,ELECTIVE IN LANGUAGE AND COMMUNICATION,2,1,30
+DSBA no_coop (academic_plan_no_coop),DSBA,06026204,เครือข่ายและความมั่นคงทางไซเบอร์เบื่องต้น,"INTRODUCTION TO NETWORKS AND
+CYBERSECURITY",2,2,15;24;66;314
+DSBA no_coop (academic_plan_no_coop),DSBA,06026207,ระบบฐานข้อมูลแบบโนเอสคิวแอล,NOSQL DATABASE SYSTEMS,2,2,16;66;319;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026208,พื้นฐานวิทยาการข้อมูล,FUNDAMENTALS OF DATA SCIENCE,2,2,16;66;320;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026209,การแสดงข้อมูลด้วยแผนภาพ,DATA VISUALIZATION,2,2,16;66;320;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026210,การหาค่าที่เหมาะที่สุด,OPTIMIZATION,2,2,16;320;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06066102,ระบบสารสนเทศเพื่อการจัดการ,MANAGEMENT INFORMATION SYSTEMS,2,2,16;71;316;351
+DSBA no_coop (academic_plan_no_coop),DSBA,06066301,โครงสร้างข้อมูลและอัลกอริทึม,DATA STRUCTURES AND ALGORITHMS,2,2,16;31;71;317;351
+DSBA no_coop (academic_plan_no_coop),DSBA,06026211,การเรียนรู้ของเครื่องเชิงประยุกต์,APPLIED MACHINE LEARNING,3,1,16;66;321;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026212,การสร้างคลังข้อมูล,DATA WAREHOUSING,3,1,16;25;321;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026xxx,"วิชาเลือกกลุ่มวิทยาการข้อมูล 1
+วิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 1
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 1","ELECTIVE IN DATA SCIENCE
+ELECTIVE IN STATISTICAL ANALYSIS 1
+ELECTIVE IN DATA ENGINEERING 1",3,1,25;26;27;32
+DSBA no_coop (academic_plan_no_coop),DSBA,06026xxx,"วิชาเลือกกลุ่มวิทยาการข้อมูล 2
+วิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 2
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 2","ELECTIVE IN DATA SCIENCE 2
+ELECTIVE IN STATISTICAL ANALYTICS 2
+ELECTIVE IN DATA ENGINEERING 2",3,1,25;26;27;32
+DSBA no_coop (academic_plan_no_coop),DSBA,9064xxxx,วิชาเลือกหมวดวิชาศึกษาทั่วไป,ELECTIVE IN GENERAL EDUCATION,3,1,351
+DSBA no_coop (academic_plan_no_coop),DSBA,90644042,การสื่อสารและการนำเสนออย่างมืออาชีพ,"PROFESSIONAL COMMUNICATION AND
+PRESENTATION",3,1,14;25;32;135;216;256;257;274;351
+DSBA no_coop (academic_plan_no_coop),DSBA,06026213,ระบบข้อมูลมหัต,BIG DATA SYSTEMS,3,2,16;26;67;322
+DSBA no_coop (academic_plan_no_coop),DSBA,06026214,โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 1,"PROJECT IN DATA SCIENCE AND BUSINESS
+ANALYTICS 1",3,2,17;26;33;67;322;323;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026xxx,"วิชาเลือกกลุ่มวิทยาการข้อมูล 3
+วิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 3
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 3","ELECTIVE IN DATA SCIENCE 3
+ELECTIVE IN STATISTICAL ANALYTICS 3
+ELECTIVE IN DATA ENGINEERING 3",3,2,25;26;27;32
+DSBA no_coop (academic_plan_no_coop),DSBA,06026xxx,"วิชาเลือกกลุ่มวิทยาการข้อมูล 4
+วิชาเลือกกลุ่มการวิเคราะห์เชิงสถิติ 4
+วิชาเลือกกลุ่มวิศวกรรมข้อมูล 4","ELECTIVE IN DATA SCIENCE 4
+ELECTIVE IN STATISTICAL ANALYTICS 4
+ELECTIVE IN DATA ENGINEERING 4",3,2,25;26;27;32
+DSBA no_coop (academic_plan_no_coop),DSBA,06066100,การบริหารโครงการเทคโนโลยีสารสนเทศ,"INFORMATION TECHNOLOGY PROJECT
+MANAGEMENT",3,2,15;26;33;71;351
+DSBA no_coop (academic_plan_no_coop),DSBA,90643021,ผู้ประกอบการสมัยใหม่,MODERN ENTREPRENEURS,3,2,14;26;33;132;199;253;255;256;351
+DSBA no_coop (academic_plan_no_coop),DSBA,06026215,โครงงานวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ 2,"PROJECT IN DATA SCIENCE AND BUSINESS
+ANALYTICS 2",4,1,17;27;34;67;323;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026xxx,วิชาเลือกในกลุ่มวิชาเลือกหรือกลุ่มวิชาเฉพาะด้าน 1,"ELECTIVE IN ELECTIVE OR SPECIFIC
+PROFESSIONAL COURSES 1",4,1,25;26;27;32
+DSBA no_coop (academic_plan_no_coop),DSBA,06026xxx,วิชาเลือกในกลุ่มวิชาเลือกหรือกลุ่มวิชาเฉพาะด้าน 2,"ELECTIVE IN ELECTIVE OR SPECIFIC PROFESSIONAL
+COURSES 2",4,1,25;26;27;32
+DSBA no_coop (academic_plan_no_coop),DSBA,9064xxxx,วิชาเลือกหมวดวิชาศึกษาทั่วไป,ELECTIVE IN GENERAL EDUCATION,4,2,351
+DSBA no_coop (academic_plan_no_coop),DSBA,xxxxxxxx,วิชาเลือกเสรี 1,FREE ELECTIVE COURSE 1,4,2,
+DSBA no_coop (academic_plan_no_coop),DSBA,xxxxxxxx,วิชาเลือกเสรี 2,FREE ELECTIVE COURSE 2,4,2,
+DSBA no_coop (academic_plan_no_coop),DSBA,06026216,ปัญญาประดิษฐ์,ARTIFICIAL INTELLIGENCE,,,17;323;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026217,การเรียนรู้ของเครื่อง,MACHINE LEARNING,,,17;324;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026218,การเรียนรู้เชิงลึก,DEEP LEARNING,,,17;67;324;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026219,การประมวลผลภาษาธรรมชาติ,NATURAL LANGUAGE PROCESSING,,,17;67;324;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026220,การทำเหมืองข้อมูลกระบวนการ,PROCESS MINING,,,17;67;325;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026221,การค้นคืนสารสนเทศ,INFORMATION RETRIEVAL,,,17;67;325;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026222,คอมพิวเตอร์วิชัน,COMPUTER VISION,,,17;326;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026223,การประมวลผลภาพ,IMAGE PROCESSING,,,17;326;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026224,การแปลงข้อมูลและการรู้จำรูปภาพ,IMAGE TRANSFORMATION AND RECOGNITION,,,17;67;326;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026225,การเรียนรู้เชิงลึกสำหรับการวิเคราะห์ภาพและวิดีโอทางการแพทย์,"DEEP LEARNING IN MEDICAL IMAGE AND VIDEO
+ANALYSIS",,,17;68;327;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026226,หัวข้อพิเศษทางวิทยาการข้อมูล 1,SPECIAL TOPICS IN DATA SCIENCE 1,,,17;327;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026227,หัวข้อพิเศษทางวิทยาการข้อมูล 2,SPECIAL TOPICS IN DATA SCIENCE 2,,,17;68;328;352
+DSBA no_coop (academic_plan_no_coop),DSBA,06026228,ปฏิบัติการพิเศษทางวิทยาการข้อมูล 1,SPECIAL WORKSHOP IN DATA SCIENCE 1,,,18;68;328;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026229,ปฏิบัติการพิเศษทางวิทยาการข้อมูล 2,SPECIAL WORKSHOP IN DATA SCIENCE 2,,,18;68;328;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026230,อนุกรมเวลาและการพยากรณ์,TIME SERIES AND FORECASTING,,,18;328;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026231,สถิติเชิงเบย์,BAYESIAN STATISTICS,,,18;329;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026232,กระบวนการสโตแคสติกเบื้องต้น,INTRODUCTION TO STOCHASTIC PROCESS,,,18;329;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026233,การวิเคราะห์ข้อมูลหลายตัวแปร,MULTIVARIATE DATA ANALYSIS,,,18;68;329;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026234,การออกแบบการทดลอง,EXPERIMENTAL DESIGN,,,18;330;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026235,หัวข้อพิเศษทางการวิเคราะห์เชิงสถิติ 1,SPECIAL TOPICS IN STATISTICAL ANALYTICS 1,,,18;68;330;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026236,หัวข้อพิเศษทางการวิเคราะห์เชิงสถิติ 2,SPECIAL TOPICS IN STATISTICAL ANALYTICS 2,,,18;68;330;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026237,ปฏิบัติการพิเศษทางการวิเคราะห์เชิงสถิติ 1,SPECIAL WORKSHOP IN STATISTICAL ANALYTICS 1,,,18;331;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026238,ปฏิบัติการพิเศษทางการวิเคราะห์เชิงสถิติ 2,SPECIAL WORKSHOP IN STATISTICAL ANALYTICS 2,,,18;69;331;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026239,สถิาปัตยกรรมข้อมูลแบบไปป์ไลน์,DATA PIPELINE ARCHITECTURE,,,18;331;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026240,การพัฒนาระบบอัจฉริยะ,INTELLIGENT SYSTEM DEVELOPMENT,,,18;332;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026241,การดำเนินงานการเรียนรู้ของเครื่อง,MACHINE LEARNING OPERATIONS,,,18;69;332;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026242,โครงสร้างพื้นฐานด้านเทคโนโลยีกลุ่มเมฆ,CLOUD TECHNOLOGY INFRASTRUCTURE,,,18;332;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026243,ระบบฐานข้อมูลขั้นสูง,ADVANCED DATABASE SYSTEMS,,,19;333;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026244,การดูแลและบำรุงรักษาระบบฐานข้อมูล,"DATABASE SYSTEM MAINTENANCE AND
+ADMINISTRATION",,,19;333
+DSBA no_coop (academic_plan_no_coop),DSBA,06026245,ระบบข้อมูลแบบกระจาย,DISTRIBUTED DATABASE SYSTEMS,,,19;334;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026246,หัวข้อพิเศษทางวิศวกรรมข้อมูล 1,SPECIAL TOPICS IN DATA ENGINEERING 1,,,19;69;334;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026247,หัวข้อพิเศษทางวิศวกรรมข้อมูล 2,SPECIAL TOPICS IN DATA ENGINEERING 2,,,19;69;334;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026248,ปฏิบัติการพิเศษทางวิศวกรรมข้อมูล 1,SPECIAL WORKSHOP IN DATA ENGINEERING 1,,,19;335;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026249,ปฏิบัติการพิเศษทางวิศวกรรมข้อมูล 2,SPECIAL WORKSHOP IN DATA ENGINEERING 2,,,19;69;335;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026250,วิทยาการข้อมูลสำหรับธุรกิจ,DATA SCIENCE FOR BUSINESS,,,19;70;335;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026251,บัญชีการเงิน,FINANCIAL ACCOUNTING,,,19;336;353
+DSBA no_coop (academic_plan_no_coop),DSBA,06026252,การวิเคราะห์ด้านการเงิน,FINANCIAL ANALYTICS,,,19;70;336;354
+DSBA no_coop (academic_plan_no_coop),DSBA,06026253,การวิเคราะห์ด้านการตลาด,MARKETING ANALYTICS,,,19;70;336;354
+DSBA no_coop (academic_plan_no_coop),DSBA,06026254,เทคโนโลยีสุขภาพสนเทศศาสตร์เบื้องต้น,INTRODUCTION TO HEALTH ANALYTICS,,,19;337;354
+DSBA no_coop (academic_plan_no_coop),DSBA,06026255,การได้มาและการจัดการข้อมูลทางด้านคลินิก,CLINICAL DATA ACQUISITION AND MANAGEMENT,,,19;337;354
+DSBA no_coop (academic_plan_no_coop),DSBA,06026256,การจัดการการปฏิบัติการ,OPERATIONS MANAGEMENT,,,19;70;338;354
+DSBA no_coop (academic_plan_no_coop),DSBA,06026257,การบริหารเชิงกลยุทธ์และสมรรถะของธุรกิจ,"BUSINESS STRATEGIC AND PERFORMANCE
+MANAGEMENT",,,20;70;338;354
+DSBA no_coop (academic_plan_no_coop),DSBA,06026258,การวิเคราะห์เครือข่ายสังคม,SOCIAL NETWORK ANALYSIS,,,20;70;339;354
+DSBA no_coop (academic_plan_no_coop),DSBA,06026259,สหกิจศึกษาทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ,"COOPERATIVE EDUCATION IN DATA
+SCIENCE AND BUSINESS ANALYTICS",,,20;34;70;339;354
+DSBA no_coop (academic_plan_no_coop),DSBA,06026260,สหกิจศึกษาต่างประเทศทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ,"OVERSEA COOPERATIVE EDUCATION IN DATA
+SCIENCE AND BUSINESS ANALYTICS",,,20;34;69;70;339;354
+DSBA no_coop (academic_plan_no_coop),DSBA,"หมายเหตุ: คอลัมน์ ""ตัวเลือกปี/เทอม (flexible)"" กรอกเฉพาะแถวที่ ปี=0 และ เทอม=0 เท่านั้น (เซลล์จะเปลี่ยนเป็นสีเหลืองอัตโนมัติ) — ใส่เป็น ""ปี/เทอม"" คั่นด้วยจุลภาค เช่น ""3/2, 4/1, 4/2""",,,,,
+IT coop (academic_plan_coop),IT,06016401,คณิตศาสตร์สำหรับเทคโนโลยีสารสนเทศ,MATHEMATICS FOR INFORMATION TECHNOLOGY,1,1,18;26;34;ocr328
+IT coop (academic_plan_coop),IT,06016402,พื้นฐานทางด้านเทคโนโลยีสารสนเทศ,INFORMATION TECHNOLOGY FUNDAMENTALS,1,1,18;26;34;ocr328
+IT coop (academic_plan_coop),IT,06016411,ระบบคอมพิวเตอร์เบื้องต้น,INTRODUCTION TO COMPUTER SYSTEMS,1,1,19;26;34;ocr333
+IT coop (academic_plan_coop),IT,06066303,การแก้ปัญหาและการโปรแกรมคอมพิวเตอร์,PROBLEM SOLVING AND COMPUTER PROGRAMMING,1,1,19;26;34;ocr371;ocr387
+IT coop (academic_plan_coop),IT,90641001,โรงเรียนสร้างเสน่ห์,CHARM SCHOOL,1,1,16;26;34;ocr138;ocr140;ocr166;ocr249;ocr277;ocr384
+IT coop (academic_plan_coop),IT,90641003,กีฬาและนันทนาการ,SPORTS AND RECREATIONAL ACTIVITIES,1,1,17;26;34;ocr138;ocr140;ocr166;ocr249;ocr277;ocr384
+IT coop (academic_plan_coop),IT,90644007,ภาษาอังกฤษพื้นฐาน 1,FOUNDATION ENGLISH 1,1,1,17;26;34;ocr138;ocr151;ocr224;ocr384
+IT coop (academic_plan_coop),IT,06016408,การสร้างโปรแกรมเชิงวัตถุ,OBJECT-ORIENTED PROGRAMMING,1,2,19;28;35;ocr331;ocr336
+IT coop (academic_plan_coop),IT,06066001,ความน่าจะเป็นและสถิติ,PROBABILITY AND STATISTICS,1,2,18;28;35;ocr368;ocr386
+IT coop (academic_plan_coop),IT,06066101,พื้นฐานทางธุรกิจสำหรับเทคโนโลยีสารสนเทศ,BUSINESS FUNDAMENTALS FOR INFORMATION TECHNOLOGY,1,2,18;28;35;ocr355;ocr368;ocr369;ocr386
+IT coop (academic_plan_coop),IT,06066301,โครงสร้างข้อมูลและอัลกอรึทึม,DATA STRUCTURES AND ALGORITHMS,1,2,19;28;35;ocr370;ocr386
+IT coop (academic_plan_coop),IT,90641002,ความฉลาดทางดิจิทัล,DIGITAL INTELLIGENCE QUOTIENT,1,2,16;28;35;ocr138;ocr140;ocr166;ocr249;ocr277;ocr384
+IT coop (academic_plan_coop),IT,90644008,ภาษาอังกฤษพื้นฐาน 2,FOUNDATION ENGLISH 2,1,2,17;28;35;ocr138;ocr151;ocr224;ocr384
+IT coop (academic_plan_coop),IT,06016403,เทคโนโลยีสื่อประสม,MULTIMEDIA TECHNOLOGY,2,1,18;29;36;ocr329
+IT coop (academic_plan_coop),IT,06016409,การประมวลผลทางกายภาพ,PHYSICAL COMPUTING,2,1,19;29;36;ocr332
+IT coop (academic_plan_coop),IT,06016413,ระบบเครือข่ายเบื้องต้น,INTRODUCTION TO NETWORK SYSTEMS,2,1,19;29;36;ocr333;ocr337;ocr338;ocr339;ocr340
+IT coop (academic_plan_coop),IT,06066000,คณิตศาสตร์ไม่ต่อเนื่อง,DISCRETE MATHEMATICS,2,1,18;29;36;ocr367;ocr386
+IT coop (academic_plan_coop),IT,06066300,แนวคิดระบบฐานข้อมูล,DATABASE SYSTEM CONCEPTS,2,1,19;29;36;ocr356;ocr369;ocr386
+IT coop (academic_plan_coop),IT,06066304,การวิเคราะห์และออกแบบระบบสารสนเทศ,INFORMATION SYSTEM ANALYSIS AND DESIGN,2,1,19;29;36;ocr344;ocr371;ocr387
+IT coop (academic_plan_coop),IT,06016405,พื้นฐานความมั่นคงปลอดภัยไซเบอร์,CYBERSECURITY FUNDAMENTALS,2,2,18;30;37;ocr330
+IT coop (academic_plan_coop),IT,06016410,วิศวกรรมซอฟต์แวร์,SOFTWARE ENGINEERING,2,2,19;30;37;ocr332
+IT coop (academic_plan_coop),IT,06016412,โครงสร้างระบบคอมพิวเตอร์และระบบปฎิบัติการ,COMPUTER ORGANIZATION AND OPERATING SYSTEM,2,2,19;30;37;ocr333;ocr88
+IT coop (academic_plan_coop),IT,06066302,การเขียนโปรแกรมเว็บพื้นฐาน,FUNDAMENTAL WEB PROGRAMMING,2,2,19;30;37;ocr343;ocr350;ocr370;ocr386
+IT coop (academic_plan_coop),IT,06016414,ระบบฐานข้อมูลแบบโนเอสคิวแอล,NOSQL DATABASE SYSTEMS,2,2,20;30;37;ocr334
+IT coop (academic_plan_coop),IT,06016415,การเขียนโปรแกรมเชิงฟังก์ชัน,FUNCTIONAL PROGRAMMING,2,2,20;30;37;ocr335
+IT coop (academic_plan_coop),IT,06016419,โครงสร้างพื้นฐานเครือข่ายการสื่อสาร,COMMUNICATION NETWORK INFRASTRUCTURE,2,2,20;30;37;ocr337
+IT coop (academic_plan_coop),IT,06016420,ระบบโครงสร้างพื้นฐานและการบริการ,INFRASTRUCTURE SYSTEMS AND SERVICES,2,2,20;30;37;ocr338
+IT coop (academic_plan_coop),IT,06016424,การออกแบบส่วนต่อประสานกับมนุษย์,HUMAN INTERFACE DESIGN,2,2,21;30;37;ocr340
+IT coop (academic_plan_coop),IT,06016425,พื้นฐานการออกแบบทัศนศิลป์สำหรับสื่อปฏิสัมพันธ์,VISUAL DESIGN FUNDAMENTALS FOR INTERACTIVE MEDIA,2,2,21;30;37;ocr341
+IT coop (academic_plan_coop),IT,06016404,เทคโนโลยีกลุ่มเมฆ,CLOUD COMPUTING,3,1,18;28;31;ocr329;ocr343
+IT coop (academic_plan_coop),IT,06066102,ระบบสารสนเทศเพื่อการจัดการ,MANAGEMENT INFORMATION SYSTEMS,3,1,18;28;31;ocr369;ocr386
+IT coop (academic_plan_coop),IT,90644xxx,วิชาเลือกหมวดภาษาและการสื่อสาร,ELECTIVE COURSE IN LANGUAGE AND COMMUNICATION,3,1,
+IT coop (academic_plan_coop),IT,06016416,วิศวกรรมความต้องการ,REQUIREMENT ENGINEERING,3,1,20;28;31;ocr335
+IT coop (academic_plan_coop),IT,06016417,เครื่องมือและสภาพแวดล้อมสำหรับการพัฒนาซอฟต์แวร์,SOFTWARE DEVELOPMENT TOOLS AND ENVIRONMENTS,3,1,20;28;31;ocr335;ocr88
+IT coop (academic_plan_coop),IT,06016418,การพัฒนาเว็บฝั่งเซิร์ฟเวอร์,SERVER-SIDE WEB DEVELOPMENT,3,1,20;21;28;31;ocr336;ocr88
+IT coop (academic_plan_coop),IT,06016421,ความมั่นคงปลอดภัยโครงสร้างพื้นฐานทางเทคโนโลยีสารสนเทศ,INFORMATION TECHNOLOGY INFRASTRUCTURE SECURITY,3,1,20;28;31;ocr338
+IT coop (academic_plan_coop),IT,06016422,อินเทอร์เน็ตของสรรพสิ่ง,INTERNET OF THINGS,3,1,20;28;31;ocr339
+IT coop (academic_plan_coop),IT,06016423,การออโตเมชั่นและโครงสร้างพื้นฐานที่สามารถโปรแกรมได้,INFRASTRUCTURE PROGRAMMABILITY AND AUTOMATION,3,1,20;28;31;ocr340
+IT coop (academic_plan_coop),IT,06016426,คอมพิวเตอร์กราฟิกส์และแอนิเมชัน,COMPUTER GRAPHICS AND ANIMATION,3,1,21;28;31;ocr341
+IT coop (academic_plan_coop),IT,06016427,การออกแบบและพัฒนาเกมเบื้องต้น,INTRODUCTION TO GAME DESIGN AND DEVELOPMENT,3,1,21;28;31;ocr342
+IT coop (academic_plan_coop),IT,06016418,การพัฒนาเว็บฝั่งเซิร์ฟเวอร์,SERVER-SIDE WEB DEVELOPMENT,3,1,20;21;28;31;ocr336;ocr88
+IT coop (academic_plan_coop),IT,"06016481
+หรือ
+06016482","สหกิจศึกษา
+หรือ
+สหกิจศึกษาต่างประเทศ","COOPERATIVE EDUCATION
+OR
+OVERSEA COOPERATIVE EDUCATION",3,2,
+IT coop (academic_plan_coop),IT,06016406,โครงงาน 1,PROJECT 1,4,1,18;33;39;ocr330;ocr331;ocr87
+IT coop (academic_plan_coop),IT,060164xx,วิชาเลือกทางเทคโนโลยีสารสนเทศ 1,ELECTIVE COURSE IN INFORMATION TECHNOLOGY 1,4,1,32;33;39
+IT coop (academic_plan_coop),IT,90643021,ผู้ประกอบการสมัยใหม่,MODERN ENTREPRENEURS,4,1,17;33;39;ocr149;ocr216;ocr270;ocr272;ocr273;ocr384
+IT coop (academic_plan_coop),IT,9064xxxx,วิชาเลือกหมวดศึกษาทั่วไป 1,ELECTIVE COURSE IN GENERAL EDUCATION 1,4,1,
+IT coop (academic_plan_coop),IT,xxxxxxxx,วิชาเลือกเสรี 1,FREE ELECTIVE COURSE 1,4,1,
+IT coop (academic_plan_coop),IT,xxxxxxxx,วิชาเลือกเสรี 2,FREE ELECTIVE COURSE 2,4,1,
+IT coop (academic_plan_coop),IT,06016407,โครงงาน 2,PROJECT 2,4,2,19;33;40;ocr331
+IT coop (academic_plan_coop),IT,06066100,การบริหารโครงการเทคโนโลยีสารสนเทศ,INFORMATION TECHNOLOGY PROJECT MANAGEMENT,4,2,18;32;40;ocr368;ocr386
+IT coop (academic_plan_coop),IT,90642033,กฎหมายสำหรับคนรุ่นใหม่,LAW FOR NEW GENERATION,4,2,17;32;40;ocr141;ocr176;ocr273;ocr384
+IT coop (academic_plan_coop),IT,90644042,การสื่อสารและการนำเสนออย่างมืออาชีพ,PROFESSIONAL COMMUNICATION AND PRESENTATION,4,2,17;32;40;ocr152;ocr233;ocr273;ocr274;ocr384
+IT coop (academic_plan_coop),IT,9064xxxx,วิชาเลือกหมวดศึกษาทั่วไป 2,ELECTIVE COURSE IN GENERAL EDUCATION 2,4,2,
+IT coop (academic_plan_coop),IT,06016428,การพัฒนาและออกแบบโปรแกรมบริการแบบจุลภาค,MICROSERVICE DESIGN AND DEVELOPMENT,,,21;25;ocr342;ocr390
+IT coop (academic_plan_coop),IT,06016429,การพัฒนาเว็บฝั่งไคลเอนต์,CLIENT-SIDE WEB DEVELOPMENT,,,21;25;ocr343;ocr390
+IT coop (academic_plan_coop),IT,06016430,การพัฒนาคลาวด์แอปพลิเคชัน,CLOUD APPLICATION DEVELOPMENT,,,21;25;ocr343;ocr390
+IT coop (academic_plan_coop),IT,06016431,การโปรแกรมอุปกรณ์เคลื่อนที่,MOBILE DEVICE PROGRAMMING,,,21;ocr344;ocr390
+IT coop (academic_plan_coop),IT,06016432,การทวนสอบและตรวจสอบซอฟต์แวร์,SOFTWARE VERIFICATION AND VALIDATION,,,21;ocr344;ocr390
+IT coop (academic_plan_coop),IT,06016433,การทดสอบอัตโนมัติในรูปแบบอไจล์,AUTOMATION TESTING IN AGILE,,,21;ocr344;ocr390
+IT coop (academic_plan_coop),IT,06016434,การทดสอบการยอมรับของเว็บ,WEB ACCEPTANCE TESTING,,,21;ocr345;ocr390
+IT coop (academic_plan_coop),IT,06016435,องค์ประกอบสำคัญของวิทยาการข้อมูล,ELEMENTS OF DATA SCIENCE,,,21;ocr345;ocr390
+IT coop (academic_plan_coop),IT,06016436,การแสดงข้อมูลด้วยแผนภาพ,DATA VISUALIZATION,,,22;ocr346;ocr390
+IT coop (academic_plan_coop),IT,06016437,โครงสร้างพื้นฐานที่น่าเชื่อถือและขยายตัวได้,RELIABLE AND SCALABLE INFRASTRUCTURE,,,22;ocr346;ocr390
+IT coop (academic_plan_coop),IT,06016438,ความปลอดภัยสำหรับระบบคลาวด์,CLOUD SECURITY,,,22;ocr347;ocr390
+IT coop (academic_plan_coop),IT,06016439,เทคโนโลยีเครือข่ายไร้สาย,WIRELESS NETWORK TECHNOLOGY,,,22;25;ocr347;ocr390
+IT coop (academic_plan_coop),IT,06016440,การออกแบบเครือข่ายสารสนเทศ,INFORMATION NETWORK DESIGN,,,22;25;ocr348;ocr390
+IT coop (academic_plan_coop),IT,06016441,ประสิทธิภาพเครือข่ายและระบบ,NETWORK AND SYSTEM PERFORMANCE,,,22;25;ocr348;ocr390
+IT coop (academic_plan_coop),IT,06016442,การออกแบบฮาร์ดแวร์สำหรับอินเทอร์เน็ตแห่งสรรพสิ่ง,INTERNET OF THINGS HARDWARE DESIGN,,,22;ocr349;ocr390
+IT coop (academic_plan_coop),IT,06016443,การวิเคราะห์ข้อมูลและแอปพลิเคชันสำหรับอินเตอร์เน็ตแห่งสรรพสิ่ง,INTERNET OF THINGS DATA ANALYTICS AND APPLICATIONS,,,22;ocr349;ocr390
+IT coop (academic_plan_coop),IT,06016444,การออกแบบเว็บ,WEB DESIGN,,,22;ocr350;ocr390
+IT coop (academic_plan_coop),IT,06016445,การเขียนสคริปต์ขั้นสูงสำหรับการออกแบบ,ADVANCED SCRIPTING FOR DESIGN,,,22;ocr350;ocr390
+IT coop (academic_plan_coop),IT,06016446,การออกแบบเกม,GAME DESIGN,,,22;25;ocr351;ocr390
+IT coop (academic_plan_coop),IT,06016447,การพัฒนาเกมขั้นต้นด้วยเกมเอนจิ้น,FUNDAMENTAL GAME DEVELOPMENT WITH GAME ENGINE,,,22;25;ocr351;ocr352;ocr390
+IT coop (academic_plan_coop),IT,06016448,การพัฒนาเกมขั้นสูงด้วยเกมเอนจิ้น,ADVANCED GAME DEVELOPMENT WITH GAME ENGINE,,,22;25;ocr351;ocr390
+IT coop (academic_plan_coop),IT,06016449,เกมมิฟิเคชัน,GAMIFICATION,,,22;ocr352;ocr390;ocr90
+IT coop (academic_plan_coop),IT,06016450,การพัฒนาเกมด้วยเทคโนโลยีเสมือนจริง,GAME DEVELOPMENT WITH REALITY TECHNOLOGY,,,22;ocr352;ocr390
+IT coop (academic_plan_coop),IT,06016451,การบริหารทรัพยากรองค์กร,ENTERPRISE RESOURCE PLANNING,,,22;ocr353;ocr391
+IT coop (academic_plan_coop),IT,06016452,การจัดการห่วงโซ่อุปทานและโลจิสติกส์,SUPPLY CHAIN MANAGEMENT AND LOGISTICS,,,23;ocr353;ocr391
+IT coop (academic_plan_coop),IT,06016453,การบริหารระบบลูกค้าสัมพันธ์,CUSTOMER RELATIONSHIP MANAGEMENT,,,23;ocr354;ocr391
+IT coop (academic_plan_coop),IT,06016454,เครื่องมือยูเอ็กซ์และการพัฒนาซอฟต์แวร์สำหรับธุรกิจดิจิทัล,"UX TOOLS AND SOFTWARE DEVELOPMENT FOR DIGITAL
+BUSINESS",,,23;ocr354;ocr391
+IT coop (academic_plan_coop),IT,06016455,การวิเคราะห์พฤติกรรมลูกค้า,CUSTOMER BEHAVIOR ANALYSIS,,,23;ocr355;ocr391
+IT coop (academic_plan_coop),IT,06016456,แบบจำลองธุรกิจ,BUSINESS MODEL,,,23;ocr355;ocr391
+IT coop (academic_plan_coop),IT,06016457,ระบบฐานข้อมูลขั้นสูง,ADVANCED DATABASE SYSTEMS,,,23;ocr356;ocr391
+IT coop (academic_plan_coop),IT,06016458,การดูแลและบำรุงรักษาระบบฐานข้อมูล,DATABASE SYSTEM MAINTENANCE AND ADMINISTRATION,,,23;ocr356;ocr391
+IT coop (academic_plan_coop),IT,06016459,การรับรองมาตรฐานและคุณภาพซอฟต์แวร์,SOFTWARE STANDARD AND QUALITY ASSURANCE,,,23;ocr357;ocr391
+IT coop (academic_plan_coop),IT,06016460,ปัญญาประดิษฐ์,ARTIFICIAL INTELLIGENCE,,,23;ocr357;ocr391
+IT coop (academic_plan_coop),IT,06016461,การประมวลผลภาษาธรรมชาติเบื้องต้น,INTRODUCTION TO NATURAL LANGUAGE PROCESSING,,,23;ocr358;ocr391
+IT coop (academic_plan_coop),IT,06016462,เทคโนโลยีสื่อสารการเคลื่อนที่,MOBILE COMMUNICATION TECHNOLOGY,,,23;ocr358;ocr391
+IT coop (academic_plan_coop),IT,06016463,เทคโนโลยีการคำนวณด้วยคอมพิวเตอร์แบบผสมผสาน,HYBRID COMPUTING TECHNOLOGY,,,23;ocr359;ocr391
+IT coop (academic_plan_coop),IT,06016464,ความมั่นคงปลอดภัยไซเบอร์ทางปฏิบัติ,PRACTICAL CYBER SECURITY,,,23;ocr359;ocr391
+IT coop (academic_plan_coop),IT,06016465,การออกแบบศูนย์ข้อมูล,DATA CENTER DESIGN,,,23;ocr360;ocr391
+IT coop (academic_plan_coop),IT,06016466,การแก้ไขปัญหาระบบและเครือข่าย,NETWORK AND SYSTEM TROUBLE SHOOTING,,,23;ocr360;ocr391
+IT coop (academic_plan_coop),IT,06016467,การแปลงข้อมูลและการรู้จำรูปภาพ,IMAGE TRANSFORMATION AND RECOGNITION,,,23;ocr361;ocr391
+IT coop (academic_plan_coop),IT,06016468,การเรียนรู้เชิงลึกสำหรับการวิเคราะห์ภาพและวีดิโอทางการแพทย์,DEEP LEARNING IN MEDICAL IMAGE AND VIDEO ANALYSIS,,,24;ocr361;ocr391
+IT coop (academic_plan_coop),IT,06016469,การวิเคราะห์ข้อมูลสุขภาพเบื้องต้น,INTRODUCTION TO HEALTHCARE DATA ANALYTICS,,,24;ocr362;ocr391;ocr91
+IT coop (academic_plan_coop),IT,06016470,การได้มาและการจัดการข้อมูลทางด้านคลินิก,CLINICAL DATA ACQUISITION AND MANAGEMENT,,,24;ocr362;ocr391
+IT coop (academic_plan_coop),IT,06016471,การวิเคราะห์ข้อมูลขนาดใหญ่,BIG DATA ANALYSIS,,,24;ocr363;ocr391
+IT coop (academic_plan_coop),IT,06016472,กระบวนการอัตโนมัติด้วยโรบอต,ROBOTIC PROCESS AUTOMATION,,,24;ocr363;ocr391
+IT coop (academic_plan_coop),IT,06016473,หัวข้อพิเศษทางด้านเทคโนโลยีสารสนเทศ 1,SPECIAL TOPICS IN INFORMATION TECHNOLOGY 1,,,24;ocr364;ocr391
+IT coop (academic_plan_coop),IT,06016474,หัวข้อพิเศษทางด้านเทคโนโลยีสารสนเทศ 2,SPECIAL TOPICS IN INFORMATION TECHNOLOGY 2,,,24;ocr364;ocr391
+IT coop (academic_plan_coop),IT,06016475,หัวข้อพิเศษทางด้านเทคโนโลยีสารสนเทศ 3,SPECIAL TOPICS IN INFORMATION TECHNOLOGY 3,,,24;ocr364;ocr391
+IT coop (academic_plan_coop),IT,06016476,หัวข้อพิเศษทางด้านเทคโนโลยีสารสนเทศ 4,SPECIAL TOPICS IN INFORMATION TECHNOLOGY 4,,,24;ocr365;ocr391
+IT coop (academic_plan_coop),IT,06016477,ปฏิบัติการพิเศษทางด้านเทคโนโลยีสารสนเทศ 1,SPECIAL WORKSHOP IN INFORMATION TECHNOLOGY 1,,,24;ocr365;ocr391
+IT coop (academic_plan_coop),IT,06016478,ปฏิบัติการพิเศษทางด้านเทคโนโลยีสารสนเทศ 2,SPECIAL WORKSHOP IN INFORMATION TECHNOLOGY 2,,,24;ocr365;ocr392
+IT coop (academic_plan_coop),IT,06016479,ปฏิบัติการพิเศษทางด้านเทคโนโลยีสารสนเทศ 3,SPECIAL WORKSHOP IN INFORMATION TECHNOLOGY 3,,,24;ocr366;ocr392
+IT coop (academic_plan_coop),IT,06016480,ปฏิบัติการพิเศษทางด้านเทคโนโลยีสารสนเทศ 4,SPECIAL WORKSHOP IN INFORMATION TECHNOLOGY 4,,,24;ocr366;ocr392
+IT coop (academic_plan_coop),IT,"หมายเหตุ: คอลัมน์ ""ตัวเลือกปี/เทอม (flexible)"" กรอกเฉพาะแถวที่ ปี=0 และ เทอม=0 เท่านั้น (เซลล์จะเปลี่ยนเป็นสีเหลืองอัตโนมัติ) — ใส่เป็น ""ปี/เทอม"" คั่นด้วยจุลภาค เช่น ""3/2, 4/1, 4/2""",,,,,
+IT no_coop (academic_plan_no_coop),IT,06016401,คณิตศาสตร์สำหรับเทคโนโลยีสารสนเทศ,MATHEMATICS FOR INFORMATION TECHNOLOGY,1,1,18;26;34;ocr328
+IT no_coop (academic_plan_no_coop),IT,06016402,พื้นฐานทางด้านเทคโนโลยีสารสนเทศ,INFORMATION TECHNOLOGY FUNDAMENTALS,1,1,18;26;34;ocr328
+IT no_coop (academic_plan_no_coop),IT,06016411,ระบบคอมพิวเตอร์เบื้องต้น,INTRODUCTION TO COMPUTER SYSTEMS,1,1,19;26;34;ocr333
+IT no_coop (academic_plan_no_coop),IT,06066303,การแก้ปัญหาและการโปรแกรมคอมพิวเตอร์,PROBLEM SOLVING AND COMPUTER PROGRAMMING,1,1,19;26;34;ocr371;ocr387
+IT no_coop (academic_plan_no_coop),IT,90641001,โรงเรียนสร้างเสน่ห์,CHARM SCHOOL,1,1,16;26;34;ocr138;ocr140;ocr166;ocr249;ocr277;ocr384
+IT no_coop (academic_plan_no_coop),IT,90641003,กีฬาและนันทนาการ,SPORTS AND RECREATIONAL ACTIVITIES,1,1,17;26;34;ocr138;ocr140;ocr166;ocr249;ocr277;ocr384
+IT no_coop (academic_plan_no_coop),IT,90644007,ภาษาอังกฤษพื้นฐาน 1,FOUNDATION ENGLISH 1,1,1,17;26;34;ocr138;ocr151;ocr224;ocr384
+IT no_coop (academic_plan_no_coop),IT,06016408,การสร้างโปรแกรมเชิงวัตถุ,OBJECT-ORIENTED PROGRAMMING,1,2,19;28;35;ocr331;ocr336
+IT no_coop (academic_plan_no_coop),IT,06066001,ความน่าจะเป็นและสถิติ,PROBABILITY AND STATISTICS,1,2,18;28;35;ocr368;ocr386
+IT no_coop (academic_plan_no_coop),IT,06066101,พื้นฐานทางธุรกิจสำหรับเทคโนโลยีสารสนเทศ,BUSINESS FUNDAMENTALS FOR INFORMATION TECHNOLOGY,1,2,18;28;35;ocr355;ocr368;ocr369;ocr386
+IT no_coop (academic_plan_no_coop),IT,06066301,โครงสร้างข้อมูลและอัลกอรึทึม,DATA STRUCTURES AND ALGORITHMS,1,2,19;28;35;ocr370;ocr386
+IT no_coop (academic_plan_no_coop),IT,90641002,ความฉลาดทางดิจิทัล,DIGITAL INTELLIGENCE QUOTIENT,1,2,16;28;35;ocr138;ocr140;ocr166;ocr249;ocr277;ocr384
+IT no_coop (academic_plan_no_coop),IT,90644008,ภาษาอังกฤษพื้นฐาน 2,FOUNDATION ENGLISH 2,1,2,17;28;35;ocr138;ocr151;ocr224;ocr384
+IT no_coop (academic_plan_no_coop),IT,06016403,เทคโนโลยีสื่อประสม,MULTIMEDIA TECHNOLOGY,2,1,18;29;36;ocr329
+IT no_coop (academic_plan_no_coop),IT,06016409,การประมวลผลทางกายภาพ,PHYSICAL COMPUTING,2,1,19;29;36;ocr332
+IT no_coop (academic_plan_no_coop),IT,06016413,ระบบเครือข่ายเบื้องต้น,INTRODUCTION TO NETWORK SYSTEMS,2,1,19;29;36;ocr333;ocr337;ocr338;ocr339;ocr340
+IT no_coop (academic_plan_no_coop),IT,06066000,คณิตศาสตร์ไม่ต่อเนื่อง,DISCRETE MATHEMATICS,2,1,18;29;36;ocr367;ocr386
+IT no_coop (academic_plan_no_coop),IT,06066300,แนวคิดระบบฐานข้อมูล,DATABASE SYSTEM CONCEPTS,2,1,19;29;36;ocr356;ocr369;ocr386
+IT no_coop (academic_plan_no_coop),IT,06066304,การวิเคราะห์และออกแบบระบบสารสนเทศ,INFORMATION SYSTEM ANALYSIS AND DESIGN,2,1,19;29;36;ocr344;ocr371;ocr387
+IT no_coop (academic_plan_no_coop),IT,06016405,พื้นฐานความมั่นคงปลอดภัยไซเบอร์,CYBERSECURITY FUNDAMENTALS,2,2,18;30;37;ocr330
+IT no_coop (academic_plan_no_coop),IT,06016410,วิศวกรรมซอฟต์แวร์,SOFTWARE ENGINEERING,2,2,19;30;37;ocr332
+IT no_coop (academic_plan_no_coop),IT,06016412,โครงสร้างระบบคอมพิวเตอร์และระบบปฎิบัติการ,COMPUTER ORGANIZATION AND OPERATING SYSTEM,2,2,19;30;37;ocr333;ocr88
+IT no_coop (academic_plan_no_coop),IT,06066302,การเขียนโปรแกรมเว็บพื้นฐาน,FUNDAMENTAL WEB PROGRAMMING,2,2,19;30;37;ocr343;ocr350;ocr370;ocr386
+IT no_coop (academic_plan_no_coop),IT,06016414,ระบบฐานข้อมูลแบบโนเอสคิวแอล,NOSQL DATABASE SYSTEMS,2,2,20;30;37;ocr334
+IT no_coop (academic_plan_no_coop),IT,06016415,การเขียนโปรแกรมเชิงฟังก์ชัน,FUNCTIONAL PROGRAMMING,2,2,20;30;37;ocr335
+IT no_coop (academic_plan_no_coop),IT,06016419,โครงสร้างพื้นฐานเครือข่ายการสื่อสาร,COMMUNICATION NETWORK INFRASTRUCTURE,2,2,20;30;37;ocr337
+IT no_coop (academic_plan_no_coop),IT,06016420,ระบบโครงสร้างพื้นฐานและการบริการ,INFRASTRUCTURE SYSTEMS AND SERVICES,2,2,20;30;37;ocr338
+IT no_coop (academic_plan_no_coop),IT,06016424,การออกแบบส่วนต่อประสานกับมนุษย์,HUMAN INTERFACE DESIGN,2,2,21;30;37;ocr340
+IT no_coop (academic_plan_no_coop),IT,06016425,พื้นฐานการออกแบบทัศนศิลป์สำหรับสื่อปฏิสัมพันธ์,VISUAL DESIGN FUNDAMENTALS FOR INTERACTIVE MEDIA,2,2,21;30;37;ocr341
+IT no_coop (academic_plan_no_coop),IT,06016404,เทคโนโลยีกลุ่มเมฆ,CLOUD COMPUTING,3,1,18;28;31;ocr329;ocr343
+IT no_coop (academic_plan_no_coop),IT,06066102,ระบบสารสนเทศเพื่อการจัดการ,MANAGEMENT INFORMATION SYSTEMS,3,1,18;28;31;ocr369;ocr386
+IT no_coop (academic_plan_no_coop),IT,90644xxx,วิชาเลือกหมวดภาษาและการสื่อสาร,ELECTIVE COURSE IN LANGUAGE AND COMMUNICATION,3,1,
+IT no_coop (academic_plan_no_coop),IT,06016416,วิศวกรรมความต้องการ,REQUIREMENT ENGINEERING,3,1,20;28;31;ocr335
+IT no_coop (academic_plan_no_coop),IT,06016417,เครื่องมือและสภาพแวดล้อมสำหรับการพัฒนาซอฟต์แวร์,SOFTWARE DEVELOPMENT TOOLS AND ENVIRONMENTS,3,1,20;28;31;ocr335;ocr88
+IT no_coop (academic_plan_no_coop),IT,06016418,การพัฒนาเว็บฝั่งเซิร์ฟเวอร์,SERVER-SIDE WEB DEVELOPMENT,3,1,20;21;28;31;ocr336;ocr88
+IT no_coop (academic_plan_no_coop),IT,06016421,ความมั่นคงปลอดภัยโครงสร้างพื้นฐานทางเทคโนโลยีสารสนเทศ,INFORMATION TECHNOLOGY INFRASTRUCTURE SECURITY,3,1,20;28;31;ocr338
+IT no_coop (academic_plan_no_coop),IT,06016422,อินเทอร์เน็ตของสรรพสิ่ง,INTERNET OF THINGS,3,1,20;28;31;ocr339
+IT no_coop (academic_plan_no_coop),IT,06016423,การออโตเมชั่นและโครงสร้างพื้นฐานที่สามารถโปรแกรมได้,INFRASTRUCTURE PROGRAMMABILITY AND AUTOMATION,3,1,20;28;31;ocr340
+IT no_coop (academic_plan_no_coop),IT,06016426,คอมพิวเตอร์กราฟิกส์และแอนิเมชัน,COMPUTER GRAPHICS AND ANIMATION,3,1,21;28;31;ocr341
+IT no_coop (academic_plan_no_coop),IT,06016427,การออกแบบและพัฒนาเกมเบื้องต้น,INTRODUCTION TO GAME DESIGN AND DEVELOPMENT,3,1,21;28;31;ocr342
+IT no_coop (academic_plan_no_coop),IT,06016418,การพัฒนาเว็บฝั่งเซิร์ฟเวอร์,SERVER-SIDE WEB DEVELOPMENT,3,1,20;21;28;31;ocr336;ocr88
+IT no_coop (academic_plan_no_coop),IT,060164xx,วิชาเลือกทางเทคโนโลยีสารสนเทศ 1,ELECTIVE COURSE IN INFORMATION TECHNOLOGY 1,3,2,32;33;39
+IT no_coop (academic_plan_no_coop),IT,060164xx,วิชาเลือกทางเทคโนโลยีสารสนเทศ 2,ELECTIVE COURSE IN INFORMATION TECHNOLOGY 2,3,2,32;33;39
+IT no_coop (academic_plan_no_coop),IT,06066100,การบริหารโครงการเทคโนโลยีสารสนเทศ,INFORMATION TECHNOLOGY PROJECT MANAGEMENT,3,2,18;32;40;ocr368;ocr386
+IT no_coop (academic_plan_no_coop),IT,90642033,กฎหมายสำหรับคนรุ่นใหม่,LAW FOR NEW GENERATION,3,2,17;32;40;ocr141;ocr176;ocr273;ocr384
+IT no_coop (academic_plan_no_coop),IT,90644042,การสื่อสารและการนำเสนออย่างมืออาชีพ,PROFESSIONAL COMMUNICATION AND PRESENTATION,3,2,17;32;40;ocr152;ocr233;ocr273;ocr274;ocr384
+IT no_coop (academic_plan_no_coop),IT,06016406,โครงงาน 1,PROJECT 1,4,1,18;33;39;ocr330;ocr331;ocr87
+IT no_coop (academic_plan_no_coop),IT,060164xx,วิชาเลือกทางเทคโนโลยีสารสนเทศ 3,ELECTIVE COURSE IN INFORMATION TECHNOLOGY 3,4,1,32;33;39
+IT no_coop (academic_plan_no_coop),IT,90643021,ผู้ประกอบการสมัยใหม่,MODERN ENTREPRENEURS,4,1,17;33;39;ocr149;ocr216;ocr270;ocr272;ocr273;ocr384
+IT no_coop (academic_plan_no_coop),IT,9064xxxx,วิชาเลือกหมวดศึกษาทั่วไป 1,ELECTIVE COURSE IN GENERAL EDUCATION 1,4,1,
+IT no_coop (academic_plan_no_coop),IT,xxxxxxxx,วิชาเลือกเสรี 1,FREE ELECTIVE COURSE 1,4,1,
+IT no_coop (academic_plan_no_coop),IT,06016407,โครงงาน 2,PROJECT 2,4,2,19;33;40;ocr331
+IT no_coop (academic_plan_no_coop),IT,9064xxxx,วิชาเลือกหมวดศึกษาทั่วไป 2,ELECTIVE COURSE IN GENERAL EDUCATION 2,4,2,
+IT no_coop (academic_plan_no_coop),IT,xxxxxxxx,วิชาเลือกเสรี 2,FREE ELECTIVE COURSE 2,4,2,
+IT no_coop (academic_plan_no_coop),IT,06016428,การพัฒนาและออกแบบโปรแกรมบริการแบบจุลภาค,MICROSERVICE DESIGN AND DEVELOPMENT,,,21;25;ocr342;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016429,การพัฒนาเว็บฝั่งไคลเอนต์,CLIENT-SIDE WEB DEVELOPMENT,,,21;25;ocr343;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016430,การพัฒนาคลาวด์แอปพลิเคชัน,CLOUD APPLICATION DEVELOPMENT,,,21;25;ocr343;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016431,การโปรแกรมอุปกรณ์เคลื่อนที่,MOBILE DEVICE PROGRAMMING,,,21;ocr344;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016432,การทวนสอบและตรวจสอบซอฟต์แวร์,SOFTWARE VERIFICATION AND VALIDATION,,,21;ocr344;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016433,การทดสอบอัตโนมัติในรูปแบบอไจล์,AUTOMATION TESTING IN AGILE,,,21;ocr344;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016434,การทดสอบการยอมรับของเว็บ,WEB ACCEPTANCE TESTING,,,21;ocr345;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016435,องค์ประกอบสำคัญของวิทยาการข้อมูล,ELEMENTS OF DATA SCIENCE,,,21;ocr345;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016436,การแสดงข้อมูลด้วยแผนภาพ,DATA VISUALIZATION,,,22;ocr346;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016437,โครงสร้างพื้นฐานที่น่าเชื่อถือและขยายตัวได้,RELIABLE AND SCALABLE INFRASTRUCTURE,,,22;ocr346;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016438,ความปลอดภัยสำหรับระบบคลาวด์,CLOUD SECURITY,,,22;ocr347;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016439,เทคโนโลยีเครือข่ายไร้สาย,WIRELESS NETWORK TECHNOLOGY,,,22;25;ocr347;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016440,การออกแบบเครือข่ายสารสนเทศ,INFORMATION NETWORK DESIGN,,,22;25;ocr348;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016441,ประสิทธิภาพเครือข่ายและระบบ,NETWORK AND SYSTEM PERFORMANCE,,,22;25;ocr348;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016442,การออกแบบฮาร์ดแวร์สำหรับอินเทอร์เน็ตแห่งสรรพสิ่ง,INTERNET OF THINGS HARDWARE DESIGN,,,22;ocr349;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016443,การวิเคราะห์ข้อมูลและแอปพลิเคชันสำหรับอินเตอร์เน็ตแห่งสรรพสิ่ง,INTERNET OF THINGS DATA ANALYTICS AND APPLICATIONS,,,22;ocr349;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016444,การออกแบบเว็บ,WEB DESIGN,,,22;ocr350;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016445,การเขียนสคริปต์ขั้นสูงสำหรับการออกแบบ,ADVANCED SCRIPTING FOR DESIGN,,,22;ocr350;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016446,การออกแบบเกม,GAME DESIGN,,,22;25;ocr351;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016447,การพัฒนาเกมขั้นต้นด้วยเกมเอนจิ้น,FUNDAMENTAL GAME DEVELOPMENT WITH GAME ENGINE,,,22;25;ocr351;ocr352;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016448,การพัฒนาเกมขั้นสูงด้วยเกมเอนจิ้น,ADVANCED GAME DEVELOPMENT WITH GAME ENGINE,,,22;25;ocr351;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016449,เกมมิฟิเคชัน,GAMIFICATION,,,22;ocr352;ocr390;ocr90
+IT no_coop (academic_plan_no_coop),IT,06016450,การพัฒนาเกมด้วยเทคโนโลยีเสมือนจริง,GAME DEVELOPMENT WITH REALITY TECHNOLOGY,,,22;ocr352;ocr390
+IT no_coop (academic_plan_no_coop),IT,06016451,การบริหารทรัพยากรองค์กร,ENTERPRISE RESOURCE PLANNING,,,22;ocr353;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016452,การจัดการห่วงโซ่อุปทานและโลจิสติกส์,SUPPLY CHAIN MANAGEMENT AND LOGISTICS,,,23;ocr353;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016453,การบริหารระบบลูกค้าสัมพันธ์,CUSTOMER RELATIONSHIP MANAGEMENT,,,23;ocr354;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016454,เครื่องมือยูเอ็กซ์และการพัฒนาซอฟต์แวร์สำหรับธุรกิจดิจิทัล,"UX TOOLS AND SOFTWARE DEVELOPMENT FOR DIGITAL
+BUSINESS",,,23;ocr354;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016455,การวิเคราะห์พฤติกรรมลูกค้า,CUSTOMER BEHAVIOR ANALYSIS,,,23;ocr355;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016456,แบบจำลองธุรกิจ,BUSINESS MODEL,,,23;ocr355;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016457,ระบบฐานข้อมูลขั้นสูง,ADVANCED DATABASE SYSTEMS,,,23;ocr356;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016458,การดูแลและบำรุงรักษาระบบฐานข้อมูล,DATABASE SYSTEM MAINTENANCE AND ADMINISTRATION,,,23;ocr356;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016459,การรับรองมาตรฐานและคุณภาพซอฟต์แวร์,SOFTWARE STANDARD AND QUALITY ASSURANCE,,,23;ocr357;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016460,ปัญญาประดิษฐ์,ARTIFICIAL INTELLIGENCE,,,23;ocr357;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016461,การประมวลผลภาษาธรรมชาติเบื้องต้น,INTRODUCTION TO NATURAL LANGUAGE PROCESSING,,,23;ocr358;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016462,เทคโนโลยีสื่อสารการเคลื่อนที่,MOBILE COMMUNICATION TECHNOLOGY,,,23;ocr358;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016463,เทคโนโลยีการคำนวณด้วยคอมพิวเตอร์แบบผสมผสาน,HYBRID COMPUTING TECHNOLOGY,,,23;ocr359;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016464,ความมั่นคงปลอดภัยไซเบอร์ทางปฏิบัติ,PRACTICAL CYBER SECURITY,,,23;ocr359;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016465,การออกแบบศูนย์ข้อมูล,DATA CENTER DESIGN,,,23;ocr360;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016466,การแก้ไขปัญหาระบบและเครือข่าย,NETWORK AND SYSTEM TROUBLE SHOOTING,,,23;ocr360;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016467,การแปลงข้อมูลและการรู้จำรูปภาพ,IMAGE TRANSFORMATION AND RECOGNITION,,,23;ocr361;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016468,การเรียนรู้เชิงลึกสำหรับการวิเคราะห์ภาพและวีดิโอทางการแพทย์,DEEP LEARNING IN MEDICAL IMAGE AND VIDEO ANALYSIS,,,24;ocr361;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016469,การวิเคราะห์ข้อมูลสุขภาพเบื้องต้น,INTRODUCTION TO HEALTHCARE DATA ANALYTICS,,,24;ocr362;ocr391;ocr91
+IT no_coop (academic_plan_no_coop),IT,06016470,การได้มาและการจัดการข้อมูลทางด้านคลินิก,CLINICAL DATA ACQUISITION AND MANAGEMENT,,,24;ocr362;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016471,การวิเคราะห์ข้อมูลขนาดใหญ่,BIG DATA ANALYSIS,,,24;ocr363;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016472,กระบวนการอัตโนมัติด้วยโรบอต,ROBOTIC PROCESS AUTOMATION,,,24;ocr363;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016473,หัวข้อพิเศษทางด้านเทคโนโลยีสารสนเทศ 1,SPECIAL TOPICS IN INFORMATION TECHNOLOGY 1,,,24;ocr364;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016474,หัวข้อพิเศษทางด้านเทคโนโลยีสารสนเทศ 2,SPECIAL TOPICS IN INFORMATION TECHNOLOGY 2,,,24;ocr364;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016475,หัวข้อพิเศษทางด้านเทคโนโลยีสารสนเทศ 3,SPECIAL TOPICS IN INFORMATION TECHNOLOGY 3,,,24;ocr364;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016476,หัวข้อพิเศษทางด้านเทคโนโลยีสารสนเทศ 4,SPECIAL TOPICS IN INFORMATION TECHNOLOGY 4,,,24;ocr365;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016477,ปฏิบัติการพิเศษทางด้านเทคโนโลยีสารสนเทศ 1,SPECIAL WORKSHOP IN INFORMATION TECHNOLOGY 1,,,24;ocr365;ocr391
+IT no_coop (academic_plan_no_coop),IT,06016478,ปฏิบัติการพิเศษทางด้านเทคโนโลยีสารสนเทศ 2,SPECIAL WORKSHOP IN INFORMATION TECHNOLOGY 2,,,24;ocr365;ocr392
+IT no_coop (academic_plan_no_coop),IT,06016479,ปฏิบัติการพิเศษทางด้านเทคโนโลยีสารสนเทศ 3,SPECIAL WORKSHOP IN INFORMATION TECHNOLOGY 3,,,24;ocr366;ocr392
+IT no_coop (academic_plan_no_coop),IT,06016480,ปฏิบัติการพิเศษทางด้านเทคโนโลยีสารสนเทศ 4,SPECIAL WORKSHOP IN INFORMATION TECHNOLOGY 4,,,24;ocr366;ocr392
+IT no_coop (academic_plan_no_coop),IT,"06016481
+หรือ
+06016482","สหกิจศึกษา
+หรือ
+สหกิจศึกษาต่างประเทศ","COOPERATIVE EDUCATION
+OR
+OVERSEA COOPERATIVE EDUCATION",,,
+IT no_coop (academic_plan_no_coop),IT,"หมายเหตุ: คอลัมน์ ""ตัวเลือกปี/เทอม (flexible)"" กรอกเฉพาะแถวที่ ปี=0 และ เทอม=0 เท่านั้น (เซลล์จะเปลี่ยนเป็นสีเหลืองอัตโนมัติ) — ใส่เป็น ""ปี/เทอม"" คั่นด้วยจุลภาค เช่น ""3/2, 4/1, 4/2""",,,,,
+หมวดศึกษาทั่วไป (general_education),AIT,90642001,ปฏิบัติงานตามทักษะด้านบุคคลและสนับสนุนวิชาชีพ 1,PRACTICE UNDER PERSONAL AND PROFESSIONAL SKILLS 1,,,ocr121
+หมวดศึกษาทั่วไป (general_education),AIT,90642002,ปฏิบัติงานตามทักษะด้านบุคคลและสนับสนุนวิชาชีพ 2,PRACTICE UNDER PERSONAL AND PROFESSIONAL SKILLS 2,,,ocr121;ocr238;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642003,ปฏิบัติงานตามทักษะด้านบุคคลและสนับสนุนวิชาชีพ 3,PRACTICE UNDER PERSONAL AND PROFESSIONAL SKILLS 3,,,ocr121;ocr131;ocr146;ocr238
+หมวดศึกษาทั่วไป (general_education),AIT,90642004,การคิดวิเคราะห์,ANALYTICAL THINKING,,,ocr238
+หมวดศึกษาทั่วไป (general_education),AIT,90642006,การคิดเชิงนวัตกรรม,INNOVATIVE THINKING,,,ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642011,การคิดอย่างมีวิจารณญาณ,CRITICAL THINKING,,,ocr121;ocr147
+หมวดศึกษาทั่วไป (general_education),AIT,90642012,กระบวนการคิดเชิงออกแบบ,DESIGN THINKING,,,ocr121;ocr147;ocr25;ocr36
+หมวดศึกษาทั่วไป (general_education),AIT,90642014,การคิดเชิงระบบและเชิงนวัตกรรม,INNOVATIVE AND SYSTEM THINKING,,,ocr148;ocr238
+หมวดศึกษาทั่วไป (general_education),AIT,90642015,การคิดสร้างสรรค์และนวัตกรรม,CREATIVE THINKING AND INNOVATION,,,ocr148;ocr238
+หมวดศึกษาทั่วไป (general_education),AIT,90642017,แกะกล่องนวัตกรรม,INNOVATION UNBOXED,,,ocr238
+หมวดศึกษาทั่วไป (general_education),AIT,90642018,เทคโนโลยีการผลิตงานสร้างสรรค์,CREATIVE PRODUCTION TECHNOLOGY,,,ocr149;ocr238
+หมวดศึกษาทั่วไป (general_education),AIT,90642019,การออกแบบสะเต็มอย่างสร้างสรรค์ขั้นพื้นฐาน,BASIC CREATIVE STEM DESIGN,,,ocr149;ocr238
+หมวดศึกษาทั่วไป (general_education),AIT,90642020,การออกแบบสะเต็มอย่างสร้างสรรค์ขั้นสูง,ADVANCE CREATIVE STEM DESIGN,,,ocr149
+หมวดศึกษาทั่วไป (general_education),AIT,90642021,ไอเดียขยะ,JUNK DESIGN,,,ocr121;ocr150;ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642022,ปรัชญาวิทยาศาสตร์,PHILOSOPHY OF SCIENCE,,,ocr121;ocr150
+หมวดศึกษาทั่วไป (general_education),AIT,90642024,การวิเคราะห์ข้อมูลทางวิชาชีพและการนำเสนอทางวิชาการ,PROFESSIONAL INFORMATION ANALYSIS AND ACADEMIC PRESENTATION,,,ocr122;ocr150;ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642025,วิเคราะห์ความจริงจากตัวเลข,FATCS BEHIND NUMBERS,,,ocr122;ocr151
+หมวดศึกษาทั่วไป (general_education),AIT,90642026,การพัฒนาทักษะเชิงวิจัย,RESEARCH SKILL DEVELOPMENT,,,ocr122;ocr151
+หมวดศึกษาทั่วไป (general_education),AIT,90642028,รู้เท่าทันการพนัน,GAMBLING LITERACY,,,ocr122
+หมวดศึกษาทั่วไป (general_education),AIT,90642029,จริยธรรมและกฎหมายว่าด้วยความเป็นมืออาชีพทางการแพทย์,"MEDICAL ETHICS, LAWS AND PROFESSIONALOSM",,,ocr122;ocr152;ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642030,จรรยาบรรณและกฎหมายวิศวกรรม,ENGINEERING ETHICS AND LAWS,,,ocr152;ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642031,จริยธรรมและกฎหมายแห่งวิชาชีพ,PROFESSIONAL ETHICS AND LAWS,,,ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642032,กฎหมายสำหรับผู้ประกอบการ,LAW FOR ENTREPRENEURS,,,ocr122;ocr153;ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642033,กฎหมายสำหรับคนรุ่นใหม่,LAW FOR NEW GENERATION,,,ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642034,กฎหมายและระเบียบในอุตสาหกรรมการบิน,LAW AND REGULATION IN AVIATION INDUSTRY,,,ocr153;ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642035,ประสบการณ์ในอุตสาหกรรมสำหรับวิศวกร,INDUSTRIAL EXPERIENCE FOR ENGINEERS,,,ocr154;ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642036,เตรียมความพร้อมสำหรับวิศวกร,PRE-ACTIVITIES FOR ENGINEERS,,,ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642037,ประเด็นและทักษะวิชาชีพ,PROFESSIONAL SKILLS AND ISSUES,,,ocr122;ocr154
+หมวดศึกษาทั่วไป (general_education),AIT,90642038,ความปลอดภัยในที่ทำงาน,OCCUPATIONAL SAFETY AND HEALTH,,,ocr122;ocr155
+หมวดศึกษาทั่วไป (general_education),AIT,90642040,คอกาแฟ,COFFEE MANIA,,,ocr122;ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642041,ครัวเด็กหอ,DORM CHEF,,,ocr123;ocr156;ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642042,ศาสตร์และศิลป์ของเนื้อสัตว์,SCIENCE AND ART OF MEATS,,,ocr123;ocr156
+หมวดศึกษาทั่วไป (general_education),AIT,90642043,ศาสตร์ของเบอร์เกอร์,SCIENCE OF BURGER,,,ocr123;ocr156;ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642044,โลกของไส้กรอก,WORLD OF SAUSAGES,,,ocr123;ocr156;ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642045,เรื่องเหล้า,BE MY BEV.,,,ocr123
+หมวดศึกษาทั่วไป (general_education),AIT,90642046,ไร้ซ์-สาระ,RICE-SARA,,,ocr123
+หมวดศึกษาทั่วไป (general_education),AIT,90642047,หมอต้นไม้,TREE DOCTOR,,,ocr157;ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642048,ยาและสมุนไพรพาเพลิน,FUN WITH DRUGS AND HERBS,,,ocr158;ocr239
+หมวดศึกษาทั่วไป (general_education),AIT,90642049,การใช้ประโยชน์จากจุลินทรีย์ในชีวิตประจำวัน,MICROBIAL UTILIZATION FOR DAILY LIFE,,,ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642050,พืชพรรณที่เป็นยา,MEDICINAL PLANTS,,,ocr159
+หมวดศึกษาทั่วไป (general_education),AIT,90642051,เทคโนโลยีชีวภาพเพื่อความเป็นอยู่ที่ดีขึ้น,BIOTECHNOLOGY FOR BETTER LIVING,,,ocr159;ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642052,จากเส้นสาย DNA สู่พันธุกรรม,GENES & GENETICS : FROM HELIX TO HEREDITARY,,,ocr159
+หมวดศึกษาทั่วไป (general_education),AIT,90642053,สาระน่ารู้อณูพันธุศาสตร์,INTERESTING MOLECULAR GENETICS,,,ocr160;ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642054,สิ่งพิทักษ์ร่างกาย,GUARDIANS OF OUR BODIES,,,ocr160;ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642055,จุลินทรีย์ร่วมชีพ,LIVING WITH MICROBES,,,ocr123;ocr160
+หมวดศึกษาทั่วไป (general_education),AIT,90642056,โรคระบาดในศตวรรษที่ 21,EPIDEMICS IN THE 21st CENTURY,,,ocr123;ocr161;ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642057,ภูมิคุ้มกาย,IMMUNITY THROUGH MEDIA,,,ocr124;ocr161
+หมวดศึกษาทั่วไป (general_education),AIT,90642058,ความเข้าใจในนโยบายสุขภาพและสวัสดิภาพของประชาชน,UNDERSTANDING HEALTH POLICY AND PUBLIC WELFARE,,,ocr124;ocr161
+หมวดศึกษาทั่วไป (general_education),AIT,90642059,การแพทย์และวรรณกรรม,MEDICINE AND LITERATURE,,,ocr124;ocr162;ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642060,ค้นหาตัวตน,SELF-DISCOVERY,,,ocr124
+หมวดศึกษาทั่วไป (general_education),AIT,90642061,โลกของแมลง,WORLD OF INSECTS,,,ocr162;ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642062,เรื่ื่องกินเรื่องใหญ่,ALL ABOUT FOOD,,,ocr124;ocr163
+หมวดศึกษาทั่วไป (general_education),AIT,90642063,การพัฒนาสุขภาพแบบองค์รวม,HOLISTIC HEALTH DEVELOPMENT,,,ocr124;ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642074,อีสปอร์ต,E-SPORTS,,,ocr163
+หมวดศึกษาทั่วไป (general_education),AIT,90642080,การประพันธ์เพลงเบื้องต้น,INTRODUCTION TO MUSIC COMPOSITION,,,ocr164
+หมวดศึกษาทั่วไป (general_education),AIT,90642081,สุนทรียะเพลงแรป,RAP APPRECIATION,,,ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642082,สุนทรียะดนตรี,MUSIC APPRECIATION,,,ocr164
+หมวดศึกษาทั่วไป (general_education),AIT,90642083,ศิลปะแห่งภาพยนต์,FILM APPRECIATION,,,ocr165
+หมวดศึกษาทั่วไป (general_education),AIT,90642084,สุนทรียะภาพถ่าย,PHOTOGRAPHY APPRECIATION,,,ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642085,วัฒนธรรมร่วมสมัย,CONTEMPORARY CULTURE,,,ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642086,วัฒนธรรมการออกแบบเบื้องต้น,INTRODUCTION TO DESIGN CULTURE,,,ocr124;ocr165;ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642087,วัฒนธรรมรอบโลก,WORLD CULTURE,,,ocr124;ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642088,วัฒนธรรมจีนดั้งเดิม,TRADITIONAL CHINESE CULTURE,,,ocr125;ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642089,สังคม เศรษฐกิจ และการเมืองจีน,"CHINESE SOCIETY, ECONOMY AND POLITICS",,,ocr125;ocr155;ocr166;ocr240
+หมวดศึกษาทั่วไป (general_education),AIT,90642090,เจาะลึกประเด็นโลก,GLOBAL INSIDE,,,ocr125;ocr167;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642091,เอเชียนศึกษา,ASIAN STUDY,,,ocr125
+หมวดศึกษาทั่วไป (general_education),AIT,90642092,การศึกษาเพื่อสร้างพลเมือง,CIVIC EDUCATION,,,ocr125
+หมวดศึกษาทั่วไป (general_education),AIT,90642093,สานสัมพันธ์กับชุมชน,COMMUNITY ENGAGEMENT,,,ocr125;ocr167;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642094,หลักการพัฒนาชุมชน,PRINCIPLES OF COMMUNITY DEVELOPMENT,,,ocr168;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642095,การพัฒนาตวามมั่นคงแห่งชาติ,NATIONAL SECURITY DEVELOPMENT,,,ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642096,วิทยาการทางทหาร,MILITARY SCIENCE,,,ocr125;ocr168;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642097,ภูมิปัญญาไทยประยุกต์,APPLIED THAI WISDOMS,,,ocr169;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642099,สังคมสูงวัยเชิงรุก,ACTIVE AGING SOCIETY,,,ocr169
+หมวดศึกษาทั่วไป (general_education),AIT,90642102,นักสื่อสารผ่านยูทูบ,YOUTUBER,,,ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642103,การดำรงชีพในสังคมดิจิทัล,LIVING IN DIGITAL SOCIETY,,,ocr125;ocr170;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642106,เล่าเรื่องการเดินทางแบบดิจิทัล,DIGITAL STORYTELLING IN JOURNEY,,,ocr125;ocr171;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642107,การผลิตสื่อดิจิทัล,DIGITAL MEDIA PRODUCTION,,,ocr126;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642108,เทคโนโลยีการถ่ายภาพดิจิทัล,DIGITAL PHOTOGRAPHY TECHNOLOGY,,,ocr126
+หมวดศึกษาทั่วไป (general_education),AIT,90642109,การออกแบบอินโฟกราฟิก,INFOGRAPHIC DESIGN,,,ocr126;ocr172;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642110,สนุกกับวิทยาศาสตร์ข้อมูล,FUN WITH DATA SCIENCE,,,ocr126;ocr172;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642112,สนุกกับปัญญาประดิษฐ์,FUN WITH AI,,,ocr173;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642113,หุ่นยนต์และปัญญาประดิษฐ์,ROBOTICS AND AI,,,ocr173;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642114,ฟาร์มอัจฉริยะ,SMART FARMING,,,ocr173;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642115,เทคโนโลยีสีเขียวและพลังงานทดแทน,GREEN TECHNOLOGY AND ALTERNATIVE ENERGY,,,ocr174
+หมวดศึกษาทั่วไป (general_education),AIT,90642116,เมืองอัจฉริยะและนวัตกรรมเมือง,SMART CITY AND INNOVATION,,,ocr174;ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642117,ทักษะการรู้สารสนเทศแห่งศตวรรษที่ 21,INFORMATION LITERACY SKILLS FOR THE 21st CENTURY,,,ocr241
+หมวดศึกษาทั่วไป (general_education),AIT,90642118,โปรแกรมคอมพิวเตอร์ประยุกต์ทางธุรกิจ,APPLICATION SOFTWARE FOR BUSSINESS,,,ocr175
+หมวดศึกษาทั่วไป (general_education),AIT,90642120,เอ็กเซลเพื่อความเป็นมืออาชีพ,FROM EXCEL TO EXCELLENT,,,ocr242
+หมวดศึกษาทั่วไป (general_education),AIT,90642122,การใช้แอพลิเคชัน ไมโครคอมพิวเตอร์,INTRODUCTION TO MICROCOMPUTER APPLICATION,,,ocr126;ocr175;ocr242
+หมวดศึกษาทั่วไป (general_education),AIT,90642123,เทคโนโลยี คอมพิวเตอร์ดนตรี,TECHNOLOGY IN MUSICAL SEQUENCING,,,ocr126;ocr176
+หมวดศึกษาทั่วไป (general_education),AIT,90642124,เทคโนโลยีและนวัตกรรมทางวิทยาศาสตร์สำหรับ SDGs,SCIENCE TECHNOLOGY AND SCIENCE INNOVATION FOR SDGS,,,ocr127;ocr242
+หมวดศึกษาทั่วไป (general_education),AIT,90642125,การดำรงชีวิตท่ามกลางภัยพิบัติและวิกฤตในอนาคต,LIVING IN FUTURE DISASTER AND CRISIS,,,ocr127;ocr176;ocr242
+หมวดศึกษาทั่วไป (general_education),AIT,90642126,วิชาเอาตัวรอด,SURVIVORS,,,ocr127;ocr175;ocr177
+หมวดศึกษาทั่วไป (general_education),AIT,90642127,รักษ์โลก,THINK EARTH,,,ocr127;ocr242
+หมวดศึกษาทั่วไป (general_education),AIT,90642128,นิเวศวิทยาและการรักษาสิ่งแวดล้อม,"ECOLOGY, CONSERVATION AND ENVIRONMENTALISM",,,ocr127;ocr177
+หมวดศึกษาทั่วไป (general_education),AIT,90642129,การท่องเที่ยวทางเลือก,ALTERNATIVE TOURISM,,,ocr127;ocr178;ocr242
+หมวดศึกษาทั่วไป (general_education),AIT,90642130,การท่องเที่ี่ยวเชิงกีฬา,SPORTS TOURISM,,,ocr127;ocr242
+หมวดศึกษาทั่วไป (general_education),AIT,90642131,วัฒนธรรมไทยกับการท่องเที่ยว,THAI CULTURE AND TOURISM,,,ocr178
+หมวดศึกษาทั่วไป (general_education),AIT,90642134,แผ่นดินพระจอมเกล้าฯศึกษา,KING MONGKUT'S REIGN STUDY,,,ocr179
+หมวดศึกษาทั่วไป (general_education),AIT,90642135,ปรัชญาเศรษฐกิจพอเพียง,PHILOSOPHY OF SUFFICIENCY ECONOMY,,,ocr180
+หมวดศึกษาทั่วไป (general_education),AIT,90642136,จริยศาสตร์และสุนทรียศาสตร์,ETHICS AND AESTHETICS,,,ocr180
+หมวดศึกษาทั่วไป (general_education),AIT,90642137,ดูละครแล้วย้อนตัว,SERIES IN DAILY LIFE,,,ocr188;ocr242
+หมวดศึกษาทั่วไป (general_education),AIT,90642138,สมาธิเพื่อพัฒนาชีวิต,MEDITATION FOR LIFE DEVELOPMENT,,,ocr181
+หมวดศึกษาทั่วไป (general_education),AIT,90642140,ภูมิคุุ้มกันทางใจ,IMMUNITY OF MIND,,,ocr127;ocr242
+หมวดศึกษาทั่วไป (general_education),AIT,90642142,จิตวิทยาสำหรับสื่อสาร,PSYCHOLOGY IN COMMUNICATION,,,ocr128;ocr242
+หมวดศึกษาทั่วไป (general_education),AIT,90642143,ชีวิตออกแบบได้,DESIGNING YOUR LIFE,,,ocr128;ocr182
+หมวดศึกษาทั่วไป (general_education),AIT,90642144,กระจกส่องใจ,MAGIC MIRROR,,,ocr128;ocr242
+หมวดศึกษาทั่วไป (general_education),AIT,90642145,พลังแห่งบุคลิกภาพ,POWER OF PERSONALITY,,,ocr128
+หมวดศึกษาทั่วไป (general_education),AIT,90642146,เปลี่ยนความคิด ชีวิตเปลี่ยน,POWER OF CHANGE,,,ocr128;ocr182;ocr242
+หมวดศึกษาทั่วไป (general_education),AIT,90642147,ทักษะแห่งความสุข,HAPPINESS SKILLS,,,ocr128;ocr183;ocr242
+หมวดศึกษาทั่วไป (general_education),AIT,90642148,ศิลปะการพัฒนาอารมณ์,ARTS OF EMOTION DEVELOPMENT,,,ocr183;ocr243
+หมวดศึกษาทั่วไป (general_education),AIT,90642149,ศิลปะการสร้างสรรค์เพื่อพัฒนาอารมณ์และจิตวิญญาณ,IMAGINATIVE ART,,,ocr128;ocr183;ocr243
+หมวดศึกษาทั่วไป (general_education),AIT,90642150,ศิลปะในชีวิตประจำวัน,ART IN EVERYDAY LIFE,,,ocr184;ocr243
+หมวดศึกษาทั่วไป (general_education),AIT,90642151,มนุษย์กับศิลปะ,MAN AND ART,,,ocr243
+หมวดศึกษาทั่วไป (general_education),AIT,90642152,ปันสุข,JOY OF SHARING,,,ocr184;ocr243
+หมวดศึกษาทั่วไป (general_education),AIT,90642153,ความเข้าใจในพฤติกรรมมนุษย์,UNDERSTANDING HUMAN BEHAVIOR,,,ocr243
+หมวดศึกษาทั่วไป (general_education),AIT,90642154,ล้มให้เป็น,FAIL-ABLE,,,ocr243
+หมวดศึกษาทั่วไป (general_education),AIT,90642156,ฮวงจุ้ย,FENG SHUI,,,ocr185;ocr243
+หมวดศึกษาทั่วไป (general_education),AIT,90642157,โหราศาสตร์ไทย,THAI ASTROLOGY,,,ocr128;ocr186;ocr243
+หมวดศึกษาทั่วไป (general_education),AIT,90642158,มุมมองของวิทยาศาสตร์และเทคโนโลยีร่วมสมัย,COMTEMPORARY SCIENCE AND TECHNOLOGY,,,ocr128
+หมวดศึกษาทั่วไป (general_education),AIT,90642159,จิตวิทยาเบื้องต้น,INTRODUCTION TO PSYCHOLOGY,,,ocr129;ocr186;ocr243
+หมวดศึกษาทั่วไป (general_education),AIT,90643001,ปฎิบัติงานตามทักษะด้านการจัดการ 1,PRACTICE UNDER MANAGEMENT SKILL 1,,,ocr196;ocr244
+หมวดศึกษาทั่วไป (general_education),AIT,90643002,ปฎิบัติงานตามทักษะด้านการจัดการ 2,PRACTICE UNDER MANAGEMENT SKILL 2,,,ocr131;ocr197
+หมวดศึกษาทั่วไป (general_education),AIT,90643005,นักเปลี่ยนโลก,THE DISRUPTOR,,,ocr197;ocr245
+หมวดศึกษาทั่วไป (general_education),AIT,90643006,การจัดการและผู้นำสมัยใหม่,MODERN MANAGEMENT AND LEADERSHIP,,,ocr198
+หมวดศึกษาทั่วไป (general_education),AIT,90643007,ภาวะผู้นำสำหรับคนรุ่นใหม่,NEXT GEN LEADERSHIP,,,ocr245
+หมวดศึกษาทั่วไป (general_education),AIT,90643008,ศาสตร์การต่อรอง,SCIENCE OF NEGOTIATION,,,ocr245
+หมวดศึกษาทั่วไป (general_education),AIT,90643010,การตลาดร่วมสมัย,CONTEMPORARY MARKETING,,,ocr131;ocr199;ocr245
+หมวดศึกษาทั่วไป (general_education),AIT,90643012,การทำงานเป็นทีม,TEAMWORK,,,ocr245;ocr246
+หมวดศึกษาทั่วไป (general_education),AIT,90643013,การจัดการเชิงอุตสาหกรรม,INDUSTRIAL MANAGEMENT,,,ocr199
+หมวดศึกษาทั่วไป (general_education),AIT,90643014,ความรู้ทั่วไปเกี่ยวกับธุรกิจ,GENERAL BUSINESS,,,ocr131;ocr245
+หมวดศึกษาทั่วไป (general_education),AIT,90643015,การบัญชีทางธุรกิจสำหรับคนรุ่นใหม่,BUSINESS ACCOUNTING FOR NEW GEN,,,ocr132;ocr245
+หมวดศึกษาทั่วไป (general_education),AIT,90643016,สนุกกับธุรกิจออนไลน์,FUN WITH ONLINE BUSINESS,,,ocr132;ocr245
+หมวดศึกษาทั่วไป (general_education),AIT,90643018,ธุรกิจระหว่างประเทศ,INTERNATIONAL BUSINESS,,,ocr132;ocr201;ocr245
+หมวดศึกษาทั่วไป (general_education),AIT,90643019,เศรษฐศาสตร์กับการเป็นผู้ประกอบการ,ECONOMICS AND ENTREPRENEURSHIP,,,ocr132
+หมวดศึกษาทั่วไป (general_education),AIT,90643020,นักพัฒนาธุรกิจสร้างสรรค์,INNOVATIVE ENTREPRENEURS,,,ocr201;ocr245
+หมวดศึกษาทั่วไป (general_education),AIT,90643021,ผู้ประกอบการสมัยใหม่,MODERN ENTREPRENEURS,,,ocr202
+หมวดศึกษาทั่วไป (general_education),AIT,90643022,ผู้ประกอบการทางสังคม,SOCIAL ENTREPRENEURS,,,ocr132
+หมวดศึกษาทั่วไป (general_education),AIT,90643024,ฟาร์มสุข,HAPPINESS FARMS,,,ocr132
+หมวดศึกษาทั่วไป (general_education),AIT,90643025,เส้นทางสู่ IPO,ROAD TO IPO,,,ocr203
+หมวดศึกษาทั่วไป (general_education),AIT,90643026,การวางแผนเพื่อการลงทุน,INVESTMENT PLANNING,,,ocr203;ocr245
+หมวดศึกษาทั่วไป (general_education),AIT,90643027,มนุษย์ เงิน และคณิตศาสตร์,"MAN, MONEY AND MATH",,,ocr204
+หมวดศึกษาทั่วไป (general_education),AIT,90643029,เศรษฐกิจดิจิทัล,DIGITAL ECONOMY,,,ocr204;ocr245
+หมวดศึกษาทั่วไป (general_education),AIT,90643030,เศรษศาสตร์ทั่ไป และการศึกษาความเป็นไปได้ของโครงการ,GENERAL ECONOMICS AND PROJECT FEASIBILITY STUDY,,,ocr132;ocr205;ocr245
+หมวดศึกษาทั่วไป (general_education),AIT,90643031,วิถีชีวิตตามแนวคิดเศรษฐกิจหมุนเวียนในศตวรรษที่ 21,CIRCULAR ECONOMIC LIFESTYLE FOR 21st CENTURY,,,ocr132;ocr246
+หมวดศึกษาทั่วไป (general_education),AIT,90643032,ปักหมุดเศรษฐกิจ,BCG ECONOMY IN ACTION,,,ocr133;ocr199;ocr206;ocr246
+หมวดศึกษาทั่วไป (general_education),AIT,90643034,การจัดการกับความคิดสร้างสรรค์,MANAGEMENT AND CREATIVITY,,,ocr133;ocr246
+หมวดศึกษาทั่วไป (general_education),AIT,90643035,การจัดการความรู้เพื่อการพัฒนานวัตกรรม,KNOWLEDGE MANAGEMENT FOR INNOVATION DEVELOPMENT,,,ocr133;ocr206
+หมวดศึกษาทั่วไป (general_education),AIT,90643036,การจัดการความรู้เพื่อการบริหารโครงการ,KNOWLEDGE MANAGEMENT FOR PROJECT MANAGEMENT,,,ocr133;ocr207
+หมวดศึกษาทั่วไป (general_education),AIT,90643037,การบัริหารงานภาครัฐและนโยบายสาธารณะในศตวรรษที่ 21,PUBLIC ADMINISTRATION AND PUBLIC POLICY IN THE 21st CENTURY,,,ocr207;ocr246
+หมวดศึกษาทั่วไป (general_education),AIT,90643038,ศัลยกรรมชีวิต,REBRANDING,,,ocr208;ocr246
+หมวดศึกษาทั่วไป (general_education),AIT,90644001,ปฎิบัติงานตามทักษะด้านการสื่อสาร 1,PRACTICE UNDER LANGUAGE AND COMMUNICATION SKILLS 1,,,ocr133
+หมวดศึกษาทั่วไป (general_education),AIT,90644002,ปฎิบัติงานตามทักษะด้านการสื่อสาร 2,PRACTICE UNDER LANGUAGE AND COMMUNICATION SKILLS 2,,,ocr133;ocr211;ocr246
+หมวดศึกษาทั่วไป (general_education),AIT,90644003,ปฎิบัติงานตามทักษะด้านการสื่อสาร 3,PRACTICE UNDER LANGUAGE AND COMMUNICATION SKILLS 3,,,ocr134;ocr211;ocr246
+หมวดศึกษาทั่วไป (general_education),AIT,90644009,การออกเสียงภาษาอังกฤษเบื้องต้น,BASIC ENGLISH PRONUNCIATION,,,ocr134
+หมวดศึกษาทั่วไป (general_education),AIT,90644010,การพัฒนาทักษะการอ่านและการเขียนภาษาอังกฤษ,DEVELOPMENT OF READING AND WRITING SKILLS IN ENGLISH,,,ocr134
+หมวดศึกษาทั่วไป (general_education),AIT,90644011,ภาษาอังกฤษเชิงวิชาการ,ENGLISH FOR ACADEMIC PURPOSES,,,ocr134;ocr212;ocr246
+หมวดศึกษาทั่วไป (general_education),AIT,90644012,ภาษาอังกฤษเพื่อการสื่อสาร,ENGLISH FOR COMMUNICATION,,,ocr212
+หมวดศึกษาทั่วไป (general_education),AIT,90644013,การรเขียนภาษาอังกฤษเพื่อการสื่อสาร,ENGLISH FOR COMMUNICATIVE WRITING,,,ocr134;ocr246
+หมวดศึกษาทั่วไป (general_education),AIT,90644014,ภาษาอังกฤษเพื่อการสื่อสารทางวิชาการ,ENGLISH FOR PROFESSIONAL COMMUNICATION,,,ocr212
+หมวดศึกษาทั่วไป (general_education),AIT,90644015,ภาษาอังกฤษเพื่อการศึกษาต่อ,ENGLISH FOR FURTHER STUDIES,,,ocr213
+หมวดศึกษาทั่วไป (general_education),AIT,90644016,อังกฤษเพื่ออุสาหกรรม,ENGLISH FOR INDUSTRY,,,ocr246
+หมวดศึกษาทั่วไป (general_education),AIT,90644017,ภาษาอังกฤษสำหรับธุรกิจ,ENGLISH FOR BUSINESS,,,ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644018,ภาษาอังกฤษเพื่อการตลาด,ENGLISH FOR MARKETING,,,ocr214;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644019,ภาษาอังกฤษเพื่อการจัดการ,ENGLISH FOR MANAGEMENT,,,ocr121
+หมวดศึกษาทั่วไป (general_education),AIT,90644020,ภาษาอังกฤษเพื่อความเข้าใจข่าวสาร,ENGLISH FOR MADIA,,,ocr134
+หมวดศึกษาทั่วไป (general_education),AIT,90644022,ภาษาอังกฤษสำหรับมืออาชีพ,ENGLISH FOR PROFESSIONAL PURPOSES,,,ocr214;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644023,ภาษาอังกฤษเพื่อเตรียมตัวทำงาน,ENGLISH FOR WORK PREPATION,,,ocr134;ocr215
+หมวดศึกษาทั่วไป (general_education),AIT,90644024,ภาษาอังกฤษเพื่อการท่องเที่ยวและการเดินทาง,ENGLISH FOR TOURISM AND TRAVELLING,,,ocr134
+หมวดศึกษาทั่วไป (general_education),AIT,90644025,ภาษาอังกฤษเพื่อการสื่อสารในงานสถาปัตยกรรม,ENGLISH FOR ARCHITECTURAL ARTS & DESIGN COMMUNICATION,,,ocr135;ocr215;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644026,ภาษาอังกฤษเพื่อการนำเสนอในงานสถาปัตยกรรม,ENGLISH FOR ARCHITECTURAL ARTS & DESIGN PRESENTATION,,,ocr135;ocr136;ocr216;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644027,ภาษาอังกฤษสำหระบการเขียนพรรณา,ENGLISH FOR NARRATIVE WRITING,,,ocr135;ocr216;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644028,ภาษาอังกฤษเพื่อการออกแบบ,ENGLISH FOR DESIGN,,,ocr132;ocr135;ocr216;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644029,ภาษาอังกฤษสำหรับวิชาชีพสุขภาพ,ENGLISH FOR HEALTH PROFESSIONS,,,ocr217;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644030,ภาษาอังกฤษเพื่อการประชาสัมพันธ์,ENGLISH FOR PUBLIC RELATIONS,,,ocr135;ocr217;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644031,ภาษาอังกฤษสำหรับวิทยาศาสตร์และเทคโนโลยี,ENGLISH FOR SCIENCE AND TECHNOLOGY,,,ocr135;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644032,ภาษาอังกฤษสำหรับการบิน,ENGLISH FOR AVIATION,,,ocr135;ocr217;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644033,การเขียนและการพูดในงานอาชีพ,WRITING AND SPEAKING IN THE PROFESSIONS,,,ocr218;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644036,การพัฒนาทักษะทางภาษาอังกฤษเพื่อการเรียนรู้ตลอดชีวิต,ENLISH SKILL DEVELOPMENT FOR LIFE-LONG LEARNING,,,ocr219;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644037,การสื่อสารข้ามวัฒนธรรม,CROSS CULTURAL COMMUNICATION,,,ocr135;ocr219;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644039,ทักษะการสื่อสารผ่านการอภิปราย,COMMUNICATION SKILLS THROUGH DEBATE,,,ocr219;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644040,ทักษะการสื่อสารผ่านละคร,COMMUNICATION SKILLS THROUGH DRAMA,,,ocr220
+หมวดศึกษาทั่วไป (general_education),AIT,90644041,ภาษาอังกฤษจากสื่อบันเทิง,ENGLISH FROM ENTERTAINMENT MEDIA,,,ocr135;ocr220;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644042,การสื่อสารและการนำเสนออย่างมืออาชีพ,PROFESSIONAL COMMUNICATION AND PRESENTATION,,,ocr136
+หมวดศึกษาทั่วไป (general_education),AIT,90644043,การพูดในที่สาธารณะ,PUBLIC SPEAKING,,,ocr136;ocr220;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644044,พูดได้ พูดดี พูดเป็น,BEST SPEECH,,,ocr136;ocr221;ocr247
+หมวดศึกษาทั่วไป (general_education),AIT,90644045,การค้นคว้าและการเขียนรายงาน,RESEARCH PAPER WRITING,,,ocr136;ocr221;ocr248
+หมวดศึกษาทั่วไป (general_education),AIT,90644047,การพัฒนาทักษะการเขียนภาษาไทยเชิงสร้างสรรค์,DEVELOPMENT OF THAI CREATIVE WRITING SKILLS,,,ocr136;ocr222;ocr248
+หมวดศึกษาทั่วไป (general_education),AIT,90644049,ภาษาไทยเพื่อการสร้างสรรค์,THAI LANGUAGE FOR CREATIVITY,,,ocr222;ocr248
+หมวดศึกษาทั่วไป (general_education),AIT,90644050,การเขียนภาษาไทยในที่ทำงาน,THAI WRITING IN WORKPLACE,,,ocr135;ocr222
+หมวดศึกษาทั่วไป (general_education),AIT,90644051,ภาษาไทยสำหรับทันตแพทย์,THAI FOR DENTAL PROFESSIONS,,,ocr223;ocr248
+หมวดศึกษาทั่วไป (general_education),AIT,90644053,การฟังและการพูดภาษาจีนพื้นฐาน,FUNDAMENTAL CHINESE FOR LISTENING AND SPEAKING,,,ocr223;ocr248
+หมวดศึกษาทั่วไป (general_education),AIT,90644054,การอ่านและการเขียนภาษาจีนพื้นฐาน,FUNDAMENTAL CHINESE READING AND WRITING,,,ocr136;ocr224;ocr248
+หมวดศึกษาทั่วไป (general_education),AIT,90644055,ไวยากรณ์ภาษาจีนพื้นฐาน และสำนวนและสุภาษิตภาษาจีน,BASIC CHINESE GRAMMAR AND CHINESE IDIOMS AND PROVERBS,,,ocr224;ocr248
+หมวดศึกษาทั่วไป (general_education),AIT,90644056,วัฒนธรรม สำนวนและสุภาษิตจีน,CHINESE CULTURE IDIOMS AND PROVERBS,,,ocr224;ocr248
+หมวดศึกษาทั่วไป (general_education),AIT,90644057,ภาษาจีนเพื่อการสื่อสาร,CHINESE FOR COMMUNUCATION,,,ocr136;ocr224;ocr248
+หมวดศึกษาทั่วไป (general_education),AIT,90644058,ภาษาจีนสำหรับแฟนด้อม,CHINESE FANDOM,,,ocr137;ocr225;ocr248
+หมวดศึกษาทั่วไป (general_education),AIT,90644059,ภาษาจีนเพื่อการท่องเที่ยว,CHINESE FOR TRAVEL,,,ocr137;ocr248
+หมวดศึกษาทั่วไป (general_education),AIT,90644060,ภาษาเยอรมันเพื่อการสื่อสาร,GERMAN FOR COMMUNUCATION,,,ocr137;ocr248
+หมวดศึกษาทั่วไป (general_education),AIT,90644061,ภาษาเยอรมันเพื่อการทำงานและธุรกิจ,GERMAN FOR WORK AND BUSINESS,,,ocr137;ocr226
+หมวดศึกษาทั่วไป (general_education),AIT,90644062,ภาษาญี่ปุ่นเพื่อการสื่อสาร,JAPANESE FOR COMMUNICATION,,,ocr137
+หมวดศึกษาทั่วไป (general_education),AIT,90644063,ภาษาญี่ปุ่นเพื่อการท่องเที่ยว,JAPANESE FOR TRAVEL,,,ocr137;ocr248
+หมวดศึกษาทั่วไป (general_education),AIT,90644064,ภาษาเกาหลีเพื่อการท่องเที่ยว,KOREAN FOR TRAVEL,,,ocr137;ocr226
+หมวดศึกษาทั่วไป (general_education),AIT,90644065,ภาษาเวียดนามเพื่อการท่องเที่ยว,VIETNAMESE FOR TRAVEL,,,ocr227;ocr248
+หมวดศึกษาทั่วไป (general_education),dsba,90641001,โรงเรียนสร้างเสน่ห์,CHARM SCHOOL,,,14;121;123;149;232;260;350
+หมวดศึกษาทั่วไป (general_education),dsba,90641002,ความฉลาดทางดิจิทัล,DIGITAL INTELLIGENCE QUOTIENT,,,14;121;123;149;232;260;350
+หมวดศึกษาทั่วไป (general_education),dsba,90641003,กีฬาและนันทนาการ,SPORTS AND RECREATIONAL ACTIVITIES,,,14;121;123;149;232;260;350
+หมวดศึกษาทั่วไป (general_education),dsba,90642001,ปฏิบัติงานตามทักษะด้านบุคคลและสนับสนุนวิชาชีพ 1,PRACTICE UNDER PERSONAL AND PROFESSIONAL SKILLS 1,,,123;150;260
+หมวดศึกษาทั่วไป (general_education),dsba,90642002,ปฏิบัติงานตามทักษะด้านบุคคลและสนับสนุนวิชาชีพ 2,PRACTICE UNDER PERSONAL AND PROFESSIONAL SKILLS 2,,,123;150;260
+หมวดศึกษาทั่วไป (general_education),dsba,90642003,ปฏิบัติงานตามทักษะด้านบุคคลและสนับสนุนวิชาชีพ 3,PRACTICE UNDER PERSONAL AND PROFESSIONAL SKILLS 3,,,123;150;260
+หมวดศึกษาทั่วไป (general_education),dsba,90642004,การคิดวิเคราะห์,ANALYTICAL THINKING,,,123;150;260
+หมวดศึกษาทั่วไป (general_education),dsba,90642005,การคิดเชิงสร้างสรรค์,CREATIVE THINKING,,,123;151;260
+หมวดศึกษาทั่วไป (general_education),dsba,90642006,การคิดเชิงนวัตกรรม,INNOVATIVE THINKING,,,123;151;260
+หมวดศึกษาทั่วไป (general_education),dsba,90642007,การคิดเชิงบวก,POSITIVE THINKING,,,123;151;260
+หมวดศึกษาทั่วไป (general_education),dsba,90642008,การแก้ปัญหา,PROBLEM SOLVING,,,123;151
+หมวดศึกษาทั่วไป (general_education),dsba,90642009,การคิดเชิงกลยุทธ์,STRATEGIC THINKING,,,123;152
+หมวดศึกษาทั่วไป (general_education),dsba,90642010,การคิดเชิงระบบ,SYSTEM THINKING,,,123;152;260
+หมวดศึกษาทั่วไป (general_education),dsba,90642011,การคิดอย่างมีวิจารณญาณ,CRITICAL THINKING,,,123;152
+หมวดศึกษาทั่วไป (general_education),dsba,90642012,กระบวนการคิดเชิงออกแบบ,DESIGN THINKING,,,123;152;256;257;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642013,บูรณาการแห่งการคิด,INTEGRATED THINKING,,,123;153;254;258;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642014,การคิดเชิงระบบและเชิงนวัตกรรม,INNOVATIVE AND SYSTEM THINKING,,,123;153;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642015,การคิดสร้างสรรค์และนวัตกรรม,CREATIVE THINKING AND INNOVATION,,,124;153;255;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642016,วิธีการออกแบบเพื่อสร้างนวัตกรรม,DESIGN METHODS FOR INNOVATION,,,124;154;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642017,แกะกล่องนวัตกรรม,INNOVATION UNBOXED,,,124;154;253;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642018,เทคโนโลยีการผลิตงานสร้างสรรค์,CREATIVE PRODUCTION TECHNOLOGY,,,124;154;254;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642019,การออกแบบสะเต็มอย่างสร้างสรรค์ขั้นพื้นฐาน,BASIC CREATIVE STEM DESIGN,,,124;155;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642020,การออกแบบสะเต็มอย่างสร้างสรรค์ขั้นสูง,ADVANCE CREATIVE STEM DESIGN,,,124;155;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642021,ไอเดียขยะ,JUNK DESIGN,,,124;155;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642022,ปรัชญาวิทยาศาสตร์,PHILOSOPHY OF SCIENCE,,,124;156
+หมวดศึกษาทั่วไป (general_education),dsba,90642023,แนวโน้มการศึกษาด้านวิศวกรรม,EMERGING TRENDS IN ENGINEERING,,,124;156;234;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642024,การวิเคราะห์ข้อมูลทางวิชาชีพและการนำเสนอทางวิชาการ,PROFESSIONAL INFORMATION ANALYSIS AND ACADEMIC PRESENTATION,,,124;156;234;255;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642025,วิเคราะห์ความจริงจากตัวเลข,FATCS BEHIND NUMBERS,,,124;157;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642026,การพัฒนาทักษะเชิงวิจัย,RESEARCH SKILL DEVELOPMENT,,,124;157;255;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642027,การตีความและการใช้เหตุผล,INTERPRETATION AND ARGUMENT,,,124;157;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642028,รู้เท่าทันการพนัน,GAMBLING LITERACY,,,124;158;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642029,จริยธรรมและกฎหมายว่าด้วยความเป็นมืออาชีพทางการแพทย์,"MEDICAL ETHICS, LAWS AND PROFESSIONALOSM",,,124;158;261
+หมวดศึกษาทั่วไป (general_education),dsba,90642030,จรรยาบรรณและกฎหมายวิศวกรรม,ENGINEERING ETHICS AND LAWS,,,124;158;253;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642031,จริยธรรมและกฎหมายแห่งวิชาชีพ,PROFESSIONAL ETHICS AND LAWS,,,124;158;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642032,กฎหมายสำหรับผู้ประกอบการ,LAW FOR ENTREPRENEURS,,,124;159
+หมวดศึกษาทั่วไป (general_education),dsba,90642033,กฎหมายสำหรับคนรุ่นใหม่,LAW FOR NEW GENERATION,,,14;22;29;124;159;256;262;351
+หมวดศึกษาทั่วไป (general_education),dsba,90642034,กฎหมายและระเบียบในอุตสาหกรรมการบิน,LAW AND REGULATION IN AVIATION INDUSTRY,,,125;159;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642035,ประสบการณ์ในอุตสาหกรรมสำหรับวิศวกร,INDUSTRIAL EXPERIENCE FOR ENGINEERS,,,125;160;211;253;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642036,เตรียมความพร้อมสำหรับวิศวกร,PRE-ACTIVITIES FOR ENGINEERS,,,125;160;253;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642037,ประเด็นและทักษะวิชาชีพ,PROFESSIONAL SKILLS AND ISSUES,,,125;160;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642038,ความปลอดภัยในที่ทำงาน,OCCUPATIONAL SAFETY AND HEALTH,,,125;161;253;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642039,ซ่อมได้ภายในบ้าน,QUICK-FIX @ HOME,,,125;161;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642040,คอกาแฟ,COFFEE MANIA,,,125;161
+หมวดศึกษาทั่วไป (general_education),dsba,90642041,ครัวเด็กหอ,DORM CHEF,,,125;161;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642042,ศาสตร์และศิลป์ของเนื้อสัตว์,SCIENCE AND ART OF MEATS,,,125;162;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642043,ศาสตร์ของเบอร์เกอร์,SCIENCE OF BURGER,,,125;162;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642044,โลกของไส้กรอก,WORLD OF SAUSAGES,,,125;162;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642045,เรื่องเหล้า,BE MY BEV.,,,125;162;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642046,ไร้ซ์-สาระ,RICE-SARA,,,125;163
+หมวดศึกษาทั่วไป (general_education),dsba,90642047,หมอต้นไม้,TREE DOCTOR,,,125;163;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642048,ยาและสมุนไพรพาเพลิน,FUN WITH DRUGS AND HERBS,,,125;163;262
+หมวดศึกษาทั่วไป (general_education),dsba,90642049,การใช้ประโยชน์จากจุลินทรีย์ในชีวิตประจำวัน,MICROBIAL UTILIZATION FOR DAILY LIFE,,,125;164;256
+หมวดศึกษาทั่วไป (general_education),dsba,90642050,พืชพรรณที่เป็นยา,MEDICINAL PLANTS,,,125;164;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642051,เทคโนโลยีชีวภาพเพื่อความเป็นอยู่ที่ดีขึ้น,BIOTECHNOLOGY FOR BETTER LIVING,,,125;164;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642052,จากเส้นสาย DNA สู่พันธุกรรม,GENES & GENETICS : FROM HELIX TO HEREDITARY,,,125;165;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642053,สาระน่ารู้อณูพันธุศาสตร์,INTERESTING MOLECULAR GENETICS,,,126;165
+หมวดศึกษาทั่วไป (general_education),dsba,90642054,สิ่งพิทักษ์ร่างกาย,GUARDIANS OF OUR BODIES,,,126;165;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642055,จุลินทรีย์ร่วมชีพ,LIVING WITH MICROBES,,,126;166;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642056,โรคระบาดในศตวรรษที่ 21,EPIDEMICS IN THE 21st CENTURY,,,126;166
+หมวดศึกษาทั่วไป (general_education),dsba,90642057,ภูมิคุ้มกาย,IMMUNITY THROUGH MEDIA,,,126;166
+หมวดศึกษาทั่วไป (general_education),dsba,90642058,ความเข้าใจในนโยบายสุขภาพและสวัสดิภาพของประชาชน,UNDERSTANDING HEALTH POLICY AND PUBLIC WELFARE,,,126;166;236;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642059,การแพทย์และวรรณกรรม,MEDICINE AND LITERATURE,,,126;167;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642060,ค้นหาตัวตน,SELF-DISCOVERY,,,126;167
+หมวดศึกษาทั่วไป (general_education),dsba,90642061,โลกของแมลง,WORLD OF INSECTS,,,126;167;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642062,เรื่ื่องกินเรื่องใหญ่,ALL ABOUT FOOD,,,126;168;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642063,การพัฒนาสุขภาพแบบองค์รวม,HOLISTIC HEALTH DEVELOPMENT,,,126;168;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642064,เปตอง,PETANQUE,,,126;168;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642065,รักบี้ฟุตบอล,RUGBY FOOTBALL,,,126;168;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642066,ฟุตบอล,SOCCER,,,126;169;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642067,ซอฟบอลและเบสบอล,SOFTBALL & BASEBALL,,,126;169;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642068,เทนนิส,TENNIS,,,126;169;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642069,วอลเลย์บอล,VOLLEYBALL,,,126;169;263
+หมวดศึกษาทั่วไป (general_education),dsba,90642070,กอล์ฟ,GOLF,,,126;169;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642071,แบดมินตัน,BADMINTON,,,126;170;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642072,บาสเกตบอล,BASKETBALL,,,127;170;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642073,หมากกระดาน,CHESS,,,127;170;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642074,อีสปอร์ต,E-SPORTS,,,127;170;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642075,คาราเต้,KARATE,,,127;171;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642076,ยิงปืน,SHOOTING,,,127;171
+หมวดศึกษาทั่วไป (general_education),dsba,90642077,เทเบิลเทนนิส,TABLE TENNIS,,,127;171;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642078,เทควันโด,TAEKWONDO,,,127;171;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642079,ยูโด,JUDO,,,127;171;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642080,การประพันธ์เพลงเบื้องต้น,INTRODUCTION TO MUSIC COMPOSITION,,,127;172;258;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642081,สุนทรียะเพลงแรป,RAP APPRECIATION,,,127;172
+หมวดศึกษาทั่วไป (general_education),dsba,90642082,สุนทรียะดนตรี,MUSIC APPRECIATION,,,127;172;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642083,ศิลปะแห่งภาพยนต์,FILM APPRECIATION,,,127;172
+หมวดศึกษาทั่วไป (general_education),dsba,90642084,สุนทรียะภาพถ่าย,PHOTOGRAPHY APPRECIATION,,,127
+หมวดศึกษาทั่วไป (general_education),dsba,90642085,วัฒนธรรมร่วมสมัย,CONTEMPORARY CULTURE,,,127;173;264
+หมวดศึกษาทั่วไป (general_education),dsba,90642086,วัฒนธรรมการออกแบบเบื้องต้น,INTRODUCTION TO DESIGN CULTURE,,,127;173
+หมวดศึกษาทั่วไป (general_education),dsba,90642087,วัฒนธรรมรอบโลก,WORLD CULTURE,,,127;173;265
+หมวดศึกษาทั่วไป (general_education),dsba,90642088,วัฒนธรรมจีนดั้งเดิม,TRADITIONAL CHINESE CULTURE,,,127;174
+หมวดศึกษาทั่วไป (general_education),dsba,90642089,สังคม เศรษฐกิจ และการเมืองจีน,"CHINESE SOCIETY, ECONOMY AND POLITICS",,,127;174;263;265
+หมวดศึกษาทั่วไป (general_education),dsba,90642090,เจาะลึกประเด็นโลก,GLOBAL INSIDE,,,127;174;265
+หมวดศึกษาทั่วไป (general_education),dsba,90642091,เอเชียนศึกษา,ASIAN STUDY,,,128;174;265
+หมวดศึกษาทั่วไป (general_education),dsba,90642092,การศึกษาเพื่อสร้างพลเมือง,CIVIC EDUCATION,,,128;175;265
+หมวดศึกษาทั่วไป (general_education),dsba,90642093,สานสัมพันธ์กับชุมชน,COMMUNITY ENGAGEMENT,,,128;175;265
+หมวดศึกษาทั่วไป (general_education),dsba,90642094,หลักการพัฒนาชุมชน,PRINCIPLES OF COMMUNITY DEVELOPMENT,,,128;175
+หมวดศึกษาทั่วไป (general_education),dsba,90642095,การพัฒนาตวามมั่นคงแห่งชาติ,NATIONAL SECURITY DEVELOPMENT,,,128;175;265
+หมวดศึกษาทั่วไป (general_education),dsba,90642096,วิทยาการทางทหาร,MILITARY SCIENCE,,,128;176
+หมวดศึกษาทั่วไป (general_education),dsba,90642097,ภูมิปัญญาไทยประยุกต์,APPLIED THAI WISDOMS,,,128;176
+หมวดศึกษาทั่วไป (general_education),dsba,90642098,พลวัตสังคมไทย,DYNAMICS OF THAI SOCIETY,,,128;176;265
+หมวดศึกษาทั่วไป (general_education),dsba,90642099,สังคมสูงวัยเชิงรุก,ACTIVE AGING SOCIETY,,,128;177
+หมวดศึกษาทั่วไป (general_education),dsba,90642100,สู้กับข่าวปลอม,FIGHTING FAKE NEWS,,,128;177
+หมวดศึกษาทั่วไป (general_education),dsba,90642101,นักรีวิว,REVIEWER,,,128;177;265
+หมวดศึกษาทั่วไป (general_education),dsba,90642102,นักสื่อสารผ่านยูทูบ,YOUTUBER,,,128;177;265
+หมวดศึกษาทั่วไป (general_education),dsba,90642103,การดำรงชีพในสังคมดิจิทัล,LIVING IN DIGITAL SOCIETY,,,128;178;265
+หมวดศึกษาทั่วไป (general_education),dsba,90642104,รู้ทันดิจิทัล,DIGITAL LITERACY,,,128;178
+หมวดศึกษาทั่วไป (general_education),dsba,90642105,อินเทอร์เน็ตพื้นฐานของสรรพสิ่ง,BASIC INTERNET OF THINGS (IOT),,,128;178;255;266
+หมวดศึกษาทั่วไป (general_education),dsba,90642106,เล่าเรื่องการเดินทางแบบดิจิทัล,DIGITAL STORYTELLING IN JOURNEY,,,128;179;266
+หมวดศึกษาทั่วไป (general_education),dsba,90642107,การผลิตสื่อดิจิทัล,DIGITAL MEDIA PRODUCTION,,,128;179;254;257;266
+หมวดศึกษาทั่วไป (general_education),dsba,90642108,เทคโนโลยีการถ่ายภาพดิจิทัล,DIGITAL PHOTOGRAPHY TECHNOLOGY,,,128;179;254;266
+หมวดศึกษาทั่วไป (general_education),dsba,90642109,การออกแบบอินโฟกราฟิก,INFOGRAPHIC DESIGN,,,128;179
+หมวดศึกษาทั่วไป (general_education),dsba,90642110,สนุกกับวิทยาศาสตร์ข้อมูล,FUN WITH DATA SCIENCE,,,129;180;253;266
+หมวดศึกษาทั่วไป (general_education),dsba,90642111,สนุุกกับการเขียนโค้ด,FUN WITH CODING,,,129;180;255;266
+หมวดศึกษาทั่วไป (general_education),dsba,90642112,สนุกกับปัญญาประดิษฐ์,FUN WITH AI,,,129;180;266
+หมวดศึกษาทั่วไป (general_education),dsba,90642113,หุ่นยนต์และปัญญาประดิษฐ์,ROBOTICS AND AI,,,129;180;256;266
+หมวดศึกษาทั่วไป (general_education),dsba,90642114,ฟาร์มอัจฉริยะ,SMART FARMING,,,129;181;266
+หมวดศึกษาทั่วไป (general_education),dsba,90642115,เทคโนโลยีสีเขียวและพลังงานทดแทน,GREEN TECHNOLOGY AND ALTERNATIVE ENERGY,,,129;181;255;266
+หมวดศึกษาทั่วไป (general_education),dsba,90642116,เมืองอัจฉริยะและนวัตกรรมเมือง,SMART CITY AND INNOVATION,,,129;181;266
+หมวดศึกษาทั่วไป (general_education),dsba,90642117,ทักษะการรู้สารสนเทศแห่งศตวรรษที่ 21,INFORMATION LITERACY SKILLS FOR THE 21st CENTURY,,,129;182;255;266
+หมวดศึกษาทั่วไป (general_education),dsba,90642118,โปรแกรมคอมพิวเตอร์ประยุกต์ทางธุรกิจ,APPLICATION SOFTWARE FOR BUSSINESS,,,129;182;253
+หมวดศึกษาทั่วไป (general_education),dsba,90642119,คอมพิวเตอร์ทางธุรกิจเพื่อพัฒนากระบวนการคิดเชิงวิเคราะห์,COMPUTER FOR DEVELOPMENT OF ANALYTICAL THINKING PROCESS,,,129;182;255
+หมวดศึกษาทั่วไป (general_education),dsba,90642120,เอ็กเซลเพื่อความเป็นมืออาชีพ,FROM EXCEL TO EXCELLENT,,,129;182
+หมวดศึกษาทั่วไป (general_education),dsba,90642121,การวิเคราะห์และจัดการข้อมูลด้วยโปรแกรมคอมพิวเตอร์,DATA ANALYSIS AND MANAGEMENT WITH COMPUTATIONAL PROGRAM,,,129;183;241;266
+หมวดศึกษาทั่วไป (general_education),dsba,90642122,การใช้แอพลิเคชัน ไมโครคอมพิวเตอร์,INTRODUCTION TO MICROCOMPUTER APPLICATION,,,129;183;267
+หมวดศึกษาทั่วไป (general_education),dsba,90642123,เทคโนโลยี คอมพิวเตอร์ดนตรี,TECHNOLOGY IN MUSICAL SEQUENCING,,,129;183;258
+หมวดศึกษาทั่วไป (general_education),dsba,90642124,เทคโนโลยีและนวัตกรรมทางวิทยาศาสตร์สำหรับ SDGs,SCIENCE TECHNOLOGY AND SCIENCE INNOVATION FOR SDGS,,,129;183;255
+หมวดศึกษาทั่วไป (general_education),dsba,90642125,การดำรงชีวิตท่ามกลางภัยพิบัติและวิกฤตในอนาคต,LIVING IN FUTURE DISASTER AND CRISIS,,,129;184;267
+หมวดศึกษาทั่วไป (general_education),dsba,90642126,วิชาเอาตัวรอด,SURVIVORS,,,129;184;267
+หมวดศึกษาทั่วไป (general_education),dsba,90642127,รักษ์โลก,THINK EARTH,,,129;184;254;267
+หมวดศึกษาทั่วไป (general_education),dsba,90642128,นิเวศวิทยาและการรักษาสิ่งแวดล้อม,"ECOLOGY, CONSERVATION AND ENVIRONMENTALISM",,,129;185;267
+หมวดศึกษาทั่วไป (general_education),dsba,90642129,การท่องเที่ยวทางเลือก,ALTERNATIVE TOURISM,,,130;185
+หมวดศึกษาทั่วไป (general_education),dsba,90642130,การท่องเที่ี่ยวเชิงกีฬา,SPORTS TOURISM,,,130;185;267
+หมวดศึกษาทั่วไป (general_education),dsba,90642131,วัฒนธรรมไทยกับการท่องเที่ยว,THAI CULTURE AND TOURISM,,,130;185;257;267
+หมวดศึกษาทั่วไป (general_education),dsba,90642132,ชุมพรศึกษาเพื่อการท่องเที่ยว,CHUMPHON STUDY FOR TOURISM,,,130;186;258;267
+หมวดศึกษาทั่วไป (general_education),dsba,90642133,รอบรั้วชุมพรศึกษา,CHUMPHON AREA STUDY,,,130;186
+หมวดศึกษาทั่วไป (general_education),dsba,90642134,แผ่นดินพระจอมเกล้าฯศึกษา,KING MONGKUT'S REIGN STUDY,,,130;186;267
+หมวดศึกษาทั่วไป (general_education),dsba,90642135,ปรัชญาเศรษฐกิจพอเพียง,PHILOSOPHY OF SUFFICIENCY ECONOMY,,,130;187;258
+หมวดศึกษาทั่วไป (general_education),dsba,90642136,จริยศาสตร์และสุนทรียศาสตร์,ETHICS AND AESTHETICS,,,130;187
+หมวดศึกษาทั่วไป (general_education),dsba,90642137,ดูละครแล้วย้อนตัว,SERIES IN DAILY LIFE,,,130;187;267
+หมวดศึกษาทั่วไป (general_education),dsba,90642138,สมาธิเพื่อพัฒนาชีวิต,MEDITATION FOR LIFE DEVELOPMENT,,,130;187;267
+หมวดศึกษาทั่วไป (general_education),dsba,90642139,การฟื้นฟูพลังใจ,RESILIENCE QUOTIENT,,,130;188;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642140,ภูมิคุุ้มกันทางใจ,IMMUNITY OF MIND,,,130;188;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642141,จิตวิทยาเพื่อการพัฒนาตนเอง,PSYCHOLOGY OF SELF-DEVELOPMENT,,,130;188;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642142,จิตวิทยาสำหรับสื่อสาร,PSYCHOLOGY IN COMMUNICATION,,,130;188;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642143,ชีวิตออกแบบได้,DESIGNING YOUR LIFE,,,130;189
+หมวดศึกษาทั่วไป (general_education),dsba,90642144,กระจกส่องใจ,MAGIC MIRROR,,,130;189;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642145,พลังแห่งบุคลิกภาพ,POWER OF PERSONALITY,,,130;189;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642146,เปลี่ยนความคิด ชีวิตเปลี่ยน,POWER OF CHANGE,,,130;189;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642147,ทักษะแห่งความสุข,HAPPINESS SKILLS,,,130;190;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642148,ศิลปะการพัฒนาอารมณ์,ARTS OF EMOTION DEVELOPMENT,,,131;190
+หมวดศึกษาทั่วไป (general_education),dsba,90642149,ศิลปะการสร้างสรรค์เพื่อพัฒนาอารมณ์และจิตวิญญาณ,IMAGINATIVE ART,,,131;190;258
+หมวดศึกษาทั่วไป (general_education),dsba,90642150,ศิลปะในชีวิตประจำวัน,ART IN EVERYDAY LIFE,,,131;191;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642151,มนุษย์กับศิลปะ,MAN AND ART,,,131;191;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642152,ปันสุข,JOY OF SHARING,,,131;191;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642153,ความเข้าใจในพฤติกรรมมนุษย์,UNDERSTANDING HUMAN BEHAVIOR,,,131;192;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642154,ล้มให้เป็น,FAIL-ABLE,,,131;192;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642155,การสร้างมนุษย์สัมพันธ์กับการสื่อสาร,HUMAN RELATIONSHIP AND COMMUNICATION,,,131;192;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642156,ฮวงจุ้ย,FENG SHUI,,,131;192;ocr273
+หมวดศึกษาทั่วไป (general_education),dsba,90642157,โหราศาสตร์ไทย,THAI ASTROLOGY,,,131;193;269
+หมวดศึกษาทั่วไป (general_education),dsba,90642158,มุมมองของวิทยาศาสตร์และเทคโนโลยีร่วมสมัย,COMTEMPORARY SCIENCE AND TECHNOLOGY,,,131;193;243;269
+หมวดศึกษาทั่วไป (general_education),dsba,90642159,จิตวิทยาเบื้องต้น,INTRODUCTION TO PSYCHOLOGY,,,131;193;269
+หมวดศึกษาทั่วไป (general_education),dsba,90643001,ปฎิบัติงานตามทักษะด้านการจัดการ 1,PRACTICE UNDER MANAGEMENT SKILL 1,,,131;194;269
+หมวดศึกษาทั่วไป (general_education),dsba,90643002,ปฎิบัติงานตามทักษะด้านการจัดการ 2,PRACTICE UNDER MANAGEMENT SKILL 2,,,131;194;269
+หมวดศึกษาทั่วไป (general_education),dsba,90643003,ปฎิบัติงานตามทักษะด้านการจัดการ 3,PRACTICE UNDER MANAGEMENT SKILL 3,,,131;194
+หมวดศึกษาทั่วไป (general_education),dsba,90643004,ผู้นำพลังบวก,POSITIVE POWER LEADER,,,131;194;269
+หมวดศึกษาทั่วไป (general_education),dsba,90643005,นักเปลี่ยนโลก,THE DISRUPTOR,,,131;195;269
+หมวดศึกษาทั่วไป (general_education),dsba,90643006,การจัดการและผู้นำสมัยใหม่,MODERN MANAGEMENT AND LEADERSHIP,,,131;195;254;255;258;269
+หมวดศึกษาทั่วไป (general_education),dsba,90643007,ภาวะผู้นำสำหรับคนรุ่นใหม่,NEXT GEN LEADERSHIP,,,132;195;269
+หมวดศึกษาทั่วไป (general_education),dsba,90643008,ศาสตร์การต่อรอง,SCIENCE OF NEGOTIATION,,,132;195;269
+หมวดศึกษาทั่วไป (general_education),dsba,90643009,การตลาดยุคคอนเทนท์,CONTENT MARKETING,,,132;196;269
+หมวดศึกษาทั่วไป (general_education),dsba,90643010,การตลาดร่วมสมัย,CONTEMPORARY MARKETING,,,132;196;269
+หมวดศึกษาทั่วไป (general_education),dsba,90643011,ศิลปะแห่งการบริหารการสื่อสาร,ART OF COMMUNICATION MANAGEMENT,,,132;196;254;269
+หมวดศึกษาทั่วไป (general_education),dsba,90643012,การทำงานเป็นทีม,TEAMWORK,,,132;197;269
+หมวดศึกษาทั่วไป (general_education),dsba,90643013,การจัดการเชิงอุตสาหกรรม,INDUSTRIAL MANAGEMENT,,,132;197;269
+หมวดศึกษาทั่วไป (general_education),dsba,90643014,ความรู้ทั่วไปเกี่ยวกับธุรกิจ,GENERAL BUSINESS,,,132;197
+หมวดศึกษาทั่วไป (general_education),dsba,90643015,การบัญชีทางธุรกิจสำหรับคนรุ่นใหม่,BUSINESS ACCOUNTING FOR NEW GEN,,,132;198;210;255
+หมวดศึกษาทั่วไป (general_education),dsba,90643016,สนุกกับธุรกิจออนไลน์,FUN WITH ONLINE BUSINESS,,,132;198;257
+หมวดศึกษาทั่วไป (general_education),dsba,90643017,ลีนสตาร์ทอัพและแนวคิดธุรกิจแบบคล่องตัว,LEAN STARTUP AND AGILE BUSINESS,,,132;198;210
+หมวดศึกษาทั่วไป (general_education),dsba,90643018,ธุรกิจระหว่างประเทศ,INTERNATIONAL BUSINESS,,,132;198;210
+หมวดศึกษาทั่วไป (general_education),dsba,90643019,เศรษฐศาสตร์กับการเป็นผู้ประกอบการ,ECONOMICS AND ENTREPRENEURSHIP,,,132;199;210
+หมวดศึกษาทั่วไป (general_education),dsba,90643020,นักพัฒนาธุรกิจสร้างสรรค์,INNOVATIVE ENTREPRENEURS,,,132;199;210
+หมวดศึกษาทั่วไป (general_education),dsba,90643021,ผู้ประกอบการสมัยใหม่,MODERN ENTREPRENEURS,,,14;26;33;132;199;253;255;256;351
+หมวดศึกษาทั่วไป (general_education),dsba,90643022,ผู้ประกอบการทางสังคม,SOCIAL ENTREPRENEURS,,,132;199;210
+หมวดศึกษาทั่วไป (general_education),dsba,90643023,ผู้ประกอบการเทคโนโลยี,TECHNOPRENEURS,,,132;200;210
+หมวดศึกษาทั่วไป (general_education),dsba,90643024,ฟาร์มสุข,HAPPINESS FARMS,,,132;200;254
+หมวดศึกษาทั่วไป (general_education),dsba,90643025,เส้นทางสู่ IPO,ROAD TO IPO,,,132;200;210
+หมวดศึกษาทั่วไป (general_education),dsba,90643026,การวางแผนเพื่อการลงทุน,INVESTMENT PLANNING,,,133;201;210;254;256
+หมวดศึกษาทั่วไป (general_education),dsba,90643027,มนุษย์ เงิน และคณิตศาสตร์,"MAN, MONEY AND MATH",,,133;201
+หมวดศึกษาทั่วไป (general_education),dsba,90643028,มือใหม่ (หัด) เล่นหุ้น,SMART TIPS FOR BEGINNING INVESTERS,,,133;201;210
+หมวดศึกษาทั่วไป (general_education),dsba,90643029,เศรษฐกิจดิจิทัล,DIGITAL ECONOMY,,,133;201;210
+หมวดศึกษาทั่วไป (general_education),dsba,90643030,เศรษศาสตร์ทั่ไป และการศึกษาความเป็นไปได้ของโครงการ,GENERAL ECONOMICS AND PROJECT FEASIBILITY STUDY,,,133;202;210;256
+หมวดศึกษาทั่วไป (general_education),dsba,90643031,วิถีชีวิตตามแนวคิดเศรษฐกิจหมุนเวียนในศตวรรษที่ 21,CIRCULAR ECONOMIC LIFESTYLE FOR 21st CENTURY,,,133;202;210
+หมวดศึกษาทั่วไป (general_education),dsba,90643032,ปักหมุดเศรษฐกิจ,BCG ECONOMY IN ACTION,,,133;202;211;255
+หมวดศึกษาทั่วไป (general_education),dsba,90643033,การจัดการนวัตกรรม,INNOVATION MANAGEMENT,,,133;203;211
+หมวดศึกษาทั่วไป (general_education),dsba,90643034,การจัดการกับความคิดสร้างสรรค์,MANAGEMENT AND CREATIVITY,,,133;203
+หมวดศึกษาทั่วไป (general_education),dsba,90643035,การจัดการความรู้เพื่อการพัฒนานวัตกรรม,KNOWLEDGE MANAGEMENT FOR INNOVATION DEVELOPMENT,,,133;204;256;257
+หมวดศึกษาทั่วไป (general_education),dsba,90643036,การจัดการความรู้เพื่อการบริหารโครงการ,KNOWLEDGE MANAGEMENT FOR PROJECT MANAGEMENT,,,133;204
+หมวดศึกษาทั่วไป (general_education),dsba,90643037,การบัริหารงานภาครัฐและนโยบายสาธารณะในศตวรรษที่ 21,PUBLIC ADMINISTRATION AND PUBLIC POLICY IN THE 21st CENTURY,,,133;204;211
+หมวดศึกษาทั่วไป (general_education),dsba,90643038,ศัลยกรรมชีวิต,REBRANDING,,,133;205;211
+หมวดศึกษาทั่วไป (general_education),dsba,90644001,ปฎิบัติงานตามทักษะด้านการสื่อสาร 1,PRACTICE UNDER LANGUAGE AND COMMUNICATION SKILLS 1,,,133;205;211
+หมวดศึกษาทั่วไป (general_education),dsba,90644002,ปฎิบัติงานตามทักษะด้านการสื่อสาร 2,PRACTICE UNDER LANGUAGE AND COMMUNICATION SKILLS 2,,,133;211
+หมวดศึกษาทั่วไป (general_education),dsba,90644003,ปฎิบัติงานตามทักษะด้านการสื่อสาร 3,PRACTICE UNDER LANGUAGE AND COMMUNICATION SKILLS 3,,,133;205;211
+หมวดศึกษาทั่วไป (general_education),dsba,90644004,การฟังและการพูดเชิงวิชาการ,ACADEMIC LISTENING AND SPEAKING,,,133;137;206;211
+หมวดศึกษาทั่วไป (general_education),dsba,90644005,การอ่านและการเขียนเชิงวิชาการ,ACADEMIC READING AND WRITING,,,133;137;206;211
+หมวดศึกษาทั่วไป (general_education),dsba,90644006,ภาษาอังกฤษเพื่อปรับพื้นฐาน,PREPARATORY ENGLISH,,,134;137;206;211
+หมวดศึกษาทั่วไป (general_education),dsba,90644007,ภาษาอังกฤษพื้นฐาน 1,FOUNDATION ENGLISH 1,,,14;121;134;207;211;350
+หมวดศึกษาทั่วไป (general_education),dsba,90644008,ภาษาอังกฤษพื้นฐาน 2,FOUNDATION ENGLISH 2,,,14;121;134;207;211;350
+หมวดศึกษาทั่วไป (general_education),dsba,90644009,การออกเสียงภาษาอังกฤษเบื้องต้น,BASIC ENGLISH PRONUNCIATION,,,134;207;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644010,การพัฒนาทักษะการอ่านและการเขียนภาษาอังกฤษ,DEVELOPMENT OF READING AND WRITING SKILLS IN ENGLISH,,,134;207
+หมวดศึกษาทั่วไป (general_education),dsba,90644011,ภาษาอังกฤษเชิงวิชาการ,ENGLISH FOR ACADEMIC PURPOSES,,,134;208;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644012,ภาษาอังกฤษเพื่อการสื่อสาร,ENGLISH FOR COMMUNICATION,,,134;208;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644013,การรเขียนภาษาอังกฤษเพื่อการสื่อสาร,ENGLISH FOR COMMUNICATIVE WRITING,,,134;208;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644014,ภาษาอังกฤษเพื่อการสื่อสารทางวิชาการ,ENGLISH FOR PROFESSIONAL COMMUNICATION,,,134;208;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644015,ภาษาอังกฤษเพื่อการศึกษาต่อ,ENGLISH FOR FURTHER STUDIES,,,134;209
+หมวดศึกษาทั่วไป (general_education),dsba,90644016,อังกฤษเพื่ออุสาหกรรม,ENGLISH FOR INDUSTRY,,,134;209;256
+หมวดศึกษาทั่วไป (general_education),dsba,90644017,ภาษาอังกฤษสำหรับธุรกิจ,ENGLISH FOR BUSINESS,,,134;209;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644018,ภาษาอังกฤษเพื่อการตลาด,ENGLISH FOR MARKETING,,,134;209;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644019,ภาษาอังกฤษเพื่อการจัดการ,ENGLISH FOR MANAGEMENT,,,134;210;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644020,ภาษาอังกฤษเพื่อความเข้าใจข่าวสาร,ENGLISH FOR MADIA,,,134;210
+หมวดศึกษาทั่วไป (general_education),dsba,90644021,ภาษาอังกฤษเพื่อการสื่อสารระหว่างวัฒนธรรม,ENGLISH FOR INTERCURAL COMMUNICATION,,,134;210;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644022,ภาษาอังกฤษสำหรับมืออาชีพ,ENGLISH FOR PROFESSIONAL PURPOSES,,,134;210;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644023,ภาษาอังกฤษเพื่อเตรียมตัวทำงาน,ENGLISH FOR WORK PREPATION,,,134;211;257
+หมวดศึกษาทั่วไป (general_education),dsba,90644024,ภาษาอังกฤษเพื่อการท่องเที่ยวและการเดินทาง,ENGLISH FOR TOURISM AND TRAVELLING,,,134;211;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644025,ภาษาอังกฤษเพื่อการสื่อสารในงานสถาปัตยกรรม,ENGLISH FOR ARCHITECTURAL ARTS & DESIGN COMMUNICATION,,,135;211;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644026,ภาษาอังกฤษเพื่อการนำเสนอในงานสถาปัตยกรรม,ENGLISH FOR ARCHITECTURAL ARTS & DESIGN PRESENTATION,,,135;211;213
+หมวดศึกษาทั่วไป (general_education),dsba,90644027,ภาษาอังกฤษสำหระบการเขียนพรรณา,ENGLISH FOR NARRATIVE WRITING,,,135;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644028,ภาษาอังกฤษเพื่อการออกแบบ,ENGLISH FOR DESIGN,,,135;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644029,ภาษาอังกฤษสำหรับวิชาชีพสุขภาพ,ENGLISH FOR HEALTH PROFESSIONS,,,135;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644030,ภาษาอังกฤษเพื่อการประชาสัมพันธ์,ENGLISH FOR PUBLIC RELATIONS,,,135;212
+หมวดศึกษาทั่วไป (general_education),dsba,90644031,ภาษาอังกฤษสำหรับวิทยาศาสตร์และเทคโนโลยี,ENGLISH FOR SCIENCE AND TECHNOLOGY,,,135;213
+หมวดศึกษาทั่วไป (general_education),dsba,90644032,ภาษาอังกฤษสำหรับการบิน,ENGLISH FOR AVIATION,,,135;213
+หมวดศึกษาทั่วไป (general_education),dsba,90644033,การเขียนและการพูดในงานอาชีพ,WRITING AND SPEAKING IN THE PROFESSIONS,,,135;213
+หมวดศึกษาทั่วไป (general_education),dsba,90644034,การเขียนทางเทคนิค,TECHNICAL WRITING,,,135;213
+หมวดศึกษาทั่วไป (general_education),dsba,90644035,การอ่านและเขียนเชิงวิชาการสำหรับวิทยาศาสตร์สุขภาพ,ACADEMIC READING AND WRITING FOR HEALTH SCIENCES,,,135;213;214;249
+หมวดศึกษาทั่วไป (general_education),dsba,90644036,การพัฒนาทักษะทางภาษาอังกฤษเพื่อการเรียนรู้ตลอดชีวิต,ENLISH SKILL DEVELOPMENT FOR LIFE-LONG LEARNING,,,135;214
+หมวดศึกษาทั่วไป (general_education),dsba,90644037,การสื่อสารข้ามวัฒนธรรม,CROSS CULTURAL COMMUNICATION,,,135;214
+หมวดศึกษาทั่วไป (general_education),dsba,90644038,การสื่อสารนวัตกรรม,INNOVATIVE COMMUNICATION,,,135;215
+หมวดศึกษาทั่วไป (general_education),dsba,90644039,ทักษะการสื่อสารผ่านการอภิปราย,COMMUNICATION SKILLS THROUGH DEBATE,,,135;213;215;257
+หมวดศึกษาทั่วไป (general_education),dsba,90644040,ทักษะการสื่อสารผ่านละคร,COMMUNICATION SKILLS THROUGH DRAMA,,,135;215;274
+หมวดศึกษาทั่วไป (general_education),dsba,90644041,ภาษาอังกฤษจากสื่อบันเทิง,ENGLISH FROM ENTERTAINMENT MEDIA,,,135;215
+หมวดศึกษาทั่วไป (general_education),dsba,90644042,การสื่อสารและการนำเสนออย่างมืออาชีพ,PROFESSIONAL COMMUNICATION AND PRESENTATION,,,14;25;32;135;216;256;257;274;351
+หมวดศึกษาทั่วไป (general_education),dsba,90644043,การพูดในที่สาธารณะ,PUBLIC SPEAKING,,,135;216
+หมวดศึกษาทั่วไป (general_education),dsba,90644044,พูดได้ พูดดี พูดเป็น,BEST SPEECH,,,136;216
+หมวดศึกษาทั่วไป (general_education),dsba,90644045,การค้นคว้าและการเขียนรายงาน,RESEARCH PAPER WRITING,,,136;216
+หมวดศึกษาทั่วไป (general_education),dsba,90644046,การฟังและการอ่านเพื่อพัฒนาคุณภาพชีวิต,LISTENING AND READING FOR IMPROVING LIFE QUALITY,,,136;217;274
+หมวดศึกษาทั่วไป (general_education),dsba,90644047,การพัฒนาทักษะการเขียนภาษาไทยเชิงสร้างสรรค์,DEVELOPMENT OF THAI CREATIVE WRITING SKILLS,,,136;217;274
+หมวดศึกษาทั่วไป (general_education),dsba,90644048,ภาษาในสังคมไทย,LANGUAGE IN THAI SOCIETY,,,136;217
+หมวดศึกษาทั่วไป (general_education),dsba,90644049,ภาษาไทยเพื่อการสร้างสรรค์,THAI LANGUAGE FOR CREATIVITY,,,136;217
+หมวดศึกษาทั่วไป (general_education),dsba,90644050,การเขียนภาษาไทยในที่ทำงาน,THAI WRITING IN WORKPLACE,,,136;218;257
+หมวดศึกษาทั่วไป (general_education),dsba,90644051,ภาษาไทยสำหรับทันตแพทย์,THAI FOR DENTAL PROFESSIONS,,,136;218
+หมวดศึกษาทั่วไป (general_education),dsba,90644052,ศิลปะการสื่อสารสำหรับมืออาชีพด้านอาหาร,COMMUNICATION IN THAI FOR CULINARY PROFESSIONALS,,,136;218;274
+หมวดศึกษาทั่วไป (general_education),dsba,90644053,การฟังและการพูดภาษาจีนพื้นฐาน,FUNDAMENTAL CHINESE FOR LISTENING AND SPEAKING,,,136;218;250
+หมวดศึกษาทั่วไป (general_education),dsba,90644054,การอ่านและการเขียนภาษาจีนพื้นฐาน,FUNDAMENTAL CHINESE READING AND WRITING,,,136;219;274
+หมวดศึกษาทั่วไป (general_education),dsba,90644055,ไวยากรณ์ภาษาจีนพื้นฐาน และสำนวนและสุภาษิตภาษาจีน,BASIC CHINESE GRAMMAR AND CHINESE IDIOMS AND PROVERBS,,,136;219;251;274
+หมวดศึกษาทั่วไป (general_education),dsba,90644056,วัฒนธรรม สำนวนและสุภาษิตจีน,CHINESE CULTURE IDIOMS AND PROVERBS,,,136;219;275
+หมวดศึกษาทั่วไป (general_education),dsba,90644057,ภาษาจีนเพื่อการสื่อสาร,CHINESE FOR COMMUNUCATION,,,136;219;253
+หมวดศึกษาทั่วไป (general_education),dsba,90644058,ภาษาจีนสำหรับแฟนด้อม,CHINESE FANDOM,,,136;219
+หมวดศึกษาทั่วไป (general_education),dsba,90644059,ภาษาจีนเพื่อการท่องเที่ยว,CHINESE FOR TRAVEL,,,136;220
+หมวดศึกษาทั่วไป (general_education),dsba,90644060,ภาษาเยอรมันเพื่อการสื่อสาร,GERMAN FOR COMMUNUCATION,,,136;220
+หมวดศึกษาทั่วไป (general_education),dsba,90644061,ภาษาเยอรมันเพื่อการทำงานและธุรกิจ,GERMAN FOR WORK AND BUSINESS,,,136;220
+หมวดศึกษาทั่วไป (general_education),dsba,90644062,ภาษาญี่ปุ่นเพื่อการสื่อสาร,JAPANESE FOR COMMUNICATION,,,136;221;253
+หมวดศึกษาทั่วไป (general_education),dsba,90644063,ภาษาญี่ปุ่นเพื่อการท่องเที่ยว,JAPANESE FOR TRAVEL,,,137;221
+หมวดศึกษาทั่วไป (general_education),dsba,90644064,ภาษาเกาหลีเพื่อการท่องเที่ยว,KOREAN FOR TRAVEL,,,137;221
+หมวดศึกษาทั่วไป (general_education),dsba,90644065,ภาษาเวียดนามเพื่อการท่องเที่ยว,VIETNAMESE FOR TRAVEL,,,137;221
+หมวดศึกษาทั่วไป (general_education),dsba,90644066,ภาษามาเลย์เพื่อการท่องเที่ยว,MALAY FOR TRAVEL,,,137;222
+หมวดศึกษาทั่วไป (general_education),it,90641001,โรงเรียนสร้างเสน่ห์,CHARM SCHOOL,,,16;26;34;ocr138;ocr140;ocr166;ocr249;ocr277;ocr384
+หมวดศึกษาทั่วไป (general_education),it,90641002,ความฉลาดทางดิจิทัล,DIGITAL INTELLIGENCE QUOTIENT,,,16;28;35;ocr138;ocr140;ocr166;ocr249;ocr277;ocr384
+หมวดศึกษาทั่วไป (general_education),it,90641003,กีฬาและนันทนาการ,SPORTS AND RECREATIONAL ACTIVITIES,,,17;26;34;ocr138;ocr140;ocr166;ocr249;ocr277;ocr384
+หมวดศึกษาทั่วไป (general_education),it,90642001,ปฏิบัติงานตามทักษะด้านบุคคลและสนับสนุนวิชาชีพ 1,PRACTICE UNDER PERSONAL AND PROFESSIONAL SKILLS 1,,,ocr140;ocr167;ocr277
+หมวดศึกษาทั่วไป (general_education),it,90642002,ปฏิบัติงานตามทักษะด้านบุคคลและสนับสนุนวิชาชีพ 2,PRACTICE UNDER PERSONAL AND PROFESSIONAL SKILLS 2,,,ocr140;ocr167;ocr277
+หมวดศึกษาทั่วไป (general_education),it,90642003,ปฏิบัติงานตามทักษะด้านบุคคลและสนับสนุนวิชาชีพ 3,PRACTICE UNDER PERSONAL AND PROFESSIONAL SKILLS 3,,,ocr140;ocr167;ocr277
+หมวดศึกษาทั่วไป (general_education),it,90642004,การคิดวิเคราะห์,ANALYTICAL THINKING,,,ocr140;ocr167
+หมวดศึกษาทั่วไป (general_education),it,90642005,การคิดเชิงสร้างสรรค์,CREATIVE THINKING,,,ocr140;ocr168
+หมวดศึกษาทั่วไป (general_education),it,90642006,การคิดเชิงนวัตกรรม,INNOVATIVE THINKING,,,ocr140;ocr168;ocr277
+หมวดศึกษาทั่วไป (general_education),it,90642007,การคิดเชิงบวก,POSITIVE THINKING,,,ocr140;ocr168
+หมวดศึกษาทั่วไป (general_education),it,90642008,การแก้ปัญหา,PROBLEM SOLVING,,,ocr140;ocr168
+หมวดศึกษาทั่วไป (general_education),it,90642009,การคิดเชิงกลยุทธ์,STRATEGIC THINKING,,,ocr140;ocr169;ocr277
+หมวดศึกษาทั่วไป (general_education),it,90642010,การคิดเชิงระบบ,SYSTEM THINKING,,,ocr140;ocr169;ocr277
+หมวดศึกษาทั่วไป (general_education),it,90642011,การคิดอย่างมีวิจารณญาณ,CRITICAL THINKING,,,ocr140;ocr169
+หมวดศึกษาทั่วไป (general_education),it,90642012,กระบวนการคิดเชิงออกแบบ,DESIGN THINKING,,,ocr140;ocr169;ocr273;ocr274;ocr278
+หมวดศึกษาทั่วไป (general_education),it,90642013,บูรณาการแห่งการคิด,INTEGRATED THINKING,,,ocr140;ocr170;ocr271;ocr275;ocr278
+หมวดศึกษาทั่วไป (general_education),it,90642014,การคิดเชิงระบบและเชิงนวัตกรรม,INNOVATIVE AND SYSTEM THINKING,,,ocr140;ocr170;ocr278
+หมวดศึกษาทั่วไป (general_education),it,90642015,การคิดสร้างสรรค์และนวัตกรรม,CREATIVE THINKING AND INNOVATION,,,ocr141;ocr170;ocr272
+หมวดศึกษาทั่วไป (general_education),it,90642016,วิธีการออกแบบเพื่อสร้างนวัตกรรม,DESIGN METHODS FOR INNOVATION,,,ocr141;ocr171;ocr278
+หมวดศึกษาทั่วไป (general_education),it,90642017,แกะกล่องนวัตกรรม,INNOVATION UNBOXED,,,ocr141;ocr171;ocr270;ocr278
+หมวดศึกษาทั่วไป (general_education),it,90642018,เทคโนโลยีการผลิตงานสร้างสรรค์,CREATIVE PRODUCTION TECHNOLOGY,,,ocr141;ocr171;ocr271;ocr278
+หมวดศึกษาทั่วไป (general_education),it,90642019,การออกแบบสะเต็มอย่างสร้างสรรค์ขั้นพื้นฐาน,BASIC CREATIVE STEM DESIGN,,,ocr141;ocr280
+หมวดศึกษาทั่วไป (general_education),it,90642020,การออกแบบสะเต็มอย่างสร้างสรรค์ขั้นสูง,ADVANCE CREATIVE STEM DESIGN,,,ocr141;ocr172;ocr278;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642021,ไอเดียขยะ,JUNK DESIGN,,,ocr141;ocr172;ocr278
+หมวดศึกษาทั่วไป (general_education),it,90642022,ปรัชญาวิทยาศาสตร์,PHILOSOPHY OF SCIENCE,,,ocr141;ocr173;ocr278
+หมวดศึกษาทั่วไป (general_education),it,90642023,แนวโน้มการศึกษาด้านวิศวกรรม,EMERGING TRENDS IN ENGINEERING,,,ocr141;ocr173;ocr251;ocr278
+หมวดศึกษาทั่วไป (general_education),it,90642024,การวิเคราะห์ข้อมูลทางวิชาชีพและการนำเสนอทางวิชาการ,PROFESSIONAL INFORMATION ANALYSIS AND ACADEMIC PRESENTATION,,,ocr141;ocr173;ocr272;ocr278
+หมวดศึกษาทั่วไป (general_education),it,90642025,วิเคราะห์ความจริงจากตัวเลข,FATCS BEHIND NUMBERS,,,ocr141;ocr174
+หมวดศึกษาทั่วไป (general_education),it,90642026,การพัฒนาทักษะเชิงวิจัย,RESEARCH SKILL DEVELOPMENT,,,ocr141;ocr174;ocr272
+หมวดศึกษาทั่วไป (general_education),it,90642027,การตีความและการใช้เหตุผล,INTERPRETATION AND ARGUMENT,,,ocr141;ocr174;ocr278
+หมวดศึกษาทั่วไป (general_education),it,90642028,รู้เท่าทันการพนัน,GAMBLING LITERACY,,,ocr141;ocr175;ocr278
+หมวดศึกษาทั่วไป (general_education),it,90642029,จริยธรรมและกฎหมายว่าด้วยความเป็นมืออาชีพทางการแพทย์,"MEDICAL ETHICS, LAWS AND PROFESSIONALOSM",,,ocr141;ocr175;ocr278
+หมวดศึกษาทั่วไป (general_education),it,90642030,จรรยาบรรณและกฎหมายวิศวกรรม,ENGINEERING ETHICS AND LAWS,,,ocr141;ocr175;ocr270
+หมวดศึกษาทั่วไป (general_education),it,90642031,จริยธรรมและกฎหมายแห่งวิชาชีพ,PROFESSIONAL ETHICS AND LAWS,,,ocr141;ocr175;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642032,กฎหมายสำหรับผู้ประกอบการ,LAW FOR ENTREPRENEURS,,,ocr141;ocr176;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642033,กฎหมายสำหรับคนรุ่นใหม่,LAW FOR NEW GENERATION,,,17;32;40;ocr141;ocr176;ocr273;ocr384
+หมวดศึกษาทั่วไป (general_education),it,90642034,กฎหมายและระเบียบในอุตสาหกรรมการบิน,LAW AND REGULATION IN AVIATION INDUSTRY,,,ocr142;ocr176;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642035,ประสบการณ์ในอุตสาหกรรมสำหรับวิศวกร,INDUSTRIAL EXPERIENCE FOR ENGINEERS,,,ocr142;ocr177;ocr270;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642036,เตรียมความพร้อมสำหรับวิศวกร,PRE-ACTIVITIES FOR ENGINEERS,,,ocr142;ocr177;ocr270
+หมวดศึกษาทั่วไป (general_education),it,90642037,ประเด็นและทักษะวิชาชีพ,PROFESSIONAL SKILLS AND ISSUES,,,ocr142;ocr177;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642038,ความปลอดภัยในที่ทำงาน,OCCUPATIONAL SAFETY AND HEALTH,,,ocr142;ocr178;ocr270;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642039,ซ่อมได้ภายในบ้าน,QUICK-FIX @ HOME,,,ocr142;ocr178;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642040,คอกาแฟ,COFFEE MANIA,,,ocr142;ocr178;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642041,ครัวเด็กหอ,DORM CHEF,,,ocr142;ocr178
+หมวดศึกษาทั่วไป (general_education),it,90642042,ศาสตร์และศิลป์ของเนื้อสัตว์,SCIENCE AND ART OF MEATS,,,ocr142;ocr179;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642043,ศาสตร์ของเบอร์เกอร์,SCIENCE OF BURGER,,,ocr142;ocr179;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642044,โลกของไส้กรอก,WORLD OF SAUSAGES,,,ocr142;ocr179
+หมวดศึกษาทั่วไป (general_education),it,90642045,เรื่องเหล้า,BE MY BEV.,,,ocr142;ocr179;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642046,ไร้ซ์-สาระ,RICE-SARA,,,ocr142;ocr180;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642047,หมอต้นไม้,TREE DOCTOR,,,ocr142;ocr180;ocr279
+หมวดศึกษาทั่วไป (general_education),it,90642048,ยาและสมุนไพรพาเพลิน,FUN WITH DRUGS AND HERBS,,,ocr142;ocr180
+หมวดศึกษาทั่วไป (general_education),it,90642049,การใช้ประโยชน์จากจุลินทรีย์ในชีวิตประจำวัน,MICROBIAL UTILIZATION FOR DAILY LIFE,,,ocr142;ocr181;ocr273
+หมวดศึกษาทั่วไป (general_education),it,90642050,พืชพรรณที่เป็นยา,MEDICINAL PLANTS,,,ocr142;ocr181
+หมวดศึกษาทั่วไป (general_education),it,90642051,เทคโนโลยีชีวภาพเพื่อความเป็นอยู่ที่ดีขึ้น,BIOTECHNOLOGY FOR BETTER LIVING,,,ocr142;ocr181
+หมวดศึกษาทั่วไป (general_education),it,90642052,จากเส้นสาย DNA สู่พันธุกรรม,GENES & GENETICS : FROM HELIX TO HEREDITARY,,,ocr142;ocr182
+หมวดศึกษาทั่วไป (general_education),it,90642053,สาระน่ารู้อณูพันธุศาสตร์,INTERESTING MOLECULAR GENETICS,,,ocr143;ocr182
+หมวดศึกษาทั่วไป (general_education),it,90642054,สิ่งพิทักษ์ร่างกาย,GUARDIANS OF OUR BODIES,,,ocr143;ocr182
+หมวดศึกษาทั่วไป (general_education),it,90642055,จุลินทรีย์ร่วมชีพ,LIVING WITH MICROBES,,,ocr143;ocr183
+หมวดศึกษาทั่วไป (general_education),it,90642056,โรคระบาดในศตวรรษที่ 21,EPIDEMICS IN THE 21st CENTURY,,,ocr143;ocr183;ocr280
+หมวดศึกษาทั่วไป (general_education),it,90642057,ภูมิคุ้มกาย,IMMUNITY THROUGH MEDIA,,,ocr143;ocr183;ocr280
+หมวดศึกษาทั่วไป (general_education),it,90642058,ความเข้าใจในนโยบายสุขภาพและสวัสดิภาพของประชาชน,UNDERSTANDING HEALTH POLICY AND PUBLIC WELFARE,,,ocr143;ocr183;ocr253
+หมวดศึกษาทั่วไป (general_education),it,90642059,การแพทย์และวรรณกรรม,MEDICINE AND LITERATURE,,,ocr143;ocr184;ocr280
+หมวดศึกษาทั่วไป (general_education),it,90642060,ค้นหาตัวตน,SELF-DISCOVERY,,,ocr143;ocr184
+หมวดศึกษาทั่วไป (general_education),it,90642061,โลกของแมลง,WORLD OF INSECTS,,,ocr143;ocr184
+หมวดศึกษาทั่วไป (general_education),it,90642062,เรื่ื่องกินเรื่องใหญ่,ALL ABOUT FOOD,,,ocr143;ocr185;ocr280
+หมวดศึกษาทั่วไป (general_education),it,90642063,การพัฒนาสุขภาพแบบองค์รวม,HOLISTIC HEALTH DEVELOPMENT,,,ocr143;ocr185;ocr280;ocr281
+หมวดศึกษาทั่วไป (general_education),it,90642064,เปตอง,PETANQUE,,,ocr143;ocr185
+หมวดศึกษาทั่วไป (general_education),it,90642065,รักบี้ฟุตบอล,RUGBY FOOTBALL,,,ocr143;ocr185;ocr280
+หมวดศึกษาทั่วไป (general_education),it,90642066,ฟุตบอล,SOCCER,,,ocr143;ocr186;ocr280
+หมวดศึกษาทั่วไป (general_education),it,90642067,ซอฟบอลและเบสบอล,SOFTBALL & BASEBALL,,,ocr143;ocr186;ocr282
+หมวดศึกษาทั่วไป (general_education),it,90642068,เทนนิส,TENNIS,,,ocr143;ocr186;ocr281
+หมวดศึกษาทั่วไป (general_education),it,90642069,วอลเลย์บอล,VOLLEYBALL,,,ocr143;ocr186
+หมวดศึกษาทั่วไป (general_education),it,90642070,กอล์ฟ,GOLF,,,ocr143;ocr186
+หมวดศึกษาทั่วไป (general_education),it,90642071,แบดมินตัน,BADMINTON,,,ocr143;ocr187;ocr281
+หมวดศึกษาทั่วไป (general_education),it,90642072,บาสเกตบอล,BASKETBALL,,,ocr144;ocr187
+หมวดศึกษาทั่วไป (general_education),it,90642073,หมากกระดาน,CHESS,,,ocr144;ocr187;ocr281
+หมวดศึกษาทั่วไป (general_education),it,90642074,อีสปอร์ต,E-SPORTS,,,ocr144;ocr187
+หมวดศึกษาทั่วไป (general_education),it,90642075,คาราเต้,KARATE,,,ocr144;ocr188
+หมวดศึกษาทั่วไป (general_education),it,90642076,ยิงปืน,SHOOTING,,,ocr144;ocr188;ocr281
+หมวดศึกษาทั่วไป (general_education),it,90642077,เทเบิลเทนนิส,TABLE TENNIS,,,ocr144;ocr188;ocr281
+หมวดศึกษาทั่วไป (general_education),it,90642078,เทควันโด,TAEKWONDO,,,ocr144;ocr188;ocr281
+หมวดศึกษาทั่วไป (general_education),it,90642079,ยูโด,JUDO,,,ocr144;ocr188
+หมวดศึกษาทั่วไป (general_education),it,90642080,การประพันธ์เพลงเบื้องต้น,INTRODUCTION TO MUSIC COMPOSITION,,,ocr144;ocr275
+หมวดศึกษาทั่วไป (general_education),it,90642081,สุนทรียะเพลงแรป,RAP APPRECIATION,,,ocr144;ocr189;ocr281
+หมวดศึกษาทั่วไป (general_education),it,90642082,สุนทรียะดนตรี,MUSIC APPRECIATION,,,ocr144;ocr189;ocr281
+หมวดศึกษาทั่วไป (general_education),it,90642083,ศิลปะแห่งภาพยนต์,FILM APPRECIATION,,,ocr144;ocr189;ocr282
+หมวดศึกษาทั่วไป (general_education),it,90642084,สุนทรียะภาพถ่าย,PHOTOGRAPHY APPRECIATION,,,ocr144;ocr190
+หมวดศึกษาทั่วไป (general_education),it,90642085,วัฒนธรรมร่วมสมัย,CONTEMPORARY CULTURE,,,ocr144;ocr190
+หมวดศึกษาทั่วไป (general_education),it,90642086,วัฒนธรรมการออกแบบเบื้องต้น,INTRODUCTION TO DESIGN CULTURE,,,ocr144;ocr190;ocr282
+หมวดศึกษาทั่วไป (general_education),it,90642087,วัฒนธรรมรอบโลก,WORLD CULTURE,,,ocr144;ocr190
+หมวดศึกษาทั่วไป (general_education),it,90642088,วัฒนธรรมจีนดั้งเดิม,TRADITIONAL CHINESE CULTURE,,,ocr144;ocr191
+หมวดศึกษาทั่วไป (general_education),it,90642089,สังคม เศรษฐกิจ และการเมืองจีน,"CHINESE SOCIETY, ECONOMY AND POLITICS",,,ocr144;ocr191
+หมวดศึกษาทั่วไป (general_education),it,90642090,เจาะลึกประเด็นโลก,GLOBAL INSIDE,,,ocr144;ocr191;ocr282
+หมวดศึกษาทั่วไป (general_education),it,90642091,เอเชียนศึกษา,ASIAN STUDY,,,ocr145;ocr191;ocr282
+หมวดศึกษาทั่วไป (general_education),it,90642092,การศึกษาเพื่อสร้างพลเมือง,CIVIC EDUCATION,,,ocr145
+หมวดศึกษาทั่วไป (general_education),it,90642093,สานสัมพันธ์กับชุมชน,COMMUNITY ENGAGEMENT,,,ocr145;ocr192;ocr282
+หมวดศึกษาทั่วไป (general_education),it,90642094,หลักการพัฒนาชุมชน,PRINCIPLES OF COMMUNITY DEVELOPMENT,,,ocr145;ocr192
+หมวดศึกษาทั่วไป (general_education),it,90642095,การพัฒนาตวามมั่นคงแห่งชาติ,NATIONAL SECURITY DEVELOPMENT,,,ocr145;ocr192;ocr282
+หมวดศึกษาทั่วไป (general_education),it,90642096,วิทยาการทางทหาร,MILITARY SCIENCE,,,ocr145;ocr193;ocr278;ocr282
+หมวดศึกษาทั่วไป (general_education),it,90642097,ภูมิปัญญาไทยประยุกต์,APPLIED THAI WISDOMS,,,ocr145;ocr193
+หมวดศึกษาทั่วไป (general_education),it,90642098,พลวัตสังคมไทย,DYNAMICS OF THAI SOCIETY,,,ocr145;ocr193;ocr282
+หมวดศึกษาทั่วไป (general_education),it,90642099,สังคมสูงวัยเชิงรุก,ACTIVE AGING SOCIETY,,,ocr145;ocr194
+หมวดศึกษาทั่วไป (general_education),it,90642100,สู้กับข่าวปลอม,FIGHTING FAKE NEWS,,,ocr194;ocr282
+หมวดศึกษาทั่วไป (general_education),it,90642101,นักรีวิว,REVIEWER,,,ocr145;ocr194;ocr282
+หมวดศึกษาทั่วไป (general_education),it,90642102,นักสื่อสารผ่านยูทูบ,YOUTUBER,,,ocr145;ocr194
+หมวดศึกษาทั่วไป (general_education),it,90642103,การดำรงชีพในสังคมดิจิทัล,LIVING IN DIGITAL SOCIETY,,,ocr145;ocr195
+หมวดศึกษาทั่วไป (general_education),it,90642104,รู้ทันดิจิทัล,DIGITAL LITERACY,,,ocr145;ocr195
+หมวดศึกษาทั่วไป (general_education),it,90642105,อินเทอร์เน็ตพื้นฐานของสรรพสิ่ง,BASIC INTERNET OF THINGS (IOT),,,ocr145;ocr195;ocr272
+หมวดศึกษาทั่วไป (general_education),it,90642106,เล่าเรื่องการเดินทางแบบดิจิทัล,DIGITAL STORYTELLING IN JOURNEY,,,ocr145;ocr196;ocr283
+หมวดศึกษาทั่วไป (general_education),it,90642107,การผลิตสื่อดิจิทัล,DIGITAL MEDIA PRODUCTION,,,ocr145;ocr196;ocr271;ocr274
+หมวดศึกษาทั่วไป (general_education),it,90642108,เทคโนโลยีการถ่ายภาพดิจิทัล,DIGITAL PHOTOGRAPHY TECHNOLOGY,,,ocr145;ocr196;ocr271;ocr283
+หมวดศึกษาทั่วไป (general_education),it,90642109,การออกแบบอินโฟกราฟิก,INFOGRAPHIC DESIGN,,,ocr145;ocr196;ocr283
+หมวดศึกษาทั่วไป (general_education),it,90642110,สนุกกับวิทยาศาสตร์ข้อมูล,FUN WITH DATA SCIENCE,,,ocr146;ocr197;ocr270;ocr283
+หมวดศึกษาทั่วไป (general_education),it,90642111,สนุุกกับการเขียนโค้ด,FUN WITH CODING,,,ocr146;ocr197;ocr272;ocr283
+หมวดศึกษาทั่วไป (general_education),it,90642112,สนุกกับปัญญาประดิษฐ์,FUN WITH AI,,,ocr146;ocr197
+หมวดศึกษาทั่วไป (general_education),it,90642113,หุ่นยนต์และปัญญาประดิษฐ์,ROBOTICS AND AI,,,ocr146;ocr197;ocr273
+หมวดศึกษาทั่วไป (general_education),it,90642114,ฟาร์มอัจฉริยะ,SMART FARMING,,,ocr146;ocr198
+หมวดศึกษาทั่วไป (general_education),it,90642115,เทคโนโลยีสีเขียวและพลังงานทดแทน,GREEN TECHNOLOGY AND ALTERNATIVE ENERGY,,,ocr146;ocr198;ocr272
+หมวดศึกษาทั่วไป (general_education),it,90642116,เมืองอัจฉริยะและนวัตกรรมเมือง,SMART CITY AND INNOVATION,,,ocr146;ocr198;ocr283
+หมวดศึกษาทั่วไป (general_education),it,90642117,ทักษะการรู้สารสนเทศแห่งศตวรรษที่ 21,INFORMATION LITERACY SKILLS FOR THE 21st CENTURY,,,ocr146;ocr199;ocr272
+หมวดศึกษาทั่วไป (general_education),it,90642118,โปรแกรมคอมพิวเตอร์ประยุกต์ทางธุรกิจ,APPLICATION SOFTWARE FOR BUSSINESS,,,ocr146;ocr199;ocr270
+หมวดศึกษาทั่วไป (general_education),it,90642119,คอมพิวเตอร์ทางธุรกิจเพื่อพัฒนากระบวนการคิดเชิงวิเคราะห์,COMPUTER FOR DEVELOPMENT OF ANALYTICAL THINKING PROCESS,,,ocr146;ocr199;ocr272;ocr283
+หมวดศึกษาทั่วไป (general_education),it,90642120,เอ็กเซลเพื่อความเป็นมืออาชีพ,FROM EXCEL TO EXCELLENT,,,ocr146;ocr199;ocr283
+หมวดศึกษาทั่วไป (general_education),it,90642121,การวิเคราะห์และจัดการข้อมูลด้วยโปรแกรมคอมพิวเตอร์,DATA ANALYSIS AND MANAGEMENT WITH COMPUTATIONAL PROGRAM,,,ocr146;ocr200;ocr283
+หมวดศึกษาทั่วไป (general_education),it,90642122,การใช้แอพลิเคชัน ไมโครคอมพิวเตอร์,INTRODUCTION TO MICROCOMPUTER APPLICATION,,,ocr146;ocr200
+หมวดศึกษาทั่วไป (general_education),it,90642123,เทคโนโลยี คอมพิวเตอร์ดนตรี,TECHNOLOGY IN MUSICAL SEQUENCING,,,ocr146;ocr200;ocr275
+หมวดศึกษาทั่วไป (general_education),it,90642124,เทคโนโลยีและนวัตกรรมทางวิทยาศาสตร์สำหรับ SDGs,SCIENCE TECHNOLOGY AND SCIENCE INNOVATION FOR SDGS,,,ocr146;ocr200;ocr272
+หมวดศึกษาทั่วไป (general_education),it,90642125,การดำรงชีวิตท่ามกลางภัยพิบัติและวิกฤตในอนาคต,LIVING IN FUTURE DISASTER AND CRISIS,,,ocr146;ocr201
+หมวดศึกษาทั่วไป (general_education),it,90642126,วิชาเอาตัวรอด,SURVIVORS,,,ocr146;ocr201;ocr284
+หมวดศึกษาทั่วไป (general_education),it,90642127,รักษ์โลก,THINK EARTH,,,ocr146;ocr201;ocr271;ocr284
+หมวดศึกษาทั่วไป (general_education),it,90642128,นิเวศวิทยาและการรักษาสิ่งแวดล้อม,"ECOLOGY, CONSERVATION AND ENVIRONMENTALISM",,,ocr146;ocr202
+หมวดศึกษาทั่วไป (general_education),it,90642129,การท่องเที่ยวทางเลือก,ALTERNATIVE TOURISM,,,ocr147;ocr202
+หมวดศึกษาทั่วไป (general_education),it,90642130,การท่องเที่ี่ยวเชิงกีฬา,SPORTS TOURISM,,,ocr147;ocr202;ocr284
+หมวดศึกษาทั่วไป (general_education),it,90642131,วัฒนธรรมไทยกับการท่องเที่ยว,THAI CULTURE AND TOURISM,,,ocr147;ocr202;ocr274;ocr284
+หมวดศึกษาทั่วไป (general_education),it,90642132,ชุมพรศึกษาเพื่อการท่องเที่ยว,CHUMPHON STUDY FOR TOURISM,,,ocr147;ocr275;ocr284
+หมวดศึกษาทั่วไป (general_education),it,90642133,รอบรั้วชุมพรศึกษา,CHUMPHON AREA STUDY,,,ocr147;ocr203;ocr284
+หมวดศึกษาทั่วไป (general_education),it,90642134,แผ่นดินพระจอมเกล้าฯศึกษา,KING MONGKUT'S REIGN STUDY,,,ocr147;ocr203
+หมวดศึกษาทั่วไป (general_education),it,90642135,ปรัชญาเศรษฐกิจพอเพียง,PHILOSOPHY OF SUFFICIENCY ECONOMY,,,ocr147;ocr204;ocr275
+หมวดศึกษาทั่วไป (general_education),it,90642136,จริยศาสตร์และสุนทรียศาสตร์,ETHICS AND AESTHETICS,,,ocr147;ocr204;ocr284
+หมวดศึกษาทั่วไป (general_education),it,90642137,ดูละครแล้วย้อนตัว,SERIES IN DAILY LIFE,,,ocr147;ocr204;ocr284
+หมวดศึกษาทั่วไป (general_education),it,90642138,สมาธิเพื่อพัฒนาชีวิต,MEDITATION FOR LIFE DEVELOPMENT,,,ocr147;ocr204;ocr284
+หมวดศึกษาทั่วไป (general_education),it,90642139,การฟื้นฟูพลังใจ,RESILIENCE QUOTIENT,,,ocr147;ocr205
+หมวดศึกษาทั่วไป (general_education),it,90642140,ภูมิคุุ้มกันทางใจ,IMMUNITY OF MIND,,,ocr147;ocr205;ocr285
+หมวดศึกษาทั่วไป (general_education),it,90642141,จิตวิทยาเพื่อการพัฒนาตนเอง,PSYCHOLOGY OF SELF-DEVELOPMENT,,,ocr147;ocr205
+หมวดศึกษาทั่วไป (general_education),it,90642142,จิตวิทยาสำหรับสื่อสาร,PSYCHOLOGY IN COMMUNICATION,,,ocr147;ocr205
+หมวดศึกษาทั่วไป (general_education),it,90642143,ชีวิตออกแบบได้,DESIGNING YOUR LIFE,,,ocr147;ocr206;ocr285
+หมวดศึกษาทั่วไป (general_education),it,90642144,กระจกส่องใจ,MAGIC MIRROR,,,ocr147;ocr206
+หมวดศึกษาทั่วไป (general_education),it,90642145,พลังแห่งบุคลิกภาพ,POWER OF PERSONALITY,,,ocr147;ocr206;ocr285
+หมวดศึกษาทั่วไป (general_education),it,90642146,เปลี่ยนความคิด ชีวิตเปลี่ยน,POWER OF CHANGE,,,ocr147;ocr206;ocr285
+หมวดศึกษาทั่วไป (general_education),it,90642147,ทักษะแห่งความสุข,HAPPINESS SKILLS,,,ocr147;ocr207
+หมวดศึกษาทั่วไป (general_education),it,90642148,ศิลปะการพัฒนาอารมณ์,ARTS OF EMOTION DEVELOPMENT,,,ocr148;ocr207;ocr285
+หมวดศึกษาทั่วไป (general_education),it,90642149,ศิลปะการสร้างสรรค์เพื่อพัฒนาอารมณ์และจิตวิญญาณ,IMAGINATIVE ART,,,ocr148;ocr207;ocr275;ocr285
+หมวดศึกษาทั่วไป (general_education),it,90642150,ศิลปะในชีวิตประจำวัน,ART IN EVERYDAY LIFE,,,ocr148;ocr208;ocr285;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90642151,มนุษย์กับศิลปะ,MAN AND ART,,,ocr148;ocr208;ocr285
+หมวดศึกษาทั่วไป (general_education),it,90642152,ปันสุข,JOY OF SHARING,,,ocr148;ocr208;ocr285
+หมวดศึกษาทั่วไป (general_education),it,90642153,ความเข้าใจในพฤติกรรมมนุษย์,UNDERSTANDING HUMAN BEHAVIOR,,,ocr148;ocr209;ocr285
+หมวดศึกษาทั่วไป (general_education),it,90642154,ล้มให้เป็น,FAIL-ABLE,,,ocr148;ocr209
+หมวดศึกษาทั่วไป (general_education),it,90642155,การสร้างมนุษย์สัมพันธ์กับการสื่อสาร,HUMAN RELATIONSHIP AND COMMUNICATION,,,ocr148;ocr209
+หมวดศึกษาทั่วไป (general_education),it,90642156,ฮวงจุ้ย,FENG SHUI,,,ocr148;ocr209;ocr285
+หมวดศึกษาทั่วไป (general_education),it,90642157,โหราศาสตร์ไทย,THAI ASTROLOGY,,,ocr148;ocr210;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90642158,มุมมองของวิทยาศาสตร์และเทคโนโลยีร่วมสมัย,COMTEMPORARY SCIENCE AND TECHNOLOGY,,,ocr148;ocr210;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90642159,จิตวิทยาเบื้องต้น,INTRODUCTION TO PSYCHOLOGY,,,ocr148;ocr210
+หมวดศึกษาทั่วไป (general_education),it,90643001,ปฎิบัติงานตามทักษะด้านการจัดการ 1,PRACTICE UNDER MANAGEMENT SKILL 1,,,ocr148;ocr211;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90643002,ปฎิบัติงานตามทักษะด้านการจัดการ 2,PRACTICE UNDER MANAGEMENT SKILL 2,,,ocr148;ocr211;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90643003,ปฎิบัติงานตามทักษะด้านการจัดการ 3,PRACTICE UNDER MANAGEMENT SKILL 3,,,ocr148;ocr211;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90643004,ผู้นำพลังบวก,POSITIVE POWER LEADER,,,ocr148;ocr211;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90643005,นักเปลี่ยนโลก,THE DISRUPTOR,,,ocr148;ocr212;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90643006,การจัดการและผู้นำสมัยใหม่,MODERN MANAGEMENT AND LEADERSHIP,,,ocr148;ocr212;ocr271;ocr272;ocr275;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90643007,ภาวะผู้นำสำหรับคนรุ่นใหม่,NEXT GEN LEADERSHIP,,,ocr149;ocr212;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90643008,ศาสตร์การต่อรอง,SCIENCE OF NEGOTIATION,,,ocr149;ocr212;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90643009,การตลาดยุคคอนเทนท์,CONTENT MARKETING,,,ocr149;ocr213;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90643010,การตลาดร่วมสมัย,CONTEMPORARY MARKETING,,,ocr149;ocr213;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90643011,ศิลปะแห่งการบริหารการสื่อสาร,ART OF COMMUNICATION MANAGEMENT,,,ocr149;ocr213;ocr271
+หมวดศึกษาทั่วไป (general_education),it,90643012,การทำงานเป็นทีม,TEAMWORK,,,ocr149;ocr214
+หมวดศึกษาทั่วไป (general_education),it,90643013,การจัดการเชิงอุตสาหกรรม,INDUSTRIAL MANAGEMENT,,,ocr149;ocr214;ocr286
+หมวดศึกษาทั่วไป (general_education),it,90643014,ความรู้ทั่วไปเกี่ยวกับธุรกิจ,GENERAL BUSINESS,,,ocr149;ocr214;ocr287
+หมวดศึกษาทั่วไป (general_education),it,90643015,การบัญชีทางธุรกิจสำหรับคนรุ่นใหม่,BUSINESS ACCOUNTING FOR NEW GEN,,,ocr149;ocr215;ocr272;ocr287
+หมวดศึกษาทั่วไป (general_education),it,90643016,สนุกกับธุรกิจออนไลน์,FUN WITH ONLINE BUSINESS,,,ocr149;ocr215;ocr274;ocr287
+หมวดศึกษาทั่วไป (general_education),it,90643017,ลีนสตาร์ทอัพและแนวคิดธุรกิจแบบคล่องตัว,LEAN STARTUP AND AGILE BUSINESS,,,ocr149;ocr215
+หมวดศึกษาทั่วไป (general_education),it,90643018,ธุรกิจระหว่างประเทศ,INTERNATIONAL BUSINESS,,,ocr149;ocr215
+หมวดศึกษาทั่วไป (general_education),it,90643019,เศรษฐศาสตร์กับการเป็นผู้ประกอบการ,ECONOMICS AND ENTREPRENEURSHIP,,,ocr149;ocr216
+หมวดศึกษาทั่วไป (general_education),it,90643020,นักพัฒนาธุรกิจสร้างสรรค์,INNOVATIVE ENTREPRENEURS,,,ocr149;ocr216;ocr287
+หมวดศึกษาทั่วไป (general_education),it,90643021,ผู้ประกอบการสมัยใหม่,MODERN ENTREPRENEURS,,,17;33;39;ocr149;ocr216;ocr270;ocr272;ocr273;ocr384
+หมวดศึกษาทั่วไป (general_education),it,90643022,ผู้ประกอบการทางสังคม,SOCIAL ENTREPRENEURS,,,ocr149;ocr216;ocr287
+หมวดศึกษาทั่วไป (general_education),it,90643023,ผู้ประกอบการเทคโนโลยี,TECHNOPRENEURS,,,ocr149;ocr217;ocr287
+หมวดศึกษาทั่วไป (general_education),it,90643024,ฟาร์มสุข,HAPPINESS FARMS,,,ocr149;ocr217;ocr271
+หมวดศึกษาทั่วไป (general_education),it,90643025,เส้นทางสู่ IPO,ROAD TO IPO,,,ocr149;ocr217;ocr287
+หมวดศึกษาทั่วไป (general_education),it,90643026,การวางแผนเพื่อการลงทุน,INVESTMENT PLANNING,,,ocr218;ocr271;ocr273;ocr287
+หมวดศึกษาทั่วไป (general_education),it,90643027,มนุษย์ เงิน และคณิตศาสตร์,"MAN, MONEY AND MATH",,,ocr150;ocr287
+หมวดศึกษาทั่วไป (general_education),it,90643028,มือใหม่ (หัด) เล่นหุ้น,SMART TIPS FOR BEGINNING INVESTERS,,,ocr150;ocr218
+หมวดศึกษาทั่วไป (general_education),it,90643029,เศรษฐกิจดิจิทัล,DIGITAL ECONOMY,,,ocr150;ocr218;ocr287
+หมวดศึกษาทั่วไป (general_education),it,90643030,เศรษศาสตร์ทั่ไป และการศึกษาความเป็นไปได้ของโครงการ,GENERAL ECONOMICS AND PROJECT FEASIBILITY STUDY,,,ocr150;ocr219;ocr273;ocr287
+หมวดศึกษาทั่วไป (general_education),it,90643031,วิถีชีวิตตามแนวคิดเศรษฐกิจหมุนเวียนในศตวรรษที่ 21,CIRCULAR ECONOMIC LIFESTYLE FOR 21st CENTURY,,,ocr150;ocr219;ocr287
+หมวดศึกษาทั่วไป (general_education),it,90643032,ปักหมุดเศรษฐกิจ,BCG ECONOMY IN ACTION,,,ocr150;ocr219;ocr272;ocr288
+หมวดศึกษาทั่วไป (general_education),it,90643033,การจัดการนวัตกรรม,INNOVATION MANAGEMENT,,,ocr150;ocr220
+หมวดศึกษาทั่วไป (general_education),it,90643034,การจัดการกับความคิดสร้างสรรค์,MANAGEMENT AND CREATIVITY,,,ocr150;ocr220
+หมวดศึกษาทั่วไป (general_education),it,90643035,การจัดการความรู้เพื่อการพัฒนานวัตกรรม,KNOWLEDGE MANAGEMENT FOR INNOVATION DEVELOPMENT,,,ocr150;ocr221;ocr273;ocr274
+หมวดศึกษาทั่วไป (general_education),it,90643036,การจัดการความรู้เพื่อการบริหารโครงการ,KNOWLEDGE MANAGEMENT FOR PROJECT MANAGEMENT,,,ocr150;ocr221;ocr288
+หมวดศึกษาทั่วไป (general_education),it,90643037,การบัริหารงานภาครัฐและนโยบายสาธารณะในศตวรรษที่ 21,PUBLIC ADMINISTRATION AND PUBLIC POLICY IN THE 21st CENTURY,,,ocr150;ocr221;ocr288
+หมวดศึกษาทั่วไป (general_education),it,90643038,ศัลยกรรมชีวิต,REBRANDING,,,ocr150;ocr222;ocr288
+หมวดศึกษาทั่วไป (general_education),it,90644001,ปฎิบัติงานตามทักษะด้านการสื่อสาร 1,PRACTICE UNDER LANGUAGE AND COMMUNICATION SKILLS 1,,,ocr150;ocr222
+หมวดศึกษาทั่วไป (general_education),it,90644002,ปฎิบัติงานตามทักษะด้านการสื่อสาร 2,PRACTICE UNDER LANGUAGE AND COMMUNICATION SKILLS 2,,,ocr150;ocr222
+หมวดศึกษาทั่วไป (general_education),it,90644003,ปฎิบัติงานตามทักษะด้านการสื่อสาร 3,PRACTICE UNDER LANGUAGE AND COMMUNICATION SKILLS 3,,,ocr150;ocr222;ocr288
+หมวดศึกษาทั่วไป (general_education),it,90644004,การฟังและการพูดเชิงวิชาการ,ACADEMIC LISTENING AND SPEAKING,,,ocr150;ocr154;ocr223
+หมวดศึกษาทั่วไป (general_education),it,90644005,การอ่านและการเขียนเชิงวิชาการ,ACADEMIC READING AND WRITING,,,ocr150;ocr154;ocr223
+หมวดศึกษาทั่วไป (general_education),it,90644006,ภาษาอังกฤษเพื่อปรับพื้นฐาน,PREPARATORY ENGLISH,,,ocr151;ocr154;ocr223;ocr288
+หมวดศึกษาทั่วไป (general_education),it,90644007,ภาษาอังกฤษพื้นฐาน 1,FOUNDATION ENGLISH 1,,,17;26;34;ocr138;ocr151;ocr224;ocr384
+หมวดศึกษาทั่วไป (general_education),it,90644008,ภาษาอังกฤษพื้นฐาน 2,FOUNDATION ENGLISH 2,,,17;28;35;ocr138;ocr151;ocr224;ocr384
+หมวดศึกษาทั่วไป (general_education),it,90644009,การออกเสียงภาษาอังกฤษเบื้องต้น,BASIC ENGLISH PRONUNCIATION,,,ocr151;ocr224;ocr289
+หมวดศึกษาทั่วไป (general_education),it,90644010,การพัฒนาทักษะการอ่านและการเขียนภาษาอังกฤษ,DEVELOPMENT OF READING AND WRITING SKILLS IN ENGLISH,,,ocr151;ocr224
+หมวดศึกษาทั่วไป (general_education),it,90644011,ภาษาอังกฤษเชิงวิชาการ,ENGLISH FOR ACADEMIC PURPOSES,,,ocr151;ocr225
+หมวดศึกษาทั่วไป (general_education),it,90644012,ภาษาอังกฤษเพื่อการสื่อสาร,ENGLISH FOR COMMUNICATION,,,ocr151;ocr225
+หมวดศึกษาทั่วไป (general_education),it,90644013,การรเขียนภาษาอังกฤษเพื่อการสื่อสาร,ENGLISH FOR COMMUNICATIVE WRITING,,,ocr151;ocr225
+หมวดศึกษาทั่วไป (general_education),it,90644014,ภาษาอังกฤษเพื่อการสื่อสารทางวิชาการ,ENGLISH FOR PROFESSIONAL COMMUNICATION,,,ocr151;ocr225
+หมวดศึกษาทั่วไป (general_education),it,90644015,ภาษาอังกฤษเพื่อการศึกษาต่อ,ENGLISH FOR FURTHER STUDIES,,,ocr151;ocr226
+หมวดศึกษาทั่วไป (general_education),it,90644016,อังกฤษเพื่ออุสาหกรรม,ENGLISH FOR INDUSTRY,,,ocr151;ocr226;ocr273
+หมวดศึกษาทั่วไป (general_education),it,90644017,ภาษาอังกฤษสำหรับธุรกิจ,ENGLISH FOR BUSINESS,,,ocr151;ocr226
+หมวดศึกษาทั่วไป (general_education),it,90644018,ภาษาอังกฤษเพื่อการตลาด,ENGLISH FOR MARKETING,,,ocr151;ocr226
+หมวดศึกษาทั่วไป (general_education),it,90644019,ภาษาอังกฤษเพื่อการจัดการ,ENGLISH FOR MANAGEMENT,,,ocr151;ocr289
+หมวดศึกษาทั่วไป (general_education),it,90644020,ภาษาอังกฤษเพื่อความเข้าใจข่าวสาร,ENGLISH FOR MADIA,,,ocr151;ocr227
+หมวดศึกษาทั่วไป (general_education),it,90644021,ภาษาอังกฤษเพื่อการสื่อสารระหว่างวัฒนธรรม,ENGLISH FOR INTERCURAL COMMUNICATION,,,ocr151;ocr227
+หมวดศึกษาทั่วไป (general_education),it,90644022,ภาษาอังกฤษสำหรับมืออาชีพ,ENGLISH FOR PROFESSIONAL PURPOSES,,,ocr151;ocr227;ocr289
+หมวดศึกษาทั่วไป (general_education),it,90644023,ภาษาอังกฤษเพื่อเตรียมตัวทำงาน,ENGLISH FOR WORK PREPATION,,,ocr151;ocr274
+หมวดศึกษาทั่วไป (general_education),it,90644024,ภาษาอังกฤษเพื่อการท่องเที่ยวและการเดินทาง,ENGLISH FOR TOURISM AND TRAVELLING,,,ocr151;ocr228
+หมวดศึกษาทั่วไป (general_education),it,90644025,ภาษาอังกฤษเพื่อการสื่อสารในงานสถาปัตยกรรม,ENGLISH FOR ARCHITECTURAL ARTS & DESIGN COMMUNICATION,,,ocr152;ocr228
+หมวดศึกษาทั่วไป (general_education),it,90644026,ภาษาอังกฤษเพื่อการนำเสนอในงานสถาปัตยกรรม,ENGLISH FOR ARCHITECTURAL ARTS & DESIGN PRESENTATION,,,ocr152;ocr228
+หมวดศึกษาทั่วไป (general_education),it,90644027,ภาษาอังกฤษสำหระบการเขียนพรรณา,ENGLISH FOR NARRATIVE WRITING,,,ocr152;ocr229
+หมวดศึกษาทั่วไป (general_education),it,90644028,ภาษาอังกฤษเพื่อการออกแบบ,ENGLISH FOR DESIGN,,,ocr152;ocr229
+หมวดศึกษาทั่วไป (general_education),it,90644029,ภาษาอังกฤษสำหรับวิชาชีพสุขภาพ,ENGLISH FOR HEALTH PROFESSIONS,,,ocr152;ocr229
+หมวดศึกษาทั่วไป (general_education),it,90644030,ภาษาอังกฤษเพื่อการประชาสัมพันธ์,ENGLISH FOR PUBLIC RELATIONS,,,ocr152;ocr229
+หมวดศึกษาทั่วไป (general_education),it,90644031,ภาษาอังกฤษสำหรับวิทยาศาสตร์และเทคโนโลยี,ENGLISH FOR SCIENCE AND TECHNOLOGY,,,ocr152;ocr230;ocr290
+หมวดศึกษาทั่วไป (general_education),it,90644032,ภาษาอังกฤษสำหรับการบิน,ENGLISH FOR AVIATION,,,ocr152;ocr230
+หมวดศึกษาทั่วไป (general_education),it,90644033,การเขียนและการพูดในงานอาชีพ,WRITING AND SPEAKING IN THE PROFESSIONS,,,ocr152;ocr230;ocr290
+หมวดศึกษาทั่วไป (general_education),it,90644034,การเขียนทางเทคนิค,TECHNICAL WRITING,,,ocr152;ocr230
+หมวดศึกษาทั่วไป (general_education),it,90644035,การอ่านและเขียนเชิงวิชาการสำหรับวิทยาศาสตร์สุขภาพ,ACADEMIC READING AND WRITING FOR HEALTH SCIENCES,,,ocr152;ocr231
+หมวดศึกษาทั่วไป (general_education),it,90644036,การพัฒนาทักษะทางภาษาอังกฤษเพื่อการเรียนรู้ตลอดชีวิต,ENLISH SKILL DEVELOPMENT FOR LIFE-LONG LEARNING,,,ocr152;ocr231
+หมวดศึกษาทั่วไป (general_education),it,90644037,การสื่อสารข้ามวัฒนธรรม,CROSS CULTURAL COMMUNICATION,,,ocr152;ocr231
+หมวดศึกษาทั่วไป (general_education),it,90644038,การสื่อสารนวัตกรรม,INNOVATIVE COMMUNICATION,,,ocr152;ocr232
+หมวดศึกษาทั่วไป (general_education),it,90644039,ทักษะการสื่อสารผ่านการอภิปราย,COMMUNICATION SKILLS THROUGH DEBATE,,,ocr152;ocr232;ocr274
+หมวดศึกษาทั่วไป (general_education),it,90644040,ทักษะการสื่อสารผ่านละคร,COMMUNICATION SKILLS THROUGH DRAMA,,,ocr152;ocr232
+หมวดศึกษาทั่วไป (general_education),it,90644041,ภาษาอังกฤษจากสื่อบันเทิง,ENGLISH FROM ENTERTAINMENT MEDIA,,,ocr152;ocr232
+หมวดศึกษาทั่วไป (general_education),it,90644042,การสื่อสารและการนำเสนออย่างมืออาชีพ,PROFESSIONAL COMMUNICATION AND PRESENTATION,,,17;32;40;ocr152;ocr233;ocr273;ocr274;ocr384
+หมวดศึกษาทั่วไป (general_education),it,90644043,การพูดในที่สาธารณะ,PUBLIC SPEAKING,,,ocr152
+หมวดศึกษาทั่วไป (general_education),it,90644044,พูดได้ พูดดี พูดเป็น,BEST SPEECH,,,ocr153;ocr233
+หมวดศึกษาทั่วไป (general_education),it,90644045,การค้นคว้าและการเขียนรายงาน,RESEARCH PAPER WRITING,,,ocr153;ocr233
+หมวดศึกษาทั่วไป (general_education),it,90644046,การฟังและการอ่านเพื่อพัฒนาคุณภาพชีวิต,LISTENING AND READING FOR IMPROVING LIFE QUALITY,,,ocr153;ocr234
+หมวดศึกษาทั่วไป (general_education),it,90644047,การพัฒนาทักษะการเขียนภาษาไทยเชิงสร้างสรรค์,DEVELOPMENT OF THAI CREATIVE WRITING SKILLS,,,ocr153;ocr234;ocr291
+หมวดศึกษาทั่วไป (general_education),it,90644048,ภาษาในสังคมไทย,LANGUAGE IN THAI SOCIETY,,,ocr153;ocr234
+หมวดศึกษาทั่วไป (general_education),it,90644049,ภาษาไทยเพื่อการสร้างสรรค์,THAI LANGUAGE FOR CREATIVITY,,,ocr153;ocr234
+หมวดศึกษาทั่วไป (general_education),it,90644050,การเขียนภาษาไทยในที่ทำงาน,THAI WRITING IN WORKPLACE,,,ocr153;ocr235;ocr274
+หมวดศึกษาทั่วไป (general_education),it,90644051,ภาษาไทยสำหรับทันตแพทย์,THAI FOR DENTAL PROFESSIONS,,,ocr153;ocr235
+หมวดศึกษาทั่วไป (general_education),it,90644052,ศิลปะการสื่อสารสำหรับมืออาชีพด้านอาหาร,COMMUNICATION IN THAI FOR CULINARY PROFESSIONALS,,,ocr153;ocr235
+หมวดศึกษาทั่วไป (general_education),it,90644053,การฟังและการพูดภาษาจีนพื้นฐาน,FUNDAMENTAL CHINESE FOR LISTENING AND SPEAKING,,,ocr153;ocr235;ocr267;ocr291
+หมวดศึกษาทั่วไป (general_education),it,90644054,การอ่านและการเขียนภาษาจีนพื้นฐาน,FUNDAMENTAL CHINESE READING AND WRITING,,,ocr153
+หมวดศึกษาทั่วไป (general_education),it,90644055,ไวยากรณ์ภาษาจีนพื้นฐาน และสำนวนและสุภาษิตภาษาจีน,BASIC CHINESE GRAMMAR AND CHINESE IDIOMS AND PROVERBS,,,ocr153;ocr236;ocr268;ocr291
+หมวดศึกษาทั่วไป (general_education),it,90644056,วัฒนธรรม สำนวนและสุภาษิตจีน,CHINESE CULTURE IDIOMS AND PROVERBS,,,ocr153;ocr236
+หมวดศึกษาทั่วไป (general_education),it,90644057,ภาษาจีนเพื่อการสื่อสาร,CHINESE FOR COMMUNUCATION,,,ocr153;ocr236;ocr270
+หมวดศึกษาทั่วไป (general_education),it,90644058,ภาษาจีนสำหรับแฟนด้อม,CHINESE FANDOM,,,ocr153;ocr236
+หมวดศึกษาทั่วไป (general_education),it,90644059,ภาษาจีนเพื่อการท่องเที่ยว,CHINESE FOR TRAVEL,,,ocr153;ocr237
+หมวดศึกษาทั่วไป (general_education),it,90644060,ภาษาเยอรมันเพื่อการสื่อสาร,GERMAN FOR COMMUNUCATION,,,ocr153;ocr237
+หมวดศึกษาทั่วไป (general_education),it,90644061,ภาษาเยอรมันเพื่อการทำงานและธุรกิจ,GERMAN FOR WORK AND BUSINESS,,,ocr153;ocr237
+หมวดศึกษาทั่วไป (general_education),it,90644062,ภาษาญี่ปุ่นเพื่อการสื่อสาร,JAPANESE FOR COMMUNICATION,,,ocr153;ocr238;ocr270
+หมวดศึกษาทั่วไป (general_education),it,90644063,ภาษาญี่ปุ่นเพื่อการท่องเที่ยว,JAPANESE FOR TRAVEL,,,ocr154;ocr238
+หมวดศึกษาทั่วไป (general_education),it,90644064,ภาษาเกาหลีเพื่อการท่องเที่ยว,KOREAN FOR TRAVEL,,,ocr154;ocr238
+หมวดศึกษาทั่วไป (general_education),it,90644065,ภาษาเวียดนามเพื่อการท่องเที่ยว,VIETNAMESE FOR TRAVEL,,,ocr154
+หมวดศึกษาทั่วไป (general_education),it,90644066,ภาษามาเลย์เพื่อการท่องเที่ยว,MALAY FOR TRAVEL,,,ocr154;ocr239
+ข้อบังคับ (rules),IT,,เกณฑ์การสำเร็จการศึกษา,,,,
+ข้อบังคับ (rules),IT,,เกณฑ์เกียรตินิยม,,,,
+ข้อบังคับ (rules),IT,,เกณฑ์พ้นสภาพนักศึกษา,,,,
+ข้อบังคับ (rules),IT,,เกณฑ์ภาคทัณฑ์ (probation),,,,
+ข้อบังคับ (rules),IT,,ระบบเกรด/การคิดคะแนน,,,,
+ข้อบังคับ (rules),IT,,เกณฑ์การลงทะเบียน,,,,
+ข้อบังคับ (rules),IT,,การลาพักการศึกษา,,,,ocr110;ocr111
+ข้อบังคับ (rules),IT,,การลาออก,,,,ocr110;ocr111
+ข้อบังคับ (rules),IT,,การสอบ/วัดผล,,,,
+ข้อบังคับ (rules),IT,,การทุจริตทางวิชาการ,,,,
+ข้อบังคับ (rules),IT,,ระเบียบความประพฤติ,,,,
+ข้อบังคับ (rules),IT,,บทลงโทษทางวินัย,,,,
+ข้อบังคับ (rules),IT,,การอุทธรณ์,,,,ocr115
+ข้อบังคับ (rules),IT,,การกลับเข้าศึกษา,,,,
+ข้อบังคับ (rules),IT,,การเทียบโอนหน่วยกิต,,,,15;ocr134;ocr135
+ข้อบังคับ (rules),IT,,ระเบียบอื่น ๆ,,,,
+ข้อบังคับ (rules),DSBA,,เกณฑ์การสำเร็จการศึกษา,,,,
+ข้อบังคับ (rules),DSBA,,เกณฑ์เกียรตินิยม,,,,
+ข้อบังคับ (rules),DSBA,,เกณฑ์พ้นสภาพนักศึกษา,,,,
+ข้อบังคับ (rules),DSBA,,เกณฑ์ภาคทัณฑ์ (probation),,,,
+ข้อบังคับ (rules),DSBA,,ระบบเกรด/การคิดคะแนน,,,,
+ข้อบังคับ (rules),DSBA,,เกณฑ์การลงทะเบียน,,,,
+ข้อบังคับ (rules),DSBA,,การลาพักการศึกษา,,,,93;94
+ข้อบังคับ (rules),DSBA,,การลาออก,,,,93;94
+ข้อบังคับ (rules),DSBA,,การสอบ/วัดผล,,,,
+ข้อบังคับ (rules),DSBA,,การทุจริตทางวิชาการ,,,,
+ข้อบังคับ (rules),DSBA,,ระเบียบความประพฤติ,,,,
+ข้อบังคับ (rules),DSBA,,บทลงโทษทางวินัย,,,,
+ข้อบังคับ (rules),DSBA,,การอุทธรณ์,,,,98
+ข้อบังคับ (rules),DSBA,,การกลับเข้าศึกษา,,,,
+ข้อบังคับ (rules),DSBA,,การเทียบโอนหน่วยกิต,,,,12;117;118
+ข้อบังคับ (rules),DSBA,,ระเบียบอื่น ๆ,,,,
+ข้อบังคับ (rules),AIT,,เกณฑ์การสำเร็จการศึกษา,,,,
+ข้อบังคับ (rules),AIT,,เกณฑ์เกียรตินิยม,,,,
+ข้อบังคับ (rules),AIT,,เกณฑ์พ้นสภาพนักศึกษา,,,,
+ข้อบังคับ (rules),AIT,,เกณฑ์ภาคทัณฑ์ (probation),,,,
+ข้อบังคับ (rules),AIT,,ระบบเกรด/การคิดคะแนน,,,,
+ข้อบังคับ (rules),AIT,,เกณฑ์การลงทะเบียน,,,,
+ข้อบังคับ (rules),AIT,,การลาพักการศึกษา,,,,ocr93;ocr94
+ข้อบังคับ (rules),AIT,,การลาออก,,,,ocr93
+ข้อบังคับ (rules),AIT,,การสอบ/วัดผล,,,,
+ข้อบังคับ (rules),AIT,,การทุจริตทางวิชาการ,,,,
+ข้อบังคับ (rules),AIT,,ระเบียบความประพฤติ,,,,
+ข้อบังคับ (rules),AIT,,บทลงโทษทางวินัย,,,,
+ข้อบังคับ (rules),AIT,,การอุทธรณ์,,,,ocr71
+ข้อบังคับ (rules),AIT,,การกลับเข้าศึกษา,,,,
+ข้อบังคับ (rules),AIT,,การเทียบโอนหน่วยกิต,,,,ocr18
+ข้อบังคับ (rules),AIT,,ระเบียบอื่น ๆ,,,,

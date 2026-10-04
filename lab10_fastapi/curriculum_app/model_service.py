@@ -53,6 +53,7 @@ class QwenTextToSQL:
 
 กติกา:
 - ตอบ SELECT หรือ WITH คำสั่งเดียว
+- ถามหน่วยกิตรวม, หน่วยกิตรวมทั้งหมด, หน่วยกิตตลอดหลักสูตร, หรือหลักสูตรมีกี่หน่วยกิต ให้ใช้ total_credits จากตาราง program (เช่น SELECT total_credits FROM program LIMIT 1 หรือระบุ WHERE program_id = '...') ห้ามใช้ SUM(credits) FROM course เด็ดขาด เพราะตาราง course คือรายวิชาทั้งหมดของคณะ
 - ถามหน่วยกิตรายเทอมให้ใช้ v_semester_credits
 - ถามรายวิชาตามแผนให้ใช้ v_plan
 - ถามกฎระเบียบ เกียรตินิยม ภาคทัณฑ์ พ้นสภาพ การทุจริตสอบ การลงทะเบียน ให้ใช้ regulation
@@ -69,6 +70,10 @@ class QwenTextToSQL:
 
 ตัวอย่าง:
 คำถาม: หลักสูตรนี้มีกี่หน่วยกิต
+SQL: SELECT total_credits FROM program LIMIT 1
+คำถาม: หลักสูตรนี้มีหน่วยกิตรวมทั้งหมดเท่าไร
+SQL: SELECT total_credits FROM program LIMIT 1
+คำถาม: หน่วยกิตรวมตลอดหลักสูตรมีเท่าไร
 SQL: SELECT total_credits FROM program LIMIT 1
 คำถาม: เทอมไหนเรียนหนักที่สุด
 SQL: SELECT year, semester, credits, n_courses FROM v_semester_credits ORDER BY credits DESC LIMIT 1
@@ -129,6 +134,7 @@ SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์การ�
 คำถาม: {question}
 ผลฐานข้อมูล: {json.dumps(rows[:40], ensure_ascii=False)}
 ตอบ JSON ที่มี key ชื่อ answer และห้ามเพิ่มข้อมูลที่ไม่มีในผล"""
+        
         return str(self._chat(prompt, ANSWER_SCHEMA).get("answer", "")).strip()
 
     def ask(self, database: CurriculumDatabase, question: str) -> dict:

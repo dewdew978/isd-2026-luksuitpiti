@@ -4,22 +4,6 @@
  * รองรับการซิงค์ข้อมูลกับฐานข้อมูล SQLite และ AI แบบ Real-time
  */
 
-// โหลดข้อมูลภาพรวมหลักสูตรเมื่อเปิดหน้าเว็บ
-async function loadProgramInfo() {
-  const badge = document.getElementById("program-badge");
-  try {
-    const res = await fetch("/api/program");
-    if (!res.ok) throw new Error("ไม่สามารถโหลดข้อมูลหลักสูตร");
-    const prog = await res.json();
-    const id = prog.program_id || "DSBA";
-    const credits = prog.total_credits || 135;
-    const years = prog.years || 4;
-    badge.textContent = `หลักสูตร ${id} • ${credits} หน่วยกิต (${years} ปี)`;
-  } catch (err) {
-    badge.textContent = "หลักสูตร DSBA • 135 หน่วยกิต";
-  }
-}
-
 // โหลดและค้นหารายวิชา
 let searchDebounceTimeout = null;
 
@@ -190,7 +174,6 @@ async function handleCreateCourse(event) {
 
 // เชื่อมต่อ Event Listeners เมื่อ DOM พร้อม
 document.addEventListener("DOMContentLoaded", () => {
-  loadProgramInfo();
   loadCourses();
 
   const searchInput = document.getElementById("search-courses-input");

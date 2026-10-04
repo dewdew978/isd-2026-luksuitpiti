@@ -1,0 +1,327 @@
+{
+  "text": {
+    "tokenizer": "pythainlp/newmm",
+    "attributes": {
+      "code": {
+        "label": "รหัสวิชา",
+        "n_items": 106,
+        "cer": 0.032558,
+        "wer": null,
+        "exact_match_acc": 0.981132,
+        "n_sub": 0,
+        "n_del": 28,
+        "n_ins": 0,
+        "n_missing": 2,
+        "n_hallucinated": 0,
+        "n_ref_chars": 860,
+        "error_samples": [
+          {
+            "key": "06016418 [ตกแถว]",
+            "gt": "06016418",
+            "pred": ""
+          },
+          {
+            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
+            "gt": "06016481\nหรือ\n06016482",
+            "pred": ""
+          }
+        ]
+      },
+      "name_th": {
+        "label": "ชื่อวิชา (ไทย) ⭐",
+        "n_items": 106,
+        "cer": 0.054115,
+        "wer": 0.369388,
+        "exact_match_acc": 0.584906,
+        "n_sub": 67,
+        "n_del": 75,
+        "n_ins": 25,
+        "n_missing": 2,
+        "n_hallucinated": 0,
+        "n_ref_chars": 3086,
+        "error_samples": [
+          {
+            "key": "06016411",
+            "gt": "ระบบคอมพิวเตอร์เบื้องต้น",
+            "pred": "ระบบคอมพวิ เตอรเ์ บื้องต้น"
+          },
+          {
+            "key": "06066303",
+            "gt": "การแก้ปัญหาและการโปรแกรมคอมพิวเตอร์",
+            "pred": "การแก้ป๎ญหาและการโปรแกรมคอมพิวเตอร์"
+          },
+          {
+            "key": "90644007",
+            "gt": "ภาษาอังกฤษพื้นฐาน 1",
+            "pred": "ภาษาอังกฤษพนื้ ฐาน 1"
+          },
+          {
+            "key": "06066001",
+            "gt": "ความน่าจะเป็นและสถิติ",
+            "pred": "ความน่าจะเปน่ และสถิติ"
+          },
+          {
+            "key": "06066301",
+            "gt": "โครงสร้างข้อมูลและอัลกอรึทึม",
+            "pred": "โครงสร้างข้อมูลและอัลกอริทึม"
+          }
+        ]
+      },
+      "name_en": {
+        "label": "ชื่อวิชา (อังกฤษ) ⭐",
+        "n_items": 106,
+        "cer": 0.037396,
+        "wer": 0.036408,
+        "exact_match_acc": 0.971698,
+        "n_sub": 0,
+        "n_del": 112,
+        "n_ins": 0,
+        "n_missing": 3,
+        "n_hallucinated": 0,
+        "n_ref_chars": 2995,
+        "error_samples": [
+          {
+            "key": "060164xx",
+            "gt": "ELECTIVE COURSE IN INFORMATION TECHNOLOGY 1",
+            "pred": "None"
+          },
+          {
+            "key": "06016418 [ตกแถว]",
+            "gt": "SERVER-SIDE WEB DEVELOPMENT",
+            "pred": ""
+          },
+          {
+            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
+            "gt": "COOPERATIVE EDUCATION\nOR\nOVERSEA COOPERATIVE EDUCATION",
+            "pred": ""
+          }
+        ]
+      },
+      "credits": {
+        "label": "หน่วยกิต",
+        "n_items": 106,
+        "cer": 0.053837,
+        "wer": null,
+        "exact_match_acc": 0.915094,
+        "n_sub": 18,
+        "n_del": 29,
+        "n_ins": 0,
+        "n_missing": 2,
+        "n_hallucinated": 0,
+        "n_ref_chars": 873,
+        "error_samples": [
+          {
+            "key": "060164xx",
+            "gt": "3(3-0-6) หรือ 3(2-2-5) หรือ 3(0-6-3)",
+            "pred": "3(3-0-6)หรือ3(2-2-5)"
+          },
+          {
+            "key": "06016428",
+            "gt": "3(2-2-5)",
+            "pred": "3(3-0-6)"
+          },
+          {
+            "key": "06016430",
+            "gt": "3(2-2-5)",
+            "pred": "3(3-0-6)"
+          },
+          {
+            "key": "06016447",
+            "gt": "3(2-2-5)",
+            "pred": "3(3-0-6)"
+          },
+          {
+            "key": "06016425",
+            "gt": "3(3-0-6)",
+            "pred": "3(2-2-5)"
+          }
+        ]
+      },
+      "year_sem": {
+        "label": "ปี/ภาค",
+        "n_items": 106,
+        "cer": 0.018868,
+        "wer": null,
+        "exact_match_acc": 0.981132,
+        "n_sub": 0,
+        "n_del": 6,
+        "n_ins": 0,
+        "n_missing": 2,
+        "n_hallucinated": 0,
+        "n_ref_chars": 318,
+        "error_samples": [
+          {
+            "key": "06016418 [ตกแถว]",
+            "gt": "3/1",
+            "pred": ""
+          },
+          {
+            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
+            "gt": "3/2",
+            "pred": ""
+          }
+        ]
+      },
+      "category": {
+        "label": "หมวดวิชา",
+        "n_items": 106,
+        "cer": 0.017906,
+        "wer": null,
+        "exact_match_acc": 0.981132,
+        "n_sub": 0,
+        "n_del": 26,
+        "n_ins": 0,
+        "n_missing": 2,
+        "n_hallucinated": 0,
+        "n_ref_chars": 1452,
+        "error_samples": [
+          {
+            "key": "06016418 [ตกแถว]",
+            "gt": "หมวดวิชาเฉพาะ",
+            "pred": ""
+          },
+          {
+            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
+            "gt": "หมวดวิชาเฉพาะ",
+            "pred": ""
+          }
+        ]
+      },
+      "ctype": {
+        "label": "บังคับ/เลือก",
+        "n_items": 106,
+        "cer": 0.020797,
+        "wer": null,
+        "exact_match_acc": 0.981132,
+        "n_sub": 0,
+        "n_del": 12,
+        "n_ins": 0,
+        "n_missing": 2,
+        "n_hallucinated": 0,
+        "n_ref_chars": 577,
+        "error_samples": [
+          {
+            "key": "06016418 [ตกแถว]",
+            "gt": "บังคับ",
+            "pred": ""
+          },
+          {
+            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
+            "gt": "บังคับ",
+            "pred": ""
+          }
+        ]
+      },
+      "prereq": {
+        "label": "วิชาบังคับก่อน",
+        "n_items": 104,
+        "cer": 0.035398,
+        "wer": null,
+        "exact_match_acc": 0.971154,
+        "n_sub": 14,
+        "n_del": 0,
+        "n_ins": 6,
+        "n_missing": 0,
+        "n_hallucinated": 0,
+        "n_ref_chars": 565,
+        "error_samples": [
+          {
+            "key": "06016432",
+            "gt": "06016413",
+            "pred": "06066304"
+          },
+          {
+            "key": "06016418",
+            "gt": "ไม่มี",
+            "pred": "06016408"
+          },
+          {
+            "key": "06016421",
+            "gt": "ไม่มี",
+            "pred": "06016413"
+          }
+        ]
+      },
+      "flexible": {
+        "label": "ปี/ภาคยืดหยุ่น",
+        "n_items": 104,
+        "cer": 2.666667,
+        "wer": null,
+        "exact_match_acc": 0.490385,
+        "n_sub": 0,
+        "n_del": 0,
+        "n_ins": 424,
+        "n_missing": 0,
+        "n_hallucinated": 0,
+        "n_ref_chars": 159,
+        "error_samples": [
+          {
+            "key": "06016428",
+            "gt": "4/1",
+            "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06016430",
+            "gt": "4/1",
+            "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06016431",
+            "gt": "4/1",
+            "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06016432",
+            "gt": "4/1",
+            "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06016433",
+            "gt": "4/1",
+            "pred": "3/1, 3/2, 4/1"
+          }
+        ]
+      }
+    },
+    "overall_micro_cer": 0.077354,
+    "alignment": {
+      "matched": 104,
+      "missed": 2,
+      "spurious": 6,
+      "precision": 0.9455,
+      "recall": 0.9811,
+      "f1": 0.963,
+      "gt_total": 106,
+      "pred_total": 110,
+      "missed_codes": [
+        "06016418",
+        "06016481\nหรือ\n06016482"
+      ],
+      "spurious_codes": [
+        "06016428",
+        "06016430",
+        "06016439",
+        "06016447",
+        "06016481",
+        "06016482"
+      ]
+    },
+    "internal_check": {
+      "ok": true,
+      "n_courses": 110,
+      "n_duplicate_keys": 0,
+      "credits_by_term": {
+        "1/1": 18,
+        "1/2": 18,
+        "2/1": 18,
+        "2/2": 18,
+        "3/1": 18,
+        "3/2": 6,
+        "4/1": 15,
+        "4/2": 15
+      },
+      "total_credits_fixed_terms": 126,
+      "issues": []
+    }
+  }
+}
