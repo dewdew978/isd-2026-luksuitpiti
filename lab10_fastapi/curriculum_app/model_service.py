@@ -67,6 +67,9 @@ class QwenTextToSQL:
      ให้หา code ของวิชาต่อเนื่อง โดยใช้: SELECT p.code, c.name_th FROM prerequisite p JOIN course c ON p.code = c.code WHERE p.requires = 'รหัสวิชา X' (ห้ามใส่ WHERE p.code = 'รหัสวิชา X' เด็ดขาด และห้าม JOIN p.requires = c.code เด็ดขาด)
 - ตาราง v_semester_credits เก็บหน่วยกิตของแต่ละปีและเทอมไว้แล้ว (คอลัมน์ credits คือหน่วยกิตของเทอมนั้น) หากถามว่าเทอมไหนเรียนหนักสุดหรือมีหน่วยกิตมากที่สุด ให้ SELECT year, semester, credits, n_courses FROM v_semester_credits ORDER BY credits DESC LIMIT 1 (ห้ามใช้ SUM(credits) หรือ GROUP BY semester เด็ดขาด)
 - ห้ามแก้ไขฐานข้อมูล
+- ถ้าคำถามมีแค่รหัสวิชา 8 หลัก อย่างเดียว (เช่น 06036100, 06026201) ให้ใช้รหัสวิชานั้นตรง ๆ ใน WHERE (เช่น WHERE code = '06036100') ห้ามแปลงเป็นชื่อวิชาเด็ดขาด โดยใช้ SELECT c.name_th, c.name_en ,c.credits FROM course c WHERE c.code = '06036100' LIMIT 1
+- ถามกฎเกียรตินิยมให้เช็กคอลัมน์ topic จากตาราง regulation โดยระบุค่าให้ตรงกับชื่อหัวข้อ (เช่น topic = 'เกียรตินิยมอันดับ 1 เหรียญทอง', topic = 'เกียรตินิยมอันดับ 1', หรือ topic = 'เกียรตินิยมอันดับ 2')
+- หากคำถามเป็นการระบุรหัสวิชาเพียวๆ ให้ดึงชื่อวิชาไทย, อังกฤษ และหน่วยกิต โดยใช้: SELECT c.name_th, c.name_en, c.credits FROM course c WHERE c.code = 'รหัสวิชา'
 
 ตัวอย่าง:
 คำถาม: หลักสูตรนี้มีกี่หน่วยกิต
@@ -87,6 +90,8 @@ SQL: SELECT c.code, c.name_th, COUNT(p.code) AS cnt FROM prerequisite p JOIN cou
 SQL: SELECT credits FROM course WHERE code = '06036100' LIMIT 1
 คำถาม: วิชา 06036100 ในหลักสูตร BIT เรียนชั้นปีที่เท่าไร
 SQL: SELECT year FROM plan_item WHERE code = '06036100' AND program_id LIKE 'BIT%' LIMIT 1
+คำถาม: 06036100
+SQL: SELECT c.name_th, c.name_en, c.credits FROM course c WHERE c.code = '06036100' LIMIT 1
 คำถาม: หลักสูตร IT มีกี่หน่วยกิต
 SQL: SELECT total_credits FROM program WHERE program_id LIKE 'IT%' LIMIT 1
 คำถาม: ปี 1 เทอม 1 เรียนกี่หน่วยกิต
@@ -99,18 +104,14 @@ SQL: SELECT n_courses FROM v_semester_credits WHERE year = 1 AND semester = 1 LI
 SQL: SELECT code, name_th FROM v_plan WHERE year = 1 AND semester = 1 LIMIT 10
 คำถาม: ต้องเรียนวิชาอะไรมาก่อนจึงจะลงเรียน 06026215 ได้
 SQL: SELECT p.requires, c.name_th FROM prerequisite p LEFT JOIN course c ON p.requires = c.code WHERE p.code = '06026215' AND p.kind = 'pre'
-คำถาม: วิชา 06016317 เป็นวิชาบังคับก่อนของวิชาใดบ้าง
-SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06016317'
-คำถาม: ถ้าไม่ผ่านวิชา 06016317 จะลงวิชาอะไรไม่ได้บ้าง
-SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06016317'
-คำถาม: ถ้าติด F วิชา 06016317 จะส่งผลกระทบต่อวิชาใดบ้าง
-SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06016317'
 คำถาม: ถ้าไม่ผ่านวิชา 06026201 จะลงวิชาอะไรไม่ได้บ้าง
 SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06026201'
 คำถาม: เกียรตินิยมอันดับ 1 เหรียญทองต้องได้เกรดเท่าไร
-SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic LIKE '%เหรียญทอง%' LIMIT 1
+SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic = 'เกียรตินิยมอันดับ 1 เหรียญทอง' LIMIT 1
 คำถาม: เกียรตินิยมอันดับ 1 ต้องได้เกรดเท่าไร
 SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic = 'เกียรตินิยมอันดับ 1' LIMIT 1
+คำถาม: เกียรตินิยมอันดับ 2 ต้องได้เกรดเท่าไร
+SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic = 'เกียรตินิยมอันดับ 2' LIMIT 1
 คำถาม: ทุจริตในการสอบจะถูกลงโทษอย่างไร
 SQL: SELECT condition_desc, penalty_action, article_no FROM regulation WHERE category = 'เกณฑ์การทุจริตในการสอบ' LIMIT 1
 คำถาม: การทุจริตในการสอบอ้างอิงข้อบังคับข้อใด
