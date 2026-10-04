@@ -10,6 +10,7 @@ let searchDebounceTimeout = null;
 async function loadCourses(search = "") {
   const container = document.getElementById("courses-list");
   const countBadge = document.getElementById("courses-count-badge");
+  if (!container) return;
 
   try {
     const url = `/api/courses?search=${encodeURIComponent(search.trim())}&limit=100`;
