@@ -47,6 +47,11 @@ def index() -> FileResponse:
     return FileResponse(STATIC_DIR / "index.html")
 
 
+@app.get("/courses", include_in_schema=False)
+def courses_page() -> FileResponse:
+    return FileResponse(STATIC_DIR / "courses.html")
+
+
 @app.get("/api/health", response_model=HealthResponse)
 def health() -> dict:
     db_ready = settings.db_path.exists()

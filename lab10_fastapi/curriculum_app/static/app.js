@@ -333,6 +333,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // รองรับ URL query params เช่น /?check=06026201 หรือ /?q=คำถาม
+  const urlParams = new URLSearchParams(window.location.search);
+  const checkCode = urlParams.get("check");
+  const askParam = urlParams.get("q");
+  if (checkCode) {
+    searchPrereq(checkCode);
+  } else if (askParam) {
+    setQuestion(askParam);
+  }
+
   // เริ่มต้นที่สถานะ Idle
   setAskState(UI_STATE.IDLE);
 });
