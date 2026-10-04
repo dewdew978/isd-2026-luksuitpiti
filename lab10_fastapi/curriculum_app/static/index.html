@@ -4,529 +4,152 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Curriculum Assistant</title>
+  
+  <!-- Fonts: Apple SF Pro TH / Sukhumvit Set + Noto Sans Thai & Prompt Fallbacks -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f8fafc;
-      --card-bg: #ffffff;
-      --text-main: #0f172a;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-      --border-focus: #0f172a;
-      --primary: #0f172a;
-      --primary-hover: #1e293b;
-      --primary-text: #ffffff;
-      --accent: #2563eb;
-      --accent-soft: #eff6ff;
-      --code-bg: #f1f5f9;
-      --radius: 12px;
-      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-      --font-family: "Google Sans", "Manrope", "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: [
+              '"SF Pro TH"',
+              '"SF Pro Display"',
+              '"SF Pro Text"',
+              '"Sukhumvit Set"',
+              '-apple-system',
+              'BlinkMacSystemFont',
+              '"Noto Sans Thai"',
+              '"Prompt"',
+              'sans-serif'
+            ],
+          }
+        }
+      }
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-family);
-      background-color: var(--bg);
-      color: var(--text-main);
-      line-height: 1.6;
-      padding: 40px 20px 80px;
-    }
-
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    /* Header */
-    header {
-      margin-bottom: 28px;
-    }
-
-    .header-content h1 {
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--text-main);
-      margin-bottom: 4px;
-    }
-
-    .header-content p {
-      font-size: 14px;
-      color: var(--text-muted);
-    }
-
-    /* Cards */
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
-      margin-bottom: 20px;
-      box-shadow: var(--shadow-sm);
-      transition: box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      box-shadow: var(--shadow-md);
-    }
-
-    .card-title {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text-main);
-      margin-bottom: 4px;
-      letter-spacing: -0.01em;
-    }
-
-    .card-subtitle {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 14px;
-    }
-
-    /* Quick Chips */
-    .chips-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 12px;
-    }
-
-    .chip {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 9999px;
-      padding: 4px 12px;
-      font-size: 12px;
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: all 0.15s ease;
-      font-family: inherit;
-    }
-
-    .chip:hover {
-      border-color: var(--primary);
-      color: var(--text-main);
-      background: #ffffff;
-    }
-
-    /* Forms */
-    textarea {
-      width: 100%;
-      min-height: 84px;
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 14px;
-      font-family: inherit;
-      color: var(--text-main);
-      background-color: #ffffff;
-      resize: vertical;
-      outline: none;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    textarea:focus, input[type="text"]:focus {
-      border-color: var(--border-focus);
-      box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.06);
-    }
-
-    .form-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 10px;
-    }
-
-    .hint {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px 18px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--primary-text);
-      background-color: var(--primary);
-      border: 1px solid var(--primary);
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.15s ease;
-      font-family: inherit;
-    }
-
-    button:hover {
-      background-color: var(--primary-hover);
-    }
-
-    button:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    /* Prereq form inline */
-    .inline-form {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .inline-form input[type="text"] {
-      flex: 1;
-      padding: 8px 12px;
-      font-size: 14px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      outline: none;
-      font-family: inherit;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    /* Result Box */
-    .answer-box {
-      margin-top: 20px;
-      padding: 16px;
-      background-color: #f8fafc;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    .answer-label {
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .answer-text {
-      color: var(--text-main);
-      white-space: pre-line;
-      font-size: 14px;
-    }
-
-    /* Details Collapsible */
-    details {
-      margin-top: 14px;
-      border-top: 1px solid var(--border);
-      padding-top: 10px;
-    }
-
-    details summary {
-      font-size: 12px;
-      color: var(--text-muted);
-      cursor: pointer;
-      user-select: none;
-      font-weight: 500;
-    }
-
-    details summary:hover {
-      color: var(--text-main);
-    }
-
-    pre {
-      background: var(--code-bg);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 12px;
-      margin-top: 8px;
-      font-size: 12px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      color: #334155;
-      overflow-x: auto;
-      white-space: pre-wrap;
-      word-break: break-all;
-    }
-
-    /* Prereq Details */
-    .prereq-course-header {
-      background: var(--accent-soft);
-      border-left: 3px solid var(--accent);
-      padding: 10px 14px;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 16px;
-      color: #1e3a8a;
-    }
-
-    .prereq-group {
-      margin-bottom: 14px;
-    }
-
-    .prereq-group-title {
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-
-    .course-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .course-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      padding: 8px 12px;
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 13px;
-      transition: border-color 0.15s ease;
-    }
-
-    .course-item:hover {
-      border-color: #cbd5e1;
-    }
-
-    .course-item a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-      font-family: ui-monospace, monospace;
-    }
-
-    .course-item a:hover {
-      text-decoration: underline;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 2px 7px;
-      font-size: 11px;
-      border-radius: 4px;
-      background: #e2e8f0;
-      color: #475569;
-      font-weight: 500;
-    }
-
-    .tag.pre {
-      background: #e0f2fe;
-      color: #0369a1;
-    }
-
-    .tag.co {
-      background: #fef3c7;
-      color: #b45309;
-    }
-
-    .empty-state {
-      font-size: 13px;
-      color: var(--text-muted);
-      font-style: italic;
-      padding: 4px 0;
-    }
-  </style>
+  </script>
+  
+  <!-- Custom Component Styles -->
+  <link rel="stylesheet" href="/static/style.css?v=7">
 </head>
-<body>
-  <div class="container">
-    <header>
-      <div class="header-content">
-        <h1>Curriculum Assistant</h1>
-        <p>ค้นหาข้อมูลหลักสูตรและตรวจสอบวิชาบังคับก่อนด้วย SQLite + Qwen AI</p>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen py-10 px-4">
+  <div class="max-w-2xl mx-auto">
+    <!-- Navigation Bar -->
+    <nav class="flex items-center justify-between border-b border-slate-200 pb-4 mb-7">
+      <div class="flex items-center gap-2">
+        <span class="text-sm font-bold tracking-tight text-slate-900">Curriculum Assistant</span>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 font-medium">ISD 2026</span>
       </div>
+      <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-xl text-xs font-medium">
+        <a href="/" class="px-3.5 py-1.5 rounded-lg bg-white text-slate-900 shadow-xs font-semibold">ถาม-ตอบ AI</a>
+        <a href="/courses" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition">จัดการรายวิชา</a>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="mb-7">
+      <h1 class="text-2xl font-bold tracking-tight text-slate-900 mb-1">ผู้ช่วยข้อมูลหลักสูตร</h1>
+      <p class="text-sm text-slate-500">ค้นหาข้อมูลหลักสูตรและตรวจสอบวิชาบังคับก่อนด้วย SQLite + Qwen AI</p>
     </header>
 
-    <!-- Card 1: Ask AI -->
-    <div class="card">
-      <div class="card-title">ถาม-ตอบข้อมูลหลักสูตร (Text-to-SQL)</div>
-      <div class="card-subtitle">พิมพ์คำถามภาษาธรรมชาติ โมเดลจะแปลงเป็นคำสั่ง SQL เพื่อค้นหาข้อมูลจริง</div>
+    <!-- Card 1: Ask AI (รองรับครบ 4 สถานะ: Idle, Loading, Success, Error) -->
+    <div class="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-sm mb-6 transition hover:shadow-md">
+      <div class="text-base font-semibold text-slate-900 mb-0.5">ถาม-ตอบข้อมูลหลักสูตร (Text-to-SQL)</div>
+      <div class="text-xs text-slate-500 mb-4">พิมพ์คำถามภาษาธรรมชาติ โมเดลจะแปลงเป็นคำสั่ง SQL เพื่อค้นหาข้อมูลจริงจากฐานข้อมูล</div>
 
-      <div class="chips-group">
-        <button type="button" class="chip" onclick="setQuestion('หลักสูตรนี้มีหน่วยกิตรวมทั้งหมดเท่าไร')">หน่วยกิตรวมทั้งหมด</button>
-        <button type="button" class="chip" onclick="setQuestion('ปี 1 เทอม 1 เรียนกี่หน่วยกิต')">ปี 1 เทอม 1 หน่วยกิต</button>
-        <button type="button" class="chip" onclick="setQuestion('วิชา 06026201 คือวิชาอะไร')">วิชา 06026201 คือวิชาอะไร</button>
+      <!-- Quick Chips -->
+      <div class="flex flex-wrap gap-2 mb-3.5" id="ask-chips">
+        <button type="button" class="chip active" data-question="หลักสูตรนี้มีหน่วยกิตรวมทั้งหมดเท่าไร">หน่วยกิตรวมทั้งหมด</button>
+        <button type="button" class="chip" data-question="ปี 1 เทอม 1 เรียนกี่หน่วยกิต">ปี 1 เทอม 1 หน่วยกิต</button>
+        <button type="button" class="chip" data-question="วิชา 06026201 คือวิชาอะไร">วิชา 06026201 คือวิชาอะไร</button>
+        <button type="button" class="chip" data-question="ถ้าไม่ผ่านวิชา 06016317 จะลงวิชาอะไรไม่ได้บ้าง">วิชาต่อเนื่องของ 06016317</button>
       </div>
 
       <form id="ask-form">
-        <textarea id="question" placeholder="พิมพ์คำถามที่ต้องการ เช่น ปี 1 เทอม 1 เรียนวิชาอะไรบ้าง..." required>หลักสูตรนี้มีหน่วยกิตรวมทั้งหมดเท่าไร</textarea>
-        <div class="form-footer">
-          <span class="hint">กด Ctrl + Enter เพื่อส่งคำถาม</span>
-          <button type="submit" id="ask-btn">ส่งคำถาม</button>
+        <textarea id="question" rows="3" class="w-full p-3.5 rounded-xl border border-slate-200 text-sm text-slate-900 bg-white placeholder:text-slate-400 focus:outline-none focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 transition resize-y leading-relaxed" placeholder="พิมพ์คำถามที่ต้องการ เช่น ปี 1 เทอม 1 เรียนวิชาอะไรบ้าง หรือ หลักสูตรนี้มีกี่หน่วยกิต..." required>หลักสูตรนี้มีหน่วยกิตรวมทั้งหมดเท่าไร</textarea>
+        <div class="flex items-center justify-between mt-3 gap-3">
+          <span class="text-xs text-slate-400">กด Ctrl + Enter เพื่อส่งคำถาม</span>
+          <button type="submit" id="ask-btn" class="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 active:scale-[0.98] text-white text-sm font-medium rounded-xl transition shadow-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">ส่งคำถาม</button>
         </div>
       </form>
 
-      <div class="answer-box" id="answer-container" style="display: none;">
-        <div class="answer-label">คำตอบ</div>
-        <div class="answer-text" id="answer">รอคำถาม...</div>
+      <!-- คอนเทนเนอร์แสดงผลตาม 4 สถานะของ AI (ตามหลักสูตร Lab 11) -->
+      <div class="mt-5 space-y-3">
+        <!-- สถานะ 1: Idle (พร้อมรับคำถาม) -->
+        <div id="ask-idle-box" class="p-3.5 bg-slate-50 border border-dashed border-slate-300 rounded-xl text-xs text-slate-500 flex items-center gap-2.5">
+          <span class="w-2 h-2 rounded-full bg-slate-400 flex-shrink-0"></span>
+          <span>พร้อมรับคำถาม — สามารถพิมพ์คำถามเกี่ยวกับวิชา แผนการเรียน หรือหน่วยกิต แล้วกด <strong>ส่งคำถาม</strong></span>
+        </div>
 
-        <details>
-          <summary>ดูคำสั่ง SQL ที่ใช้</summary>
-          <pre id="sql">-</pre>
-        </details>
+        <!-- สถานะ 2: Loading (รอโมเดลประมวลผล) -->
+        <div id="ask-loading-box" class="p-4 bg-blue-50/80 border border-blue-200 rounded-xl flex items-center gap-3 text-blue-700 text-sm font-medium hidden">
+          <span class="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin flex-shrink-0"></span>
+          <span>กำลังประมวลผลคำถาม... (กำลังแปลงคำถามเป็น SQL และดึงข้อมูลจาก SQLite)</span>
+        </div>
 
-        <details>
-          <summary>ดูข้อมูลที่ได้จากฐานข้อมูล (Rows)</summary>
-          <pre id="rows">-</pre>
-        </details>
+        <!-- สถานะ 3: Success (ได้รับคำตอบสำเร็จ) -->
+        <div id="ask-success-box" class="p-4 bg-slate-50 border border-slate-200 rounded-xl text-sm leading-relaxed space-y-3 hidden">
+          <div class="flex justify-between items-center text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+            <span>คำตอบจากระบบ</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Success</span>
+          </div>
+          <div class="text-slate-800 bg-white p-3.5 rounded-lg border border-slate-200 text-sm whitespace-pre-wrap leading-relaxed shadow-sm font-normal" id="answer-text">-</div>
+
+          <details class="group border border-slate-200 rounded-lg p-2.5 bg-white text-xs" open>
+            <summary class="font-medium text-slate-600 cursor-pointer hover:text-slate-900 select-none">ดูคำสั่ง SQL ที่ใช้</summary>
+            <div class="mt-2">
+              <div class="flex items-center justify-between px-3 py-1.5 bg-slate-200/60 rounded-t-md border-x border-t border-slate-200 text-[11px] text-slate-500 font-mono">
+                <span>SQL Query</span>
+                <button type="button" id="copy-sql-btn" class="px-2.5 py-0.5 text-[11px] font-sans font-medium text-slate-700 hover:text-slate-900 bg-white hover:bg-slate-50 border border-slate-300 rounded transition cursor-pointer">คัดลอก SQL</button>
+              </div>
+              <pre id="answer-sql" class="p-3 bg-slate-100 rounded-b-md font-mono text-xs text-slate-700 overflow-x-auto whitespace-pre-wrap break-all border border-slate-200">-</pre>
+            </div>
+          </details>
+
+          <details class="group border border-slate-200 rounded-lg p-2.5 bg-white text-xs">
+            <summary class="font-medium text-slate-600 cursor-pointer hover:text-slate-900 select-none">ดูข้อมูลที่ได้จากฐานข้อมูล (Rows)</summary>
+            <pre id="answer-rows" class="mt-2 p-3 bg-slate-100 rounded-md font-mono text-xs text-slate-700 overflow-x-auto whitespace-pre-wrap break-all border border-slate-200/60">-</pre>
+          </details>
+        </div>
+
+        <!-- สถานะ 4: Error (เกิดข้อผิดพลาดในการประมวลผล) -->
+        <div id="ask-error-box" class="p-4 bg-rose-50 border border-rose-200 rounded-xl text-sm space-y-2 hidden">
+          <div class="flex items-center justify-between font-semibold text-rose-900 text-sm">
+            <span>เกิดข้อผิดพลาดในการประมวลผล</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">Error</span>
+          </div>
+          <div class="text-rose-700 font-mono text-xs bg-rose-100/70 p-2.5 rounded-lg border border-rose-200/60 break-words" id="ask-error-msg">-</div>
+          <div class="text-xs text-rose-600" id="ask-error-action">-</div>
+        </div>
       </div>
     </div>
 
     <!-- Card 2: Prerequisite Graph -->
-    <div class="card">
-      <div class="card-title">เงื่อนไขรายวิชา (Prerequisite Graph)</div>
-      <div class="card-subtitle">ตรวจสอบว่าต้องผ่านวิชาใดมาก่อน และเป็นวิชาบังคับก่อนของวิชาใดบ้าง</div>
+    <div class="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-sm mb-6 transition hover:shadow-md">
+      <div class="text-base font-semibold text-slate-900 mb-0.5">เงื่อนไขรายวิชา (Prerequisite Graph)</div>
+      <div class="text-xs text-slate-500 mb-4">ตรวจสอบว่าต้องผ่านวิชาใดมาก่อน และเป็นวิชาบังคับก่อนของวิชาใดบ้าง</div>
 
-      <div class="chips-group">
-        <button type="button" class="chip" onclick="searchPrereq('06026201')">06026201</button>
-        <button type="button" class="chip" onclick="searchPrereq('06026200')">06026200</button>
-        <button type="button" class="chip" onclick="searchPrereq('06026215')">06026215</button>
-        <button type="button" class="chip" onclick="searchPrereq('06016401')">06016401</button>
+      <div class="flex flex-wrap gap-2 mb-3.5" id="prereq-chips">
+        <button type="button" class="chip active" data-code="06026201">06026201</button>
+        <button type="button" class="chip" data-code="06026200">06026200</button>
+        <button type="button" class="chip" data-code="06026215">06026215</button>
+        <button type="button" class="chip" data-code="06016401">06016401</button>
       </div>
 
-      <form id="prereq-form" class="inline-form">
-        <input type="text" id="course-code" placeholder="รหัสวิชา 8 หลัก เช่น 06026201" value="06026201" pattern="\d{8}" title="รหัสวิชา 8 หลัก" required>
-        <button type="submit" id="prereq-btn">ตรวจสอบ</button>
+      <form id="prereq-form" class="flex gap-2">
+        <input type="text" id="course-code" class="flex-1 px-3.5 py-2 rounded-xl border border-slate-200 text-sm text-slate-900 focus:outline-none focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 font-mono transition" placeholder="รหัสวิชา 8 หลัก เช่น 06026201" value="06026201" pattern="\d{8}" title="รหัสวิชา 8 หลัก" required>
+        <button type="submit" id="prereq-btn" class="px-5 py-2 bg-slate-900 hover:bg-slate-800 active:scale-[0.98] text-white text-sm font-medium rounded-xl transition shadow-sm disabled:opacity-50">ตรวจสอบ</button>
       </form>
 
-      <div id="prereq-result" style="margin-top: 18px;"></div>
+      <div id="prereq-result" class="mt-4"></div>
     </div>
   </div>
 
-  <script>
-    // ตัวช่วยเลือกคำถามตัวอย่าง
-    function setQuestion(q) {
-      const textarea = document.getElementById("question");
-      textarea.value = q;
-      textarea.focus();
-    }
-
-    // รองรับการกด Ctrl+Enter / Cmd+Enter ใน textarea
-    document.getElementById("question").addEventListener("keydown", (e) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
-        e.preventDefault();
-        document.getElementById("ask-form").requestSubmit();
-      }
-    });
-
-    // ถามคำถาม AI
-    document.getElementById("ask-form").addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const btn = document.getElementById("ask-btn");
-      const answer = document.getElementById("answer");
-      const container = document.getElementById("answer-container");
-      
-      container.style.display = "block";
-      answer.textContent = "กำลังประมวลผลคำถาม...";
-      btn.disabled = true;
-      btn.textContent = "กำลังคิด...";
-
-      try {
-        const response = await fetch("/api/ask", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ question: document.getElementById("question").value })
-        });
-        const data = await response.json();
-        if (!response.ok) throw new Error(data.detail || "เกิดข้อผิดพลาดในการประมวลผล");
-
-        answer.textContent = data.answer || "ไม่มีข้อความตอบกลับ";
-        document.getElementById("rows").textContent = JSON.stringify(data.rows, null, 2);
-        document.getElementById("sql").textContent = data.sql || "-";
-      } catch (error) {
-        answer.textContent = `เกิดข้อผิดพลาด: ${error.message}`;
-      } finally {
-        btn.disabled = false;
-        btn.textContent = "ส่งคำถาม";
-      }
-    });
-
-    // Prerequisite Graph Search
-    async function fetchPrereq(code) {
-      const resultDiv = document.getElementById("prereq-result");
-      const btn = document.getElementById("prereq-btn");
-      resultDiv.innerHTML = "<div class='empty-state'>กำลังตรวจสอบข้อมูล...</div>";
-      btn.disabled = true;
-
-      try {
-        const response = await fetch(`/api/courses/${encodeURIComponent(code)}/prerequisites`);
-        const data = await response.json();
-        if (!response.ok) throw new Error(data.detail || "ไม่พบข้อมูลวิชานี้");
-
-        const courseTitle = `${data.code} — ${data.name_th || data.name_en || '-'} ${data.credits != null ? `(${data.credits} หน่วยกิต)` : ''}`;
-        
-        let html = `<div class="prereq-course-header">${courseTitle}</div>`;
-
-        // 1. Requires
-        html += `<div class="prereq-group">
-          <div class="prereq-group-title">1. วิชาที่ต้องเรียนมาก่อน (Requires)</div>`;
-        if (data.requires && data.requires.length > 0) {
-          html += `<ul class="course-list">` + data.requires.map(c => `
-            <li class="course-item">
-              <div>
-                <a href="javascript:void(0)" onclick="searchPrereq('${c.code}')">${c.code}</a>
-                <span style="margin-left: 6px;">${c.name_th || c.name_en || ''}</span>
-                ${c.credits != null ? `<span style="color: var(--text-muted); font-size: 12px;">(${c.credits} นก.)</span>` : ''}
-              </div>
-              <span class="tag ${c.kind}">${c.kind.toUpperCase()}</span>
-            </li>
-          `).join("") + `</ul>`;
-        } else {
-          html += `<div class="empty-state">ไม่มีเงื่อนไขวิชาบังคับก่อน</div>`;
-        }
-        html += `</div>`;
-
-        // 2. Required By
-        html += `<div class="prereq-group">
-          <div class="prereq-group-title">2. เป็นวิชาบังคับก่อนของ (Required By)</div>`;
-        if (data.required_by && data.required_by.length > 0) {
-          html += `<ul class="course-list">` + data.required_by.map(c => `
-            <li class="course-item">
-              <div>
-                <a href="javascript:void(0)" onclick="searchPrereq('${c.code}')">${c.code}</a>
-                <span style="margin-left: 6px;">${c.name_th || c.name_en || ''}</span>
-                ${c.credits != null ? `<span style="color: var(--text-muted); font-size: 12px;">(${c.credits} นก.)</span>` : ''}
-              </div>
-              <span class="tag ${c.kind}">${c.kind.toUpperCase()}</span>
-            </li>
-          `).join("") + `</ul>`;
-        } else {
-          html += `<div class="empty-state">ไม่มีวิชาที่ต้องใช้วิชานี้เป็นวิชาบังคับก่อน</div>`;
-        }
-        html += `</div>`;
-
-        resultDiv.innerHTML = html;
-      } catch (error) {
-        resultDiv.innerHTML = `<div class="empty-state" style="color: #ef4444; font-style: normal;">${error.message}</div>`;
-      } finally {
-        btn.disabled = false;
-      }
-    }
-
-    function searchPrereq(code) {
-      document.getElementById("course-code").value = code;
-      fetchPrereq(code);
-    }
-
-    document.getElementById("prereq-form").addEventListener("submit", (event) => {
-      event.preventDefault();
-      const code = document.getElementById("course-code").value.trim();
-      fetchPrereq(code);
-    });
-  </script>
+  <script src="/static/app.js?v=7" defer></script>
 </body>
 </html>

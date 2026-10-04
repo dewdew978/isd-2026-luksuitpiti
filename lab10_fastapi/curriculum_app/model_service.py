@@ -53,16 +53,40 @@ class QwenTextToSQL:
 
 กติกา:
 - ตอบ SELECT หรือ WITH คำสั่งเดียว
+- ถามหน่วยกิตรวม, หน่วยกิตรวมทั้งหมด, หน่วยกิตตลอดหลักสูตร, หรือหลักสูตรมีกี่หน่วยกิต ให้ใช้ total_credits จากตาราง program (เช่น SELECT total_credits FROM program LIMIT 1 หรือระบุ WHERE program_id = '...') ห้ามใช้ SUM(credits) FROM course เด็ดขาด เพราะตาราง course คือรายวิชาทั้งหมดของคณะ
 - ถามหน่วยกิตรายเทอมให้ใช้ v_semester_credits
 - ถามรายวิชาตามแผนให้ใช้ v_plan
 - ถามกฎระเบียบ เกียรตินิยม ภาคทัณฑ์ พ้นสภาพ การทุจริตสอบ การลงทะเบียน ให้ใช้ regulation
+- ถามว่าวิชามีกี่หน่วยกิต ให้ใช้ course จากรหัสวิชา code (ตาราง course ไม่มีคอลัมน์ program_id ห้ามใส่ program_id ใน WHERE ของตาราง course) หรือใช้ v_plan
 - หากคำถามไม่ได้ระบุชื่อหลักสูตร (เช่น IT, DSBA, BIT, AIT) ห้ามใส่เงื่อนไข program_id หรือ subquery หา program เด็ดขาด
-- หากคำถามระบุชื่อหลักสูตร ให้ใส่เงื่อนไข program_id LIKE 'IT%' หรือ 'DSBA%' หรือ 'BIT%' หรือ 'AIT%' ใน WHERE เสมอ (เนื่องจากรหัสในระบบคือ IT-coop, DSBA-coop, BIT-coop, AIT)
+- หากใช้ alias ให้ตาราง (เช่น prerequisite p หรือ course c) ต้องอ้างอิงคอลัมน์ผ่าน alias นั้นเสมอ ห้ามผสมชื่อตารางเดิม เช่น p.requires ห้ามเขียน prerequisite.requires
+- สำหรับตาราง prerequisite ให้ระวังทิศทางความสัมพันธ์อย่างเคร่งครัด:
+  1) หากถามว่า "วิชา X ต้องผ่าน/เรียนวิชาใดมาก่อน" หรือ "วิชาบังคับก่อนของ X คืออะไร":
+     ให้หา requires โดยใช้: SELECT p.requires, c.name_th FROM prerequisite p JOIN course c ON p.requires = c.code WHERE p.code = 'รหัสวิชา X'
+  2) หากถามว่า "ถ้าไม่ผ่าน/ติด F วิชา X จะลงวิชาอะไรไม่ได้บ้าง" หรือ "วิชา X เป็นวิชาบังคับก่อนของวิชาใดบ้าง" หรือ "วิชาต่อเนื่องของ X":
+     ให้หา code ของวิชาต่อเนื่อง โดยใช้: SELECT p.code, c.name_th FROM prerequisite p JOIN course c ON p.code = c.code WHERE p.requires = 'รหัสวิชา X' (ห้ามใส่ WHERE p.code = 'รหัสวิชา X' เด็ดขาด และห้าม JOIN p.requires = c.code เด็ดขาด)
+- ตาราง v_semester_credits เก็บหน่วยกิตของแต่ละปีและเทอมไว้แล้ว (คอลัมน์ credits คือหน่วยกิตของเทอมนั้น) หากถามว่าเทอมไหนเรียนหนักสุดหรือมีหน่วยกิตมากที่สุด ให้ SELECT year, semester, credits, n_courses FROM v_semester_credits ORDER BY credits DESC LIMIT 1 (ห้ามใช้ SUM(credits) หรือ GROUP BY semester เด็ดขาด)
 - ห้ามแก้ไขฐานข้อมูล
 
 ตัวอย่าง:
 คำถาม: หลักสูตรนี้มีกี่หน่วยกิต
 SQL: SELECT total_credits FROM program LIMIT 1
+คำถาม: หลักสูตรนี้มีหน่วยกิตรวมทั้งหมดเท่าไร
+SQL: SELECT total_credits FROM program LIMIT 1
+คำถาม: หน่วยกิตรวมตลอดหลักสูตรมีเท่าไร
+SQL: SELECT total_credits FROM program LIMIT 1
+คำถาม: เทอมไหนเรียนหนักที่สุด
+SQL: SELECT year, semester, credits, n_courses FROM v_semester_credits ORDER BY credits DESC LIMIT 1
+คำถาม: เทอมไหนมีจำนวนหน่วยกิตรวมให้เรียนหนักที่สุด
+SQL: SELECT year, semester, credits, n_courses FROM v_semester_credits ORDER BY credits DESC LIMIT 1
+คำถาม: วิชาไหนเป็นวิชาบังคับก่อนให้วิชาอื่นมากที่สุด
+SQL: SELECT c.code, c.name_th, COUNT(p.code) AS cnt FROM prerequisite p JOIN course c ON p.requires = c.code GROUP BY p.requires ORDER BY cnt DESC LIMIT 5
+คำถาม: วิชาไหนเป็นวิชาบังคับก่อน (Prerequisite) ให้วิชาอื่นมากที่สุด 5 อันดับแรก
+SQL: SELECT c.code, c.name_th, COUNT(p.code) AS cnt FROM prerequisite p JOIN course c ON p.requires = c.code GROUP BY p.requires ORDER BY cnt DESC LIMIT 5
+คำถาม: วิชา 06036100 ในหลักสูตร BIT มีกี่หน่วยกิต
+SQL: SELECT credits FROM course WHERE code = '06036100' LIMIT 1
+คำถาม: วิชา 06036100 ในหลักสูตร BIT เรียนชั้นปีที่เท่าไร
+SQL: SELECT year FROM plan_item WHERE code = '06036100' AND program_id LIKE 'BIT%' LIMIT 1
 คำถาม: หลักสูตร IT มีกี่หน่วยกิต
 SQL: SELECT total_credits FROM program WHERE program_id LIKE 'IT%' LIMIT 1
 คำถาม: ปี 1 เทอม 1 เรียนกี่หน่วยกิต
@@ -74,7 +98,15 @@ SQL: SELECT n_courses FROM v_semester_credits WHERE year = 1 AND semester = 1 LI
 คำถาม: ปี 1 เทอม 1 เรียนวิชาอะไรบ้าง
 SQL: SELECT code, name_th FROM v_plan WHERE year = 1 AND semester = 1 LIMIT 10
 คำถาม: ต้องเรียนวิชาอะไรมาก่อนจึงจะลงเรียน 06026215 ได้
-SQL: SELECT requires FROM prerequisite WHERE code='06026215' AND kind='pre'
+SQL: SELECT p.requires, c.name_th FROM prerequisite p LEFT JOIN course c ON p.requires = c.code WHERE p.code = '06026215' AND p.kind = 'pre'
+คำถาม: วิชา 06016317 เป็นวิชาบังคับก่อนของวิชาใดบ้าง
+SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06016317'
+คำถาม: ถ้าไม่ผ่านวิชา 06016317 จะลงวิชาอะไรไม่ได้บ้าง
+SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06016317'
+คำถาม: ถ้าติด F วิชา 06016317 จะส่งผลกระทบต่อวิชาใดบ้าง
+SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06016317'
+คำถาม: ถ้าไม่ผ่านวิชา 06026201 จะลงวิชาอะไรไม่ได้บ้าง
+SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06026201'
 คำถาม: เกียรตินิยมอันดับ 1 เหรียญทองต้องได้เกรดเท่าไร
 SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic LIKE '%เหรียญทอง%' LIMIT 1
 คำถาม: เกียรตินิยมอันดับ 1 ต้องได้เกรดเท่าไร
@@ -102,6 +134,7 @@ SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์การ�
 คำถาม: {question}
 ผลฐานข้อมูล: {json.dumps(rows[:40], ensure_ascii=False)}
 ตอบ JSON ที่มี key ชื่อ answer และห้ามเพิ่มข้อมูลที่ไม่มีในผล"""
+        
         return str(self._chat(prompt, ANSWER_SCHEMA).get("answer", "")).strip()
 
     def ask(self, database: CurriculumDatabase, question: str) -> dict:

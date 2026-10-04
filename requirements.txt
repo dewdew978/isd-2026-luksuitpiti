@@ -15,3 +15,9 @@ rapidfuzz
 pydantic
 PyYAML
 rich
+requests
+fastapi
+uvicorn
+pymupdf
+pythainlp
+python-dotenv

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>จัดการรายวิชา — Curriculum Assistant</title>
+  
+  <!-- Fonts: Apple SF Pro TH / Sukhumvit Set + Noto Sans Thai & Prompt Fallbacks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: [
+              '"SF Pro TH"',
+              '"SF Pro Display"',
+              '"SF Pro Text"',
+              '"Sukhumvit Set"',
+              '-apple-system',
+              'BlinkMacSystemFont',
+              '"Noto Sans Thai"',
+              '"Prompt"',
+              'sans-serif'
+            ],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Component Styles -->
+  <link rel="stylesheet" href="/static/style.css?v=8">
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen py-10 px-4">
+  <div class="max-w-2xl mx-auto">
+    <!-- Navigation Bar -->
+    <nav class="flex items-center justify-between border-b border-slate-200 pb-4 mb-7">
+      <div class="flex items-center gap-2">
+        <span class="text-sm font-bold tracking-tight text-slate-900">Curriculum Assistant</span>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 font-medium">ISD 2026</span>
+      </div>
+      <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-xl text-xs font-medium">
+        <a href="/" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition">ถาม-ตอบ AI</a>
+        <a href="/courses" class="px-3.5 py-1.5 rounded-lg bg-white text-slate-900 shadow-xs font-semibold">จัดการรายวิชา</a>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="mb-7">
+      <h1 class="text-2xl font-bold tracking-tight text-slate-900 mb-1">จัดการรายวิชา</h1>
+      <p class="text-sm text-slate-500">เพิ่มรายวิชาใหม่ในหลักสูตร เชื่อมต่อกับ SQLite แบบ Real-time</p>
+    </header>
+
+    <!-- Card 1: เพิ่มรายวิชาใหม่ -->
+    <div class="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-sm mb-6 transition hover:shadow-md">
+      <div class="text-base font-semibold text-slate-900 mb-0.5">เพิ่มรายวิชาใหม่</div>
+      <div class="text-xs text-slate-500 mb-5">เมื่อบันทึกแล้ว รายวิชาจะลงฐานข้อมูลทันที และสามารถถาม AI ในหน้านู้นได้ทันทีโดยไม่ต้อง Retrain โมเดล</div>
+
+      <form id="create-course-form" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="course-code" class="block text-xs font-medium text-slate-700 mb-1">รหัสวิชา (8 หลัก) *</label>
+            <input type="text" id="course-code" name="code" required pattern="^\d{8}$" maxlength="8"
+                   placeholder="เช่น 06026299"
+                   class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-900 bg-white placeholder:text-slate-400 focus:outline-none focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 transition font-mono">
+          </div>
+          <div>
+            <label for="course-credits" class="block text-xs font-medium text-slate-700 mb-1">จำนวนหน่วยกิต (0-12) *</label>
+            <input type="number" id="course-credits" name="credits" required min="0" max="12" value="3"
+                   class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-900 bg-white placeholder:text-slate-400 focus:outline-none focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 transition">
+          </div>
+        </div>
+
+        <div>
+          <label for="course-name-th" class="block text-xs font-medium text-slate-700 mb-1">ชื่อรายวิชา (ภาษาไทย) *</label>
+          <input type="text" id="course-name-th" name="name_th" required maxlength="300"
+                 placeholder="เช่น การเรียนรู้เชิงลึกประยุกต์"
+                 class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-900 bg-white placeholder:text-slate-400 focus:outline-none focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 transition">
+        </div>
+
+        <div>
+          <label for="course-name-en" class="block text-xs font-medium text-slate-700 mb-1">ชื่อรายวิชา (ภาษาอังกฤษ)</label>
+          <input type="text" id="course-name-en" name="name_en" maxlength="300"
+                 placeholder="เช่น APPLIED DEEP LEARNING"
+                 class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-900 bg-white placeholder:text-slate-400 focus:outline-none focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 transition">
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <label for="course-lecture" class="block text-[11px] font-medium text-slate-600 mb-1">ชม. บรรยาย</label>
+            <input type="number" id="course-lecture" name="lecture_h" min="0" max="60" value="2"
+                   class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs text-slate-900 bg-white focus:outline-none focus:border-slate-900 transition">
+          </div>
+          <div>
+            <label for="course-lab" class="block text-[11px] font-medium text-slate-600 mb-1">ชม. ปฏิบัติการ</label>
+            <input type="number" id="course-lab" name="lab_h" min="0" max="60" value="2"
+                   class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs text-slate-900 bg-white focus:outline-none focus:border-slate-900 transition">
+          </div>
+          <div>
+            <label for="course-self" class="block text-[11px] font-medium text-slate-600 mb-1">ชม. ค้นคว้าเอง</label>
+            <input type="number" id="course-self" name="self_h" min="0" max="60" value="5"
+                   class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs text-slate-900 bg-white focus:outline-none focus:border-slate-900 transition">
+          </div>
+        </div>
+
+        <div>
+          <label for="course-desc" class="block text-xs font-medium text-slate-700 mb-1">คำอธิบายรายวิชา (ถ้ามี)</label>
+          <textarea id="course-desc" name="description_th" rows="2"
+                    placeholder="ระบุคำอธิบายรายวิชาสังเขป..."
+                    class="w-full p-3 rounded-xl border border-slate-200 text-xs text-slate-900 bg-white placeholder:text-slate-400 focus:outline-none focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 transition resize-y"></textarea>
+        </div>
+
+        <div class="flex items-center justify-end pt-2">
+          <button type="submit" id="save-course-btn"
+                  class="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 active:scale-[0.98] text-white text-sm font-medium rounded-xl transition shadow-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+            บันทึกรายวิชา
+          </button>
+        </div>
+      </form>
+
+      <!-- Feedback Boxes (Lab 11: Loading, Success, Error) -->
+      <div class="mt-4 space-y-3">
+        <div id="create-loading-box" class="p-3.5 bg-blue-50/80 border border-blue-200 rounded-xl flex items-center gap-3 text-blue-700 text-xs font-medium hidden">
+          <span class="w-3.5 h-3.5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin flex-shrink-0"></span>
+          <span>กำลังบันทึกข้อมูลรายวิชาเข้าฐานข้อมูล...</span>
+        </div>
+
+        <div id="create-success-box" class="p-4 bg-emerald-50/80 border border-emerald-200 rounded-xl text-xs text-emerald-900 leading-relaxed space-y-2 hidden">
+          <div class="font-semibold text-emerald-800 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+            <span>บันทึกรายวิชาสำเร็จ (201 Created)</span>
+          </div>
+          <div id="create-success-msg" class="text-emerald-700"></div>
+          <div class="pt-1">
+            <a href="/" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-900 underline hover:text-emerald-950">
+              <span>ไปที่หน้า ถาม-ตอบ AI เพื่อทดสอบถามคำถามเกี่ยวกับวิชานี้</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <div id="create-error-box" class="p-4 bg-red-50 border border-red-200 rounded-xl text-xs text-red-800 leading-relaxed space-y-1 hidden">
+          <div class="font-semibold text-red-900 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-red-600"></span>
+            <span id="create-error-title">เกิดข้อผิดพลาดในการบันทึก</span>
+          </div>
+          <div id="create-error-msg" class="text-red-700"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-xs text-slate-400 mt-10">
+      ISD 2026 Course Project &bull; Curriculum Assistant with SQLite &amp; Qwen AI
+    </footer>
+  </div>
+
+  <script src="/static/courses.js?v=1"></script>
+</body>
+</html>

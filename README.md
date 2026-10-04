@@ -10,25 +10,121 @@
 ![Status](https://img.shields.io/badge/Status-Active-4caf50)
  
 </div>
-# isd-2026-luksuitpiti 
+# isd-2026-luksuitpiti: Curriculum Assistant & Intelligent OCR System
+วิชา 06026240 การพัฒนาระบบอัจฉริยะ (Intelligent System Development)  
+คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (KMITL)
 
-โปรเจคที่เลือก 2 ocr เล่มหลักสูตร  
-67070098 _drews.  
-67070141 babysalmonnn  
-67070190 sv_jatm  
-67070307 pingsensei  
-# Thai-English OCR System
-
-โปรเจกต์นี้เป็น OCR pipeline สำหรับเอกสารภาพเดี่ยวและหลายหน้า เช่น `.jpg`, `.png`, `.tif`, `.pdf` โดยรองรับเอกสารภาษาไทยและอังกฤษปนกัน
-
-OCR engines ที่มีให้:
-
-- PaddleOCR: เหมาะกับภาษาไทยและเอกสารทั่วไป
-- Tesseract OCR: ใช้ `tha+eng` ได้ดีเมื่อมีภาษาไทย/อังกฤษปนกัน
-- TrOCR: OCR แบบ Transformer เหมาะกับ printed English เป็นหลัก
-- Ensemble: ใช้ PaddleOCR + Tesseract แล้วรวมผลแบบง่าย
+## สมาชิกกลุ่ม (Group Members - Luksuitpiti)
+| ลำดับ | รหัสนักศึกษา | ชื่อ - นามสกุล | GitHub Username | สาขาวิชา |
+|:---:|:---:|:---|:---|:---:|
+| 1 | 67070098 | นายปวริศ ปัญสิงห์ | _drews. | DSBA |
+| 2 | 67070141 | นายภูวิศ ทรายทอง | babysalmonnn | DSBA |
+| 3 | 67070190 | นายสุวิจักขณ์ กุลฉัตลานนท์ | sv_jatm | DSBA |
+| 4 | 67070307 | นายปิติ หยาง | pingsensei | DSBA |
 
 ---
+
+## คู่มือการรัน Application สำหรับอาจารย์และผู้ตรวจประเมิน (Quick Start Guide)
+
+โปรเจกต์นี้พัฒนาระบบสกัดข้อมูลเล่มหลักสูตร มคอ.2 (ครอบคลุมทั้ง 4 สาขาวิชา: DSBA, BIT, IT, AIT) เข้าสู่ฐานข้อมูลเชิงสัมพันธ์ SQLite และให้บริการเว็บแอปพลิเคชันถามตอบด้วย Text-to-SQL (NL2SQL) ร่วมกับ Local LLM (Ollama)
+
+### 1. ความต้องการของระบบ (Prerequisites)
+- **Python**: เวอร์ชัน 3.10 ขึ้นไป
+- **Ollama**: ติดตั้งและเปิด Background Service:
+  ```bash
+  ollama serve
+  ```
+  จากนั้นดาวน์โหลดโมเดล LLM สำหรับ Text-to-SQL:
+  ```bash
+  ollama pull qwen3:4b
+  ```
+
+---
+
+### 2. ขั้นตอนการติดตั้ง Dependencies
+เปิด Terminal ในโฟลเดอร์โปรเจกต์ และติดตั้งไลบรารีที่จำเป็น:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 3. การเตรียมฐานข้อมูลหลักสูตร (Database Setup)
+> **หมายเหตุ**: โปรเจกต์มีฐานข้อมูล SQLite สำเร็จรูปที่ผ่านการสกัดครบทั้ง 284 รายวิชาและผ่านการตรวจ 7 กฎบันทึกไว้ที่ `work/lab8b_run/curriculum.db` เรียบร้อยแล้ว **สามารถข้ามไปขั้นตอนที่ 4 เพื่อเปิดรันเว็บแอปพลิเคชันได้ทันที**
+
+หากต้องการสั่งรันกระบวนการสกัดใหม่จากเล่มหลักสูตร PDF ต้นฉบับ (Cold-Start Reproduction):
+
+#### ก. สกัดข้อมูลรายวิชาด้วย Lab 7B (แผนการศึกษา + วิชาเลือกเฉพาะ ครบ 4 หลักสูตร):
+```bash
+python src/ocr_system/lab7b_curriculum.py -i data/input/fulldoc_dsba.pdf --pages 19-25,33-39 -g data/ground_truth/DSBA/DSBA_academic_plan_coop.json -p text -o lab7_final/output/DSBA --program DSBA
+python src/ocr_system/lab7b_curriculum.py -i data/input/fulldoc_BIT.pdf --pages 24-25,31-35 -g data/ground_truth/BIT/BIT_academic_plan_coop.json -p text -o lab7_final/output/BIT --program BIT
+python src/ocr_system/lab7b_curriculum.py -i data/input/fulldoc_it.pdf --pages 26-30,39-45 -g data/ground_truth/IT/IT_academic_plan_coop.json -p text -o lab7_final/output/IT --program IT
+python src/ocr_system/lab7b_curriculum.py -i data/input/fulldoc_AIT.pdf --pages 21-26 -g data/ground_truth/AIT/AIT_academic_plan.json -p text -o lab7_final/output/AIT --program AIT
+```
+
+#### ข. แปลงและนำเข้าฐานข้อมูล SQLite กลางด้วย Lab 8B:
+```bash
+# สร้าง Schema
+python src/ocr_system/lab8b_curriculum_db.py schema -o work/lab8b_run/schema
+
+# แปลงผลลัพธ์เข้า Schema Lab 8B
+python src/ocr_system/lab8b_curriculum_db.py import-lab7b -i lab7_final/output/DSBA/pred_text.json -o work/lab8b_run/DSBA/curriculum.json --program-id DSBA --program-name "วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ (สหกิจศึกษา)" --name-en "Data Science and Business Analytics (DSBA)" --total-credits 135 --years 4
+python src/ocr_system/lab8b_curriculum_db.py import-lab7b -i lab7_final/output/BIT/pred_text.json -o work/lab8b_run/BIT/curriculum.json --program-id BIT --program-name "เทคโนโลยีสารสนเทศทางธุรกิจ (สหกิจศึกษา)" --name-en "Business Information Technology (BIT)" --total-credits 126 --years 4
+python src/ocr_system/lab8b_curriculum_db.py import-lab7b -i lab7_final/output/IT/pred_text.json -o work/lab8b_run/IT/curriculum.json --program-id IT --program-name "เทคโนโลยีสารสนเทศ (สหกิจศึกษา)" --name-en "Information Technology (IT)" --total-credits 129 --years 4
+python src/ocr_system/lab8b_curriculum_db.py import-lab7b -i lab7_final/output/AIT/pred_text.json -o work/lab8b_run/AIT/curriculum.json --program-id AIT --program-name "เทคโนโลยีปัญญาประดิษฐ์" --name-en "Artificial Intelligence Technology (AIT)" --total-credits 120 --years 4
+
+# โหลดเข้าฐานข้อมูลกลาง
+python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/DSBA/curriculum.json -d work/lab8b_run/curriculum.db --replace
+python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/BIT/curriculum.json -d work/lab8b_run/curriculum.db
+python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/IT/curriculum.json -d work/lab8b_run/curriculum.db
+python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/AIT/curriculum.json -d work/lab8b_run/curriculum.db
+```
+
+#### ค. ตรวจสอบความถูกต้องของฐานข้อมูล (Consistency Verification 7 กฎ):
+```bash
+python src/ocr_system/lab8b_curriculum_db.py verify -d work/lab8b_run/curriculum.db -o work/lab8b_run/verify.json
+```
+*(ผลการตรวจสอบ: ผ่านครบ 7 จาก 7 ข้อ 100%)*
+
+---
+
+### 4. ขั้นตอนการสั่งรัน Web Application (FastAPI + Modern Web UI)
+สั่งรันเว็บเซิร์ฟเวอร์ด้วยคำสั่ง:
+```bash
+uvicorn lab10_fastapi.curriculum_app.main:app --host 127.0.0.1 --port 8000 --reload
+```
+
+---
+
+### 5. การเปิดใช้งานหน้าเว็บผ่าน Web Browser
+เมื่อเซิร์ฟเวอร์เปิดทำงานแล้ว สามารถเปิดเบราว์เซอร์และเข้าไปที่:
+1. **หน้าถามตอบหลักสูตร AI (Assistant Chat UI)**:
+   - URL: [http://127.0.0.1:8000/](http://127.0.0.1:8000/) หรือ [http://127.0.0.1:8000/static/index.html](http://127.0.0.1:8000/static/index.html)
+   - ฟีเจอร์: ถามตอบภาษาธรรมชาติเกี่ยวกับโครงสร้างหลักสูตร แผนการเรียน และข้อบังคับการศึกษา พร้อมระบบแสดง SQL และตารางข้อมูล
+2. **หน้าโครงสร้างหลักสูตรและรายวิชาทั้งหมด (Course Catalog & Regulations)**:
+   - URL: [http://127.0.0.1:8000/courses](http://127.0.0.1:8000/courses) หรือ [http://127.0.0.1:8000/static/courses.html](http://127.0.0.1:8000/static/courses.html)
+   - ฟีเจอร์: ตรวจสอบรายวิชาทั้งหมด 284 วิชา ค้นหารหัส/ชื่อวิชา ตรวจสอบวิชาบังคับก่อน (Prerequisites) และดูข้อบังคับการศึกษา สจล.
+3. **หน้า Interactive API Documentation (Swagger UI)**:
+   - URL: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+   - ฟีเจอร์: ทดสอบเรียกใช้งาน API Endpoint ทุกเส้นได้โดยตรง
+
+---
+
+### 6. ตัวอย่างคำถามทดสอบการทำงานของระบบ (Test Queries)
+- **คำถามเชิงโครงสร้าง**:
+  - `หลักสูตร DSBA มีกี่หน่วยกิต`
+  - `วิชา 06026218 คือวิชาอะไร`
+  - `วิชา 06026241 ต้องเรียนวิชาใดมาก่อน`
+- **คำถามเชิงความสัมพันธ์และแผนการศึกษา**:
+  - `ปี 2 เทอม 1 สาขา DSBA เรียนวิชาอะไรบ้าง`
+  - `หลักสูตร IT มีวิชากี่ตัว`
+- **คำถามเชิงข้อบังคับการศึกษา (Regulations)**:
+  - `เกณฑ์การพ้นสภาพนักศึกษามีอะไรบ้าง`
+  - `ลงทะเบียนเรียนขั้นต่ำและสูงสุดได้กี่หน่วยกิต`
+
+---
+
+# Thai-English OCR System (Lab 1 - Lab 6)
 
 ## Project Structure
 
@@ -438,3 +534,29 @@ python -m ocr_system.cli ocr data/input/sample.jpg --engine tesseract --no-prepr
 ```
 
 ---
+
+## Lab 11: Front-End Development & API Contract
+
+### โครงสร้างไฟล์ Frontend
+แยกไฟล์ตาม Best Practice (สไลด์หน้า 7 และ 28):
+```text
+lab10_fastapi/curriculum_app/static/
+├── index.html   # โครงสร้างหน้าเว็บหลัก
+├── style.css    # จัดรูปแบบสไตล์, เลย์เอาต์ และ 4 สถานะของระบบ AI
+└── app.js       # ตัวควบคุมตรรกะ, async fetch และ 4 สถานะของระบบ AI
+```
+
+### การจัดการ 4 สถานะ UI (AI System UX)
+1. **Idle**: คำแนะนำการใช้งานพร้อมปุ่มชิปตัวอย่างคำถาม
+2. **Loading**: แสดง Spinner และข้อความกำลังประมวลผล พร้อม `disabled` ปุ่มเพื่อป้องกันการกดซ้ำ
+3. **Success**: แสดงคำตอบภาษาธรรมชาติจาก AI พร้อมรายละเอียด SQL และตารางข้อมูล (ปลอดภัยจาก XSS ด้วย `textContent`)
+4. **Error**: แสดงกล่องเตือนสีแดง แจ้งรายละเอียดข้อผิดพลาดและข้อแนะนำสิ่งที่ผู้ใช้ควรดำเนินการแก้ไข
+
+### API Contract สรุป
+| Endpoint | Method | Request Body / Param | Response 200 OK | Response Error |
+| :--- | :---: | :--- | :--- | :--- |
+| `/api/ask` | POST | `{"question": "string"}` | `{"question", "sql", "rows", "answer"}` | `422` (Invalid/SQL Error), `503` (Ollama/DB offline) |
+| `/api/courses/{code}/prerequisites` | GET | `code`: รหัสวิชา 8 หลัก | `{"code", "name_th", "requires", "required_by"}` | `404` (ไม่พบรายวิชา) |
+| `/api/health` | GET | - | `{"status", "database_ready", "ollama_ready", "model"}` | `200` (Status: degraded if not ready) |
+
+> ดูรายละเอียดสัญญา API Contract และตัวอย่าง payload ฉบับสมบูรณ์ได้ที่ [lab10_fastapi/curriculum_app/README.md](file:///C:/Users/thewh/Downloads/isd-2026-luksuitpiti/lab10_fastapi/curriculum_app/README.md)

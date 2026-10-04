@@ -1,9 +1,7 @@
 import json
 import re
-from collections import defaultdict, deque
 from pathlib import Path
 from typing import Any
-
 
 CODE_RE = re.compile(r"^(?:\d{8}|\d{5}x{3}|\d{4}x{4}|x{4,8})$", re.IGNORECASE)
 CREDITS_RE = re.compile(r"\d+\s*\(\s*\d+\s*-\s*\d+\s*-\s*\d+\s*\)")
@@ -12,20 +10,11 @@ TOTAL_RE = re.compile(r"^(?:รวม|เธฃเธงเธก|total)$", re.I
 
 def extract_curriculum_from_file(
     ocr_path: str | Path,
-    template_path: str | Path | None = None,
     program: str = "DSBA",
     plan: str = "no_coop",
 ) -> dict[str, Any]:
     payload = _load_ocr_payload(ocr_path)
-    parsed = extract_curriculum(payload, program=program, plan=plan)
-
-    # Disable GT/template merge while measuring OCR extraction quality.
-    # if template_path:
-    #     with Path(template_path).open("r", encoding="utf-8") as f:
-    #         template = json.load(f)
-    #     return merge_with_template(parsed, template)
-
-    return parsed
+    return extract_curriculum(payload, program=program, plan=plan)
 
 
 def extract_curriculum(payload: dict[str, Any], program: str = "DSBA", plan: str = "no_coop") -> dict[str, Any]:
@@ -42,31 +31,6 @@ def extract_curriculum(payload: dict[str, Any], program: str = "DSBA", plan: str
         "courses": courses,
     }
 
-
-def merge_with_template(parsed: dict[str, Any], template: dict[str, Any]) -> dict[str, Any]:
-    parsed_by_code: dict[str, deque[dict[str, Any]]] = defaultdict(deque)
-    for course in parsed.get("courses", []):
-        parsed_by_code[str(course.get("code"))].append(course)
-
-    output = {
-        "source": template.get("source"),
-        "description": template.get("description"),
-        "program": template.get("program", parsed.get("program")),
-        "plan": template.get("plan", parsed.get("plan")),
-        "courses": [],
-    }
-
-    for template_course in template.get("courses", []):
-        course = dict(template_course)
-        code = str(course.get("code"))
-        if parsed_by_code[code]:
-            parsed_course = parsed_by_code[code].popleft()
-            for key in ("name_th", "name_en", "credits", "year", "semester"):
-                if course.get(key) in (None, "") and parsed_course.get(key) not in (None, ""):
-                    course[key] = parsed_course[key]
-        output["courses"].append(course)
-
-    return output
 
 
 def _load_ocr_payload(path: str | Path) -> dict[str, Any]:

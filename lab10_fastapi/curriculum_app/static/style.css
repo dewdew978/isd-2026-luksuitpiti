@@ -1,0 +1,151 @@
+/* Custom Component Styles complementing Tailwind CSS */
+
+:root {
+  --font-family: "SF Pro TH", "SF Pro Display", "SF Pro Text", "Sukhumvit Set", -apple-system, BlinkMacSystemFont, "Noto Sans Thai", "Prompt", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.015em;
+}
+
+/* Helper / State Classes */
+.hidden {
+  display: none !important;
+}
+
+/* Quick Question Chips */
+button.chip,
+.chip {
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 12px;
+  color: #475569;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  font-family: inherit;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+}
+
+button.chip:hover,
+.chip:hover {
+  border-color: #143926;
+  color: #143926;
+  background-color: #f8fafc;
+}
+
+/* Active State (ตามหลักสูตร Lab 11: classList.toggle('active')) */
+button.chip.active,
+.chip.active {
+  background-color: #143926 !important;
+  color: #ffffff !important;
+  border-color: #143926 !important;
+  font-weight: 500;
+  box-shadow: 0 2px 4px 0 rgba(20, 57, 38, 0.15);
+}
+
+#prereq-result {
+  margin-top: 1rem;
+}
+
+/* Prerequisite Graph Styles */
+.prereq-course-header {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #0f172a;
+}
+
+.prereq-group {
+  margin-bottom: 14px;
+}
+
+.prereq-group-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.course-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+}
+
+.course-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: border-color 0.15s ease;
+}
+
+.course-item:hover {
+  border-color: #cbd5e1;
+}
+
+.course-item a {
+  color: #15803d;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: ui-monospace, monospace;
+}
+
+.course-item a:hover {
+  text-decoration: underline;
+}
+
+.course-name {
+  margin-left: 6px;
+  color: #1e293b;
+}
+
+.course-credits-badge {
+  color: #94a3b8;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 7px;
+  font-size: 11px;
+  border-radius: 4px;
+  background: #e2e8f0;
+  color: #475569;
+  font-weight: 500;
+}
+
+.tag.pre {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.tag.co {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.empty-state {
+  font-size: 13px;
+  color: #94a3b8;
+  font-style: italic;
+  padding: 4px 0;
+}
