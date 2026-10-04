@@ -89,7 +89,13 @@ SQL: SELECT n_courses FROM v_semester_credits WHERE year = 1 AND semester = 1 LI
 คำถาม: ปี 1 เทอม 1 เรียนวิชาอะไรบ้าง
 SQL: SELECT code, name_th FROM v_plan WHERE year = 1 AND semester = 1 LIMIT 10
 คำถาม: ต้องเรียนวิชาอะไรมาก่อนจึงจะลงเรียน 06026215 ได้
-SQL: SELECT requires FROM prerequisite WHERE code='06026215' AND kind='pre'
+SQL: SELECT p.requires, c.name_th FROM prerequisite p LEFT JOIN course c ON p.requires = c.code WHERE p.code = '06026215' AND p.kind = 'pre'
+คำถาม: วิชา 06016317 เป็นวิชาบังคับก่อนของวิชาใดบ้าง
+SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06016317'
+คำถาม: ถ้าไม่ผ่านวิชา 06016317 จะลงวิชาอะไรไม่ได้บ้าง
+SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06016317'
+คำถาม: ถ้าติด F วิชา 06016317 จะส่งผลกระทบต่อวิชาใดบ้าง
+SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06016317'
 คำถาม: เกียรตินิยมอันดับ 1 เหรียญทองต้องได้เกรดเท่าไร
 SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic LIKE '%เหรียญทอง%' LIMIT 1
 คำถาม: เกียรตินิยมอันดับ 1 ต้องได้เกรดเท่าไร
