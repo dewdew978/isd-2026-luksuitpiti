@@ -59,7 +59,11 @@ class QwenTextToSQL:
 - ถามว่าวิชามีกี่หน่วยกิต ให้ใช้ course จากรหัสวิชา code (ตาราง course ไม่มีคอลัมน์ program_id ห้ามใส่ program_id ใน WHERE ของตาราง course) หรือใช้ v_plan
 - หากคำถามไม่ได้ระบุชื่อหลักสูตร (เช่น IT, DSBA, BIT, AIT) ห้ามใส่เงื่อนไข program_id หรือ subquery หา program เด็ดขาด
 - หากใช้ alias ให้ตาราง (เช่น prerequisite p หรือ course c) ต้องอ้างอิงคอลัมน์ผ่าน alias นั้นเสมอ ห้ามผสมชื่อตารางเดิม เช่น p.requires ห้ามเขียน prerequisite.requires
-- ตาราง prerequisite มีคอลัมน์ code (วิชาที่ต้องเรียน), requires (วิชาบังคับก่อน), kind ('pre' หรือ 'co')
+- สำหรับตาราง prerequisite ให้ระวังทิศทางความสัมพันธ์อย่างเคร่งครัด:
+  1) หากถามว่า "วิชา X ต้องผ่าน/เรียนวิชาใดมาก่อน" หรือ "วิชาบังคับก่อนของ X คืออะไร":
+     ให้หา requires โดยใช้: SELECT p.requires, c.name_th FROM prerequisite p JOIN course c ON p.requires = c.code WHERE p.code = 'รหัสวิชา X'
+  2) หากถามว่า "ถ้าไม่ผ่าน/ติด F วิชา X จะลงวิชาอะไรไม่ได้บ้าง" หรือ "วิชา X เป็นวิชาบังคับก่อนของวิชาใดบ้าง" หรือ "วิชาต่อเนื่องของ X":
+     ให้หา code ของวิชาต่อเนื่อง โดยใช้: SELECT p.code, c.name_th FROM prerequisite p JOIN course c ON p.code = c.code WHERE p.requires = 'รหัสวิชา X' (ห้ามใส่ WHERE p.code = 'รหัสวิชา X' เด็ดขาด และห้าม JOIN p.requires = c.code เด็ดขาด)
 - ตาราง v_semester_credits เก็บหน่วยกิตของแต่ละปีและเทอมไว้แล้ว (คอลัมน์ credits คือหน่วยกิตของเทอมนั้น) หากถามว่าเทอมไหนเรียนหนักสุดหรือมีหน่วยกิตมากที่สุด ให้ SELECT year, semester, credits, n_courses FROM v_semester_credits ORDER BY credits DESC LIMIT 1 (ห้ามใช้ SUM(credits) หรือ GROUP BY semester เด็ดขาด)
 - ห้ามแก้ไขฐานข้อมูล
 
@@ -96,6 +100,8 @@ SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code =
 SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06016317'
 คำถาม: ถ้าติด F วิชา 06016317 จะส่งผลกระทบต่อวิชาใดบ้าง
 SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06016317'
+คำถาม: ถ้าไม่ผ่านวิชา 06026201 จะลงวิชาอะไรไม่ได้บ้าง
+SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06026201'
 คำถาม: เกียรตินิยมอันดับ 1 เหรียญทองต้องได้เกรดเท่าไร
 SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic LIKE '%เหรียญทอง%' LIMIT 1
 คำถาม: เกียรตินิยมอันดับ 1 ต้องได้เกรดเท่าไร
