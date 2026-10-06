@@ -17,7 +17,7 @@ PyYAML
 rich
 requests
 fastapi
-uvicorn
+uvicorn[standard]
 pymupdf
 pythainlp
 python-dotenv
