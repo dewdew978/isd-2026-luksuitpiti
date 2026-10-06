@@ -14,6 +14,7 @@ class AskResponse(BaseModel):
     sql: str
     rows: list[dict[str, Any]]
     answer: str
+    sources: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class CourseCreate(BaseModel):
@@ -25,6 +26,8 @@ class CourseCreate(BaseModel):
     lab_h: int | None = Field(default=None, ge=0, le=60)
     self_h: int | None = Field(default=None, ge=0, le=60)
     description_th: str | None = None
+    pdf_pages: str | None = None
+    printed_pages: str | None = None
 
 
 class CourseResponse(CourseCreate):

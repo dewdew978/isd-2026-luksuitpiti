@@ -26,6 +26,7 @@ function setAskState(state, payload = {}) {
   const loadingBox = document.getElementById("ask-loading-box");
   const successBox = document.getElementById("ask-success-box");
   const errorBox = document.getElementById("ask-error-box");
+  const citationBadge = document.getElementById("citation-badge");
 
   // ควบคุมการแสดงผลตามสถานะด้วย CSS class (.hidden) 
   idleBox.classList.toggle("hidden", state !== UI_STATE.IDLE);
@@ -46,7 +47,37 @@ function setAskState(state, payload = {}) {
     document.getElementById("answer-rows").textContent = payload.rows
       ? JSON.stringify(payload.rows, null, 2)
       : "-";
+
+    // แสดง Badge อ้างอิงเลขหน้าเดี่ยว ข้างๆ ปุ่ม Success
+    if (citationBadge) {
+      const sources = payload.sources || [];
+      let pageText = "";
+      let detailTooltip = "";
+
+      for (const s of sources) {
+        const raw = s.printed_pages || s.pdf_pages || "";
+        if (raw) {
+          // ดึงเฉพาะเลขหน้าแรกเพียงตัวเดียวตามที่ผู้ใช้ต้องการ
+          const first = String(raw).split(";")[0].trim();
+          const clean = first.replace(/^หน้า\s*/, "");
+          if (clean) {
+            pageText = clean.startsWith("หมวด") ? `อ้างอิง: ${clean}` : `อ้างอิงหน้า ${clean}`;
+            detailTooltip = `${s.title || s.code || ""} ${s.article_no ? `(${s.article_no})` : ""}`;
+            break;
+          }
+        }
+      }
+
+      if (pageText) {
+        citationBadge.textContent = pageText;
+        if (detailTooltip) citationBadge.title = detailTooltip.trim();
+        citationBadge.classList.remove("hidden");
+      } else {
+        citationBadge.classList.add("hidden");
+      }
+    }
   } else if (state === UI_STATE.ERROR) {
+    if (citationBadge) citationBadge.classList.add("hidden");
     document.getElementById("ask-error-msg").textContent =
       payload.errorMsg || "เกิดข้อผิดพลาดในการประมวลผล";
     document.getElementById("ask-error-action").textContent =
@@ -110,6 +141,7 @@ async function handleAskSubmit(event) {
       answer: data.answer,
       sql: data.sql,
       rows: data.rows,
+      sources: data.sources || [],
     });
   } catch (error) {
     // เข้าสู่สถานะ Error พร้อมบอกสิ่งที่เกิดขึ้นและคำแนะนำในการแก้ไข

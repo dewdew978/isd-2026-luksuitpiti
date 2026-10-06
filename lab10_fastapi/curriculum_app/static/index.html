@@ -96,7 +96,10 @@
         <div id="ask-success-box" class="p-4 bg-slate-50 border border-slate-200 rounded-xl text-sm leading-relaxed space-y-3 hidden">
           <div class="flex justify-between items-center text-[11px] font-semibold uppercase tracking-wider text-slate-500">
             <span>คำตอบจากระบบ</span>
-            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Success</span>
+            <div class="flex items-center gap-1.5">
+              <span id="citation-badge" class="px-2 py-0.5 rounded text-[10px] font-medium bg-amber-100 text-amber-900 border border-amber-300 hidden" title="แหล่งอ้างอิงจากเล่มหลักสูตร">อ้างอิงหน้า -</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Success</span>
+            </div>
           </div>
           <div class="text-slate-800 bg-white p-3.5 rounded-lg border border-slate-200 text-sm whitespace-pre-wrap leading-relaxed shadow-sm font-normal" id="answer-text">-</div>
 
@@ -150,6 +153,6 @@
     </div>
   </div>
 
-  <script src="/static/app.js?v=7" defer></script>
+  <script src="/static/app.js?v=9" defer></script>
 </body>
 </html>

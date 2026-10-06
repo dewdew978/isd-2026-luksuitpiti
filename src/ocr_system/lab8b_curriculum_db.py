@@ -153,6 +153,8 @@ def build_models():
         lab_h: int | None = Field(default=None, ge=0, le=60)
         self_h: int | None = Field(default=None, ge=0, le=60)
         description_th: str | None = None
+        pdf_pages: str | None = None
+        printed_pages: str | None = None
 
         @field_validator("code")
         @classmethod
@@ -246,7 +248,9 @@ CREATE TABLE IF NOT EXISTS course (
     lecture_h      INTEGER,
     lab_h          INTEGER,
     self_h         INTEGER,
-    description_th TEXT
+    description_th TEXT,
+    pdf_pages      TEXT,
+    printed_pages  TEXT
 );
 
 CREATE TABLE IF NOT EXISTS plan_item (
@@ -275,7 +279,7 @@ CREATE INDEX IF NOT EXISTS ix_plan_code ON plan_item(code);
 -- นี่คือเหตุผลที่ VIEW มีอยู่ในโลก: ซ่อนความซับซ้อนของการ normalize
 CREATE VIEW IF NOT EXISTS v_plan AS
 SELECT p.id, p.program_id, p.year, p.semester, p.code, c.name_th, c.name_en,
-       p.credits, p.alt_group, p.note
+       p.credits, p.alt_group, p.note, c.pdf_pages, c.printed_pages
 FROM plan_item p
 LEFT JOIN course c ON c.code = p.code
 ORDER BY CASE WHEN p.program_id LIKE 'DSBA%' THEN 0 ELSE 1 END, p.id;
@@ -607,6 +611,8 @@ def convert_lab7b(data: dict, *, program_id: str | None = None,
                 "lab_h": lab or 0,
                 "self_h": self_h or 6,
                 "description_th": desc_th_val,
+                "pdf_pages": src.get("pdf_pages"),
+                "printed_pages": src.get("printed_pages"),
             }
             old = course_by_code.get(code)
             if old is None:

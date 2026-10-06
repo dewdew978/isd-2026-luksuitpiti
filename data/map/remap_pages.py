@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 remap_pages.py — สคริปต์สแกนและแมปตำแหน่งเลขหน้าของรายวิชาอัตโนมัติ
-จากไฟล์ Full OCR (outputs/fulldoc_*_ocr.json) และ Course Lists (outputs/OCR filtered/ & data/ground_truth/)
+จากไฟล์ Full OCR (outputs/fulldoc_*_ocr.json) และ Course Lists จาก OCR (outputs/OCR filtered/)
+ปราศจากการใช้ Ground Truth (Zero Data Leakage) 100%
 
 ผลลัพธ์:
   บันทึกเป็นไฟล์ data/map/Map_page_all.csv
@@ -28,10 +29,9 @@ PROJECT_ROOT = SCRIPT_DIR.parent.parent
 
 OUTPUTS_DIR = PROJECT_ROOT / "outputs"
 FILTERED_DIR = OUTPUTS_DIR / "OCR filtered"
-GT_DIR = PROJECT_ROOT / "data" / "ground_truth"
 OUT_CSV = SCRIPT_DIR / "Map_page_all.csv"
 
-# การตั้งค่าสำหรับแต่ละหลักสูตร
+# การตั้งค่าสำหรับแต่ละหลักสูตร (อ้างอิงจาก OCR Filtered และ Full OCR เท่านั้น ปราศจาก Ground Truth)
 PROGRAMS = [
     {
         "program": "DSBA",
@@ -39,10 +39,6 @@ PROGRAMS = [
         "filtered_files": [
             FILTERED_DIR / "DSBA_coop_filtered.json",
             FILTERED_DIR / "DSBA_no_coop_filtered.json",
-        ],
-        "gt_files": [
-            GT_DIR / "DSBA" / "DSBA_academic_plan_coop.json",
-            GT_DIR / "DSBA" / "DSBA_academic_plan_no_coop.json",
         ],
         "pdf_offset": 5, # หน้าคำนำ/สารบัญโรมัน 5 หน้า
     },
@@ -53,10 +49,6 @@ PROGRAMS = [
             FILTERED_DIR / "IT_coop_filtered.json",
             FILTERED_DIR / "IT_no_coop_filtered.json",
         ],
-        "gt_files": [
-            GT_DIR / "IT" / "IT_academic_plan_coop.json",
-            GT_DIR / "IT" / "IT_academic_plan_no_coop.json",
-        ],
         "pdf_offset": 5,
     },
     {
@@ -66,10 +58,6 @@ PROGRAMS = [
             FILTERED_DIR / "BIT_coop_filtered.json",
             FILTERED_DIR / "BIT_no_coop_filtered.json",
         ],
-        "gt_files": [
-            GT_DIR / "BIT" / "BIT_academic_plan_coop.json",
-            GT_DIR / "BIT" / "BIT_academic_plan_no_coop.json",
-        ],
         "pdf_offset": 5,
     },
     {
@@ -78,9 +66,6 @@ PROGRAMS = [
         "filtered_files": [
             FILTERED_DIR / "AIT_filtered.json",
         ],
-        "gt_files": [
-            GT_DIR / "AIT" / "AIT_academic_plan.json",
-        ],
         "pdf_offset": 5,
     },
 ]
@@ -88,7 +73,8 @@ PROGRAMS = [
 
 def run_remapping():
     print("=" * 70)
-    print("  เริ่มกระบวนการสแกนและแมปเลขหน้าของรายวิชา (Automated Page Remapping)")
+    print("  เริ่มกระบวนการสแกนและแมปเลขหน้าของรายวิชา (Pure OCR Page Remapping)")
+    print("  แหล่งข้อมูล: outputs/OCR filtered/ และ outputs/fulldoc_*_ocr.json (ไม่ใช้ Ground Truth)")
     print("=" * 70)
 
     results = []
@@ -100,27 +86,7 @@ def run_remapping():
 
         courses_map = {}
 
-        # 1. โหลดรายวิชาจาก Ground Truth Files
-        for gt_path in prog["gt_files"]:
-            if gt_path.exists():
-                try:
-                    with open(gt_path, "r", encoding="utf-8") as f:
-                        d = json.load(f)
-                        for c in d.get("courses", []):
-                            code = str(c.get("code", "")).strip()
-                            if re.match(r"^\d{8}$", code) and code not in courses_map:
-                                courses_map[code] = {
-                                    "code": code,
-                                    "name_th": c.get("name_th", ""),
-                                    "name_en": c.get("name_en", ""),
-                                    "credits": c.get("credits", ""),
-                                    "year": c.get("year", ""),
-                                    "semester": c.get("semester", ""),
-                                }
-                except Exception as e:
-                    print(f"    ข้อผิดพลาดในการอ่าน GT {gt_path.name}: {e}")
-
-        # 2. โหลดรายวิชาจาก Filtered OCR Files
+        # โหลดรายวิชาจาก Filtered OCR Files (Pure OCR Output)
         for fl_path in prog["filtered_files"]:
             if fl_path.exists():
                 try:
@@ -140,7 +106,7 @@ def run_remapping():
                 except Exception as e:
                     print(f"    ข้อผิดพลาดในการอ่าน Filtered {fl_path.name}: {e}")
 
-        print(f"    พบรายวิชาที่ต้องแมป: {len(courses_map)} วิชา")
+        print(f"    พบรายวิชาจาก OCR ที่ต้องแมป: {len(courses_map)} วิชา")
 
         # 3. โหลดข้อความจากไฟล์ OCR เต็ม
         ocr_file = prog["ocr_file"]

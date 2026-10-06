@@ -14,7 +14,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": null,
+      "printed_pages": null
     },
     {
       "code": "9064xxxx",
@@ -28,7 +30,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": null,
+      "printed_pages": null
     },
     {
       "code": "06026216",
@@ -42,7 +46,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;72;328;357",
+      "printed_pages": "17;67;323;352"
     },
     {
       "code": "06026217",
@@ -56,7 +62,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;72;329;357",
+      "printed_pages": "17;67;324;352"
     },
     {
       "code": "06026218",
@@ -70,7 +78,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;72;329;357",
+      "printed_pages": "17;67;324;352"
     },
     {
       "code": "06026219",
@@ -84,7 +94,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;72;329;357",
+      "printed_pages": "17;67;324;352"
     },
     {
       "code": "06026220",
@@ -98,7 +110,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;72;330;357",
+      "printed_pages": "17;67;325;352"
     },
     {
       "code": "06026221",
@@ -112,7 +126,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;72;330;357",
+      "printed_pages": "17;67;325;352"
     },
     {
       "code": "06026222",
@@ -126,7 +142,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;72;331;357",
+      "printed_pages": "17;67;326;352"
     },
     {
       "code": "06026223",
@@ -140,7 +158,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;72;331;357",
+      "printed_pages": "17;67;326;352"
     },
     {
       "code": "06026224",
@@ -154,7 +174,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;72;331;357",
+      "printed_pages": "17;67;326;352"
     },
     {
       "code": "06026225",
@@ -168,7 +190,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;73;332;357",
+      "printed_pages": "17;68;327;352"
     },
     {
       "code": "06026226",
@@ -182,7 +206,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;73;332;357",
+      "printed_pages": "17;68;327;352"
     },
     {
       "code": "06026227",
@@ -196,7 +222,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;73;333;357",
+      "printed_pages": "17;68;328;352"
     },
     {
       "code": "06026228",
@@ -210,7 +238,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;73;333;358",
+      "printed_pages": "18;68;328;353"
     },
     {
       "code": "06026229",
@@ -224,7 +254,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;73;333;358",
+      "printed_pages": "18;68;328;353"
     },
     {
       "code": "06026230",
@@ -238,7 +270,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;73;333;358",
+      "printed_pages": "18;68;328;353"
     },
     {
       "code": "06026231",
@@ -252,7 +286,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;73;334;358",
+      "printed_pages": "18;68;329;353"
     },
     {
       "code": "06026232",
@@ -266,7 +302,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;73;334;358",
+      "printed_pages": "18;68;329;353"
     },
     {
       "code": "06026233",
@@ -280,7 +318,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;73;334;358",
+      "printed_pages": "18;68;329;353"
     },
     {
       "code": "06026234",
@@ -294,7 +334,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;73;335;358",
+      "printed_pages": "18;68;330;353"
     },
     {
       "code": "06026235",
@@ -308,7 +350,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;73;335;358",
+      "printed_pages": "18;68;330;353"
     },
     {
       "code": "06026236",
@@ -322,7 +366,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;73;335;358",
+      "printed_pages": "18;68;330;353"
     },
     {
       "code": "06026237",
@@ -336,7 +382,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;74;336;358",
+      "printed_pages": "18;69;331;353"
     },
     {
       "code": "06026238",
@@ -350,7 +398,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;74;336",
+      "printed_pages": "18;69;331"
     },
     {
       "code": "06026239",
@@ -364,7 +414,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;74;336;358",
+      "printed_pages": "18;69;331;353"
     },
     {
       "code": "06026240",
@@ -378,7 +430,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;74;337;358",
+      "printed_pages": "18;69;332;353"
     },
     {
       "code": "06026241",
@@ -392,7 +446,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;74;337;358",
+      "printed_pages": "18;69;332;353"
     },
     {
       "code": "06026242",
@@ -406,7 +462,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "23;74;337;358",
+      "printed_pages": "18;69;332;353"
     },
     {
       "code": "06026243",
@@ -420,7 +478,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;74;338;358",
+      "printed_pages": "19;69;333;353"
     },
     {
       "code": "06026244",
@@ -434,7 +494,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;74;338",
+      "printed_pages": "19;69;333"
     },
     {
       "code": "06026245",
@@ -448,7 +510,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;74;339;358",
+      "printed_pages": "19;69;334;353"
     },
     {
       "code": "06026246",
@@ -462,7 +526,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;74;339;358",
+      "printed_pages": "19;69;334;353"
     },
     {
       "code": "06026247",
@@ -476,7 +542,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;74;339;358",
+      "printed_pages": "19;69;334;353"
     },
     {
       "code": "06026248",
@@ -490,7 +558,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;74;340;358",
+      "printed_pages": "19;69;335;353"
     },
     {
       "code": "06026249",
@@ -504,7 +574,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;74;340;358",
+      "printed_pages": "19;69;335;353"
     },
     {
       "code": "06026250",
@@ -518,7 +590,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;75;340;358",
+      "printed_pages": "19;70;335;353"
     },
     {
       "code": "06026251",
@@ -532,7 +606,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;75;341;358",
+      "printed_pages": "19;70;336;353"
     },
     {
       "code": "06026252",
@@ -546,7 +622,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;75;341;359",
+      "printed_pages": "19;70;336;354"
     },
     {
       "code": "06026253",
@@ -560,7 +638,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;75;341;359",
+      "printed_pages": "19;70;336;354"
     },
     {
       "code": "06026254",
@@ -574,7 +654,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;75;342;359",
+      "printed_pages": "19;70;337;354"
     },
     {
       "code": "06026255",
@@ -588,7 +670,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;75;342;359",
+      "printed_pages": "19;70;337;354"
     },
     {
       "code": "06026256",
@@ -602,7 +686,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "24;75;343;359",
+      "printed_pages": "19;70;338;354"
     },
     {
       "code": "06026257",
@@ -616,7 +702,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "25;75;343;359",
+      "printed_pages": "20;70;338;354"
     },
     {
       "code": "06026258",
@@ -630,7 +718,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": "3/1, 3/2, 4/1",
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "25;75;344;359",
+      "printed_pages": "20;70;339;354"
     },
     {
       "code": "06026200",
@@ -644,7 +734,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "20;26;33;71;317;356",
+      "printed_pages": "15;21;28;66;312;351"
     },
     {
       "code": "06026202",
@@ -658,7 +750,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "20;26;33;71;318;356",
+      "printed_pages": "15;21;28;66;313;351"
     },
     {
       "code": "06066101",
@@ -672,7 +766,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "20;26;33;76;320;356",
+      "printed_pages": "15;21;28;71;315;351"
     },
     {
       "code": "06066303",
@@ -686,7 +782,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;26;33;76;322;356",
+      "printed_pages": "16;21;28;71;317;351"
     },
     {
       "code": "90641001",
@@ -700,7 +798,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "19;26;33;355",
+      "printed_pages": "14;21;28;350"
     },
     {
       "code": "90641003",
@@ -714,7 +814,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "19;26;33;355",
+      "printed_pages": "14;21;28;350"
     },
     {
       "code": "90644007",
@@ -728,7 +830,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "19;26;33;355",
+      "printed_pages": "14;21;28;350"
     },
     {
       "code": "06026201",
@@ -742,7 +846,9 @@
       "prerequisite": "06026200",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "20;27;34;71;317;356",
+      "printed_pages": "15;22;29;66;312;351"
     },
     {
       "code": "06026203",
@@ -756,7 +862,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "20;27;34;71;319;356",
+      "printed_pages": "15;22;29;66;314;351"
     },
     {
       "code": "06026205",
@@ -770,7 +878,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;27;34;71;323;357",
+      "printed_pages": "16;22;29;66;318;352"
     },
     {
       "code": "06066001",
@@ -784,7 +894,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "20;27;34;76;318;356",
+      "printed_pages": "15;22;29;71;313;351"
     },
     {
       "code": "90641002",
@@ -798,7 +910,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "19;27;34;355",
+      "printed_pages": "14;22;29;350"
     },
     {
       "code": "90642033",
@@ -812,7 +926,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "19;27;34;356",
+      "printed_pages": "14;22;29;351"
     },
     {
       "code": "90644008",
@@ -826,7 +942,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "19;27;34;355",
+      "printed_pages": "14;22;29;350"
     },
     {
       "code": "06026206",
@@ -840,7 +958,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;28;35;71;324;357",
+      "printed_pages": "16;23;30;66;319;352"
     },
     {
       "code": "06066000",
@@ -854,7 +974,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "20;28;35;76;318;356",
+      "printed_pages": "15;23;30;71;313;351"
     },
     {
       "code": "06066300",
@@ -868,7 +990,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;28;35;76;321;356",
+      "printed_pages": "16;23;30;71;316;351"
     },
     {
       "code": "06066302",
@@ -882,7 +1006,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;28;35;76;322;356",
+      "printed_pages": "16;23;30;71;317;351"
     },
     {
       "code": "06066304",
@@ -896,7 +1022,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;28;35;76;323;356",
+      "printed_pages": "16;23;30;71;318;351"
     },
     {
       "code": "90644xxx",
@@ -910,7 +1038,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": null,
+      "printed_pages": null
     },
     {
       "code": "06026204",
@@ -924,7 +1054,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "20;29;36;71;319;356",
+      "printed_pages": "15;24;31;66;314;351"
     },
     {
       "code": "06026207",
@@ -938,7 +1070,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;29;36;71;324;357",
+      "printed_pages": "16;24;31;66;319;352"
     },
     {
       "code": "06026208",
@@ -952,7 +1086,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;29;36;71;325;357",
+      "printed_pages": "16;24;31;66;320;352"
     },
     {
       "code": "06026209",
@@ -966,7 +1102,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;29;36;71;325;357",
+      "printed_pages": "16;24;31;66;320;352"
     },
     {
       "code": "06026210",
@@ -980,7 +1118,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;29;36;71;325;357",
+      "printed_pages": "16;24;31;66;320;352"
     },
     {
       "code": "06066102",
@@ -994,7 +1134,9 @@
       "prerequisite": "06066101",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;29;36;76;321;356",
+      "printed_pages": "16;24;31;71;316;351"
     },
     {
       "code": "06066301",
@@ -1008,7 +1150,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;29;36;76;322;356",
+      "printed_pages": "16;24;31;71;317;351"
     },
     {
       "code": "06026211",
@@ -1022,7 +1166,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;30;37;71;326;357",
+      "printed_pages": "16;25;32;66;321;352"
     },
     {
       "code": "06026212",
@@ -1036,7 +1182,9 @@
       "prerequisite": "06066300",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;30;37;72;326;357",
+      "printed_pages": "16;25;32;67;321;352"
     },
     {
       "code": "06026xxx",
@@ -1050,7 +1198,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": null,
+      "printed_pages": null
     },
     {
       "code": "06026xxx",
@@ -1064,7 +1214,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": null,
+      "printed_pages": null
     },
     {
       "code": "9064xxxx",
@@ -1078,7 +1230,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": null,
+      "printed_pages": null
     },
     {
       "code": "90644042",
@@ -1092,7 +1246,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "19;30;37;356",
+      "printed_pages": "14;25;32;351"
     },
     {
       "code": "06026213",
@@ -1106,7 +1262,9 @@
       "prerequisite": "06066300",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "21;31;38;72;327;357",
+      "printed_pages": "16;26;33;67;322;352"
     },
     {
       "code": "06026214",
@@ -1120,7 +1278,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;31;38;72;327;357",
+      "printed_pages": "17;26;33;67;322;352"
     },
     {
       "code": "06026xxx",
@@ -1134,7 +1294,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": null,
+      "printed_pages": null
     },
     {
       "code": "06026xxx",
@@ -1148,7 +1310,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": null,
+      "printed_pages": null
     },
     {
       "code": "06066100",
@@ -1162,7 +1326,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "20;31;38;76;356",
+      "printed_pages": "15;26;33;71;351"
     },
     {
       "code": "90643021",
@@ -1176,7 +1342,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "19;31;38;356",
+      "printed_pages": "14;26;33;351"
     },
     {
       "code": "06026215",
@@ -1190,7 +1358,9 @@
       "prerequisite": "06026214",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": "22;32;39;72;328;357",
+      "printed_pages": "17;27;34;67;323;352"
     },
     {
       "code": "9064xxxx",
@@ -1204,7 +1374,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": null,
+      "printed_pages": null
     },
     {
       "code": "xxxxxxxx",
@@ -1218,7 +1390,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": null,
+      "printed_pages": null
     },
     {
       "code": "xxxxxxxx",
@@ -1232,7 +1406,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": null
+      "alt_group": null,
+      "pdf_pages": null,
+      "printed_pages": null
     },
     {
       "code": "06026259",
@@ -1246,7 +1422,9 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": "alt_coop_4_2"
+      "alt_group": "alt_coop_4_2",
+      "pdf_pages": "25;39;75;344;359",
+      "printed_pages": "20;34;70;339;354"
     },
     {
       "code": "06026260",
@@ -1260,12 +1438,14 @@
       "prerequisite": "ไม่มี",
       "flexible_year_semester": null,
       "note": null,
-      "alt_group": "alt_coop_4_2"
+      "alt_group": "alt_coop_4_2",
+      "pdf_pages": "25;39;75;344;359",
+      "printed_pages": "20;34;70;339;354"
     }
   ],
   "_meta": {
     "pipeline": "text",
-    "elapsed_sec": 1.5,
+    "elapsed_sec": 2.5,
     "models": {
       "ocr": "scb10x/typhoon-ocr1.5-3b",
       "text": "qwen3:4b"

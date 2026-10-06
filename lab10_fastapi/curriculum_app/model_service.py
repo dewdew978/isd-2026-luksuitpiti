@@ -107,23 +107,23 @@ SQL: SELECT p.requires, c.name_th FROM prerequisite p LEFT JOIN course c ON p.re
 คำถาม: ถ้าไม่ผ่านวิชา 06026201 จะลงวิชาอะไรไม่ได้บ้าง
 SQL: SELECT p.code, c.name_th FROM prerequisite p LEFT JOIN course c ON p.code = c.code WHERE p.requires = '06026201'
 คำถาม: เกียรตินิยมอันดับ 1 เหรียญทองต้องได้เกรดเท่าไร
-SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic = 'เกียรตินิยมอันดับ 1 เหรียญทอง' LIMIT 1
+SQL: SELECT min_gpa, topic, article_no, source_page FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic = 'เกียรตินิยมอันดับ 1 เหรียญทอง' LIMIT 1
 คำถาม: เกียรตินิยมอันดับ 1 ต้องได้เกรดเท่าไร
-SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic = 'เกียรตินิยมอันดับ 1' LIMIT 1
+SQL: SELECT min_gpa, topic, article_no, source_page FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic = 'เกียรตินิยมอันดับ 1' LIMIT 1
 คำถาม: เกียรตินิยมอันดับ 2 ต้องได้เกรดเท่าไร
-SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic = 'เกียรตินิยมอันดับ 2' LIMIT 1
+SQL: SELECT min_gpa, topic, article_no, source_page FROM regulation WHERE category = 'เกณฑ์เกียรตินิยม' AND topic = 'เกียรตินิยมอันดับ 2' LIMIT 1
 คำถาม: ทุจริตในการสอบจะถูกลงโทษอย่างไร
-SQL: SELECT condition_desc, penalty_action, article_no FROM regulation WHERE category = 'เกณฑ์การทุจริตในการสอบ' LIMIT 1
+SQL: SELECT condition_desc, penalty_action, article_no, source_page FROM regulation WHERE category = 'เกณฑ์การทุจริตในการสอบ' LIMIT 1
 คำถาม: การทุจริตในการสอบอ้างอิงข้อบังคับข้อใด
-SQL: SELECT article_no FROM regulation WHERE category = 'เกณฑ์การทุจริตในการสอบ' LIMIT 1
+SQL: SELECT article_no, source_page FROM regulation WHERE category = 'เกณฑ์การทุจริตในการสอบ' LIMIT 1
 คำถาม: นักศึกษาที่ได้ GPA ต่ำกว่าเท่าไรถึงจะถูกภาคทัณฑ์
-SQL: SELECT condition_desc, max_gpa FROM regulation WHERE category = 'เกณฑ์ภาคทัณฑ์' AND topic LIKE '%ติดภาคทัณฑ์%' LIMIT 1
+SQL: SELECT condition_desc, max_gpa, article_no, source_page FROM regulation WHERE category = 'เกณฑ์ภาคทัณฑ์' AND topic LIKE '%ติดภาคทัณฑ์%' LIMIT 1
 คำถาม: ลงทะเบียนเรียนภาคปกติได้ต่ำสุดกี่หน่วยกิต
-SQL: SELECT min_credits FROM regulation WHERE category = 'เกณฑ์การลงทะเบียน' LIMIT 1
+SQL: SELECT min_credits, article_no, source_page FROM regulation WHERE category = 'เกณฑ์การลงทะเบียน' LIMIT 1
 คำถาม: ลงทะเบียนเรียนภาคปกติได้สูงสุดกี่หน่วยกิต
-SQL: SELECT max_credits FROM regulation WHERE category = 'เกณฑ์การลงทะเบียน' LIMIT 1
+SQL: SELECT max_credits, article_no, source_page FROM regulation WHERE category = 'เกณฑ์การลงทะเบียน' LIMIT 1
 คำถาม: เกณฑ์การสำเร็จการศึกษาต้องได้ GPA เท่าไร
-SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์การสำเร็จการศึกษา' AND min_gpa IS NOT NULL LIMIT 1
+SQL: SELECT min_gpa, article_no, source_page FROM regulation WHERE category = 'เกณฑ์การสำเร็จการศึกษา' AND min_gpa IS NOT NULL LIMIT 1
 
 คำถาม: {question}
 ตอบ JSON ที่มี key ชื่อ sql"""
@@ -138,7 +138,81 @@ SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์การ�
         
         return str(self._chat(prompt, ANSWER_SCHEMA).get("answer", "")).strip()
 
+    def extract_sources(self, database: CurriculumDatabase, question: str, sql: str, rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        sources: list[dict[str, Any]] = []
+        seen = set()
+
+        # 1. ตรวจสอบข้อมูลข้อบังคับ (regulations) จาก rows
+        for r in rows:
+            if any(k in r for k in ("article_no", "condition_desc", "penalty_action", "source_page")):
+                title = str(r.get("topic") or r.get("category") or "ข้อบังคับสถาบันฯ").strip()
+                art = r.get("article_no")
+                spage = r.get("source_page")
+                key = f"reg:{title}:{art}"
+                if key not in seen:
+                    seen.add(key)
+                    sources.append({
+                        "type": "regulation",
+                        "title": title,
+                        "article_no": art,
+                        "printed_pages": str(spage) if spage else None,
+                        "pdf_pages": None,
+                    })
+
+        # 2. ตรวจสอบข้อมูลรายวิชา (course) จาก rows หรือ question
+        codes_found: list[str] = []
+        for r in rows:
+            for k in ("code", "requires"):
+                val = str(r.get(k) or "").strip()
+                if re.match(r"^\d{8}$", val) and val not in codes_found:
+                    codes_found.append(val)
+            for v in r.values():
+                for c in re.findall(r"\b\d{8}\b", str(v)):
+                    if c not in codes_found:
+                        codes_found.append(c)
+
+        for c in re.findall(r"\b\d{8}\b", question):
+            if c not in codes_found:
+                codes_found.append(c)
+
+        if codes_found:
+            try:
+                conn = self.lab8b.open_db(database.path, readonly=True)
+                cols = [col[1] for col in conn.execute("PRAGMA table_info(course)").fetchall()]
+                for code in codes_found[:6]:
+                    row = conn.execute("SELECT * FROM course WHERE code = ?", (code,)).fetchone()
+                    if row:
+                        name_th = row["name_th"]
+                        printed = row["printed_pages"] if "printed_pages" in cols else None
+                        pdf_p = row["pdf_pages"] if "pdf_pages" in cols else None
+                        key = f"course:{code}"
+                        if key not in seen:
+                            seen.add(key)
+                            sources.append({
+                                "type": "course",
+                                "code": code,
+                                "title": f"{code} {name_th}" if name_th else code,
+                                "printed_pages": printed,
+                                "pdf_pages": pdf_p,
+                            })
+                conn.close()
+            except Exception:
+                pass
+
+        # 3. คำถามเกี่ยวกับโครงสร้างหลักสูตร (program) หรือแผนการเรียน (plan)
+        if not sources and any(t in sql.lower() for t in ("from program", "total_credits", "degree", "v_semester_credits", "v_plan", "plan_item")):
+            sources.append({
+                "type": "program",
+                "title": "เล่มหลักสูตร",
+                "printed_pages": "หมวดที่ 3",
+                "pdf_pages": None,
+            })
+
+        return sources
+
     def ask(self, database: CurriculumDatabase, question: str) -> dict:
-        sql, rows = database.query_from_model(self.make_sql(question))
+        sql = self.make_sql(question)
+        sql, rows = database.query_from_model(sql)
         answer = self.summarize(question, rows) if rows else "ไม่พบข้อมูลนี้ในฐานข้อมูลหลักสูตร"
-        return {"question": question, "sql": sql, "rows": rows, "answer": answer}
+        sources = self.extract_sources(database, question, sql, rows)
+        return {"question": question, "sql": sql, "rows": rows, "answer": answer, "sources": sources}

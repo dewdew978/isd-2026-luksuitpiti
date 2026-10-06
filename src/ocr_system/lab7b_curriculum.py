@@ -264,50 +264,55 @@ def extract_pdf_text(path: str, page_spec: str | None = None) -> str:
     return "\n".join(out)
 
 
-def extract_pdf_course_descriptions(pdf_path: str) -> tuple[dict[str, str], dict[str, str]]:
+def extract_pdf_course_descriptions(pdf_path: str) -> tuple[dict[str, str], dict[str, str], dict[str, list[int]]]:
     """
-    สกัดวิชาบังคับก่อน (Prerequisite) และชื่อภาษาอังกฤษ (name_en)
-    จากหมวดคำอธิบายรายวิชาของเล่มหลักสูตร PDF โดยตรง (สะอาด 100% ไม่ใช้ Ground Truth)
+    สกัดวิชาบังคับก่อน (Prerequisite), ชื่อภาษาอังกฤษ (name_en) และเลขหน้าที่พบในเล่ม (course_pages)
+    จากหมวดคำอธิบายรายวิชาและเนื้อหาของเล่มหลักสูตร PDF โดยตรง (สะอาด 100% ไม่ใช้ Ground Truth)
     """
     p = Path(pdf_path)
     if not p.exists():
-        return {}, {}
+        return {}, {}, {}
     if p.is_dir() or p.suffix.lower() != ".pdf":
         candidates = list(p.glob("*.pdf")) + list(p.parent.glob("*.pdf")) + list(p.parent.glob("data/*.pdf"))
         if candidates:
             p = candidates[0]
         else:
-            return {}, {}
+            return {}, {}, {}
 
     fitz = _need("fitz")
     prereqs: dict[str, str] = {}
     en_names: dict[str, str] = {}
+    course_pages: dict[str, list[int]] = {}
     try:
         doc = fitz.open(str(p))
-        full_text = ""
         for page_idx in range(len(doc)):
-            full_text += f"\n=== Page {page_idx + 1} ===\n" + clean_thai(doc[page_idx].get_text())
+            page_num = page_idx + 1
+            page_text = clean_thai(doc[page_idx].get_text())
+            lines = [l.strip() for l in page_text.splitlines() if l.strip()]
+            for i, line in enumerate(lines):
+                m_code = re.match(r"^(\d{8})\b", line)
+                if m_code:
+                    code = m_code.group(1)
+                    if code not in course_pages:
+                        course_pages[code] = []
+                    if page_num not in course_pages[code]:
+                        course_pages[code].append(page_num)
 
-        lines = [l.strip() for l in full_text.splitlines() if l.strip()]
-        for i, line in enumerate(lines):
-            m_code = re.match(r"^(\d{8})\b", line)
-            if m_code:
-                code = m_code.group(1)
-                for j in range(i, min(len(lines), i + 12)):
-                    if j > i and re.match(r"^\d{8}\b", lines[j]):
-                        break
-                    if code not in en_names and re.match(r"^[A-Z][A-Z\s\d\-&,\.\(\)\/\']+$", lines[j]) and len(lines[j]) >= 3:
-                        if not lines[j].startswith(("PREREQUISITE", "NONE", "COURSE", "PAGE", "TOTAL")):
-                            en_names[code] = lines[j]
-                    if "วิชาบังคับก่อน" in lines[j] or "PREREQUISITE" in lines[j]:
-                        pre_text = " ".join(lines[j:min(len(lines), j + 3)])
-                        codes_found = [c for c in re.findall(r"\b\d{8}\b", pre_text) if c != code]
-                        if codes_found and code not in prereqs:
-                            prereqs[code] = ", ".join(sorted(list(set(codes_found))))
-                        break
+                    for j in range(i, min(len(lines), i + 12)):
+                        if j > i and re.match(r"^\d{8}\b", lines[j]):
+                            break
+                        if code not in en_names and re.match(r"^[A-Z][A-Z\s\d\-&,\.\(\)\/\']+$", lines[j]) and len(lines[j]) >= 3:
+                            if not lines[j].startswith(("PREREQUISITE", "NONE", "COURSE", "PAGE", "TOTAL")):
+                                en_names[code] = lines[j]
+                        if "วิชาบังคับก่อน" in lines[j] or "PREREQUISITE" in lines[j]:
+                            pre_text = " ".join(lines[j:min(len(lines), j + 3)])
+                            codes_found = [c for c in re.findall(r"\b\d{8}\b", pre_text) if c != code]
+                            if codes_found and code not in prereqs:
+                                prereqs[code] = ", ".join(sorted(list(set(codes_found))))
+                            break
     except Exception as e:
         print(f"    ⚠ ไม่สามารถสกัดคำอธิบายรายวิชาจาก PDF: {e}")
-    return prereqs, en_names
+    return prereqs, en_names, course_pages
 
 
 
@@ -648,6 +653,8 @@ def clean_and_normalize_course(c: dict) -> dict:
         "flexible_year_semester": flex,
         "note": note,
         "alt_group": alt_group,
+        "pdf_pages": c.get("pdf_pages"),
+        "printed_pages": c.get("printed_pages"),
     }
 
 
@@ -1517,11 +1524,12 @@ def run_pipeline(name: str, pages: list[bytes], outdir: Path,
         "models": {"ocr": MODEL_OCR, "text": MODEL_TEXT},
         "dpi": DPI, "pages_per_chunk": PAGES_PER_CHUNK,
     }
-    # เสริมข้อมูลวิชาบังคับก่อน (prerequisite) และชื่ออังกฤษจากคำอธิบายรายวิชาใน PDF
+    # เสริมข้อมูลวิชาบังคับก่อน (prerequisite), ชื่ออังกฤษ และเลขหน้าอ้างอิงจากเล่ม PDF
     if pdf_path and data.get("courses"):
-        prereqs, en_names = extract_pdf_course_descriptions(pdf_path)
+        prereqs, en_names, course_pages = extract_pdf_course_descriptions(pdf_path)
         enriched_pre = 0
         enriched_en = 0
+        enriched_pages = 0
         for c in data.get("courses", []):
             code = c.get("code")
             if code in prereqs and (not c.get("prerequisite") or c.get("prerequisite") == "ไม่มี"):
@@ -1530,14 +1538,129 @@ def run_pipeline(name: str, pages: list[bytes], outdir: Path,
             if code in en_names and not c.get("name_en"):
                 c["name_en"] = en_names[code]
                 enriched_en += 1
-        if enriched_pre or enriched_en:
-            print(f"  ✓ เสริมข้อมูลจากคำอธิบายรายวิชาในเล่ม: prerequisite {enriched_pre} วิชา, name_en {enriched_en} วิชา")
+            if code in course_pages:
+                pdf_list = sorted(course_pages[code])
+                printed_list = [max(1, p - 5) for p in pdf_list]
+                c["pdf_pages"] = ";".join(map(str, pdf_list))
+                c["printed_pages"] = ";".join(map(str, printed_list))
+                enriched_pages += 1
+        if enriched_pre or enriched_en or enriched_pages:
+            print(f"  ✓ เสริมข้อมูลจากเล่ม PDF: prerequisite {enriched_pre} วิชา, name_en {enriched_en} วิชา, เลขหน้าอ้างอิง {enriched_pages} วิชา")
 
     path = outdir / f"pred_{name}.json"
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"  ✓ บันทึก {path}  ({len(data['courses'])} วิชา, "
           f"{data['_meta']['elapsed_sec']} วิ)")
     return data
+
+
+def enrich_all_curricula_pages() -> None:
+    """
+    สกัดเลขหน้า (printed_pages, pdf_pages) จากเล่ม PDF ใน data/input/
+    และอัปเดตเข้าสู่ไฟล์ pred_text.json ทุกหลักสูตร (DSBA, IT, BIT, AIT)
+    """
+    repo_root = Path(__file__).resolve().parent.parent.parent
+    pdf_mapping = {
+        "DSBA": repo_root / "data" / "input" / "fulldoc_dsba.pdf",
+        "IT": repo_root / "data" / "input" / "fulldoc_it.pdf",
+        "BIT": repo_root / "data" / "input" / "fulldoc_BIT.pdf",
+        "AIT": repo_root / "data" / "input" / "fulldoc_AIT.pdf",
+    }
+    target_dirs = [
+        repo_root / "lab7_final" / "output",
+        repo_root / "work" / "lab7b_run",
+    ]
+
+    print("\n" + "=" * 70)
+    print("  Lab 7B — สกัดเลขหน้าอ้างอิงจากเล่มหลักสูตร PDF เข้าสู่ pred_text.json")
+    print("=" * 70)
+
+    total_updated = 0
+    for prog, pdf_path in pdf_mapping.items():
+        if not pdf_path.exists():
+            print(f"  ⚠ ไม่พบไฟล์ PDF ของ {prog}: {pdf_path}")
+            continue
+
+        print(f"\n[+] กำลังสกัดเลขหน้าจาก {pdf_path.name} ({prog})...")
+        prereqs, en_names, course_pages = extract_pdf_course_descriptions(str(pdf_path))
+        print(f"    ✓ พบรายวิชาที่มีเลขหน้าในเล่ม: {len(course_pages)} วิชา")
+
+        for base_dir in target_dirs:
+            pred_file = base_dir / prog / "pred_text.json"
+            if not pred_file.exists():
+                continue
+
+            try:
+                data = json.loads(pred_file.read_text(encoding="utf-8"))
+            except Exception as e:
+                print(f"    ⚠ อ่านไฟล์ {pred_file} ไม่สำเร็จ: {e}")
+                continue
+
+            courses = data.get("courses", [])
+            enriched = 0
+            for c in courses:
+                code = c.get("code")
+                if code in course_pages:
+                    pdf_list = sorted(course_pages[code])
+                    printed_list = [max(1, p - 5) for p in pdf_list]
+                    c["pdf_pages"] = ";".join(map(str, pdf_list))
+                    c["printed_pages"] = ";".join(map(str, printed_list))
+                    enriched += 1
+                if code in en_names and not c.get("name_en"):
+                    c["name_en"] = en_names[code]
+                if code in prereqs and (not c.get("prerequisite") or c.get("prerequisite") == "ไม่มี"):
+                    c["prerequisite"] = prereqs[code]
+
+            pred_file.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"    ✓ อัปเดต {pred_file.relative_to(repo_root)}: เพิ่มเลขหน้า {enriched}/{len(courses)} วิชา")
+            total_updated += enriched
+
+    # อัปเดตเลขหน้าเข้าสู่ฐานข้อมูล SQLite (curriculum.db) โดยตรง
+    print("\n[+] กำลังบันทึกเลขหน้าเข้าฐานข้อมูล SQLite (curriculum.db)...")
+    db_paths = [
+        repo_root / "work" / "lab8b_run" / "curriculum.db",
+        repo_root / "work" / "lab8b_run" / "combined" / "curriculum.db",
+        repo_root / "work" / "lab8b_run" / "DSBA" / "curriculum.db",
+        repo_root / "work" / "lab8b_run" / "IT" / "curriculum.db",
+        repo_root / "work" / "lab8b_run" / "BIT" / "curriculum.db",
+        repo_root / "work" / "lab8b_run" / "AIT" / "curriculum.db",
+    ]
+    for db_path in db_paths:
+        if not db_path.exists():
+            continue
+        try:
+            import sqlite3
+            conn = sqlite3.connect(db_path)
+            cur = conn.cursor()
+            cols = [col[1] for col in cur.execute("PRAGMA table_info(course)").fetchall()]
+            if "printed_pages" not in cols:
+                cur.execute("ALTER TABLE course ADD COLUMN printed_pages TEXT")
+            if "pdf_pages" not in cols:
+                cur.execute("ALTER TABLE course ADD COLUMN pdf_pages TEXT")
+
+            # รวบรวมข้อมูลเลขหน้าจาก pred_text.json ที่เพิ่งอัปเดต
+            for prog in pdf_mapping.keys():
+                pred_file = repo_root / "lab7_final" / "output" / prog / "pred_text.json"
+                if pred_file.exists():
+                    p_data = json.loads(pred_file.read_text(encoding="utf-8"))
+                    for c in p_data.get("courses", []):
+                        if c.get("code") and c.get("printed_pages"):
+                            cur.execute(
+                                "UPDATE course SET printed_pages = ?, pdf_pages = ? WHERE code = ?",
+                                (c["printed_pages"], c.get("pdf_pages"), c["code"])
+                            )
+            conn.commit()
+            updated_count = cur.execute(
+                "SELECT COUNT(*) FROM course WHERE printed_pages IS NOT NULL AND printed_pages != ''"
+            ).fetchone()[0]
+            conn.close()
+            print(f"    ✓ อัปเดต {db_path.relative_to(repo_root)}: มีเลขหน้ารองรับแล้ว {updated_count} วิชา")
+        except Exception as e:
+            print(f"    ⚠ อัปเดตฐานข้อมูล {db_path} ไม่สำเร็จ: {e}")
+
+    print("\n" + "=" * 70)
+    print(f"  [OK] เสร็จสิ้นการสกัดเลขหน้า Lab 7B เรียบร้อย (รวม {total_updated} รายการ)")
+    print("=" * 70)
 
 
 def main() -> None:
@@ -1553,10 +1676,16 @@ def main() -> None:
                     help="รหัสหลักสูตร (ถ้าไม่ระบุจะเดาจากชื่อไฟล์ input หรือ gt)")
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--eval-only", metavar="PRED_JSON")
+    ap.add_argument("--enrich-pages", action="store_true",
+                    help="สกัดเลขหน้า (printed_pages, pdf_pages) จากเล่ม PDF เข้าสู่ pred_text.json ทุกหลักสูตร")
     args = ap.parse_args()
 
     if args.check:
         sys.exit(0 if check_environment() else 1)
+
+    if args.enrich_pages:
+        enrich_all_curricula_pages()
+        return
 
     outdir = Path(args.out)
     outdir.mkdir(parents=True, exist_ok=True)
@@ -1564,10 +1693,11 @@ def main() -> None:
     if args.eval_only:
         if not args.gt:
             raise SystemExit("❌ --eval-only ต้องระบุ --gt ด้วย")
-        pred = json.loads(Path(args.eval_only).read_text(encoding="utf-8"))
+        pred_path = Path(args.eval_only)
+        pred = json.loads(pred_path.read_text(encoding="utf-8"))
         gt = json.loads(Path(args.gt).read_text(encoding="utf-8"))
         stats, align = evaluate(pred, gt)
-        M.print_table(stats, f"ผลประเมิน: {Path(args.eval_only).name}")
+        M.print_table(stats, f"ผลประเมิน: {pred_path.name}")
         print(f"\n  จับคู่วิชา: เจอ {align['matched']}/{align['gt_total']} "
               f"| ตก {align['missed']} | แต่งเกิน {align['spurious']}")
         print(f"  P={align['precision']:.3f}  R={align['recall']:.3f}  "
@@ -1575,6 +1705,25 @@ def main() -> None:
         if align["missed_codes"]:
             print(f"  วิชาที่อ่านตก: {', '.join(map(str, align['missed_codes'][:10]))}")
         M.print_errors(stats)
+
+        # บันทึกผลเป็น comparison.csv และ evaluation.json
+        save_dir = outdir if args.out != "output" else pred_path.parent
+        save_dir.mkdir(parents=True, exist_ok=True)
+        csv_path = save_dir / "comparison.csv"
+        M.save_csv(stats, str(csv_path), extra={"pipeline": "text"})
+
+        eval_summary = {
+            "text": {
+                **M.stats_to_dict(stats),
+                "alignment": align,
+                "internal_check": verify_internal(pred),
+            }
+        }
+        json_path = save_dir / "evaluation.json"
+        json_path.write_text(json.dumps(eval_summary, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"\n✓ บันทึกผลการประเมินลงไฟล์เรียบร้อย:")
+        print(f"  • CSV : {csv_path}")
+        print(f"  • JSON: {json_path}")
         return
 
     if not args.input:
