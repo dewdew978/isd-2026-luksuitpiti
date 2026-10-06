@@ -559,4 +559,4 @@ lab10_fastapi/curriculum_app/static/
 | `/api/courses/{code}/prerequisites` | GET | `code`: รหัสวิชา 8 หลัก | `{"code", "name_th", "requires", "required_by"}` | `404` (ไม่พบรายวิชา) |
 | `/api/health` | GET | - | `{"status", "database_ready", "ollama_ready", "model"}` | `200` (Status: degraded if not ready) |
 
-> ดูรายละเอียดสัญญา API Contract และตัวอย่าง payload ฉบับสมบูรณ์ได้ที่ [lab10_fastapi/curriculum_app/README.md](file:///C:/Users/thewh/Downloads/isd-2026-luksuitpiti/lab10_fastapi/curriculum_app/README.md)
+> ดูรายละเอียดสัญญา API Contract และตัวอย่าง payload ฉบับสมบูรณ์ได้ที่ [lab10_fastapi/curriculum_app/README.md](lab10_fastapi/curriculum_app/README.md)
