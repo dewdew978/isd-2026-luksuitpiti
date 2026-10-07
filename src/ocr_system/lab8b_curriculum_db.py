@@ -795,13 +795,85 @@ def cmd_load(args) -> None:
         conn.execute("INSERT OR REPLACE INTO prerequisite VALUES (?,?,?)",
                      (r["code"], r["requires"], r.get("kind", "pre")))
 
+    # โหลดข้อบังคับเข้าตาราง regulation ถ้ามีการระบุ หรือพบไฟล์ regulations.json
+    reg_file = getattr(args, "regulations", None)
+    if not reg_file:
+        repo_root = Path(__file__).resolve().parent.parent.parent
+        for cand in [
+            repo_root / "work" / "lab7b_run" / "regulations.json",
+            repo_root / "work" / "lab8b_run" / "regulations.json",
+        ]:
+            if cand.exists():
+                reg_file = str(cand)
+                break
+
+    if reg_file and Path(reg_file).exists():
+        try:
+            regs = json.loads(Path(reg_file).read_text(encoding="utf-8"))
+            conn.execute("DELETE FROM regulation")
+            for r in regs:
+                conn.execute(
+                    """
+                    INSERT INTO regulation (
+                        program_id, category, topic, condition_desc, min_gpa, max_gpa,
+                        min_credits, max_credits, penalty_action, article_no, source_page
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        r.get("program_id", "ALL"), r.get("category"), r.get("topic"),
+                        r.get("condition_desc"), r.get("min_gpa"), r.get("max_gpa"),
+                        r.get("min_credits"), r.get("max_credits"), r.get("penalty_action"),
+                        r.get("article_no"), r.get("source_page")
+                    )
+                )
+            conn.commit()
+        except Exception as e:
+            print(f"  ⚠ ไม่สามารถโหลด regulations: {e}")
+
     conn.commit()
-    n = {t: conn.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0]
-         for t in ("program", "course", "plan_item", "prerequisite")}
+    tables = ["program", "course", "plan_item", "prerequisite"]
+    has_reg = conn.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='regulation'").fetchone()
+    if has_reg:
+        tables.append("regulation")
+    n = {t: conn.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0] for t in tables}
     conn.close()
     print(f"  โหลดเข้า {db} แล้ว")
     for t, c in n.items():
         print(f"    {t:<14} {c:>5} แถว")
+
+
+def cmd_load_regulations(args) -> None:
+    """โหลดไฟล์ regulations.json เข้าตาราง regulation ใน SQLite"""
+    src = Path(args.input)
+    db = Path(args.database)
+    if not src.exists():
+        raise SystemExit(f"❌ ไม่พบไฟล์: {src}")
+    if not db.exists():
+        raise SystemExit(f"❌ ไม่พบฐานข้อมูล: {db}")
+
+    regs = json.loads(src.read_text(encoding="utf-8"))
+    conn = open_db(db)
+    conn.executescript(DDL)
+    conn.execute("DELETE FROM regulation")
+    for r in regs:
+        conn.execute(
+            """
+            INSERT INTO regulation (
+                program_id, category, topic, condition_desc, min_gpa, max_gpa,
+                min_credits, max_credits, penalty_action, article_no, source_page
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                r.get("program_id", "ALL"), r.get("category"), r.get("topic"),
+                r.get("condition_desc"), r.get("min_gpa"), r.get("max_gpa"),
+                r.get("min_credits"), r.get("max_credits"), r.get("penalty_action"),
+                r.get("article_no"), r.get("source_page")
+            )
+        )
+    conn.commit()
+    count = conn.execute("SELECT COUNT(*) FROM regulation").fetchone()[0]
+    conn.close()
+    print(f"✓ โหลด regulation เข้า {db.name} สำเร็จ ({count} แถว)")
 
 
 # ═══════════════════════════════════════════════════════════════════════
@@ -1821,6 +1893,12 @@ def main() -> None:
     p.add_argument("-i", "--input", required=True)
     p.add_argument("-d", "--database", required=True)
     p.add_argument("--replace", action="store_true", help="ลบฐานข้อมูลเดิมก่อน")
+    p.add_argument("--regulations", default=None,
+                   help="ไฟล์ regulations.json เพื่อโหลดเข้าตาราง regulation (เช่น work/lab7b_run/regulations.json)")
+
+    p = sub.add_parser("load-regulations", help="โหลด regulations.json เข้าตาราง regulation ใน SQLite")
+    p.add_argument("-i", "--input", required=True, help="ไฟล์ regulations.json")
+    p.add_argument("-d", "--database", required=True, help="ไฟล์ SQLite .db")
 
     p = sub.add_parser("verify", help="ตรวจความสอดคล้อง 7 ข้อ")
     p.add_argument("-d", "--database", required=True)
@@ -1843,7 +1921,7 @@ def main() -> None:
         sys.exit(0 if cmd_selftest(args) else 1)
     {"demo": cmd_demo, "schema": cmd_schema, "extract": cmd_extract,
      "import-lab7b": cmd_import_lab7b,
-     "load": cmd_load, "verify": cmd_verify, "ask": cmd_ask,
+     "load": cmd_load, "load-regulations": cmd_load_regulations, "verify": cmd_verify, "ask": cmd_ask,
      "eval": cmd_eval}[args.cmd](args)
 
 

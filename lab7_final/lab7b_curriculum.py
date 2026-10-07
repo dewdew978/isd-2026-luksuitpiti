@@ -55,6 +55,7 @@ import time
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
+from pydantic import BaseModel, Field
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -1663,6 +1664,413 @@ def enrich_all_curricula_pages() -> None:
     print("=" * 70)
 
 
+# ==============================================================================
+#  ส่วนที่ 11 — สกัดข้อบังคับการศึกษา (ภาคผนวก ก) จากภาพสแกน PDF ด้วย Typhoon-OCR + Qwen
+# ==============================================================================
+
+
+class RegulationItem(BaseModel):
+    program_id: str = "ALL"
+    category: str
+    topic: str
+    condition_desc: str
+    min_gpa: float | None = None
+    max_gpa: float | None = None
+    min_credits: int | None = None
+    max_credits: int | None = None
+    penalty_action: str | None = None
+    article_no: str | None = None
+    source_page: int | None = None
+
+
+TYPHOON_REGULATION_PROMPT = """Extract all text from the image.
+
+Instructions:
+- Only return the clean Markdown.
+- Do not include any explanation or extra text.
+- You must include all information on the page.
+
+Formatting Rules:
+- Tables: Render tables using <table>...</table> in clean HTML format.
+- Equations: Render equations using LaTeX syntax with inline ($...$) and block ($$...$$).
+- Images/Charts/Diagrams: Wrap any clearly defined visual areas (e.g. charts, diagrams, pictures) in:
+  <!-- image -->
+  [image description]
+  <!-- /image -->
+- Page Numbers: Wrap page numbers in <page_number>...</page_number> (e.g., <page_number>14</page_number>).
+- Checkboxes: Use ☐ for unchecked and ☑ for checked boxes.
+"""
+
+REGULATION_CATEGORIES = [
+    {
+        "category": "เกณฑ์การลงทะเบียน",
+        "description": "เกณฑ์จำนวนหน่วยกิตขั้นต่ำและสูงสุดที่สามารถลงทะเบียนเรียนได้ในภาคปกติและภาคพิเศษตามข้อ 11",
+        "target_articles": ["ข้อ 11"],
+        "target_pages": [94],
+        "schema": [
+            {
+                "topic": "ภาคปกติ",
+                "condition_desc": "คำอธิบายเงื่อนไขการลงทะเบียนภาคการศึกษาปกติ",
+                "min_credits": 9,
+                "max_credits": 22,
+                "article_no": "ข้อ 11",
+                "source_page": 89
+            },
+            {
+                "topic": "กรณีพิเศษขอจบ",
+                "condition_desc": "คำอธิบายเงื่อนไขนักศึกษาปีสุดท้าย/ขอจบที่ต้องการลงมากกว่า 22 หน่วยกิต แต่ไม่เกิน 27 หน่วยกิต",
+                "min_credits": None,
+                "max_credits": 27,
+                "article_no": "ข้อ 11",
+                "source_page": 89
+            },
+            {
+                "topic": "ภาคพิเศษฤดูร้อน",
+                "condition_desc": "คำอธิบายเงื่อนไขการลงทะเบียนภาคการศึกษาพิเศษ (ไม่เกิน 9 หน่วยกิต)",
+                "min_credits": None,
+                "max_credits": 9,
+                "article_no": "ข้อ 11",
+                "source_page": 89
+            }
+        ]
+    },
+    {
+        "category": "การทุจริตในการสอบ",
+        "description": "บทลงโทษและผลทางวินัยเมื่อนักศึกษากระทำการทุจริตในการสอบตามข้อ 20 วรรคสอง และข้อ 33.8 / ข้อ 41",
+        "target_articles": ["ข้อ 20 วรรคสอง", "ข้อ 33.8", "ข้อ 41"],
+        "target_pages": [96, 99, 101],
+        "schema": [
+            {
+                "topic": "ทุจริตครั้งแรก",
+                "condition_desc": "นักศึกษาซึ่งทุจริตในการสอบ จะไม่ได้รับการพิจารณาผลการเรียน และพักการเรียนในภาคการศึกษาถัดไป 1 ภาคการศึกษา",
+                "penalty_action": "พักการเรียน 1 ภาคการศึกษาถัดไป",
+                "article_no": "ข้อ 20 วรรคสอง",
+                "source_page": 91
+            },
+            {
+                "topic": "ทุจริตซ้ำ",
+                "condition_desc": "ทุจริตในการสอบซ้ำมากกว่า 1 ครั้ง พ้นสภาพการเป็นนักศึกษา",
+                "penalty_action": "พ้นสภาพการเป็นนักศึกษา",
+                "article_no": "ข้อ 33.8",
+                "source_page": 94
+            }
+        ]
+    },
+    {
+        "category": "เกณฑ์การภาคทัณฑ์",
+        "description": "เกณฑ์การติดภาคทัณฑ์และการพ้นภาคทัณฑ์ตามค่าระดับคะแนนเฉลี่ยสะสม (GPA) ตามข้อ 22",
+        "target_articles": ["ข้อ 22"],
+        "target_pages": [97],
+        "schema": [
+            {
+                "topic": "เกณฑ์การติดภาคทัณฑ์ตามข้อ 22",
+                "condition_desc": "นักศึกษาที่ได้ค่าระดับคะแนนเฉลี่ยสะสมต่ำกว่า 2.00 ต้องถูกภาคทัณฑ์ไว้",
+                "min_gpa": None,
+                "max_gpa": 1.99,
+                "penalty_action": "ติดภาคทัณฑ์",
+                "article_no": "ข้อ 22",
+                "source_page": 92
+            },
+            {
+                "topic": "เกณฑ์การพ้นภาคทัณฑ์ตามข้อ 22",
+                "condition_desc": "พ้นภาคทัณฑ์เมื่อได้รับค่าระดับคะแนนเฉลี่ยสะสมไม่ต่ำกว่า 2.00",
+                "min_gpa": 2.00,
+                "max_gpa": None,
+                "penalty_action": "พ้นภาคทัณฑ์",
+                "article_no": "ข้อ 22",
+                "source_page": 92
+            }
+        ]
+    },
+    {
+        "category": "เกณฑ์พ้นสภาพนักศึกษา",
+        "description": "เกณฑ์การพ้นสภาพนักศึกษาจากผลการศึกษาตามข้อ 33 (เช่น GPA ต่ำกว่า 1.00 หรือระหว่างภาคทัณฑ์)",
+        "target_articles": ["ข้อ 33.11", "ข้อ 33.12"],
+        "target_pages": [99],
+        "schema": [
+            {
+                "topic": "เกณฑ์พ้นสภาพนักศึกษาจากผลการเรียนตามข้อ 33",
+                "condition_desc": "นักศึกษาที่ได้ค่าระดับคะแนนเฉลี่ยสะสมต่ำกว่า 1.00 หรือถูกภาคทัณฑ์และเทอมถัดไปได้ต่ำกว่า 2.00",
+                "min_gpa": 0.99,
+                "max_gpa": None,
+                "penalty_action": "พ้นสภาพการเป็นนักศึกษา",
+                "article_no": "ข้อ 33.12",
+                "source_page": 94
+            }
+        ]
+    },
+    {
+        "category": "เกณฑ์เกียรตินิยม",
+        "description": "เกณฑ์การได้รับปริญญาเกียรตินิยมอันดับหนึ่งเหรียญทอง อันดับหนึ่ง และอันดับสอง ตามข้อ 27.2",
+        "target_articles": ["ข้อ 27.2.1", "ข้อ 27.2.2", "ข้อ 27.2.3"],
+        "target_pages": [98],
+        "schema": [
+            {
+                "topic": "เกียรตินิยมอันดับ 1 เหรียญทอง",
+                "condition_desc": "GPA สะสมตามโครงสร้างสูงสุดในกลุ่ม และไม่ต่ำกว่า 3.75 ไม่เทียบโอนจากสถาบันอื่น",
+                "min_gpa": 3.75,
+                "max_gpa": None,
+                "article_no": "ข้อ 27.2.1",
+                "source_page": 93
+            },
+            {
+                "topic": "เกียรตินิยมอันดับ 1",
+                "condition_desc": "GPA สะสมตามโครงสร้างและ GPA สะสมไม่ต่ำกว่า 3.50",
+                "min_gpa": 3.50,
+                "max_gpa": None,
+                "article_no": "ข้อ 27.2.2",
+                "source_page": 93
+            },
+            {
+                "topic": "เกียรตินิยมอันดับ 2",
+                "condition_desc": "GPA สะสมตามโครงสร้างและ GPA สะสมไม่ต่ำกว่า 3.25",
+                "min_gpa": 3.25,
+                "max_gpa": None,
+                "article_no": "ข้อ 27.2.3",
+                "source_page": 93
+            }
+        ]
+    }
+]
+
+
+def ocr_regulation_pages_with_typhoon(
+    page_images: dict[int, bytes],
+    model_name: str,
+    intermediate_md_path: Path
+) -> dict[int, str]:
+    """สกัดข้อความจากภาพสแกนด้วย Typhoon-OCR และบันทึกเป็น Markdown"""
+    requests = _need("requests")
+    print(f"\n[2/3] กำลังถอดรหัสข้อความจากภาพสแกน {len(page_images)} หน้าด้วย {model_name}...")
+    intermediate_md_path.parent.mkdir(parents=True, exist_ok=True)
+
+    extracted_texts: dict[int, str] = {}
+    md_lines: list[str] = [
+        "# ข้อความที่สกัดได้จากภาคผนวก ก (ข้อบังคับ สจล. ปริญญาตรี พ.ศ. 2564)",
+        f"# วันที่สกัด: {time.strftime('%Y-%m-%d %H:%M:%S')}",
+        f"# โมเดล: {model_name}\n"
+    ]
+
+    for p_num in sorted(page_images.keys()):
+        img_bytes = page_images[p_num]
+        img_b64 = base64.b64encode(img_bytes).decode("utf-8")
+        print(f"      • หน้า {p_num:3d} (ขนาด {len(img_bytes)/1024:.1f} KB) ...", end="", flush=True)
+        t0 = time.time()
+        try:
+            payload = {
+                "model": model_name,
+                "prompt": TYPHOON_REGULATION_PROMPT,
+                "images": [img_b64],
+                "stream": False,
+                "options": {
+                    "temperature": 0.1,
+                    "repeat_penalty": 1.2,
+                }
+            }
+            res = requests.post(f"{OLLAMA_HOST}/api/generate", json=payload, timeout=300)
+            res.raise_for_status()
+            text_out = res.json().get("response", "").strip()
+            elapsed = time.time() - t0
+            extracted_texts[p_num] = text_out
+            print(f" สำเร็จ ({len(text_out)} ตัวอักษร, {elapsed:.1f} วิ)")
+
+            md_lines.append(f"<!-- Page {p_num} -->\n## หน้า {p_num}\n\n{text_out}\n\n---\n")
+        except Exception as e:
+            print(f" ล้มเหลว ({e})")
+            extracted_texts[p_num] = ""
+
+    intermediate_md_path.write_text("\n".join(md_lines), encoding="utf-8")
+    print(f"      ✓ บันทึก Markdown เรียบร้อย: {intermediate_md_path}")
+    return extracted_texts
+
+
+def extract_regulations_with_llm(
+    page_texts: dict[int, str],
+    model_name: str
+) -> list[RegulationItem]:
+    """สกัดข้อบังคับการศึกษาจากข้อความ OCR ผ่าน Qwen3"""
+    requests = _need("requests")
+    print(f"\n[3/3] กำลังสกัดโครงสร้างข้อบังคับผ่าน {model_name}...")
+    full_context = "\n\n".join(
+        f"=== เนื้อหาหน้า PDF {p_num} ===\n{txt}"
+        for p_num, txt in sorted(page_texts.items()) if txt
+    )
+
+    all_items: list[RegulationItem] = []
+
+    for cat_spec in REGULATION_CATEGORIES:
+        cat_name = cat_spec["category"]
+        desc = cat_spec["description"]
+        schema_json = json.dumps(cat_spec["schema"], ensure_ascii=False, indent=2)
+
+        prompt = f"""จงสกัดข้อบังคับการศึกษาในหมวด '{cat_name}' จากข้อความเอกสารที่ให้มา
+รายละเอียดหมวด: {desc}
+
+ข้อความจากเอกสาร:
+{full_context}
+
+คำสั่ง:
+1. ให้ตอบในรูปแบบ JSON Array ของ Object ตาม Schema ดังนี้เท่านั้น
+2. ใช้ข้อมูลจริงจากข้อความในเอกสารเท่านั้น ห้ามแต่งข้อมูลขึ้นมาเอง
+3. ฟิลด์ที่ไม่มีข้อมูลให้ใส่ null
+
+ตัวอย่าง Schema ที่ต้องการ:
+{schema_json}
+
+ตอบเป็น JSON Array เท่านั้น:"""
+
+        print(f"      • หมวด '{cat_name}' ...", end="", flush=True)
+        t0 = time.time()
+        try:
+            payload = {
+                "model": model_name,
+                "prompt": prompt,
+                "stream": False,
+                "think": False,
+                "format": "json",
+                "options": {
+                    "temperature": 0.1,
+                    "num_ctx": 8192,
+                }
+            }
+            res = requests.post(f"{OLLAMA_HOST}/api/generate", json=payload, timeout=300)
+            res.raise_for_status()
+            ans_raw = res.json().get("response", "").strip()
+
+            ans_raw = re.sub(r"<think>.*?</think>", "", ans_raw, flags=re.DOTALL).strip()
+            if ans_raw.startswith("```"):
+                ans_raw = re.sub(r"^```(?:json)?\s*", "", ans_raw)
+                ans_raw = re.sub(r"\s*```$", "", ans_raw)
+
+            parsed = json.loads(ans_raw)
+            if isinstance(parsed, dict):
+                for k in ["regulations", "items", "data", "results"]:
+                    if k in parsed and isinstance(parsed[k], list):
+                        parsed = parsed[k]
+                        break
+                else:
+                    parsed = [parsed]
+
+            valid_count = 0
+            for item_dict in parsed:
+                item_dict["category"] = cat_name
+                item_dict.setdefault("program_id", "ALL")
+                item = RegulationItem(**item_dict)
+                all_items.append(item)
+                valid_count += 1
+            elapsed = time.time() - t0
+            print(f" ได้ {valid_count} รายการ ({elapsed:.1f} วิ)")
+        except Exception as e:
+            print(f" ข้อผิดพลาด: {e}")
+
+    return all_items
+
+
+def print_regulations_summary(regulations: list[RegulationItem]) -> None:
+    print("\n" + "=" * 95)
+    print("  สรุปข้อบังคับการศึกษาที่สกัดได้จากเล่ม PDF (Local VLM Pipeline)")
+    print("=" * 95)
+    print(f"{'หมวดหมู่ (Category)':<26} | {'หัวข้อ (Topic)':<25} | {'ข้อบังคับ':<12} | {'เงื่อนไข (GPA/หน่วยกิต/บทลงโทษ)':<28}")
+    print("-" * 95)
+    for r in regulations:
+        cond_str = []
+        if r.min_credits or r.max_credits:
+            cond_str.append(f"หน่วยกิต: {r.min_credits or 0}-{r.max_credits or '-'}")
+        if r.min_gpa or r.max_gpa:
+            cond_str.append(f"GPA: {r.min_gpa or 0.0}-{r.max_gpa or '-'}")
+        if r.penalty_action:
+            cond_str.append(f"โทษ: {r.penalty_action}")
+        cond_display = ", ".join(cond_str) if cond_str else (r.condition_desc[:25] + "...")
+        print(f"{r.category:<26} | {r.topic:<25} | {str(r.article_no):<12} | {cond_display:<28}")
+    print("=" * 95)
+
+
+def run_extract_regulations(
+    pdf_input: str | Path | None = None,
+    page_spec: str = "94,96,97,98,99,101",
+    out_dir: Path | str = "work/lab7b_run"
+) -> Path:
+    """
+    กระบวนการสกัดข้อบังคับการศึกษา (ภาคผนวก ก) จากเล่ม PDF
+    ส่งออกผลลัพธ์เป็น regulations.json และ intermediate_regulations_vlm.md เท่านั้น
+    (ไม่แตะต้องฐานข้อมูล SQLite ตามหลัก Separation of Concerns)
+    """
+    repo_root = Path(__file__).resolve().parent.parent.parent
+    if not (repo_root / "data").exists():
+        repo_root = Path(__file__).resolve().parent.parent
+
+    if pdf_input:
+        pdf_path = Path(pdf_input)
+    else:
+        pdf_path = repo_root / "data" / "input" / "fulldoc_dsba.pdf"
+
+    if not pdf_path.exists():
+        candidates = [
+            repo_root / "data" / "input" / "fulldoc_dsba.pdf",
+            repo_root / "data" / "fulldoc_dsba.pdf",
+            Path("data/input/fulldoc_dsba.pdf"),
+            Path("data/fulldoc_dsba.pdf")
+        ]
+        for c in candidates:
+            if c.exists():
+                pdf_path = c
+                break
+        else:
+            raise SystemExit(f"❌ ไม่พบไฟล์ PDF: {pdf_input}")
+
+    out_path = Path(out_dir)
+    out_path.mkdir(parents=True, exist_ok=True)
+    out_json = out_path / "regulations.json"
+    out_md = out_path / "intermediate_regulations_vlm.md"
+
+    print("\n" + "=" * 70)
+    print("  Lab 7B: สกัดข้อบังคับการศึกษาจากเล่ม PDF ด้วย Typhoon-OCR + Qwen")
+    print("=" * 70)
+    print(f"  • เอกสารนำเข้า : {pdf_path}")
+    print(f"  • หน้าที่เลือก : {page_spec}")
+    print(f"  • โมเดล OCR   : {MODEL_OCR}")
+    print(f"  • โมเดล Text  : {MODEL_TEXT}")
+    print(f"  • โฟลเดอร์ออก : {out_path}")
+    print("=" * 70)
+
+    assert_offline()
+
+    fitz = _need("fitz", "pymupdf")
+    doc = fitz.open(str(pdf_path))
+    total_pages = len(doc)
+    doc.close()
+
+    wanted_indices = parse_page_range(page_spec, total_pages)
+    wanted_pages = [i + 1 for i in wanted_indices]
+
+    print(f"\n[1/3] กำลังเรนเดอร์ภาพจาก PDF {len(wanted_pages)} หน้า: {wanted_pages} ...")
+    mat = fitz.Matrix(DPI / 72, DPI / 72)
+    doc = fitz.open(str(pdf_path))
+    page_images: dict[int, bytes] = {}
+    for p_num in wanted_pages:
+        pix = doc[p_num - 1].get_pixmap(matrix=mat)
+        page_images[p_num] = pix.tobytes("png")
+    doc.close()
+    print(f"      ✓ เรนเดอร์ภาพครบ {len(page_images)} หน้า @ {DPI} DPI")
+
+    # Step 2: Typhoon-OCR
+    page_texts = ocr_regulation_pages_with_typhoon(page_images, MODEL_OCR, out_md)
+
+    # Step 3: Information Extraction via Qwen
+    regulations = extract_regulations_with_llm(page_texts, MODEL_TEXT)
+
+    # Step 4: Save JSON only (No DB touching!)
+    items_dict = [r.model_dump() for r in regulations]
+    out_json.write_text(json.dumps(items_dict, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"\n      ✓ บันทึก JSON เรียบร้อย: {out_json} ({len(items_dict)} รายการ)")
+
+    print_regulations_summary(regulations)
+    print(f"\n✓ สกัดข้อบังคับการศึกษาเสร็จสมบูรณ์!")
+    print(f"  • Markdown: {out_md}")
+    print(f"  • JSON    : {out_json}")
+    return out_json
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(
         description="Lab 7B — สกัดแผนการศึกษาจากเล่มหลักสูตร ด้วย LLM บนเครื่อง")
@@ -1678,6 +2086,8 @@ def main() -> None:
     ap.add_argument("--eval-only", metavar="PRED_JSON")
     ap.add_argument("--enrich-pages", action="store_true",
                     help="สกัดเลขหน้า (printed_pages, pdf_pages) จากเล่ม PDF เข้าสู่ pred_text.json ทุกหลักสูตร")
+    ap.add_argument("--extract-regulations", action="store_true",
+                    help="สกัดข้อบังคับการศึกษา (ภาคผนวก ก) จากเล่ม PDF ด้วย Typhoon-OCR + Qwen")
     args = ap.parse_args()
 
     if args.check:
@@ -1685,6 +2095,13 @@ def main() -> None:
 
     if args.enrich_pages:
         enrich_all_curricula_pages()
+        return
+
+    if args.extract_regulations:
+        pdf_file = args.input or "data/input/fulldoc_dsba.pdf"
+        pages_spec = args.pages or "94,96,97,98,99,101"
+        out_dir = Path(args.out) if args.out != "output" else Path("work/lab7b_run")
+        run_extract_regulations(pdf_file, pages_spec, out_dir)
         return
 
     outdir = Path(args.out)

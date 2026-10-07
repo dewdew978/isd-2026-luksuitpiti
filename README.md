@@ -94,6 +94,22 @@ python -m src.ocr_system.lab7b_curriculum --eval-only work/lab7b_run/AIT/pred_te
 > *(เมื่อนำเข้าสู่ฐานข้อมูล SQLite ใน Lab 8B ระบบมีฟังก์ชัน **Deduplication** ยุบวิชาซ้ำเหลือ 1 รายการ และจัดวิชาคู่สหกิจศึกษาเป็น **Alternative Slot (`alt_group`)** จึงทำให้ฐานข้อมูลสะอาด 100% และผ่านการตรวจครบ 7 กฎ)*
 
 
+#### ก.2 สกัดข้อบังคับการศึกษา (ภาคผนวก ก) ด้วย Lab 7B (Typhoon-OCR 1.5-3B + Qwen3:4b):
+> **หมายเหตุ**: ในเล่มหลักสูตร เนื้อหาภาคผนวก ก (ข้อบังคับ สจล. ว่าด้วยการศึกษาระดับปริญญาตรี พ.ศ. 2564) หน้า 94–101 เป็น**ภาพสแกน (Scanned Bitmap Images)** ที่ไม่มี Text Layer ดั้งเดิม จึงต้องใช้ Local Vision-Language Model (VLM) ในการถอดรหัสข้อความภาษาไทยและแปลงเป็น Structured Data:
+
+```bash
+# สกัดข้อบังคับการศึกษาจากเล่ม PDF (บันทึกผลลง work/lab7b_run/)
+python src/ocr_system/lab7b_curriculum.py --extract-regulations
+
+# หรือระบุพาธและหน้าที่ต้องการสกัดเอง:
+python src/ocr_system/lab7b_curriculum.py --extract-regulations -i data/input/fulldoc_dsba.pdf --pages 94,96,97,98,99,101 -o work/lab7b_run
+```
+*ผลลัพธ์ที่ได้ (บันทึกใน `work/lab7b_run/`):*
+- `intermediate_regulations_vlm.md`: ข้อความภาษาไทยสมบูรณ์จากหน้าสแกน 94, 96, 97, 98, 99, 101 ถอดรหัสด้วย `scb10x/typhoon-ocr1.5-3b`
+- `regulations.json`: Structured Data ข้อบังคับ 11 รายการ (เกณฑ์การลงทะเบียน 9–22 หน่วยกิต, บทลงโทษการทุจริตสอบ, เกณฑ์ภาคทัณฑ์ GPA < 2.00, พ้นสภาพนักศึกษา, เกณฑ์เกียรตินิยมอันดับ 1 เหรียญทอง/อันดับ 1/อันดับ 2)
+
+---
+
 #### ข. แปลงและนำเข้าฐานข้อมูล SQLite กลางด้วย Lab 8B:
 ```bash
 # สร้าง Schema
@@ -105,11 +121,14 @@ python src/ocr_system/lab8b_curriculum_db.py import-lab7b -i lab7_final/output/B
 python src/ocr_system/lab8b_curriculum_db.py import-lab7b -i lab7_final/output/IT/pred_text.json -o work/lab8b_run/IT/curriculum.json --program-id IT --program-name "เทคโนโลยีสารสนเทศ (สหกิจศึกษา)" --name-en "Information Technology (IT)" --total-credits 129 --years 4
 python src/ocr_system/lab8b_curriculum_db.py import-lab7b -i lab7_final/output/AIT/pred_text.json -o work/lab8b_run/AIT/curriculum.json --program-id AIT --program-name "เทคโนโลยีปัญญาประดิษฐ์" --name-en "Artificial Intelligence Technology (AIT)" --total-credits 120 --years 4
 
-# โหลดเข้าฐานข้อมูลกลาง
+# โหลดข้อมูลรายวิชาเข้าฐานข้อมูลกลาง
 python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/DSBA/curriculum.json -d work/lab8b_run/curriculum.db --replace
 python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/BIT/curriculum.json -d work/lab8b_run/curriculum.db
 python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/IT/curriculum.json -d work/lab8b_run/curriculum.db
 python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/AIT/curriculum.json -d work/lab8b_run/curriculum.db
+
+# โหลดข้อบังคับการศึกษา (Regulations) เข้าตาราง regulation ในฐานข้อมูล
+python src/ocr_system/lab8b_curriculum_db.py load-regulations -i work/lab7b_run/regulations.json -d work/lab8b_run/curriculum.db
 ```
 
 #### ค. ตรวจสอบความถูกต้องของฐานข้อมูล (Consistency Verification 7 กฎ):
