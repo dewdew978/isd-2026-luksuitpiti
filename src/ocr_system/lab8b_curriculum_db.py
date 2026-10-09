@@ -164,6 +164,26 @@ def build_models():
                 raise ValueError(f"รหัสวิชาต้องเป็นตัวเลข 8 หลัก แต่ได้ '{v}'")
             return v
 
+    class StudyPlan(BaseModel):
+        """แผนการศึกษา (เช่น แผนสหกิจศึกษา, แผนปกติ)"""
+        plan_id: str
+        program_id: str
+        name_th: str
+        name_en: str | None = None
+        plan_type: str = "single"
+
+    class ElectiveSlot(BaseModel):
+        """ช่องวิชาเลือกในแผนการศึกษา (เช่น 06026xxx, xxxxxxxx)"""
+        plan_id: str | None = None
+        year: int = Field(ge=1, le=8)
+        semester: int = Field(ge=1, le=3)
+        slot_name_th: str
+        slot_name_en: str | None = None
+        code_pattern: str | None = None
+        credits: int = Field(ge=0, le=12)
+        credit_options: str | None = None
+        note: str | None = None
+
     class PlanItem(BaseModel):
         """
         หนึ่งบรรทัดในแผนการศึกษา
@@ -176,6 +196,7 @@ def build_models():
         นี่คือบทเรียนตรงจาก Lab 7B: กฎตรวจที่ไม่รู้จักกรณีนี้
         จะเตือนผิดทุกครั้งที่เจอวิชาเลือก จนนักศึกษาเลิกอ่านคำเตือน
         """
+        plan_id: str | None = None
         year: int = Field(ge=1, le=8)
         semester: int = Field(ge=1, le=3)   # 3 = ภาคฤดูร้อน
         code: str
@@ -216,8 +237,10 @@ def build_models():
     class Curriculum(BaseModel):
         """เอกสารทั้งเล่มหนึ่งฉบับ"""
         program: Program
+        study_plans: list[StudyPlan] = []
         courses: list[Course] = []
         plan: list[PlanItem] = []
+        elective_slots: list[ElectiveSlot] = []
         prerequisites: list[Prerequisite] = []
 
     return Curriculum
@@ -240,8 +263,17 @@ CREATE TABLE IF NOT EXISTS program (
     years         INTEGER NOT NULL CHECK (years BETWEEN 1 AND 8)
 );
 
+CREATE TABLE IF NOT EXISTS study_plan (
+    plan_id       TEXT PRIMARY KEY,
+    program_id    TEXT NOT NULL REFERENCES program(program_id),
+    name_th       TEXT NOT NULL,
+    name_en       TEXT,
+    plan_type     TEXT NOT NULL CHECK (plan_type IN ('coop', 'no_coop', 'single')),
+    UNIQUE (plan_id, program_id)
+);
+
 CREATE TABLE IF NOT EXISTS course (
-    code           TEXT PRIMARY KEY,
+    code           TEXT PRIMARY KEY CHECK (code GLOB '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
     name_th        TEXT NOT NULL,
     name_en        TEXT,
     credits        INTEGER NOT NULL CHECK (credits BETWEEN 0 AND 12),
@@ -253,15 +285,30 @@ CREATE TABLE IF NOT EXISTS course (
     printed_pages  TEXT
 );
 
+CREATE TABLE IF NOT EXISTS elective_slot (
+    id             INTEGER PRIMARY KEY AUTOINCREMENT,
+    plan_id        TEXT NOT NULL REFERENCES study_plan(plan_id),
+    year           INTEGER NOT NULL CHECK (year BETWEEN 1 AND 8),
+    semester       INTEGER NOT NULL CHECK (semester BETWEEN 1 AND 3),
+    slot_name_th   TEXT NOT NULL,
+    slot_name_en   TEXT,
+    code_pattern   TEXT,
+    credits        INTEGER NOT NULL CHECK (credits BETWEEN 0 AND 12),
+    credit_options TEXT,
+    note           TEXT
+);
+
 CREATE TABLE IF NOT EXISTS plan_item (
     id         INTEGER PRIMARY KEY AUTOINCREMENT,
-    program_id TEXT NOT NULL REFERENCES program(program_id),
+    plan_id    TEXT NOT NULL,
+    program_id TEXT NOT NULL,
     year       INTEGER NOT NULL CHECK (year BETWEEN 1 AND 8),
     semester   INTEGER NOT NULL CHECK (semester BETWEEN 1 AND 3),
-    code       TEXT NOT NULL,
+    code       TEXT NOT NULL REFERENCES course(code),
     credits    INTEGER NOT NULL CHECK (credits BETWEEN 0 AND 12),
     alt_group  TEXT,
-    note       TEXT
+    note       TEXT,
+    FOREIGN KEY (plan_id, program_id) REFERENCES study_plan(plan_id, program_id)
 );
 
 CREATE TABLE IF NOT EXISTS prerequisite (
@@ -271,44 +318,50 @@ CREATE TABLE IF NOT EXISTS prerequisite (
     PRIMARY KEY (code, requires, kind)
 );
 
+CREATE TABLE IF NOT EXISTS program_course (
+    program_id TEXT NOT NULL REFERENCES program(program_id),
+    code       TEXT NOT NULL REFERENCES course(code),
+    PRIMARY KEY (program_id, code)
+);
+
 CREATE INDEX IF NOT EXISTS ix_plan_sem ON plan_item(year, semester);
 CREATE INDEX IF NOT EXISTS ix_plan_code ON plan_item(code);
+CREATE INDEX IF NOT EXISTS ix_plan_plan_id ON plan_item(plan_id);
+CREATE INDEX IF NOT EXISTS ix_slot_plan ON elective_slot(plan_id, year, semester);
 
--- VIEW ทำให้การถามคำถามง่ายขึ้นมาก
--- แทนที่ LLM จะต้อง JOIN เองทุกครั้ง เราเตรียมตารางแบนไว้ให้
--- นี่คือเหตุผลที่ VIEW มีอยู่ในโลก: ซ่อนความซับซ้อนของการ normalize
 CREATE VIEW IF NOT EXISTS v_plan AS
-SELECT p.id, p.program_id, p.year, p.semester, p.code, c.name_th, c.name_en,
-       p.credits, p.alt_group, p.note, c.pdf_pages, c.printed_pages
+SELECT p.id, sp.plan_id, sp.plan_type, p.program_id, p.year, p.semester,
+       p.code, c.name_th, c.name_en, p.credits, p.alt_group, p.note,
+       c.pdf_pages, c.printed_pages, 0 AS is_elective_slot
 FROM plan_item p
+JOIN study_plan sp ON sp.plan_id = p.plan_id
 LEFT JOIN course c ON c.code = p.code
-ORDER BY CASE WHEN p.program_id LIKE 'DSBA%' THEN 0 ELSE 1 END, p.id;
 
--- VIEW ที่สองนี้สำคัญกว่าที่เห็น
---
--- ถ้าให้ LLM เขียน SUM(credits) FROM v_plan เอง มันจะได้คำตอบผิด
--- เพราะวิชาเลือก "A หรือ B" มีสองแถว แต่ต้องนับหน่วยกิตครั้งเดียว
--- ปี 2 เทอม 1 จะได้ 12 แทนที่จะเป็น 9
---
--- ทางแก้ที่ผิดคือ ไปเขียนใน prompt ว่า "อย่าลืมหักวิชาเลือกออก"
--- เพราะ prompt เป็นการขอร้อง โมเดลจะลืมเป็นบางครั้ง แล้วเราจะจับไม่ได้
---
--- ทางแก้ที่ถูกคือ ย้ายตรรกะนี้มาไว้ใน VIEW
--- แล้ว LLM แค่ SELECT ธรรมดา ไม่มีโอกาสทำผิดเลย
--- หลักการ: อะไรที่ต้อง "ถูกเสมอ" ให้เขียนเป็นโค้ด ไม่ใช่เขียนเป็นคำสั่งให้ AI
+UNION ALL
+
+SELECT e.id + 100000 AS id, sp.plan_id, sp.plan_type, sp.program_id, e.year, e.semester,
+       e.code_pattern AS code, e.slot_name_th AS name_th, e.slot_name_en AS name_en,
+       e.credits, NULL AS alt_group, e.note,
+       NULL AS pdf_pages, NULL AS printed_pages, 1 AS is_elective_slot
+FROM elective_slot e
+JOIN study_plan sp ON sp.plan_id = e.plan_id;
+
 CREATE VIEW IF NOT EXISTS v_semester_credits AS
-SELECT program_id, year, semester, SUM(credits) AS credits, COUNT(*) AS n_courses
+SELECT plan_id, program_id, year, semester, SUM(credits) AS credits, SUM(n_courses) AS n_courses
 FROM (
-    SELECT program_id, year, semester,
-           COALESCE(alt_group, 'x' || id) AS grp,
-           MAX(credits) AS credits
+    SELECT plan_id, program_id, year, semester, MAX(credits) AS credits, 1 AS n_courses
     FROM plan_item
-    GROUP BY program_id, year, semester, COALESCE(alt_group, 'x' || id)
-)
-GROUP BY program_id, year, semester
-ORDER BY CASE WHEN program_id LIKE 'DSBA%' THEN 0 ELSE 1 END, program_id;
+    GROUP BY plan_id, program_id, year, semester, COALESCE(alt_group, 'x' || id)
 
--- ตารางข้อบังคับและกฎระเบียบการศึกษา (Academic Regulations)
+    UNION ALL
+
+    SELECT plan_id,
+           (SELECT program_id FROM study_plan WHERE study_plan.plan_id = elective_slot.plan_id) AS program_id,
+           year, semester, credits, 1 AS n_courses
+    FROM elective_slot
+)
+GROUP BY plan_id, program_id, year, semester;
+
 CREATE TABLE IF NOT EXISTS regulation (
     id              INTEGER PRIMARY KEY AUTOINCREMENT,
     program_id      TEXT DEFAULT 'ALL',
@@ -552,16 +605,42 @@ def convert_lab7b(data: dict, *, program_id: str | None = None,
     warnings: list[str] = []
     course_by_code: dict[str, dict] = {}
     plan: list[dict] = []
+    elective_slots: list[dict] = []
     prerequisites: list[dict] = []
     seen_plan: set[tuple] = set()
     seen_pre: set[tuple] = set()
     skipped_wildcards = 0
     skipped_flexible = 0
 
+    pid = str(program_id or data.get("program") or "curriculum").strip().upper()
+    prog_str = str(data.get("program") or "").lower()
+    plan_str = str(data.get("plan") or "").lower()
+    combined_str = f"{prog_str} {plan_str}"
+
+    if pid == "AIT" or "ait" in prog_str:
+        effective_plan_id = "AIT_SINGLE"
+        effective_plan_type = "single"
+    elif "non_coop" in combined_str or "non-coop" in combined_str or "ไม่สหกิจ" in combined_str or "ปกติ" in combined_str:
+        effective_plan_id = f"{pid}_NON_COOP"
+        effective_plan_type = "no_coop"
+    elif "coop" in combined_str or "สหกิจ" in combined_str:
+        effective_plan_id = f"{pid}_COOP"
+        effective_plan_type = "coop"
+    else:
+        effective_plan_id = f"{pid}_NON_COOP"
+        effective_plan_type = "no_coop"
+
+    study_plans = [{
+        "plan_id": effective_plan_id,
+        "program_id": pid,
+        "name_th": str(program_name or data.get("program") or pid).strip(),
+        "name_en": name_en,
+        "plan_type": effective_plan_type,
+    }]
+
     for index, src in enumerate(data.get("courses") or []):
         raw_code = str(src.get("code") or "").strip()
         codes = _lab7b_codes(raw_code)
-        is_placeholder = False
         if not codes:
             try:
                 year = int(src.get("year"))
@@ -569,19 +648,28 @@ def convert_lab7b(data: dict, *, program_id: str | None = None,
             except (TypeError, ValueError):
                 year = semester = 0
             if 1 <= year <= 8 and 1 <= semester <= 3:
-                # แปลง wildcard/วิชาเลือกในแผนเป็นรหัสตัวแทน 8 หลัก
-                prefix = "99999"
-                for pre in ("9064", "9664", "0601", "0602", "0603", "0604"):
-                    if pre in raw_code:
-                        prefix = f"{pre}9"
-                        break
-                placeholder = f"{prefix[:5]}{index:03d}"
-                codes = [placeholder]
-                is_placeholder = True
-            else:
-                skipped_wildcards += 1
-                warnings.append(f"courses[{index}] ข้ามรหัสที่ไม่ใช่ตัวเลข 8 หลัก: {raw_code!r}")
-                continue
+                try:
+                    slot_credit, _, _, _ = _credit_parts(src.get("credits"))
+                except ValueError:
+                    slot_credit = 3
+                notes = [str(x).strip() for x in
+                         (src.get("category"), src.get("type"), src.get("note")) if x]
+                note_str = " | ".join(notes) or None
+                elective_slots.append({
+                    "plan_id": effective_plan_id,
+                    "year": year,
+                    "semester": semester,
+                    "slot_name_th": str(src.get("name_th") or raw_code).strip(),
+                    "slot_name_en": str(src.get("name_en") or "").strip() or None,
+                    "code_pattern": raw_code,
+                    "credits": slot_credit,
+                    "credit_options": str(src.get("credits") or ""),
+                    "note": note_str,
+                })
+            skipped_wildcards += 1
+            warnings.append(f"courses[{index}] ข้ามรหัสที่ไม่ใช่ตัวเลข 8 หลัก (บันทึกลง elective_slots): {raw_code!r}")
+            continue
+
         try:
             credit, lecture, lab, self_h = _credit_parts(src.get("credits"))
         except ValueError as exc:
@@ -591,16 +679,10 @@ def convert_lab7b(data: dict, *, program_id: str | None = None,
             warnings.append(f"{raw_code}: หน่วยกิตมีหลายแบบ; ใช้แบบแรก")
 
         for code in codes:
-            if is_placeholder:
-                name_th_val = str(src.get("name_th") or code).strip() or "วิชาเลือก"
-                name_en_val = (str(src["name_en"]).replace("\n", " ").strip()
-                               if src.get("name_en") else "Elective Course (Placeholder)")
-                desc_th_val = src.get("description_th") or "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)"
-            else:
-                name_th_val = str(src.get("name_th") or code).strip()
-                name_en_val = (str(src["name_en"]).replace("\n", " ").strip()
-                               if src.get("name_en") else None)
-                desc_th_val = src.get("description_th")
+            name_th_val = str(src.get("name_th") or code).strip()
+            name_en_val = (str(src["name_en"]).replace("\n", " ").strip()
+                           if src.get("name_en") else None)
+            desc_th_val = src.get("description_th")
 
             candidate = {
                 "code": code,
@@ -637,9 +719,9 @@ def convert_lab7b(data: dict, *, program_id: str | None = None,
                      (src.get("category"), src.get("type"), src.get("note")) if x]
             note = " | ".join(notes) or None
             for code in codes:
-                key = (year, semester, code, alt_group)
+                key = (effective_plan_id, year, semester, code, alt_group)
                 if key not in seen_plan:
-                    plan.append({"year": year, "semester": semester,
+                    plan.append({"plan_id": effective_plan_id, "year": year, "semester": semester,
                                  "code": code, "credits": credit,
                                  "alt_group": alt_group, "note": note})
                     seen_plan.add(key)
@@ -656,23 +738,6 @@ def convert_lab7b(data: dict, *, program_id: str | None = None,
                                           "kind": "pre"})
                     seen_pre.add(key)
 
-    if program_id in ("DSBA", "DSBA-coop") and "06016401" not in course_by_code:
-        course_by_code["06016401"] = {
-            "code": "06016401",
-            "name_th": "คณิตศาสตร์สำหรับเทคโนโลยีสารสนเทศ",
-            "name_en": "MATHEMATICS FOR INFORMATION TECHNOLOGY",
-            "credits": 3,
-            "lecture_h": 3,
-            "lab_h": 0,
-            "self_h": 6,
-            "description_th": "เซต ความสัมพันธ์และฟังก์ชัน ตรรกศาสตร์ การพิสูจน์",
-        }
-        plan.insert(0, {
-            "year": 1, "semester": 1,
-            "code": "06016401", "credits": 3,
-            "alt_group": None, "note": "หมวดวิชาเฉพาะ | บังคับ"
-        })
-
     max_year = max((p["year"] for p in plan), default=4)
     effective_years = years or max_year
     if total_credits is None:
@@ -680,13 +745,14 @@ def convert_lab7b(data: dict, *, program_id: str | None = None,
         for i, item in enumerate(plan):
             group = item.get("alt_group") or f"row_{i}"
             groups[(item["year"], item["semester"], group)] = item["credits"]
+        for i, item in enumerate(elective_slots):
+            groups[(item["year"], item["semester"], f"slot_{i}")] = item["credits"]
         total_credits = sum(groups.values())
         warnings.append(f"ไม่ได้ระบุ --total-credits; คำนวณจากแผนที่แปลได้ = {total_credits}")
     if not 30 <= total_credits <= 300:
         raise ValueError(f"หน่วยกิตรวม {total_credits} อยู่นอกช่วง 30..300; "
                          "ระบุ --total-credits จากเล่มหลักสูตร")
 
-    pid = str(program_id or data.get("program") or "curriculum").strip()
     result = {
         "program": {
             "program_id": pid,
@@ -696,8 +762,10 @@ def convert_lab7b(data: dict, *, program_id: str | None = None,
             "total_credits": total_credits,
             "years": effective_years,
         },
+        "study_plans": study_plans,
         "courses": list(course_by_code.values()),
         "plan": plan,
+        "elective_slots": elective_slots,
         "prerequisites": prerequisites,
     }
     Curriculum = build_models()
@@ -706,6 +774,7 @@ def convert_lab7b(data: dict, *, program_id: str | None = None,
         "source_courses": len(data.get("courses") or []),
         "converted_courses": len(result["courses"]),
         "plan_items": len(result["plan"]),
+        "elective_slots": len(result["elective_slots"]),
         "prerequisites": len(result["prerequisites"]),
         "skipped_wildcards": skipped_wildcards,
         "skipped_flexible_plan_items": skipped_flexible,
@@ -772,34 +841,66 @@ def cmd_load(args) -> None:
     conn.executescript(DDL)
 
     prog = data["program"]
+    pid = prog["program_id"]
     conn.execute(
         "INSERT OR REPLACE INTO program VALUES (?,?,?,?,?,?)",
-        (prog["program_id"], prog["name_th"], prog.get("name_en"),
+        (pid, prog["name_th"], prog.get("name_en"),
          prog.get("degree"), prog["total_credits"], prog["years"]))
 
-    for c in data.get("courses", []):
-        conn.execute("INSERT OR REPLACE INTO course VALUES (?,?,?,?,?,?,?,?)",
-                     (c["code"], c["name_th"], c.get("name_en"), c["credits"],
-                      c.get("lecture_h"), c.get("lab_h"), c.get("self_h"),
-                      c.get("description_th")))
-
-    conn.execute("DELETE FROM plan_item WHERE program_id = ?", (prog["program_id"],))
-    for p in data.get("plan", []):
+    study_plans = data.get("study_plans") or [{
+        "plan_id": f"{pid}_DEFAULT",
+        "program_id": pid,
+        "name_th": prog["name_th"],
+        "name_en": prog.get("name_en"),
+        "plan_type": "single",
+    }]
+    for sp in study_plans:
         conn.execute(
-            "INSERT INTO plan_item (program_id, year, semester, code, credits,"
-            " alt_group, note) VALUES (?,?,?,?,?,?,?)",
-            (prog["program_id"], p["year"], p["semester"], p["code"],
+            "INSERT OR REPLACE INTO study_plan VALUES (?,?,?,?,?)",
+            (sp["plan_id"], sp.get("program_id", pid), sp["name_th"], sp.get("name_en"), sp.get("plan_type", "single"))
+        )
+    default_plan_id = study_plans[0]["plan_id"]
+
+    for c in data.get("courses", []):
+        code_str = str(c.get("code") or "").strip()
+        if re.fullmatch(r"\d{8}", code_str):
+            conn.execute(
+                "INSERT OR REPLACE INTO course (code, name_th, name_en, credits, lecture_h, lab_h, self_h, description_th, pdf_pages, printed_pages) "
+                "VALUES (?,?,?,?,?,?,?,?,?,?)",
+                (code_str, c["name_th"], c.get("name_en"), c["credits"],
+                 c.get("lecture_h"), c.get("lab_h"), c.get("self_h"),
+                 c.get("description_th"), c.get("pdf_pages"), c.get("printed_pages")))
+
+    conn.execute("DELETE FROM plan_item WHERE program_id = ?", (pid,))
+    for p in data.get("plan", []):
+        p_plan_id = p.get("plan_id") or default_plan_id
+        conn.execute(
+            "INSERT INTO plan_item (plan_id, program_id, year, semester, code, credits,"
+            " alt_group, note) VALUES (?,?,?,?,?,?,?,?)",
+            (p_plan_id, pid, p["year"], p["semester"], p["code"],
              p["credits"], p.get("alt_group"), p.get("note")))
+
+    for e in data.get("elective_slots", []):
+        e_plan_id = e.get("plan_id") or default_plan_id
+        conn.execute(
+            "INSERT INTO elective_slot (plan_id, year, semester, slot_name_th, slot_name_en, code_pattern, credits, credit_options, note) "
+            "VALUES (?,?,?,?,?,?,?,?,?)",
+            (e_plan_id, e["year"], e["semester"], e["slot_name_th"], e.get("slot_name_en"),
+             e.get("code_pattern"), e["credits"], e.get("credit_options"), e.get("note"))
+        )
 
     for r in data.get("prerequisites", []):
         conn.execute("INSERT OR REPLACE INTO prerequisite VALUES (?,?,?)",
                      (r["code"], r["requires"], r.get("kind", "pre")))
+
+    conn.execute("INSERT OR IGNORE INTO program_course (program_id, code) SELECT DISTINCT program_id, code FROM plan_item")
 
     # โหลดข้อบังคับเข้าตาราง regulation ถ้ามีการระบุ หรือพบไฟล์ regulations.json
     reg_file = getattr(args, "regulations", None)
     if not reg_file:
         repo_root = Path(__file__).resolve().parent.parent.parent
         for cand in [
+            repo_root / "work" / "lab7b_run" / "regulations" / "regulations.json",
             repo_root / "work" / "lab7b_run" / "regulations.json",
             repo_root / "work" / "lab8b_run" / "regulations.json",
         ]:
@@ -812,6 +913,12 @@ def cmd_load(args) -> None:
             regs = json.loads(Path(reg_file).read_text(encoding="utf-8"))
             conn.execute("DELETE FROM regulation")
             for r in regs:
+                min_gpa = r.get("min_gpa")
+                max_gpa = r.get("max_gpa")
+                cond = str(r.get("condition_desc") or "")
+                if "1.00" in cond and ("ต่ำกว่า" in cond or "<" in cond):
+                    max_gpa = 0.99
+                    min_gpa = None
                 conn.execute(
                     """
                     INSERT INTO regulation (
@@ -821,7 +928,7 @@ def cmd_load(args) -> None:
                     """,
                     (
                         r.get("program_id", "ALL"), r.get("category"), r.get("topic"),
-                        r.get("condition_desc"), r.get("min_gpa"), r.get("max_gpa"),
+                        r.get("condition_desc"), min_gpa, max_gpa,
                         r.get("min_credits"), r.get("max_credits"), r.get("penalty_action"),
                         r.get("article_no"), r.get("source_page")
                     )
@@ -831,7 +938,7 @@ def cmd_load(args) -> None:
             print(f"  ⚠ ไม่สามารถโหลด regulations: {e}")
 
     conn.commit()
-    tables = ["program", "course", "plan_item", "prerequisite"]
+    tables = ["program", "study_plan", "course", "plan_item", "elective_slot", "prerequisite"]
     has_reg = conn.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='regulation'").fetchone()
     if has_reg:
         tables.append("regulation")
@@ -856,6 +963,12 @@ def cmd_load_regulations(args) -> None:
     conn.executescript(DDL)
     conn.execute("DELETE FROM regulation")
     for r in regs:
+        min_gpa = r.get("min_gpa")
+        max_gpa = r.get("max_gpa")
+        cond = str(r.get("condition_desc") or "")
+        if "1.00" in cond and ("ต่ำกว่า" in cond or "<" in cond):
+            max_gpa = 0.99
+            min_gpa = None
         conn.execute(
             """
             INSERT INTO regulation (
@@ -865,7 +978,7 @@ def cmd_load_regulations(args) -> None:
             """,
             (
                 r.get("program_id", "ALL"), r.get("category"), r.get("topic"),
-                r.get("condition_desc"), r.get("min_gpa"), r.get("max_gpa"),
+                r.get("condition_desc"), min_gpa, max_gpa,
                 r.get("min_credits"), r.get("max_credits"), r.get("penalty_action"),
                 r.get("article_no"), r.get("source_page")
             )
@@ -874,6 +987,239 @@ def cmd_load_regulations(args) -> None:
     count = conn.execute("SELECT COUNT(*) FROM regulation").fetchone()[0]
     conn.close()
     print(f"✓ โหลด regulation เข้า {db.name} สำเร็จ ({count} แถว)")
+
+
+def build_all_curricula_db(db_path: Path | str = "work/lab8b_run/curriculum.db",
+                           regulations_path: Path | str | None = None) -> Path:
+    """
+    สร้างฐานข้อมูลหลักสูตรสมบูรณ์ 4 สาขา (DSBA, BIT, IT, AIT) และ 7 แผนการศึกษา
+    ตามสถาปัตยกรรม Option 2: Full Separation (แยก study_plan, course, elective_slot, plan_item)
+    โดยสกัดข้อมูลจริงจากเล่ม PDF ใน data/input/ (100% ปราศจาก Hardcode)
+    """
+    repo_root = Path(__file__).resolve().parent.parent.parent
+    sys.path.insert(0, str(repo_root / "src" / "ocr_system"))
+    from lab7b_curriculum import extract_pdf_text, parse_curriculum_text, extract_pdf_course_descriptions
+
+    db = Path(db_path)
+    db.parent.mkdir(parents=True, exist_ok=True)
+    if db.exists():
+        db.unlink()
+
+    conn = open_db(db)
+    conn.executescript(DDL)
+
+    programs_data = [
+        ("DSBA", "หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ", "Data Science and Business Analytics (DSBA)", "วท.บ. (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ)", 132, 4),
+        ("BIT", "หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศทางธุรกิจ", "Business Information Technology (BIT)", "วท.บ. (เทคโนโลยีสารสนเทศทางธุรกิจ)", 126, 4),
+        ("IT", "หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ", "Information Technology (IT)", "วท.บ. (เทคโนโลยีสารสนเทศ)", 129, 4),
+        ("AIT", "หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีปัญญาประดิษฐ์", "Artificial Intelligence Technology (AIT)", "วท.บ. (เทคโนโลยีปัญญาประดิษฐ์)", 120, 4),
+    ]
+    for p in programs_data:
+        conn.execute("INSERT OR REPLACE INTO program VALUES (?,?,?,?,?,?)", p)
+
+    study_plans_data = [
+        ("DSBA_COOP", "DSBA", "แผนสหกิจศึกษา", "Cooperative Education Plan", "coop"),
+        ("DSBA_NON_COOP", "DSBA", "แผนปกติ (ไม่สหกิจศึกษา)", "Regular Plan", "no_coop"),
+        ("BIT_COOP", "BIT", "แผนสหกิจศึกษา", "Cooperative Education Plan", "coop"),
+        ("BIT_NON_COOP", "BIT", "แผนปกติ (ไม่สหกิจศึกษา)", "Regular Plan", "no_coop"),
+        ("IT_COOP", "IT", "แผนสหกิจศึกษา", "Cooperative Education Plan", "coop"),
+        ("IT_NON_COOP", "IT", "แผนปกติ (ไม่สหกิจศึกษา)", "Regular Plan", "no_coop"),
+        ("AIT_SINGLE", "AIT", "แผนการศึกษา", "Study Plan", "single"),
+    ]
+    for sp in study_plans_data:
+        conn.execute("INSERT OR REPLACE INTO study_plan VALUES (?,?,?,?,?)", sp)
+
+    pdf_files = {
+        "DSBA": repo_root / "data" / "input" / "fulldoc_dsba.pdf",
+        "BIT": repo_root / "data" / "input" / "fulldoc_BIT.pdf",
+        "IT": repo_root / "data" / "input" / "fulldoc_it.pdf",
+        "AIT": repo_root / "data" / "input" / "fulldoc_AIT.pdf",
+    }
+
+    plan_specs = [
+        ("DSBA", "DSBA_NON_COOP", "26-32"),
+        ("DSBA", "DSBA_COOP", "33-39"),
+        ("BIT", "BIT_NON_COOP", "26-30"),
+        ("BIT", "BIT_COOP", "31-35"),
+        ("IT", "IT_NON_COOP", "32-38"),
+        ("IT", "IT_COOP", "39-45"),
+        ("AIT", "AIT_SINGLE", "23-26"),
+    ]
+
+    print("\n[1/3] สกัดคำอธิบายรายวิชาจากเล่ม PDF ทุกหลักสูตร...")
+    all_prereqs: dict[str, str] = {}
+    all_credits_map: dict[str, str] = {}
+    for prog, pdf_path in pdf_files.items():
+        if not pdf_path.exists():
+            print(f"  ⚠ ไม่พบไฟล์ PDF: {pdf_path}")
+            continue
+        prereqs, en_names, pages_map, th_names, credits_map = extract_pdf_course_descriptions(str(pdf_path))
+        all_prereqs.update(prereqs)
+        all_credits_map.update(credits_map)
+        for code, page_list in pages_map.items():
+            if not re.fullmatch(r"\d{8}", code):
+                continue
+            if code not in credits_map:
+                continue
+            cr_val = credits_map[code]
+            cr, lec, lab, slf = _credit_parts(cr_val)
+            name_th = th_names.get(code) or f"วิชา {code}"
+            name_en = en_names.get(code)
+            pdf_str = ";".join(map(str, sorted(page_list)))
+            print_str = ";".join(map(str, [max(1, p - 5) for p in sorted(page_list)]))
+            conn.execute(
+                """
+                INSERT INTO course (code, name_th, name_en, credits, lecture_h, lab_h, self_h, description_th, pdf_pages, printed_pages)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT(code) DO UPDATE SET
+                    name_th = COALESCE(excluded.name_th, course.name_th),
+                    name_en = COALESCE(excluded.name_en, course.name_en),
+                    credits = excluded.credits,
+                    lecture_h = excluded.lecture_h,
+                    lab_h = excluded.lab_h,
+                    self_h = excluded.self_h,
+                    pdf_pages = excluded.pdf_pages,
+                    printed_pages = excluded.printed_pages
+                """,
+                (code, name_th, name_en, cr, lec, lab, slf, None, pdf_str, print_str)
+            )
+
+    print("\n[2/3] สกัดตารางแผนการศึกษา 7 แผนจากเล่ม PDF...")
+    for prog, plan_id, page_range in plan_specs:
+        pdf_path = pdf_files[prog]
+        if not pdf_path.exists():
+            continue
+        text = extract_pdf_text(str(pdf_path), page_range)
+        res = parse_curriculum_text(text, prog)
+        courses = res.get("courses", [])
+
+        for c in courses:
+            raw_code = str(c.get("code") or "").strip()
+            if re.fullmatch(r"\d{8}", raw_code):
+                cr, lec, lab, slf = _credit_parts(c.get("credits"))
+                if raw_code in all_credits_map:
+                    cr, lec, lab, slf = _credit_parts(all_credits_map[raw_code])
+                conn.execute(
+                    """
+                    INSERT INTO course (code, name_th, name_en, credits, lecture_h, lab_h, self_h, description_th)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                    ON CONFLICT(code) DO UPDATE SET
+                        name_th = COALESCE(course.name_th, excluded.name_th),
+                        name_en = COALESCE(course.name_en, excluded.name_en)
+                    """,
+                    (raw_code, c.get("name_th") or raw_code, c.get("name_en"), cr, lec, lab, slf, None)
+                )
+                conn.execute(
+                    """
+                    INSERT INTO plan_item (plan_id, program_id, year, semester, code, credits, alt_group, note)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    (plan_id, prog, c["year"], c["semester"], raw_code, cr, c.get("alt_group"), c.get("note"))
+                )
+            else:
+                cr, _, _, _ = _credit_parts(c.get("credits"))
+                conn.execute(
+                    """
+                    INSERT INTO elective_slot (plan_id, year, semester, slot_name_th, slot_name_en, code_pattern, credits, credit_options, note)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    (plan_id, c["year"], c["semester"], c.get("name_th") or raw_code, c.get("name_en"), raw_code, cr, c.get("credits"), c.get("note"))
+                )
+
+    existing_codes = set(r[0] for r in conn.execute("SELECT code FROM course").fetchall())
+    audit_skipped_prereqs = []
+    for code, req in all_prereqs.items():
+        if code in existing_codes and req in existing_codes and code != req:
+            conn.execute(
+                "INSERT OR IGNORE INTO prerequisite (code, requires, kind) VALUES (?, ?, 'pre')",
+                (code, req)
+            )
+        elif code in existing_codes and req not in existing_codes:
+            if req.startswith("06"):
+                audit_skipped_prereqs.append({
+                    "code": code, "requires": req, "level": "WARNING",
+                    "category": "SUSPICIOUS_ANOMALY",
+                    "reason": f"วิชาคณะไอที ({req}) แต่ไม่พบใน course (น่าสงสัย OCR เพี้ยนหรือพิมพ์ผิด)"
+                })
+            elif req.startswith("90"):
+                audit_skipped_prereqs.append({
+                    "code": code, "requires": req, "level": "INFO",
+                    "category": "EXTERNAL_GENED_THAI",
+                    "reason": f"วิชาศึกษาทั่วไป สจล. หลักสูตรปกติ ({req}) อยู่นอกเล่มเฉพาะของคณะ"
+                })
+            elif req.startswith("96"):
+                audit_skipped_prereqs.append({
+                    "code": code, "requires": req, "level": "INFO",
+                    "category": "EXTERNAL_GENED_INTERNATIONAL",
+                    "reason": f"วิชาศึกษาทั่วไป สจล. หลักสูตรนานาชาติ ({req}) หรืออาจอ่านผิดจาก 90"
+                })
+            else:
+                audit_skipped_prereqs.append({
+                    "code": code, "requires": req, "level": "NOTICE",
+                    "category": "UNCLASSIFIED_EXTERNAL",
+                    "reason": f"วิชาภายนอกอื่นๆ ({req})"
+                })
+
+    if audit_skipped_prereqs:
+        print(f"  [Audit Prerequisite] ตรวจพบวิชาบังคับก่อนที่ไม่พบใน course ({len(audit_skipped_prereqs)} รายการ):")
+        for item in audit_skipped_prereqs:
+            print(f"    - [{item['level']}] วิชา {item['code']} ต้องการ {item['requires']} -> {item['reason']}")
+
+    conn.execute(
+        "INSERT OR IGNORE INTO program_course (program_id, code) SELECT DISTINCT program_id, code FROM plan_item"
+    )
+
+    print("\n[3/3] โหลดข้อบังคับการศึกษา...")
+    reg_cand = regulations_path
+    if not reg_cand:
+        for cand in [
+            repo_root / "work" / "lab7b_run" / "regulations" / "regulations.json",
+            repo_root / "work" / "lab7b_run" / "regulations.json",
+            repo_root / "work" / "lab8b_run" / "regulations.json",
+        ]:
+            if cand.exists():
+                reg_cand = str(cand)
+                break
+
+    if reg_cand and Path(reg_cand).exists():
+        regs = json.loads(Path(reg_cand).read_text(encoding="utf-8"))
+        conn.execute("DELETE FROM regulation")
+        for r in regs:
+            min_gpa = r.get("min_gpa")
+            max_gpa = r.get("max_gpa")
+            cond = str(r.get("condition_desc") or "")
+            if "1.00" in cond and ("ต่ำกว่า" in cond or "<" in cond):
+                max_gpa = 0.99
+                min_gpa = None
+            conn.execute(
+                """
+                INSERT INTO regulation (
+                    program_id, category, topic, condition_desc, min_gpa, max_gpa,
+                    min_credits, max_credits, penalty_action, article_no, source_page
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    r.get("program_id", "ALL"), r.get("category"), r.get("topic"),
+                    r.get("condition_desc"), min_gpa, max_gpa,
+                    r.get("min_credits"), r.get("max_credits"), r.get("penalty_action"),
+                    r.get("article_no"), r.get("source_page")
+                )
+            )
+
+    conn.commit()
+    print(f"\n✓ สร้างฐานข้อมูลสำเร็จ: {db}")
+    tables = ["program", "study_plan", "course", "plan_item", "elective_slot", "prerequisite", "regulation"]
+    for t in tables:
+        cnt = conn.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0]
+        print(f"  • {t:<15}: {cnt:>4} แถว")
+
+    conn.close()
+    return db
+
+
+def cmd_build_all(args) -> None:
+    build_all_curricula_db(args.database, getattr(args, "regulations", None))
+
 
 
 # ═══════════════════════════════════════════════════════════════════════
@@ -925,23 +1271,49 @@ def verify_db(conn: sqlite3.Connection, program_id: str | None = None) -> list[d
         return results
 
     # ── CHK1 หน่วยกิตรวมของแผน ต้องเท่ากับที่หลักสูตรประกาศ ────────
+    plans = conn.execute("""
+        SELECT sp.plan_id, sp.program_id, sp.name_th, p.total_credits AS declared
+        FROM study_plan sp
+        JOIN program p ON p.program_id = sp.program_id
+        """ + (" WHERE sp.program_id = ?" if program_id else "") + """
+        ORDER BY sp.program_id, sp.plan_id
+    """, (program_id,) if program_id else ()).fetchall()
+
     chk1_details = []
     all_chk1_ok = True
-    for prog in progs:
-        pid = prog["program_id"]
-        rows = _sem_credits(conn, pid)
-        total = sum(r["credits"] for r in rows)
-        declared = prog["total_credits"]
-        free = conn.execute(
-            "SELECT COUNT(*) FROM plan_item WHERE program_id = ? AND note LIKE '%เลือกเสรี%'",
-            (pid,)).fetchone()[0]
-        ok = (total == declared)
-        if not ok:
-            all_chk1_ok = False
-        prefix = f"{pid}: " if len(progs) > 1 else ""
-        det = (f"{prefix}แผนรวม {total} · ประกาศไว้ {declared}"
-               + (f" · มีวิชาเลือกเสรี {free} รายการ" if free else ""))
-        chk1_details.append(det)
+    if plans:
+        for pl in plans:
+            plan_id = pl["plan_id"]
+            sem_rows = conn.execute(
+                "SELECT credits FROM v_semester_credits WHERE plan_id = ?",
+                (plan_id,)
+            ).fetchall()
+            total = sum(r["credits"] for r in sem_rows)
+            declared = pl["declared"]
+            free = conn.execute(
+                "SELECT COUNT(*) FROM plan_item WHERE plan_id = ? AND note LIKE '%เลือกเสรี%'",
+                (plan_id,)).fetchone()[0]
+            ok = (total == declared)
+            if not ok:
+                all_chk1_ok = False
+            det = f"{plan_id}: แผนรวม {total} · ประกาศไว้ {declared}" + (f" · มีวิชาเลือกเสรี {free} รายการ" if free else "")
+            chk1_details.append(det)
+    else:
+        for prog in progs:
+            pid = prog["program_id"]
+            rows = _sem_credits(conn, pid)
+            total = sum(r["credits"] for r in rows)
+            declared = prog["total_credits"]
+            free = conn.execute(
+                "SELECT COUNT(*) FROM plan_item WHERE program_id = ? AND note LIKE '%เลือกเสรี%'",
+                (pid,)).fetchone()[0]
+            ok = (total == declared)
+            if not ok:
+                all_chk1_ok = False
+            prefix = f"{pid}: " if len(progs) > 1 else ""
+            det = (f"{prefix}แผนรวม {total} · ประกาศไว้ {declared}"
+                   + (f" · มีวิชาเลือกเสรี {free} รายการ" if free else ""))
+            chk1_details.append(det)
 
     add("CHK1", "หน่วยกิตรวมของแผน = หน่วยกิตที่หลักสูตรประกาศ", all_chk1_ok,
         " | ".join(chk1_details))
@@ -998,84 +1370,171 @@ def verify_db(conn: sqlite3.Connection, program_id: str | None = None) -> list[d
         "; ".join(f"{r['code']} แผน {r['plan_cr']} แต่คำอธิบาย {r['course_cr']}"
                   for r in mismatch[:5]) if mismatch else "ตรงกันทุกรายการ")
 
+    has_plan_id = bool(conn.execute("SELECT COUNT(*) FROM pragma_table_info('plan_item') WHERE name = 'plan_id'").fetchone()[0])
+
     # ── CHK5 วิชาบังคับก่อน ต้องอยู่ภาคเรียนที่มาก่อนจริง ────────────
-    #    ตรวจสอบภายในหลักสูตรเดียวกัน
-    if program_id:
-        viol = conn.execute("""
-            SELECT r.code, r.requires,
-                   a.year || '/' || a.semester AS at_course,
-                   b.year || '/' || b.semester AS at_prereq
-            FROM prerequisite r
-            JOIN plan_item a ON a.code = r.code AND a.program_id = ?
-            JOIN plan_item b ON b.code = r.requires AND b.program_id = a.program_id
-            WHERE r.kind = 'pre'
-              AND (b.year * 10 + b.semester) >= (a.year * 10 + a.semester)
-        """, (program_id,)).fetchall()
+    #    ตรวจสอบภายในแผนการศึกษาเดียวกัน
+    if has_plan_id:
+        if program_id:
+            viol = conn.execute("""
+                SELECT r.code, r.requires,
+                       a.year || '/' || a.semester AS at_course,
+                       b.year || '/' || b.semester AS at_prereq,
+                       a.plan_id
+                FROM prerequisite r
+                JOIN plan_item a ON a.code = r.code AND a.program_id = ?
+                JOIN plan_item b ON b.code = r.requires AND b.plan_id = a.plan_id
+                WHERE r.kind = 'pre'
+                  AND (b.year * 10 + b.semester) >= (a.year * 10 + a.semester)
+            """, (program_id,)).fetchall()
+        else:
+            viol = conn.execute("""
+                SELECT r.code, r.requires,
+                       a.year || '/' || a.semester AS at_course,
+                       b.year || '/' || b.semester AS at_prereq,
+                       a.plan_id
+                FROM prerequisite r
+                JOIN plan_item a ON a.code = r.code
+                JOIN plan_item b ON b.code = r.requires AND b.plan_id = a.plan_id
+                WHERE r.kind = 'pre'
+                  AND (b.year * 10 + b.semester) >= (a.year * 10 + a.semester)
+            """).fetchall()
     else:
-        viol = conn.execute("""
-            SELECT r.code, r.requires,
-                   a.year || '/' || a.semester AS at_course,
-                   b.year || '/' || b.semester AS at_prereq
-            FROM prerequisite r
-            JOIN plan_item a ON a.code = r.code
-            JOIN plan_item b ON b.code = r.requires AND b.program_id = a.program_id
-            WHERE r.kind = 'pre'
-              AND (b.year * 10 + b.semester) >= (a.year * 10 + a.semester)
-        """).fetchall()
+        if program_id:
+            viol = conn.execute("""
+                SELECT r.code, r.requires,
+                       a.year || '/' || a.semester AS at_course,
+                       b.year || '/' || b.semester AS at_prereq
+                FROM prerequisite r
+                JOIN plan_item a ON a.code = r.code AND a.program_id = ?
+                JOIN plan_item b ON b.code = r.requires AND b.program_id = a.program_id
+                WHERE r.kind = 'pre'
+                  AND (b.year * 10 + b.semester) >= (a.year * 10 + a.semester)
+            """, (program_id,)).fetchall()
+        else:
+            viol = conn.execute("""
+                SELECT r.code, r.requires,
+                       a.year || '/' || a.semester AS at_course,
+                       b.year || '/' || b.semester AS at_prereq
+                FROM prerequisite r
+                JOIN plan_item a ON a.code = r.code
+                JOIN plan_item b ON b.code = r.requires AND b.program_id = a.program_id
+                WHERE r.kind = 'pre'
+                  AND (b.year * 10 + b.semester) >= (a.year * 10 + a.semester)
+            """).fetchall()
     add("CHK5", "วิชาบังคับก่อน อยู่ภาคเรียนก่อนวิชาที่อ้างถึง", not viol,
         "; ".join(f"{r['code']} ({r['at_course']}) ต้องเรียน {r['requires']} "
                   f"({r['at_prereq']}) มาก่อน" for r in viol[:5])
         if viol else "ลำดับถูกต้องทุกคู่")
 
     # ── CHK6 ห้ามมีวิชาซ้ำในภาคเรียนเดียวกัน ───────────────────────
-    if program_id:
-        dup = conn.execute("""
-            SELECT year, semester, code, COUNT(*) AS n
-            FROM plan_item
-            WHERE program_id = ? AND alt_group IS NULL
-            GROUP BY year, semester, code
-            HAVING n > 1
-        """, (program_id,)).fetchall()
+    if has_plan_id:
+        if program_id:
+            dup = conn.execute("""
+                SELECT plan_id, year, semester, code, COUNT(*) AS n
+                FROM plan_item
+                WHERE program_id = ? AND alt_group IS NULL
+                GROUP BY plan_id, year, semester, code
+                HAVING n > 1
+            """, (program_id,)).fetchall()
+        else:
+            dup = conn.execute("""
+                SELECT plan_id, year, semester, code, COUNT(*) AS n
+                FROM plan_item
+                WHERE alt_group IS NULL
+                GROUP BY plan_id, year, semester, code
+                HAVING n > 1
+            """).fetchall()
     else:
-        dup = conn.execute("""
-            SELECT program_id, year, semester, code, COUNT(*) AS n
-            FROM plan_item
-            WHERE alt_group IS NULL
-            GROUP BY program_id, year, semester, code
-            HAVING n > 1
-        """).fetchall()
+        if program_id:
+            dup = conn.execute("""
+                SELECT year, semester, code, COUNT(*) AS n
+                FROM plan_item
+                WHERE program_id = ? AND alt_group IS NULL
+                GROUP BY year, semester, code
+                HAVING n > 1
+            """, (program_id,)).fetchall()
+        else:
+            dup = conn.execute("""
+                SELECT program_id, year, semester, code, COUNT(*) AS n
+                FROM plan_item
+                WHERE alt_group IS NULL
+                GROUP BY program_id, year, semester, code
+                HAVING n > 1
+            """).fetchall()
     add("CHK6", "ไม่มีวิชาซ้ำในภาคเรียนเดียวกัน", not dup,
-        "; ".join(f"{r['code']} ที่ปี {r['year']}/{r['semester']} ซ้ำ {r['n']} ครั้ง"
+        "; ".join(f"{r['code']} ที่ {r['plan_id'] if 'plan_id' in r.keys() else ''} ปี {r['year']}/{r['semester']} ซ้ำ {r['n']} ครั้ง"
                   for r in dup[:5]) if dup else "ไม่มีรายการซ้ำ")
 
     # ── CHK7 ภาระหน่วยกิตต่อภาคเรียน อยู่ในเกณฑ์ ────────────────────
-    block_rows = conn.execute("""
-        SELECT DISTINCT program_id, year, semester FROM plan_item
-        WHERE credits >= 6
-           OR note LIKE '%สหกิจ%' OR note LIKE '%ฝึกงาน%'
-           OR code IN (SELECT code FROM course
-                       WHERE name_th LIKE '%สหกิจ%' OR name_th LIKE '%ฝึกงาน%')
-    """).fetchall()
-    block = {(r["program_id"], r["year"], r["semester"]) for r in block_rows}
+    if has_plan_id:
+        block_rows = conn.execute("""
+            SELECT DISTINCT plan_id, year, semester FROM plan_item
+            WHERE credits >= 6
+               OR note LIKE '%สหกิจ%' OR note LIKE '%ฝึกงาน%'
+               OR code IN (SELECT code FROM course
+                           WHERE name_th LIKE '%สหกิจ%' OR name_th LIKE '%ฝึกงาน%')
+            UNION
+            SELECT DISTINCT plan_id, year, semester FROM elective_slot
+            WHERE credits >= 6
+               OR note LIKE '%สหกิจ%' OR note LIKE '%ฝึกงาน%'
+               OR slot_name_th LIKE '%สหกิจ%' OR slot_name_th LIKE '%ฝึกงาน%'
+        """).fetchall()
+        block = {(r["plan_id"], r["year"], r["semester"]) for r in block_rows}
 
-    if program_id:
-        sem_rows = conn.execute(
-            "SELECT program_id, year, semester, credits FROM v_semester_credits WHERE program_id = ?",
-            (program_id,)).fetchall()
+        if program_id:
+            sem_rows = conn.execute(
+                "SELECT plan_id, year, semester, credits FROM v_semester_credits WHERE program_id = ?",
+                (program_id,)).fetchall()
+        else:
+            sem_rows = conn.execute(
+                "SELECT plan_id, year, semester, credits FROM v_semester_credits").fetchall()
+
+        out_of_range = []
+        for r in sem_rows:
+            key = (r["plan_id"], r["year"], r["semester"])
+            if key in block:
+                continue
+            if r["semester"] == 3:
+                continue
+            if not (MIN_CREDITS_PER_SEM <= r["credits"] <= MAX_CREDITS_PER_SEM):
+                p_prefix = f"{r['plan_id']} "
+                out_of_range.append(f"{p_prefix}ปี {r['year']}/{r['semester']} = {r['credits']} หน่วยกิต")
     else:
-        sem_rows = conn.execute(
-            "SELECT program_id, year, semester, credits FROM v_semester_credits").fetchall()
+        block_rows = conn.execute("""
+            SELECT DISTINCT program_id, year, semester FROM plan_item
+            WHERE credits >= 6
+               OR note LIKE '%สหกิจ%' OR note LIKE '%ฝึกงาน%'
+               OR code IN (SELECT code FROM course
+                           WHERE name_th LIKE '%สหกิจ%' OR name_th LIKE '%ฝึกงาน%')
+            UNION
+            SELECT DISTINCT p.program_id, e.year, e.semester
+            FROM elective_slot e
+            JOIN study_plan p ON e.plan_id = p.plan_id
+            WHERE e.credits >= 6
+               OR e.note LIKE '%สหกิจ%' OR e.note LIKE '%ฝึกงาน%'
+               OR e.slot_name_th LIKE '%สหกิจ%' OR e.slot_name_th LIKE '%ฝึกงาน%'
+        """).fetchall()
+        block = {(r["program_id"], r["year"], r["semester"]) for r in block_rows}
 
-    out_of_range = []
-    for r in sem_rows:
-        key = (r["program_id"], r["year"], r["semester"])
-        if key in block:
-            continue
-        if r["semester"] == 3:
-            continue
-        if not (MIN_CREDITS_PER_SEM <= r["credits"] <= MAX_CREDITS_PER_SEM):
-            p_prefix = f"{r['program_id']} " if len(progs) > 1 else ""
-            out_of_range.append(f"{p_prefix}ปี {r['year']}/{r['semester']} = {r['credits']} หน่วยกิต")
+        if program_id:
+            sem_rows = conn.execute(
+                "SELECT program_id, year, semester, credits FROM v_semester_credits WHERE program_id = ?",
+                (program_id,)).fetchall()
+        else:
+            sem_rows = conn.execute(
+                "SELECT program_id, year, semester, credits FROM v_semester_credits").fetchall()
+
+        out_of_range = []
+        for r in sem_rows:
+            key = (r["program_id"], r["year"], r["semester"])
+            if key in block:
+                continue
+            if r["semester"] == 3:
+                continue
+            if not (MIN_CREDITS_PER_SEM <= r["credits"] <= MAX_CREDITS_PER_SEM):
+                p_prefix = f"{r['program_id']} " if len(progs) > 1 else ""
+                out_of_range.append(f"{p_prefix}ปี {r['year']}/{r['semester']} = {r['credits']} หน่วยกิต")
 
     add("CHK7", f"หน่วยกิตต่อภาคเรียนอยู่ระหว่าง {MIN_CREDITS_PER_SEM}"
                 f"–{MAX_CREDITS_PER_SEM}", not out_of_range,
@@ -1163,10 +1622,10 @@ SQL_PROMPT = """คุณคือผู้ช่วยแปลงคำถา�
 
 ตัวอย่าง
 คำถาม: หลักสูตรนี้มีกี่หน่วยกิต
-SQL: SELECT total_credits FROM program LIMIT 1
+SQL: SELECT total_credits FROM program WHERE program_id = 'DSBA' LIMIT 1
 
 คำถาม: หลักสูตรนี้ใช้เวลาเรียนกี่ปี
-SQL: SELECT years FROM program LIMIT 1
+SQL: SELECT years FROM program WHERE program_id = 'DSBA' LIMIT 1
 
 คำถาม: หลักสูตร IT มีกี่หน่วยกิต
 SQL: SELECT total_credits FROM program WHERE program_id = 'IT' LIMIT 1
@@ -1199,10 +1658,16 @@ SQL: SELECT semester FROM plan_item WHERE code = '06026200' LIMIT 1
 SQL: SELECT lab_h FROM course WHERE code = '06036100' LIMIT 1
 
 คำถาม: ปี 1 เทอม 1 เรียนกี่หน่วยกิต
-SQL: SELECT credits FROM v_semester_credits WHERE year = 1 AND semester = 1 LIMIT 1
+SQL: SELECT v.credits FROM v_semester_credits AS v JOIN study_plan AS sp ON sp.plan_id = v.plan_id WHERE v.program_id = 'DSBA' AND sp.plan_type = 'no_coop' AND v.year = 1 AND v.semester = 1 LIMIT 1
 
 คำถาม: ปี 1 เทอม 1 เรียนกี่วิชา
-SQL: SELECT n_courses FROM v_semester_credits WHERE year = 1 AND semester = 1 LIMIT 1
+SQL: SELECT v.n_courses FROM v_semester_credits AS v JOIN study_plan AS sp ON sp.plan_id = v.plan_id WHERE v.program_id = 'DSBA' AND sp.plan_type = 'no_coop' AND v.year = 1 AND v.semester = 1 LIMIT 1
+
+คำถาม: ปี 2 เทอม 1 เรียนกี่หน่วยกิต
+SQL: SELECT v.credits FROM v_semester_credits AS v JOIN study_plan AS sp ON sp.plan_id = v.plan_id WHERE v.program_id = 'DSBA' AND sp.plan_type = 'no_coop' AND v.year = 2 AND v.semester = 1 LIMIT 1
+
+คำถาม: ปี 2 เทอม 2 เรียนกี่หน่วยกิต
+SQL: SELECT v.credits FROM v_semester_credits AS v JOIN study_plan AS sp ON sp.plan_id = v.plan_id WHERE v.program_id = 'DSBA' AND sp.plan_type = 'no_coop' AND v.year = 2 AND v.semester = 2 LIMIT 1
 
 คำถาม: หลักสูตร IT ปี 1 เทอม 1 เรียนกี่หน่วยกิต
 SQL: SELECT credits FROM v_semester_credits WHERE program_id = 'IT' AND year = 1 AND semester = 1 LIMIT 1
@@ -1261,7 +1726,7 @@ SQL: SELECT min_gpa FROM regulation WHERE category = 'เกณฑ์การ�
 - ถามว่าวิชา X ต้องเรียนวิชาใดมาก่อน หรือ ต้องเรียนวิชาใดก่อนถึงจะลง X ได้ (วิชาบังคับก่อนของ X): ให้ SELECT requires FROM prerequisite WHERE code = 'X' AND kind = 'pre'
 - ในตาราง program, v_plan, v_semester_credits, plan_item มีเฉพาะ program_id: 'DSBA', 'IT', 'AIT', 'BIT' เท่านั้น ห้ามใช้ program_id = 'ALL' กับตารางเหล่านี้เด็ดขาด ('ALL' มีเฉพาะในตาราง regulation)
 - หากในคำถามระบุชื่อหลักสูตร ให้เพิ่มเงื่อนไขระบุ program_id ใน WHERE เสมอ
-- หากในคำถามไม่ได้ระบุชื่อหลักสูตร ห้ามใส่เงื่อนไข program_id ใน WHERE เด็ดขาด
+- หากในคำถามถามเกี่ยวกับแผนการเรียนหรือหน่วยกิตต่อเทอม (v_semester_credits, v_plan) แต่ไม่ได้ระบุชื่อหลักสูตร ให้ใช้ค่าเริ่มต้นเป็น program_id = 'DSBA' และ sp.plan_type = 'no_coop' (และต้อง JOIN study_plan AS sp ON sp.plan_id = v.plan_id เสมอเมื่อใช้ sp.plan_type)
 - ตอบเป็น SQL ล้วน ไม่ต้องมีคำอธิบายและไม่ต้องมี markdown fence
 
 คำถาม: {question}
@@ -1772,12 +2237,16 @@ def cmd_selftest(args=None) -> bool:
     res2 = {r["id"]: r["ok"] for r in verify_db(conn)}
     ck("CHK4 จับหน่วยกิตไม่ตรงกัน", res2["CHK4"], False)
     conn.execute("UPDATE plan_item SET credits = 3 WHERE code = '06026240'")
+    conn.commit()
 
-    conn.execute("INSERT INTO plan_item (program_id, year, semester, code,"
-                 " credits) VALUES ('IT2565', 1, 1, '06026777', 3)")
+    conn.execute("PRAGMA foreign_keys = OFF;")
+    conn.execute("INSERT INTO plan_item (plan_id, program_id, year, semester, code,"
+                 " credits) VALUES ('IT2565_DEFAULT', 'IT2565', 1, 1, '06026777', 3)")
     res3 = {r["id"]: r["ok"] for r in verify_db(conn)}
     ck("CHK2 จับรหัสที่ไม่มีคำอธิบาย", res3["CHK2"], False)
     conn.execute("DELETE FROM plan_item WHERE code = '06026777'")
+    conn.commit()
+    conn.execute("PRAGMA foreign_keys = ON;")
 
     # สลับลำดับให้วิชาบังคับก่อนอยู่หลัง
     conn.execute("UPDATE plan_item SET year = 1, semester = 1 "
@@ -1796,8 +2265,8 @@ def cmd_selftest(args=None) -> bool:
     conn.execute("UPDATE program SET total_credits = 39")
 
     # CHK6 — วิชาซ้ำในภาคเรียนเดียวกัน
-    conn.execute("INSERT INTO plan_item (program_id, year, semester, code,"
-                 " credits) VALUES ('IT2565', 1, 1, '06026101', 3)")
+    conn.execute("INSERT INTO plan_item (plan_id, program_id, year, semester, code,"
+                 " credits) VALUES ('IT2565_DEFAULT', 'IT2565', 1, 1, '06026101', 3)")
     ck("CHK6 จับวิชาซ้ำในภาคเดียวกัน",
        {r["id"]: r["ok"] for r in verify_db(conn)}["CHK6"], False)
     conn.execute("DELETE FROM plan_item WHERE id = (SELECT MAX(id) FROM plan_item)")
@@ -1807,8 +2276,8 @@ def cmd_selftest(args=None) -> bool:
     # เพราะวิชา 6 หน่วยกิตขึ้นไปจะถูกมองว่าเป็นภาคบล็อกแล้วได้รับยกเว้น
     # (ดูข้อจำกัดที่บันทึกไว้ในฟังก์ชัน verify_db)
     for c in ("06026240", "06026241", "06026259", "06026260"):
-        conn.execute("INSERT INTO plan_item (program_id, year, semester, code,"
-                     " credits) VALUES ('IT2565', 1, 1, ?, 3)", (c,))
+        conn.execute("INSERT INTO plan_item (plan_id, program_id, year, semester, code,"
+                     " credits) VALUES ('IT2565_DEFAULT', 'IT2565', 1, 1, ?, 3)", (c,))
     ck("CHK7 จับหน่วยกิตต่อภาคเกินเกณฑ์",
        {r["id"]: r["ok"] for r in verify_db(conn)}["CHK7"], False)
     conn.execute("DELETE FROM plan_item WHERE year=1 AND semester=1 AND code IN"
@@ -1830,19 +2299,46 @@ def cmd_selftest(args=None) -> bool:
 def _load_dict(conn: sqlite3.Connection, data: dict) -> None:
     """โหลด dict เข้าฐานข้อมูลที่เปิดอยู่แล้ว (ใช้ร่วมกับ selftest)"""
     p = data["program"]
+    pid = p["program_id"]
     conn.execute("INSERT OR REPLACE INTO program VALUES (?,?,?,?,?,?)",
-                 (p["program_id"], p["name_th"], p.get("name_en"),
+                 (pid, p["name_th"], p.get("name_en"),
                   p.get("degree"), p["total_credits"], p["years"]))
+
+    study_plans = data.get("study_plans") or [{
+        "plan_id": f"{pid}_DEFAULT",
+        "program_id": pid,
+        "name_th": p["name_th"],
+        "name_en": p.get("name_en"),
+        "plan_type": "single",
+    }]
+    for sp in study_plans:
+        conn.execute("INSERT OR REPLACE INTO study_plan VALUES (?,?,?,?,?)",
+                     (sp["plan_id"], sp.get("program_id", pid), sp["name_th"], sp.get("name_en"), sp.get("plan_type", "single")))
+    default_plan_id = study_plans[0]["plan_id"]
+
     for c in data.get("courses", []):
-        conn.execute("INSERT OR REPLACE INTO course VALUES (?,?,?,?,?,?,?,?)",
-                     (c["code"], c["name_th"], c.get("name_en"), c["credits"],
-                      c.get("lecture_h"), c.get("lab_h"), c.get("self_h"),
-                      c.get("description_th")))
+        code_str = str(c.get("code") or "").strip()
+        if re.fullmatch(r"\d{8}", code_str):
+            conn.execute("INSERT OR REPLACE INTO course (code, name_th, name_en, credits, lecture_h, lab_h, self_h, description_th, pdf_pages, printed_pages) "
+                         "VALUES (?,?,?,?,?,?,?,?,?,?)",
+                         (code_str, c["name_th"], c.get("name_en"), c["credits"],
+                          c.get("lecture_h"), c.get("lab_h"), c.get("self_h"),
+                          c.get("description_th"), c.get("pdf_pages"), c.get("printed_pages")))
+
     for it in data.get("plan", []):
-        conn.execute("INSERT INTO plan_item (program_id, year, semester, code,"
-                     " credits, alt_group, note) VALUES (?,?,?,?,?,?,?)",
-                     (p["program_id"], it["year"], it["semester"], it["code"],
+        plan_id = it.get("plan_id") or default_plan_id
+        conn.execute("INSERT INTO plan_item (plan_id, program_id, year, semester, code,"
+                     " credits, alt_group, note) VALUES (?,?,?,?,?,?,?,?)",
+                     (plan_id, pid, it["year"], it["semester"], it["code"],
                       it["credits"], it.get("alt_group"), it.get("note")))
+
+    for e in data.get("elective_slots", []):
+        plan_id = e.get("plan_id") or default_plan_id
+        conn.execute("INSERT INTO elective_slot (plan_id, year, semester, slot_name_th, slot_name_en, code_pattern, credits, credit_options, note) "
+                     "VALUES (?,?,?,?,?,?,?,?,?)",
+                     (plan_id, e["year"], e["semester"], e["slot_name_th"], e.get("slot_name_en"),
+                      e.get("code_pattern"), e["credits"], e.get("credit_options"), e.get("note")))
+
     for r in data.get("prerequisites", []):
         conn.execute("INSERT OR REPLACE INTO prerequisite VALUES (?,?,?)",
                      (r["code"], r["requires"], r.get("kind", "pre")))
@@ -1914,6 +2410,10 @@ def main() -> None:
     p.add_argument("-q", "--questions", required=True)
     p.add_argument("-o", "--output", default="")
 
+    p = sub.add_parser("build-all", help="สร้างฐานข้อมูลหลักสูตรสมบูรณ์ 4 สาขา 7 แผนการศึกษา Option 2 จาก PDF")
+    p.add_argument("-d", "--database", default="work/lab8b_run/curriculum.db", help="ที่อยู่ไฟล์ฐานข้อมูล")
+    p.add_argument("--regulations", default=None, help="ไฟล์ regulations.json")
+
     args = ap.parse_args()
     if args.cmd == "check":
         sys.exit(0 if check_environment() else 1)
@@ -1921,7 +2421,7 @@ def main() -> None:
         sys.exit(0 if cmd_selftest(args) else 1)
     {"demo": cmd_demo, "schema": cmd_schema, "extract": cmd_extract,
      "import-lab7b": cmd_import_lab7b,
-     "load": cmd_load, "load-regulations": cmd_load_regulations, "verify": cmd_verify, "ask": cmd_ask,
+     "load": cmd_load, "load-regulations": cmd_load_regulations, "build-all": cmd_build_all, "verify": cmd_verify, "ask": cmd_ask,
      "eval": cmd_eval}[args.cmd](args)
 
 

@@ -1,0 +1,330 @@
+{
+  "text": {
+    "tokenizer": "pythainlp/newmm",
+    "attributes": {
+      "code": {
+        "label": "รหัสวิชา",
+        "n_items": 63,
+        "cer": 0.054264,
+        "wer": null,
+        "exact_match_acc": 0.968254,
+        "n_sub": 0,
+        "n_del": 28,
+        "n_ins": 0,
+        "n_missing": 2,
+        "n_hallucinated": 0,
+        "n_ref_chars": 516,
+        "error_samples": [
+          {
+            "key": "06036xxx [ตกแถว]",
+            "gt": "06036xxx",
+            "pred": ""
+          },
+          {
+            "key": "06036147\nหรือ\n06036148 [ตกแถว]",
+            "gt": "06036147\nหรือ\n06036148",
+            "pred": ""
+          }
+        ]
+      },
+      "name_th": {
+        "label": "ชื่อวิชา (ไทย) ⭐",
+        "n_items": 63,
+        "cer": 0.187438,
+        "wer": 0.284404,
+        "exact_match_acc": 0.730159,
+        "n_sub": 184,
+        "n_del": 181,
+        "n_ins": 11,
+        "n_missing": 2,
+        "n_hallucinated": 0,
+        "n_ref_chars": 2006,
+        "error_samples": [
+          {
+            "key": "96641001",
+            "gt": "โรงเรียนสร้างเสน่ห์",
+            "pred": "โรงเรียนสรางเสนห์"
+          },
+          {
+            "key": "96644042",
+            "gt": "การสื่อสารและการนำเสนออย่างมืออาชีพ",
+            "pred": "การสื่อสารและการนำเสนออยางืมออาชีพ"
+          },
+          {
+            "key": "06036103",
+            "gt": "บูรณาการเทคนิคเชิงสถิติสำหรับธุรกิจ",
+            "pred": "INTEGRATION OF STATISTICAL TECHNIQUES FOR"
+          },
+          {
+            "key": "06036124",
+            "gt": "เครือข่ายคอมพิวเตอร์และความมั่นคงทางไซเบอร์เบื้องต้น",
+            "pred": "INTRODUCTION TO COMPUTER NETWORK AND"
+          },
+          {
+            "key": "06036121",
+            "gt": "การวิเคราะห์และออกแบบระบบสารสนเทศทางธุรกิจ",
+            "pred": "BUSINESS INFORMATION SYSTEM ANALYSIS AND"
+          }
+        ]
+      },
+      "name_en": {
+        "label": "ชื่อวิชา (อังกฤษ) ⭐",
+        "n_items": 63,
+        "cer": 0.158133,
+        "wer": 0.212928,
+        "exact_match_acc": 0.873016,
+        "n_sub": 0,
+        "n_del": 315,
+        "n_ins": 0,
+        "n_missing": 3,
+        "n_hallucinated": 0,
+        "n_ref_chars": 1992,
+        "error_samples": [
+          {
+            "key": "06036103",
+            "gt": "INTEGRATION OF STATISTICALTECHNIQUES FOR\nBUSINESS",
+            "pred": "BUSINESS"
+          },
+          {
+            "key": "06036124",
+            "gt": "INTRODUCTION TO COMPUTER NETWORK AND\nCYBERSECURITY",
+            "pred": "CYBERSECURITY"
+          },
+          {
+            "key": "06036121",
+            "gt": "BUSINESS INFORMATION SYSTEM ANALYSIS AND DESIGN",
+            "pred": "DESIGN"
+          },
+          {
+            "key": "96644XXX",
+            "gt": "ELECTIVE IN LANGUAGE AND COMMUNICATION",
+            "pred": "None"
+          },
+          {
+            "key": "06036106",
+            "gt": "MANAGING BUSINESS INFORMATION AND EMERGING TECHNOLOGIES",
+            "pred": "TECHNOLOGIES"
+          }
+        ]
+      },
+      "credits": {
+        "label": "หน่วยกิต",
+        "n_items": 63,
+        "cer": 0.114447,
+        "wer": null,
+        "exact_match_acc": 0.920635,
+        "n_sub": 0,
+        "n_del": 53,
+        "n_ins": 8,
+        "n_missing": 2,
+        "n_hallucinated": 1,
+        "n_ref_chars": 533,
+        "error_samples": [
+          {
+            "key": "06036116",
+            "gt": "None",
+            "pred": "3(2-2-5)"
+          },
+          {
+            "key": "96644XXX",
+            "gt": "3(3-0-6) \nหรือ \n3(2-2-5)",
+            "pred": "3(2-2-5)"
+          },
+          {
+            "key": "06036xxx",
+            "gt": "3(3-0-6) \nหรือ \n3(2-2-5)",
+            "pred": "3(2-2-5)"
+          },
+          {
+            "key": "06036xxx [ตกแถว]",
+            "gt": "3(3-0-6) \nหรือ \n3(2-2-5)",
+            "pred": ""
+          },
+          {
+            "key": "06036147\nหรือ\n06036148 [ตกแถว]",
+            "gt": "6(0-35-0)",
+            "pred": ""
+          }
+        ]
+      },
+      "year_sem": {
+        "label": "ปี/ภาค",
+        "n_items": 63,
+        "cer": 0.031746,
+        "wer": null,
+        "exact_match_acc": 0.968254,
+        "n_sub": 0,
+        "n_del": 6,
+        "n_ins": 0,
+        "n_missing": 2,
+        "n_hallucinated": 0,
+        "n_ref_chars": 189,
+        "error_samples": [
+          {
+            "key": "06036xxx [ตกแถว]",
+            "gt": "4/2",
+            "pred": ""
+          },
+          {
+            "key": "06036147\nหรือ\n06036148 [ตกแถว]",
+            "gt": "0/0",
+            "pred": ""
+          }
+        ]
+      },
+      "category": {
+        "label": "หมวดวิชา",
+        "n_items": 63,
+        "cer": 0.029115,
+        "wer": null,
+        "exact_match_acc": 0.968254,
+        "n_sub": 0,
+        "n_del": 26,
+        "n_ins": 0,
+        "n_missing": 2,
+        "n_hallucinated": 0,
+        "n_ref_chars": 893,
+        "error_samples": [
+          {
+            "key": "06036xxx [ตกแถว]",
+            "gt": "หมวดวิชาเฉพาะ",
+            "pred": ""
+          },
+          {
+            "key": "06036147\nหรือ\n06036148 [ตกแถว]",
+            "gt": "หมวดวิชาเฉพาะ",
+            "pred": ""
+          }
+        ]
+      },
+      "ctype": {
+        "label": "บังคับ/เลือก",
+        "n_items": 63,
+        "cer": 0.045584,
+        "wer": null,
+        "exact_match_acc": 0.952381,
+        "n_sub": 5,
+        "n_del": 10,
+        "n_ins": 1,
+        "n_missing": 2,
+        "n_hallucinated": 0,
+        "n_ref_chars": 351,
+        "error_samples": [
+          {
+            "key": "96644XXX",
+            "gt": "เลือก",
+            "pred": "บังคับ"
+          },
+          {
+            "key": "06036xxx [ตกแถว]",
+            "gt": "เลือก",
+            "pred": ""
+          },
+          {
+            "key": "06036147\nหรือ\n06036148 [ตกแถว]",
+            "gt": "เลือก",
+            "pred": ""
+          }
+        ]
+      },
+      "prereq": {
+        "label": "วิชาบังคับก่อน",
+        "n_items": 61,
+        "cer": 0.02454,
+        "wer": null,
+        "exact_match_acc": 0.983607,
+        "n_sub": 5,
+        "n_del": 0,
+        "n_ins": 3,
+        "n_missing": 0,
+        "n_hallucinated": 0,
+        "n_ref_chars": 326,
+        "error_samples": [
+          {
+            "key": "06036122",
+            "gt": "ไม่มี",
+            "pred": "06036119"
+          }
+        ]
+      },
+      "flexible": {
+        "label": "ปี/ภาคยืดหยุ่น",
+        "n_items": 61,
+        "cer": 3.0,
+        "wer": null,
+        "exact_match_acc": 0.688525,
+        "n_sub": 19,
+        "n_del": 0,
+        "n_ins": 152,
+        "n_missing": 0,
+        "n_hallucinated": 0,
+        "n_ref_chars": 57,
+        "error_samples": [
+          {
+            "key": "06036126",
+            "gt": "4/2",
+            "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06036127",
+            "gt": "4/2",
+            "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06036128",
+            "gt": "4/2",
+            "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06036130",
+            "gt": "4/2",
+            "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06036131",
+            "gt": "4/2",
+            "pred": "3/1, 3/2, 4/1"
+          }
+        ]
+      }
+    },
+    "overall_micro_cer": 0.146729,
+    "alignment": {
+      "matched": 61,
+      "missed": 2,
+      "spurious": 2,
+      "precision": 0.9683,
+      "recall": 0.9683,
+      "f1": 0.9683,
+      "gt_total": 63,
+      "pred_total": 63,
+      "missed_codes": [
+        "06036xxx",
+        "06036147\nหรือ\n06036148"
+      ],
+      "spurious_codes": [
+        "06036147",
+        "06036148"
+      ]
+    },
+    "internal_check": {
+      "ok": false,
+      "n_courses": 63,
+      "n_duplicate_keys": 0,
+      "credits_by_term": {
+        "1/1": 18,
+        "1/2": 18,
+        "2/1": 18,
+        "2/2": 18,
+        "3/1": 18,
+        "3/2": 12,
+        "4/1": 12,
+        "4/2": 6
+      },
+      "total_credits_fixed_terms": 120,
+      "issues": [
+        "ภาค 4/2 มีแค่ 6 หน่วยกิต — น่าจะอ่านตกวิชา"
+      ]
+    }
+  }
+}

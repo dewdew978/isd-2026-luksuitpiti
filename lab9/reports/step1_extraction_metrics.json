@@ -1,0 +1,72 @@
+{
+  "DSBA": {
+    "name": "Data Science and Business Analytics",
+    "gt_total": 90,
+    "pred_total": 89,
+    "matched": 89,
+    "missed": 1,
+    "spurious": 0,
+    "precision": 1.0,
+    "recall": 0.9889,
+    "f1": 0.9944,
+    "missed_codes": [
+      "06016401"
+    ],
+    "spurious_codes": []
+  },
+  "IT": {
+    "name": "Information Technology",
+    "gt_total": 106,
+    "pred_total": 110,
+    "matched": 105,
+    "missed": 1,
+    "spurious": 5,
+    "precision": 0.9545,
+    "recall": 0.9906,
+    "f1": 0.9722,
+    "missed_codes": [
+      "06016418"
+    ],
+    "spurious_codes": [
+      "06016428",
+      "06016430",
+      "06016447",
+      "06016481",
+      "06016482"
+    ]
+  },
+  "BIT": {
+    "name": "Business Information Technology",
+    "gt_total": 63,
+    "pred_total": 65,
+    "matched": 63,
+    "missed": 0,
+    "spurious": 2,
+    "precision": 0.9692,
+    "recall": 1.0,
+    "f1": 0.9844,
+    "missed_codes": [],
+    "spurious_codes": [
+      "06036147",
+      "06036148"
+    ]
+  },
+  "AIT": {
+    "name": "Artificial Intelligence Technology",
+    "gt_total": 57,
+    "pred_total": 58,
+    "matched": 56,
+    "missed": 1,
+    "spurious": 2,
+    "precision": 0.9655,
+    "recall": 0.9825,
+    "f1": 0.9739,
+    "missed_codes": [
+      "06016401"
+    ],
+    "spurious_codes": [
+      "06046443",
+      "06046444"
+    ]
+  }
+}

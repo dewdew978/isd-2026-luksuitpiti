@@ -3,14 +3,23 @@
     "program_id": "IT",
     "name_th": "เทคโนโลยีสารสนเทศ (สหกิจศึกษา)",
     "name_en": "Information Technology (IT)",
-    "degree": "วิทยาศาสตรบัณฑิต",
+    "degree": "วท.บ. (เทคโนโลยีสารสนเทศ)",
     "total_credits": 129,
     "years": 4
   },
+  "study_plans": [
+    {
+      "plan_id": "IT_COOP",
+      "program_id": "IT",
+      "name_th": "เทคโนโลยีสารสนเทศ (สหกิจศึกษา)",
+      "name_en": "Information Technology (IT)",
+      "plan_type": "coop"
+    }
+  ],
   "courses": [
     {
       "code": "06016428",
-      "name_th": "การพฒั นาและออกแบบโปรแกรมบรกิ ารแบบจุลภาค",
+      "name_th": "การพฒันาและออกแบบโปรแกรมบรกิ ารแบบจุลภาค",
       "name_en": "MICROSERVICE DESIGN AND DEVELOPMENT",
       "credits": 3,
       "lecture_h": 2,
@@ -22,7 +31,7 @@
     },
     {
       "code": "06016429",
-      "name_th": "การพัฒนาเว็บฝ๎้งไคลเอนต์",
+      "name_th": "การพัฒนาเว็บฝั่งไคลเอนต์",
       "name_en": "CLIENT-SIDE WEB DEVELOPMENT",
       "credits": 3,
       "lecture_h": 2,
@@ -34,7 +43,7 @@
     },
     {
       "code": "06016430",
-      "name_th": "การพฒั นาคลาวด์แอปพลิเคชัน",
+      "name_th": "การพฒันาคลาวด์แอปพลิเคชัน",
       "name_en": "CLOUD APPLICATION DEVELOPMENT",
       "credits": 3,
       "lecture_h": 2,
@@ -46,8 +55,8 @@
     },
     {
       "code": "06016431",
-      "name_th": "การโปรแกรมอุปกรณ์เคลื่อนท ี่",
-      "name_en": "MOBILE DEVICE PROGRAMMING",
+      "name_th": "การโปรแกรมอุปกรณ์เคลื่อนที่",
+      "name_en": "MOBILE DEVICE PROGRAMMING Introduction to technology and the programming of applications for mobile computing including devices i.e. smart phones, pads, and tablets, developing mobile applications and using device emulators for coding and testing.",
       "credits": 3,
       "lecture_h": 2,
       "lab_h": 2,
@@ -58,7 +67,7 @@
     },
     {
       "code": "06016432",
-      "name_th": "การทวนสอบและตรวจสอบซอฟต์แวร ์",
+      "name_th": "การทวนสอบและตรวจสอบซอฟต์แวร์",
       "name_en": "SOFTWARE VERIFICATION AND VALIDATION",
       "credits": 3,
       "lecture_h": 3,
@@ -130,7 +139,7 @@
     },
     {
       "code": "06016438",
-      "name_th": "ความปลอดภยั สำหรับระบบคลาวด์",
+      "name_th": "ความปลอดภยัสำหรับระบบคลาวด์",
       "name_en": "CLOUD SECURITY",
       "credits": 3,
       "lecture_h": 3,
@@ -142,7 +151,7 @@
     },
     {
       "code": "06016439",
-      "name_th": "เทคโนโลยีเครือขา่ ยไร้สาย",
+      "name_th": "เทคโนโลยีเครือข่ายไร้สาย",
       "name_en": "WIRELESS NETWORK TECHNOLOGY",
       "credits": 3,
       "lecture_h": 3,
@@ -178,7 +187,7 @@
     },
     {
       "code": "06016442",
-      "name_th": "การออกแบบฮาร์ดแวร์สำหรับอินเทอร์เน็ตแห่งสรรพสงิ่",
+      "name_th": "การออกแบบฮาร์ดแวร์สำหรับอินเทอร์เน็ตแห่งสรรพสิ่ง",
       "name_en": "INTERNET OF THINGS HARDWARE DESIGN",
       "credits": 3,
       "lecture_h": 2,
@@ -214,7 +223,7 @@
     },
     {
       "code": "06016445",
-      "name_th": "การเขียนสคริปต์ขั้นสงู สำหรับการออกแบบ",
+      "name_th": "การเขียนสคริปต์ขั้นสงูสำหรับการออกแบบ",
       "name_en": "ADVANCED SCRIPTING FOR DESIGN",
       "credits": 3,
       "lecture_h": 2,
@@ -238,7 +247,7 @@
     },
     {
       "code": "06016447",
-      "name_th": "การพฒั นาเกมขั้นต้นด้วยเกมเอนจิ้น",
+      "name_th": "การพฒันาเกมขั้นต้นด้วยเกมเอนจิ้น",
       "name_en": "FUNDAMENTAL GAME DEVELOPMENT WITH GAME ENGINE",
       "credits": 3,
       "lecture_h": 2,
@@ -262,7 +271,7 @@
     },
     {
       "code": "06016449",
-      "name_th": "เกมมิฟัเคชัน",
+      "name_th": "เกิมมฟิเคชัน",
       "name_en": "GAMIFICATION",
       "credits": 3,
       "lecture_h": 3,
@@ -274,7 +283,7 @@
     },
     {
       "code": "06016450",
-      "name_th": "การพัฒนาเกมด้วยเทคโนโลยีเสมือนจริง",
+      "name_th": "การพัฒนาเกมด้วยเทคโนโลยีเสืมอนจริง",
       "name_en": "GAME DEVELOPMENT WITH REALITY TECHNOLOGY",
       "credits": 3,
       "lecture_h": 2,
@@ -298,7 +307,7 @@
     },
     {
       "code": "06016452",
-      "name_th": "การจัดการห่วงโซ่อุปทานและโลจิสติกส ์",
+      "name_th": "การจัดการห่วงโซ่อุปทานและโลจิสติกส์",
       "name_en": "SUPPLY CHAIN MANAGEMENT AND LOGISTICS",
       "credits": 3,
       "lecture_h": 3,
@@ -310,7 +319,7 @@
     },
     {
       "code": "06016453",
-      "name_th": "การบริหารระบบลูกค้าสมั พนั ธ์",
+      "name_th": "การบริหารระบบลูกค้าสมัพนัธ์",
       "name_en": "CUSTOMER RELATIONSHIP MANAGEMENT",
       "credits": 3,
       "lecture_h": 3,
@@ -322,7 +331,7 @@
     },
     {
       "code": "06016454",
-      "name_th": "เครื่องมือยูเอ็กซ์และการพัฒนาซอฟต์แวร์สำหรับธุรกิจดิจิทัล",
+      "name_th": "เครื่อืงมอยูเอ็กซ์และการพัฒนาซอฟต์แวร์สำหรับธุรกิจดิจิทัล",
       "name_en": "UX TOOLS AND SOFTWARE DEVELOPMENT FOR DIGITAL BUSINESS",
       "credits": 3,
       "lecture_h": 3,
@@ -394,7 +403,7 @@
     },
     {
       "code": "06016460",
-      "name_th": "ป๎ญญาประดิษฐ ์",
+      "name_th": "ปัญญาประดิษฐ์",
       "name_en": "ARTIFICIAL INTELLIGENCE",
       "credits": 3,
       "lecture_h": 3,
@@ -406,7 +415,7 @@
     },
     {
       "code": "06016461",
-      "name_th": "การประมวลผลภาษาธรรมชาตเิ บื้องต้น",
+      "name_th": "การประมวลผลภาษาธรรมชาตเิบื้องต้น",
       "name_en": "INTRODUCTION TO NATURAL LANGUAGE PROCESSING",
       "credits": 3,
       "lecture_h": 3,
@@ -418,7 +427,7 @@
     },
     {
       "code": "06016462",
-      "name_th": "เทคโนโลยีสอื่ สารเคลื่อนที่",
+      "name_th": "เทคโนโลยีสอื่สารเคลื่อนที่",
       "name_en": "MOBILE COMMUNICATION TECHNOLOGY",
       "credits": 3,
       "lecture_h": 3,
@@ -466,7 +475,7 @@
     },
     {
       "code": "06016466",
-      "name_th": "การแก้ไขป๎ญหาระบบและเครือข่าย",
+      "name_th": "การแก้ไขปัญหาระบบและเครือข่าย",
       "name_en": "NETWORK AND SYSTEM TROUBLE SHOOTING",
       "credits": 3,
       "lecture_h": 3,
@@ -479,7 +488,7 @@
     {
       "code": "06016467",
       "name_th": "การแปลงข้อมูลและการรู้จำรูปภาพ",
-      "name_en": "IMAGE TRANSFORMATION AND RECOGNITION",
+      "name_en": "IMAGE TRANSFORMATION AND RECOGNITION Introduction to digital image processing for binary, gray and color images, local image filtering, dimensionality reduction, transformation, discrete Fourier transform, principal components analysis, linear discriminant analysis, 2D wavelet transform, bi- dimensional empirical mode decomposition, 2D empirical wavelet transform and handcraft-based and learning-based approaches.",
       "credits": 3,
       "lecture_h": 3,
       "lab_h": 0,
@@ -550,7 +559,7 @@
     },
     {
       "code": "06016473",
-      "name_th": "หัวข้อพเิ ศษทางด้านเทคโนโลยีสารสนเทศ 1",
+      "name_th": "หัวข้อพเิศษทางด้านเทคโนโลยีสารสนเทศ 1",
       "name_en": "SPECIAL TOPICS IN INFORMATION TECHNOLOGY 1",
       "credits": 3,
       "lecture_h": 3,
@@ -574,7 +583,7 @@
     },
     {
       "code": "06016475",
-      "name_th": "หัวขอ้ พเิ ศษทางด้านเทคโนโลยีสารสนเทศ 3",
+      "name_th": "หัวขอ้พเิศษทางด้านเทคโนโลยีสารสนเทศ 3",
       "name_en": "SPECIAL TOPICS IN INFORMATION TECHNOLOGY 3",
       "credits": 3,
       "lecture_h": 3,
@@ -586,7 +595,7 @@
     },
     {
       "code": "06016476",
-      "name_th": "หัวขอ้ พเิ ศษทางด้านเทคโนโลยีสารสนเทศ 4",
+      "name_th": "หัวขอ้พเิศษทางด้านเทคโนโลยีสารสนเทศ 4",
       "name_en": "SPECIAL TOPICS IN INFORMATION TECHNOLOGY 4",
       "credits": 3,
       "lecture_h": 3,
@@ -645,6 +654,30 @@
       "printed_pages": "24;86;361"
     },
     {
+      "code": "06016481",
+      "name_th": "สหกิจศึกษา",
+      "name_en": "COOPERATIVE EDUCATION",
+      "credits": 6,
+      "lecture_h": 3,
+      "lab_h": 36,
+      "self_h": 6,
+      "description_th": null,
+      "pdf_pages": "30;44;92;366",
+      "printed_pages": "25;39;87;361"
+    },
+    {
+      "code": "06016482",
+      "name_th": "สหกิจศกึษาต่างประเทศ",
+      "name_en": "OVERSEA COOPERATIVE EDUCATION",
+      "credits": 6,
+      "lecture_h": 3,
+      "lab_h": 36,
+      "self_h": 6,
+      "description_th": null,
+      "pdf_pages": "30;44;92;367",
+      "printed_pages": "25;39;87;362"
+    },
+    {
       "code": "06016401",
       "name_th": "คณิตศาสตร์สำหรับเทคโนโลยีสารสนเทศ",
       "name_en": "MATHEMATICS FOR INFORMATION TECHNOLOGY",
@@ -670,7 +703,7 @@
     },
     {
       "code": "06016411",
-      "name_th": "ระบบคอมพวิ เตอรเ์ บื้องต้น",
+      "name_th": "ระบบคอมพิว เตอร์เบื้องต้น",
       "name_en": "INTRODUCTION TO COMPUTER SYSTEMS",
       "credits": 3,
       "lecture_h": 2,
@@ -682,7 +715,7 @@
     },
     {
       "code": "06066303",
-      "name_th": "การแก้ป๎ญหาและการโปรแกรมคอมพิวเตอร์",
+      "name_th": "การแก้ปัญหาและการโปรแกรมคอมพิวเตอร์",
       "name_en": "PROBLEM SOLVING AND COMPUTER PROGRAMMING",
       "credits": 3,
       "lecture_h": 2,
@@ -694,7 +727,7 @@
     },
     {
       "code": "90641001",
-      "name_th": "โรงเรียนสร้างเสน่ห ์",
+      "name_th": "โรงเรียนสร้างเส่นห์",
       "name_en": "CHARM SCHOOL",
       "credits": 2,
       "lecture_h": 1,
@@ -718,7 +751,7 @@
     },
     {
       "code": "90644007",
-      "name_th": "ภาษาอังกฤษพนื้ ฐาน 1",
+      "name_th": "ภาษาอังกฤษพื้น ฐาน 1",
       "name_en": "FOUNDATION ENGLISH 1",
       "credits": 3,
       "lecture_h": 3,
@@ -742,7 +775,7 @@
     },
     {
       "code": "06066001",
-      "name_th": "ความน่าจะเปน่ และสถิติ",
+      "name_th": "ความน่าจะเป็น และสถิติ",
       "name_en": "PROBABILITY AND STATISTICS",
       "credits": 3,
       "lecture_h": 3,
@@ -778,7 +811,7 @@
     },
     {
       "code": "90641002",
-      "name_th": "ความฉลาดทางดิจทิ ัล",
+      "name_th": "ความฉลาดทางดิจทิัล",
       "name_en": "DIGITAL INTELLIGENCE QUOTIENT",
       "credits": 3,
       "lecture_h": 3,
@@ -802,7 +835,7 @@
     },
     {
       "code": "06016403",
-      "name_th": "เทคโนโลยีสอื่ ประสม",
+      "name_th": "เทคโนโลยีสอื่ประสม",
       "name_en": "MULTIMEDIA TECHNOLOGY",
       "credits": 3,
       "lecture_h": 2,
@@ -910,7 +943,7 @@
     },
     {
       "code": "06066302",
-      "name_th": "การเขยี นโปรแกรมเวบ็ พื้นฐาน",
+      "name_th": "การเขียนโปรแกรมเว็บ พื้นฐาน",
       "name_en": "FUNDAMENTAL WEB PROGRAMMING",
       "credits": 3,
       "lecture_h": 2,
@@ -934,7 +967,7 @@
     },
     {
       "code": "06016415",
-      "name_th": "การเขียนโปรแกรมเชิงฟ๎งก์ชัน",
+      "name_th": "การเขียนโปรแกรมเชิงฟังก์ชัน",
       "name_en": "FUNCTIONAL PROGRAMMING",
       "credits": 3,
       "lecture_h": 2,
@@ -946,7 +979,7 @@
     },
     {
       "code": "06016419",
-      "name_th": "โครงสร้างพนื้ ฐานเครือข่ายการสื่อสาร",
+      "name_th": "โครงสร้างพื้น ฐานเครือข่ายการสื่อสาร",
       "name_en": "COMMUNICATION NETWORK INFRASTRUCTURE",
       "credits": 3,
       "lecture_h": 2,
@@ -958,7 +991,7 @@
     },
     {
       "code": "06016420",
-      "name_th": "ระบบโครงสร้างพนื้ ฐานและการบริการ",
+      "name_th": "ระบบโครงสร้างพื้น ฐานและการบริการ",
       "name_en": "INFRASTRUCTURE SYSTEMS AND SERVICES",
       "credits": 3,
       "lecture_h": 2,
@@ -970,7 +1003,7 @@
     },
     {
       "code": "06016424",
-      "name_th": "การออกแบบส่วนต่อประสานกับมนุษย ์",
+      "name_th": "การออกแบบส่วนต่อประสานกับมนุษย์",
       "name_en": "HUMAN INTERFACE DESIGN",
       "credits": 3,
       "lecture_h": 3,
@@ -982,7 +1015,7 @@
     },
     {
       "code": "06016425",
-      "name_th": "พื้นฐานการออกแบบทัศนศิลปส ำหรับสื่อปฏิสัมพันธ ์",
+      "name_th": "พื้นฐานการออกแบบทัศนศิลปส์ ำหรับสื่อปฏิสัมพันธ์",
       "name_en": "VISUAL DESIGN FUNDAMENTALS FOR INTERACTIVE MEDIA",
       "credits": 3,
       "lecture_h": 2,
@@ -1017,18 +1050,6 @@
       "printed_pages": "18;31;38;87;364"
     },
     {
-      "code": "90649088",
-      "name_th": "วิชาเลือกหมวดภาษาและการสื่อสาร",
-      "name_en": "ELECTIVE COURSE IN LANGUAGE AND COMMUNICATION",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
       "code": "06016416",
       "name_th": "วิศวกรรมความต้องการ",
       "name_en": "REQUIREMENT ENGINEERING",
@@ -1042,7 +1063,7 @@
     },
     {
       "code": "06016417",
-      "name_th": "เครื่องมือและสภาพแวดล้อมสำหรับการพัฒนาซอฟต์แวร ์",
+      "name_th": "เครื่อืงมอและสภาพแวดล้อมสำหรับการพัฒนาซอฟต์แวร์",
       "name_en": "SOFTWARE DEVELOPMENT TOOLS AND ENVIRONMENTS",
       "credits": 3,
       "lecture_h": 2,
@@ -1054,7 +1075,7 @@
     },
     {
       "code": "06016418",
-      "name_th": "การพัฒนาเว็บฝ๎้งเซิร์ฟเวอร์",
+      "name_th": "การพัฒนาเว็บฝั่งเซิร์ฟเวอร์",
       "name_en": "SERVER-SIDE WEB DEVELOPMENT",
       "credits": 3,
       "lecture_h": 2,
@@ -1066,7 +1087,7 @@
     },
     {
       "code": "06016421",
-      "name_th": "ความมั่นคงปลอดภัยโครงสรา้ งพื้นฐานทางเทคโนโลยสี ารสนเทศ",
+      "name_th": "ความมั่นคงปลอดภัยโครงสร้างพื้นฐานทางเทคโนโลยสี ารสนเทศ",
       "name_en": "INFORMATION TECHNOLOGY INFRASTRUCTURE SECURITY",
       "credits": 3,
       "lecture_h": 3,
@@ -1078,7 +1099,7 @@
     },
     {
       "code": "06016422",
-      "name_th": "อินเทอร์เน็ตของสรรพสงิ่",
+      "name_th": "อินเทอร์เน็ตของสรรพสิ่ง",
       "name_en": "INTERNET OF THINGS",
       "credits": 3,
       "lecture_h": 2,
@@ -1090,7 +1111,7 @@
     },
     {
       "code": "06016423",
-      "name_th": "การออโตเมชั่นและโครงสร้างพนื้ ฐานที่สามารถโปรแกรมได้",
+      "name_th": "การออโตเมชั่นและโครงสร้างพื้น ฐานที่สามารถโปรแกรมได้",
       "name_en": "INFRASTRUCTURE PROGRAMMABILITY AND AUTOMATION",
       "credits": 3,
       "lecture_h": 2,
@@ -1102,7 +1123,7 @@
     },
     {
       "code": "06016426",
-      "name_th": "คอมพิวเตอรก์ ราฟักส์และแอนิเมชัน",
+      "name_th": "คอมพิวเตอรก์ราฟิกส์และแอินเมชัน",
       "name_en": "COMPUTER GRAPHICS AND ANIMATION",
       "credits": 3,
       "lecture_h": 2,
@@ -1114,7 +1135,7 @@
     },
     {
       "code": "06016427",
-      "name_th": "การออกแบบและพัฒนาเกมเบอื้ งต้น",
+      "name_th": "การออกแบบและพัฒนาเกมเบอื้งต้น",
       "name_en": "INTRODUCTION TO GAME DESIGN AND DEVELOPMENT",
       "credits": 3,
       "lecture_h": 2,
@@ -1123,30 +1144,6 @@
       "description_th": null,
       "pdf_pages": "26;36;43;89;342",
       "printed_pages": "21;31;38;84;337"
-    },
-    {
-      "code": "06016481",
-      "name_th": "สหกิจศึกษา",
-      "name_en": "COOPERATIVE EDUCATION",
-      "credits": 6,
-      "lecture_h": 3,
-      "lab_h": 36,
-      "self_h": 6,
-      "description_th": null,
-      "pdf_pages": "30;44;92;366",
-      "printed_pages": "25;39;87;361"
-    },
-    {
-      "code": "06016482",
-      "name_th": "สหกิจศึกษาต่างประเทศ",
-      "name_en": "OVERSEA COOPERATIVE EDUCATION",
-      "credits": 6,
-      "lecture_h": 3,
-      "lab_h": 36,
-      "self_h": 6,
-      "description_th": null,
-      "pdf_pages": "30;44;92;367",
-      "printed_pages": "25;39;87;362"
     },
     {
       "code": "06016406",
@@ -1161,20 +1158,8 @@
       "printed_pages": "18;33;39;82;325;326"
     },
     {
-      "code": "06019100",
-      "name_th": "วิชาเลือกทางเทคโนโลยีสารสนเทศ 1",
-      "name_en": "Elective Course (Placeholder)",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
       "code": "90643021",
-      "name_th": "ผู้ประกอบการสมัยใหม ่",
+      "name_th": "ผู้ประกอบการสมัยให่ม",
       "name_en": "MODERN ENTREPRENEURS",
       "credits": 3,
       "lecture_h": 3,
@@ -1183,42 +1168,6 @@
       "description_th": null,
       "pdf_pages": "22;38;44;384",
       "printed_pages": "17;33;39;379"
-    },
-    {
-      "code": "90649102",
-      "name_th": "วิชาเลือก หมวดศึกษาทั่วไป 1",
-      "name_en": "ELECTIVE COURSE IN GENERAL EDUCATION 1",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
-      "code": "99999103",
-      "name_th": "วิชาเลอื กเสรี 1                         3(x-x-x)",
-      "name_en": "FREE ELECTIVE COURSE 1",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
-      "code": "99999104",
-      "name_th": "วิชาเลอื กเสรี 2                         3(x-x-x)",
-      "name_en": "FREE ELECTIVE COURSE 2",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
     },
     {
       "code": "06016407",
@@ -1246,7 +1195,7 @@
     },
     {
       "code": "90642033",
-      "name_th": "กฎหมายสำหรับคนรุ่นใหม ่",
+      "name_th": "กฎหมายสำหรับคนรุ่นให่ม",
       "name_en": "LAW FOR NEW GENERATION",
       "credits": 3,
       "lecture_h": 3,
@@ -1258,7 +1207,7 @@
     },
     {
       "code": "90644042",
-      "name_th": "การสื่อสารและการนำเสนออย่างมืออาชีพ",
+      "name_th": "การสื่อสารและการนำเสนออย่างืมออาชีพ",
       "name_en": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
       "credits": 3,
       "lecture_h": 3,
@@ -1267,22 +1216,11 @@
       "description_th": null,
       "pdf_pages": "22;37;45;384",
       "printed_pages": "17;32;40;379"
-    },
-    {
-      "code": "90649109",
-      "name_th": "วิชาเลือก หมวดศึกษาทั่วไป 2",
-      "name_en": "ELECTIVE COURSE IN GENERAL EDUCATION 2",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
     }
   ],
   "plan": [
     {
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "06016401",
@@ -1291,6 +1229,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "06016402",
@@ -1299,6 +1238,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "06016411",
@@ -1307,6 +1247,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "06066303",
@@ -1315,6 +1256,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "90641001",
@@ -1323,6 +1265,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "90641003",
@@ -1331,6 +1274,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "90644007",
@@ -1339,6 +1283,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 2,
       "code": "06016408",
@@ -1347,6 +1292,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 2,
       "code": "06066001",
@@ -1355,6 +1301,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 2,
       "code": "06066101",
@@ -1363,6 +1310,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 2,
       "code": "06066301",
@@ -1371,6 +1319,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 2,
       "code": "90641002",
@@ -1379,6 +1328,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 2,
       "code": "90644008",
@@ -1387,6 +1337,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06016403",
@@ -1395,6 +1346,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06016409",
@@ -1403,6 +1355,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06016413",
@@ -1411,6 +1364,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06066000",
@@ -1419,6 +1373,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06066300",
@@ -1427,6 +1382,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06066304",
@@ -1435,6 +1391,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016405",
@@ -1443,6 +1400,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016410",
@@ -1451,6 +1409,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016412",
@@ -1459,6 +1418,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06066302",
@@ -1467,6 +1427,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016414",
@@ -1475,6 +1436,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016415",
@@ -1483,6 +1445,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016419",
@@ -1491,6 +1454,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016420",
@@ -1499,6 +1463,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016424",
@@ -1507,6 +1472,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016425",
@@ -1515,6 +1481,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016404",
@@ -1523,6 +1490,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06066102",
@@ -1531,14 +1499,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "year": 3,
-      "semester": 1,
-      "code": "90649088",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
-    },
-    {
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016416",
@@ -1547,6 +1508,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016417",
@@ -1555,6 +1517,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016418",
@@ -1563,6 +1526,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016421",
@@ -1571,6 +1535,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016422",
@@ -1579,6 +1544,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016423",
@@ -1587,6 +1553,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016426",
@@ -1595,6 +1562,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016427",
@@ -1603,6 +1571,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 2,
       "code": "06016481",
@@ -1611,6 +1580,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 2,
       "code": "06016482",
@@ -1619,6 +1589,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 1,
       "code": "06016406",
@@ -1627,14 +1598,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "year": 4,
-      "semester": 1,
-      "code": "06019100",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาเฉพาะ | เลือก"
-    },
-    {
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 1,
       "code": "90643021",
@@ -1643,30 +1607,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "year": 4,
-      "semester": 1,
-      "code": "90649102",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
-    },
-    {
-      "year": 4,
-      "semester": 1,
-      "code": "99999103",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาเลือกเสรี | เลือก"
-    },
-    {
-      "year": 4,
-      "semester": 1,
-      "code": "99999104",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาเลือกเสรี | เลือก"
-    },
-    {
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 2,
       "code": "06016407",
@@ -1675,6 +1616,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 2,
       "code": "06066100",
@@ -1683,6 +1625,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 2,
       "code": "90642033",
@@ -1691,19 +1634,80 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 2,
       "code": "90644042",
       "credits": 3,
       "alt_group": null,
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    }
+  ],
+  "elective_slots": [
+    {
+      "plan_id": "IT_COOP",
+      "year": 3,
+      "semester": 1,
+      "slot_name_th": "วิชาเลือกหมวดภาษาและการสื่อสาร",
+      "slot_name_en": "ELECTIVE COURSE IN LANGUAGE AND COMMUNICATION",
+      "code_pattern": "90644xxx",
+      "credits": 3,
+      "credit_options": "3(3-0-6)",
+      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
     },
     {
+      "plan_id": "IT_COOP",
+      "year": 4,
+      "semester": 1,
+      "slot_name_th": "วิชาเลือกทางเทคโนโลยีสารสนเทศ 1",
+      "slot_name_en": null,
+      "code_pattern": "060164xx",
+      "credits": 3,
+      "credit_options": "3(3-0-6)หรือ3(2-2-5)",
+      "note": "หมวดวิชาเฉพาะ | เลือก"
+    },
+    {
+      "plan_id": "IT_COOP",
+      "year": 4,
+      "semester": 1,
+      "slot_name_th": "วิชาเลือก หมวดศึกษาทั่วไป 1",
+      "slot_name_en": "ELECTIVE COURSE IN GENERAL EDUCATION 1",
+      "code_pattern": "9064xxxx",
+      "credits": 3,
+      "credit_options": "3(3-0-6)",
+      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
+    },
+    {
+      "plan_id": "IT_COOP",
+      "year": 4,
+      "semester": 1,
+      "slot_name_th": "วิชาเลอืกเสรี 1",
+      "slot_name_en": "FREE ELECTIVE COURSE 1",
+      "code_pattern": "xxxxxxxx",
+      "credits": 3,
+      "credit_options": "3(x-x-x)",
+      "note": "หมวดวิชาเลือกเสรี | เลือก"
+    },
+    {
+      "plan_id": "IT_COOP",
+      "year": 4,
+      "semester": 1,
+      "slot_name_th": "วิชาเลอืกเสรี 2",
+      "slot_name_en": "FREE ELECTIVE COURSE 2",
+      "code_pattern": "xxxxxxxx",
+      "credits": 3,
+      "credit_options": "3(x-x-x)",
+      "note": "หมวดวิชาเลือกเสรี | เลือก"
+    },
+    {
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 2,
-      "code": "90649109",
+      "slot_name_th": "วิชาเลือก หมวดศึกษาทั่วไป 2",
+      "slot_name_en": "ELECTIVE COURSE IN GENERAL EDUCATION 2",
+      "code_pattern": "9064xxxx",
       "credits": 3,
-      "alt_group": null,
+      "credit_options": "3(3-0-6)",
       "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
     }
   ],

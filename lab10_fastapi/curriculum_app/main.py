@@ -25,8 +25,8 @@ from .database import CurriculumDatabase  # noqa: E402
 from .model_service import QwenTextToSQL  # noqa: E402
 from .schemas import (  # noqa: E402
     AskRequest, AskResponse, CourseCreate, CoursePrerequisitesResponse,
-    CourseResponse, HealthResponse, PlanItemResponse, PlanSummaryResponse,
-    RegulationResponse, StatsResponse,
+    CourseResponse, ElectiveSlotResponse, HealthResponse, PlanItemResponse,
+    PlanSummaryResponse, RegulationResponse, StatsResponse, StudyPlanResponse,
 )
 
 
@@ -77,14 +77,23 @@ def get_program() -> dict:
     return program
 
 
+@app.get("/api/programs")
+def get_programs() -> list[dict]:
+    try:
+        return database.programs()
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+
 @app.get("/api/courses", response_model=list[CourseResponse])
 def get_courses(
     search: str = Query(default="", max_length=100),
-    limit: int = Query(default=20, ge=1, le=100),
+    program_id: str | None = Query(default=None, max_length=20, description="กรองตามสาขา เช่น DSBA, BIT, IT, AIT"),
+    limit: int = Query(default=50, ge=1, le=100),
     offset: int = Query(default=0, ge=0),
 ) -> list[dict]:
     try:
-        return database.courses(search, limit, offset)
+        return database.courses(search=search, program_id=program_id, limit=limit, offset=offset)
     except FileNotFoundError as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
 
@@ -96,6 +105,8 @@ def post_course(course: CourseCreate) -> dict:
         return database.create_course(course.model_dump())
     except FileNotFoundError as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=str(exc)) from exc
     except sqlite3.IntegrityError as exc:
         raise HTTPException(status_code=409, detail="รหัสวิชานี้มีอยู่แล้ว") from exc
 
@@ -116,14 +127,38 @@ def get_course_prerequisites(code: str) -> dict:
     return result
 
 
+@app.get("/api/study-plans", response_model=list[StudyPlanResponse])
+def get_study_plans(
+    program_id: str | None = Query(default=None, max_length=20, description="รหัสหลักสูตร เช่น IT, DSBA, BIT, AIT"),
+    plan_id: str | None = Query(default=None, max_length=50, description="รหัสแผน เช่น IT_COOP, IT_NON_COOP"),
+) -> list[dict]:
+    try:
+        return database.study_plans(program_id=program_id, plan_id=plan_id)
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+
+@app.get("/api/elective-slots", response_model=list[ElectiveSlotResponse])
+def get_elective_slots(
+    plan_id: str | None = Query(default=None, max_length=50, description="รหัสแผน เช่น DSBA_COOP, BIT_NON_COOP"),
+    year: int | None = Query(default=None, ge=1, le=8),
+    semester: int | None = Query(default=None, ge=1, le=3),
+) -> list[dict]:
+    try:
+        return database.elective_slots(plan_id=plan_id, year=year, semester=semester)
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+
 @app.get("/api/plan", response_model=list[PlanItemResponse])
 def get_plan(
     year: int | None = Query(default=None, ge=1, le=8, description="ชั้นปี เช่น 1, 2, 3, 4"),
     semester: int | None = Query(default=None, ge=1, le=3, description="ภาคการศึกษา เช่น 1, 2, 3"),
     program_id: str | None = Query(default=None, max_length=20, description="รหัสหลักสูตร เช่น IT, DSBA, BIT, AIT"),
+    plan_id: str | None = Query(default=None, max_length=50, description="รหัสแผน เช่น DSBA_COOP, BIT_NON_COOP"),
 ) -> list[dict]:
     try:
-        return database.plan(year=year, semester=semester, program_id=program_id)
+        return database.plan(year=year, semester=semester, program_id=program_id, plan_id=plan_id)
     except FileNotFoundError as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
 
@@ -133,9 +168,10 @@ def get_plan_summary(
     year: int | None = Query(default=None, ge=1, le=8, description="ชั้นปี เช่น 1, 2, 3, 4"),
     semester: int | None = Query(default=None, ge=1, le=3, description="ภาคการศึกษา เช่น 1, 2, 3"),
     program_id: str | None = Query(default=None, max_length=20, description="รหัสหลักสูตร เช่น IT, DSBA, BIT, AIT"),
+    plan_id: str | None = Query(default=None, max_length=50, description="รหัสแผน เช่น DSBA_COOP, BIT_NON_COOP"),
 ) -> list[dict]:
     try:
-        return database.plan_summary(year=year, semester=semester, program_id=program_id)
+        return database.plan_summary(year=year, semester=semester, program_id=program_id, plan_id=plan_id)
     except FileNotFoundError as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
 

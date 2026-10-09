@@ -5,13 +5,13 @@
       "code": {
         "label": "รหัสวิชา",
         "n_items": 106,
-        "cer": 0.032558,
+        "cer": 0.009302,
         "wer": null,
-        "exact_match_acc": 0.981132,
+        "exact_match_acc": 0.990566,
         "n_sub": 0,
-        "n_del": 28,
+        "n_del": 8,
         "n_ins": 0,
-        "n_missing": 2,
+        "n_missing": 1,
         "n_hallucinated": 0,
         "n_ref_chars": 860,
         "error_samples": [
@@ -19,94 +19,99 @@
             "key": "06016418 [ตกแถว]",
             "gt": "06016418",
             "pred": ""
-          },
-          {
-            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
-            "gt": "06016481\nหรือ\n06016482",
-            "pred": ""
           }
         ]
       },
       "name_th": {
         "label": "ชื่อวิชา (ไทย) ⭐",
         "n_items": 106,
-        "cer": 0.054115,
-        "wer": 0.369388,
-        "exact_match_acc": 0.584906,
-        "n_sub": 67,
-        "n_del": 75,
-        "n_ins": 25,
-        "n_missing": 2,
+        "cer": 0.032728,
+        "wer": 0.246939,
+        "exact_match_acc": 0.669811,
+        "n_sub": 59,
+        "n_del": 37,
+        "n_ins": 5,
+        "n_missing": 1,
         "n_hallucinated": 0,
         "n_ref_chars": 3086,
         "error_samples": [
           {
-            "key": "06016411",
-            "gt": "ระบบคอมพิวเตอร์เบื้องต้น",
-            "pred": "ระบบคอมพวิ เตอรเ์ บื้องต้น"
-          },
-          {
-            "key": "06066303",
-            "gt": "การแก้ปัญหาและการโปรแกรมคอมพิวเตอร์",
-            "pred": "การแก้ป๎ญหาและการโปรแกรมคอมพิวเตอร์"
-          },
-          {
-            "key": "90644007",
-            "gt": "ภาษาอังกฤษพื้นฐาน 1",
-            "pred": "ภาษาอังกฤษพนื้ ฐาน 1"
-          },
-          {
-            "key": "06066001",
-            "gt": "ความน่าจะเป็นและสถิติ",
-            "pred": "ความน่าจะเปน่ และสถิติ"
+            "key": "90641001",
+            "gt": "โรงเรียนสร้างเสน่ห์",
+            "pred": "โรงเรียนสร้างเส่นห์"
           },
           {
             "key": "06066301",
             "gt": "โครงสร้างข้อมูลและอัลกอรึทึม",
             "pred": "โครงสร้างข้อมูลและอัลกอริทึม"
+          },
+          {
+            "key": "90641002",
+            "gt": "ความฉลาดทางดิจิทัล",
+            "pred": "ความฉลาดทางดิจทิัล"
+          },
+          {
+            "key": "06016403",
+            "gt": "เทคโนโลยีสื่อประสม",
+            "pred": "เทคโนโลยีสอื่ประสม"
+          },
+          {
+            "key": "06016409",
+            "gt": "การประมวลผลทางกายภาพ",
+            "pred": "การประมวลทางกายภาพ"
           }
         ]
       },
       "name_en": {
         "label": "ชื่อวิชา (อังกฤษ) ⭐",
         "n_items": 106,
-        "cer": 0.037396,
-        "wer": 0.036408,
-        "exact_match_acc": 0.971698,
-        "n_sub": 0,
-        "n_del": 112,
-        "n_ins": 0,
-        "n_missing": 3,
+        "cer": 0.370952,
+        "wer": 0.359223,
+        "exact_match_acc": 0.933962,
+        "n_sub": 3,
+        "n_del": 85,
+        "n_ins": 1023,
+        "n_missing": 2,
         "n_hallucinated": 0,
         "n_ref_chars": 2995,
         "error_samples": [
+          {
+            "key": "06016481\nหรือ\n06016482",
+            "gt": "COOPERATIVE EDUCATION\nOR\nOVERSEA COOPERATIVE EDUCATION",
+            "pred": "OVERSEA COOPERATIVE EDUCATION"
+          },
           {
             "key": "060164xx",
             "gt": "ELECTIVE COURSE IN INFORMATION TECHNOLOGY 1",
             "pred": "None"
           },
           {
-            "key": "06016418 [ตกแถว]",
-            "gt": "SERVER-SIDE WEB DEVELOPMENT",
-            "pred": ""
+            "key": "06016428",
+            "gt": "MICROSERVICE DESIGN AND DEVELOPMENT",
+            "pred": "MICROSERVICE DESIGN AND DEVELOPMENT Introduction to microservices, evolutionary architect, monolith, service-oriented architecture and microservice, decomposition strategies and design, inter-process communication, queueing and routing, command query responsibility segregation, service discovery, application metrics, circuit breaker, observability, Microservice Development"
           },
           {
-            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
-            "gt": "COOPERATIVE EDUCATION\nOR\nOVERSEA COOPERATIVE EDUCATION",
-            "pred": ""
+            "key": "06016431",
+            "gt": "MOBILE DEVICE PROGRAMMING",
+            "pred": "MOBILE DEVICE PROGRAMMING Introduction to technology and the programming of applications for mobile computing including devices i.e. smart phones, pads, and tablets, developing mobile applications and using device emulators for coding and testing."
+          },
+          {
+            "key": "06016447",
+            "gt": "FUNDAMENTAL GAME DEVELOPMENT WITH GAME ENGINE",
+            "pred": "DEVELOPMENT WITH GAME ENGINE Fundamental of Augmented Reality, Virtual Reality and Mixed Reality, Mathematical of Motion and Physics in Extended Reality Worlds, Human Visual Perception, Game Engine, VR Programming, Tracking Techniques, Interaction Techniques"
           }
         ]
       },
       "credits": {
         "label": "หน่วยกิต",
         "n_items": 106,
-        "cer": 0.053837,
+        "cer": 0.036655,
         "wer": null,
-        "exact_match_acc": 0.915094,
-        "n_sub": 18,
-        "n_del": 29,
+        "exact_match_acc": 0.943396,
+        "n_sub": 12,
+        "n_del": 20,
         "n_ins": 0,
-        "n_missing": 2,
+        "n_missing": 1,
         "n_hallucinated": 0,
         "n_ref_chars": 873,
         "error_samples": [
@@ -140,13 +145,13 @@
       "year_sem": {
         "label": "ปี/ภาค",
         "n_items": 106,
-        "cer": 0.018868,
+        "cer": 0.009434,
         "wer": null,
-        "exact_match_acc": 0.981132,
+        "exact_match_acc": 0.990566,
         "n_sub": 0,
-        "n_del": 6,
+        "n_del": 3,
         "n_ins": 0,
-        "n_missing": 2,
+        "n_missing": 1,
         "n_hallucinated": 0,
         "n_ref_chars": 318,
         "error_samples": [
@@ -154,34 +159,24 @@
             "key": "06016418 [ตกแถว]",
             "gt": "3/1",
             "pred": ""
-          },
-          {
-            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
-            "gt": "3/2",
-            "pred": ""
           }
         ]
       },
       "category": {
         "label": "หมวดวิชา",
         "n_items": 106,
-        "cer": 0.017906,
+        "cer": 0.008953,
         "wer": null,
-        "exact_match_acc": 0.981132,
+        "exact_match_acc": 0.990566,
         "n_sub": 0,
-        "n_del": 26,
+        "n_del": 13,
         "n_ins": 0,
-        "n_missing": 2,
+        "n_missing": 1,
         "n_hallucinated": 0,
         "n_ref_chars": 1452,
         "error_samples": [
           {
             "key": "06016418 [ตกแถว]",
-            "gt": "หมวดวิชาเฉพาะ",
-            "pred": ""
-          },
-          {
-            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
             "gt": "หมวดวิชาเฉพาะ",
             "pred": ""
           }
@@ -190,13 +185,13 @@
       "ctype": {
         "label": "บังคับ/เลือก",
         "n_items": 106,
-        "cer": 0.020797,
+        "cer": 0.010399,
         "wer": null,
-        "exact_match_acc": 0.981132,
+        "exact_match_acc": 0.990566,
         "n_sub": 0,
-        "n_del": 12,
+        "n_del": 6,
         "n_ins": 0,
-        "n_missing": 2,
+        "n_missing": 1,
         "n_hallucinated": 0,
         "n_ref_chars": 577,
         "error_samples": [
@@ -204,36 +199,31 @@
             "key": "06016418 [ตกแถว]",
             "gt": "บังคับ",
             "pred": ""
-          },
-          {
-            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
-            "gt": "บังคับ",
-            "pred": ""
           }
         ]
       },
       "prereq": {
         "label": "วิชาบังคับก่อน",
-        "n_items": 104,
-        "cer": 0.035398,
+        "n_items": 105,
+        "cer": 0.035088,
         "wer": null,
-        "exact_match_acc": 0.971154,
+        "exact_match_acc": 0.971429,
         "n_sub": 14,
         "n_del": 0,
         "n_ins": 6,
         "n_missing": 0,
         "n_hallucinated": 0,
-        "n_ref_chars": 565,
+        "n_ref_chars": 570,
         "error_samples": [
-          {
-            "key": "06016432",
-            "gt": "06016413",
-            "pred": "06066304"
-          },
           {
             "key": "06016418",
             "gt": "ไม่มี",
             "pred": "06016408"
+          },
+          {
+            "key": "06016432",
+            "gt": "06016413",
+            "pred": "06066304"
           },
           {
             "key": "06016421",
@@ -244,10 +234,10 @@
       },
       "flexible": {
         "label": "ปี/ภาคยืดหยุ่น",
-        "n_items": 104,
+        "n_items": 105,
         "cer": 2.666667,
         "wer": null,
-        "exact_match_acc": 0.490385,
+        "exact_match_acc": 0.495238,
         "n_sub": 0,
         "n_del": 0,
         "n_ins": 424,
@@ -257,6 +247,11 @@
         "error_samples": [
           {
             "key": "06016428",
+            "gt": "4/1",
+            "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06016429",
             "gt": "4/1",
             "pred": "3/1, 3/2, 4/1"
           },
@@ -274,33 +269,26 @@
             "key": "06016432",
             "gt": "4/1",
             "pred": "3/1, 3/2, 4/1"
-          },
-          {
-            "key": "06016433",
-            "gt": "4/1",
-            "pred": "3/1, 3/2, 4/1"
           }
         ]
       }
     },
-    "overall_micro_cer": 0.077354,
+    "overall_micro_cer": 0.157759,
     "alignment": {
-      "matched": 104,
-      "missed": 2,
-      "spurious": 6,
-      "precision": 0.9455,
-      "recall": 0.9811,
-      "f1": 0.963,
+      "matched": 105,
+      "missed": 1,
+      "spurious": 5,
+      "precision": 0.9545,
+      "recall": 0.9906,
+      "f1": 0.9722,
       "gt_total": 106,
       "pred_total": 110,
       "missed_codes": [
-        "06016418",
-        "06016481\nหรือ\n06016482"
+        "06016418"
       ],
       "spurious_codes": [
         "06016428",
         "06016430",
-        "06016439",
         "06016447",
         "06016481",
         "06016482"

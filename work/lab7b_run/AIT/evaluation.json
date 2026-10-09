@@ -5,13 +5,13 @@
       "code": {
         "label": "รหัสวิชา",
         "n_items": 57,
-        "cer": 0.059829,
+        "cer": 0.017094,
         "wer": null,
-        "exact_match_acc": 0.964912,
+        "exact_match_acc": 0.982456,
         "n_sub": 0,
-        "n_del": 28,
+        "n_del": 8,
         "n_ins": 0,
-        "n_missing": 2,
+        "n_missing": 1,
         "n_hallucinated": 0,
         "n_ref_chars": 468,
         "error_samples": [
@@ -19,64 +19,59 @@
             "key": "06016401 [ตกแถว]",
             "gt": "06016401",
             "pred": ""
-          },
-          {
-            "key": "06046443 หรือ 06046444 [ตกแถว]",
-            "gt": "06046443 หรือ 06046444",
-            "pred": ""
           }
         ]
       },
       "name_th": {
         "label": "ชื่อวิชา (ไทย) ⭐",
         "n_items": 57,
-        "cer": 0.111954,
-        "wer": 0.26009,
-        "exact_match_acc": 0.684211,
-        "n_sub": 22,
-        "n_del": 114,
-        "n_ins": 41,
-        "n_missing": 2,
+        "cer": 0.034788,
+        "wer": 0.134529,
+        "exact_match_acc": 0.824561,
+        "n_sub": 18,
+        "n_del": 33,
+        "n_ins": 4,
+        "n_missing": 1,
         "n_hallucinated": 0,
         "n_ref_chars": 1581,
         "error_samples": [
           {
-            "key": "06046402",
-            "gt": "พีชคณิตเชิงเส้น",
-            "pred": "พีชคณิตเชิงเสน้"
+            "key": "06046411",
+            "gt": "การวิเคราะห์และเพิ่มประสิทธิภาพเครือข่าย",
+            "pred": "การวิเคราะห์และเพิ่มประสิทธภิ าพเครือข่าย"
           },
           {
-            "key": "06066001",
-            "gt": "ความน่าจะเป็นและสถิติ",
-            "pred": "ความน่าจะเปน็ และสถิติ"
+            "key": "06046414",
+            "gt": "การประมวลผลภาษาธรรมชาติด้วยการเรียนรู้อย่างเชิงลึก",
+            "pred": "การประมวลผลภาษาธรรมชาตดิ้วยการเรียนรู้อย่างเชิงลึก"
           },
           {
-            "key": "9064xxxx",
-            "gt": "วิชาเลือกหมวดวิชาศึกษาทั่วไป",
-            "pred": "วิชาเลือกหมวดวิชาศึกษาทั่วไป           3 (x-x-x)"
+            "key": "060464xx",
+            "gt": "วิชาเลือกเทคโนโลยีปัญญาประดิษฐ์เฉพาะทาง",
+            "pred": "วิชาเลือกเทคโนโลยีปญัญาประดิษฐ์เฉพาะทาง"
           },
           {
-            "key": "06046405",
-            "gt": "การเรียนรู้ของเครื่องเชิงความน่าจะเป็น",
-            "pred": "การเรียนรู้ของเครื่องเชิงความนา่ จะเปน็"
+            "key": "06046440",
+            "gt": "วิชาสัมมนาปัญญาประดิษฐ์",
+            "pred": "วิชาสัมมนาปัญญาประดษิฐ์"
           },
           {
-            "key": "06046413",
-            "gt": "ปัญญาประดิษฐ์และอินเทอร์เน็ตประสานสรรพสิ่ง",
-            "pred": "ปัญญาประดิษฐ์และอินเทอร์เน็ตประสานสรรพสงิ่"
+            "key": "060464xx",
+            "gt": "วิชาเลือกเทคโนโลยีปัญญาประดิษฐ์เฉพาะทาง",
+            "pred": "วิชาเลือกเทคโนโลยีปญัญาประดิษฐ์เฉพาะทาง"
           }
         ]
       },
       "name_en": {
         "label": "ชื่อวิชา (อังกฤษ) ⭐",
         "n_items": 57,
-        "cer": 0.095939,
-        "wer": 0.078261,
+        "cer": 0.040612,
+        "wer": 0.030435,
         "exact_match_acc": 0.947368,
         "n_sub": 0,
-        "n_del": 163,
+        "n_del": 69,
         "n_ins": 0,
-        "n_missing": 2,
+        "n_missing": 1,
         "n_hallucinated": 0,
         "n_ref_chars": 1699,
         "error_samples": [
@@ -86,13 +81,13 @@
             "pred": "PROBLEM SOLVING AND COMPUTER PROGRAMMING"
           },
           {
-            "key": "06016401 [ตกแถว]",
-            "gt": "MATHEMATICS FOR INFORMATION TECHNOLOGY",
-            "pred": ""
+            "key": "06046443 หรือ 06046444",
+            "gt": "COOPERATIVE EDUCATION IN ARTIFICIAL INTELLIGIENCE TECHNOLOGY \nOVERSEA COOPERATIVE EDUCATION IN ARTIFICIAL INTELLIGIENCE TECHNOLOGY",
+            "pred": "COOPERATIVE EDUCATION IN ARTIFICIAL OVERSEA COOPERATIVE EDUCATION IN ARTIFICIAL INTELLIGIENCE TECHNOLOGY"
           },
           {
-            "key": "06046443 หรือ 06046444 [ตกแถว]",
-            "gt": "COOPERATIVE EDUCATION IN ARTIFICIAL INTELLIGIENCE TECHNOLOGY \nOVERSEA COOPERATIVE EDUCATION IN ARTIFICIAL INTELLIGIENCE TECHNOLOGY",
+            "key": "06016401 [ตกแถว]",
+            "gt": "MATHEMATICS FOR INFORMATION TECHNOLOGY",
             "pred": ""
           }
         ]
@@ -100,53 +95,33 @@
       "credits": {
         "label": "หน่วยกิต",
         "n_items": 57,
-        "cer": 0.069869,
+        "cer": 0.017467,
         "wer": null,
-        "exact_match_acc": 0.877193,
-        "n_sub": 15,
-        "n_del": 17,
+        "exact_match_acc": 0.982456,
+        "n_sub": 0,
+        "n_del": 8,
         "n_ins": 0,
-        "n_missing": 2,
+        "n_missing": 1,
         "n_hallucinated": 0,
         "n_ref_chars": 458,
         "error_samples": [
           {
-            "key": "9064xxxx",
-            "gt": "3(x-x-x)",
-            "pred": "3(3-0-6)"
-          },
-          {
-            "key": "xxxxxxxx",
-            "gt": "3(x-x-x)",
-            "pred": "3(3-0-6)"
-          },
-          {
-            "key": "9064xxxx",
-            "gt": "3(x-x-x)",
-            "pred": "3(3-0-6)"
-          },
-          {
-            "key": "90644xxx",
-            "gt": "3(x-x-x)",
-            "pred": "3(3-0-6)"
-          },
-          {
-            "key": "xxxxxxxx",
-            "gt": "3(x-x-x)",
-            "pred": "3(3-0-6)"
+            "key": "06016401 [ตกแถว]",
+            "gt": "3(3-0-6)",
+            "pred": ""
           }
         ]
       },
       "year_sem": {
         "label": "ปี/ภาค",
         "n_items": 57,
-        "cer": 0.035088,
+        "cer": 0.017544,
         "wer": null,
-        "exact_match_acc": 0.964912,
+        "exact_match_acc": 0.982456,
         "n_sub": 0,
-        "n_del": 6,
+        "n_del": 3,
         "n_ins": 0,
-        "n_missing": 2,
+        "n_missing": 1,
         "n_hallucinated": 0,
         "n_ref_chars": 171,
         "error_samples": [
@@ -154,24 +129,19 @@
             "key": "06016401 [ตกแถว]",
             "gt": "1/1",
             "pred": ""
-          },
-          {
-            "key": "06046443 หรือ 06046444 [ตกแถว]",
-            "gt": "4/2",
-            "pred": ""
           }
         ]
       },
       "category": {
         "label": "หมวดวิชา",
         "n_items": 57,
-        "cer": 0.04472,
+        "cer": 0.028571,
         "wer": null,
-        "exact_match_acc": 0.929825,
+        "exact_match_acc": 0.947368,
         "n_sub": 0,
-        "n_del": 26,
+        "n_del": 13,
         "n_ins": 10,
-        "n_missing": 2,
+        "n_missing": 1,
         "n_hallucinated": 0,
         "n_ref_chars": 805,
         "error_samples": [
@@ -189,24 +159,19 @@
             "key": "06016401 [ตกแถว]",
             "gt": "หมวดวิชาเฉพาะ",
             "pred": ""
-          },
-          {
-            "key": "06046443 หรือ 06046444 [ตกแถว]",
-            "gt": "หมวดวิชาเฉพาะ",
-            "pred": ""
           }
         ]
       },
       "ctype": {
         "label": "บังคับ/เลือก",
         "n_items": 57,
-        "cer": 0.037618,
+        "cer": 0.018809,
         "wer": null,
-        "exact_match_acc": 0.964912,
+        "exact_match_acc": 0.982456,
         "n_sub": 0,
-        "n_del": 12,
+        "n_del": 6,
         "n_ins": 0,
-        "n_missing": 2,
+        "n_missing": 1,
         "n_hallucinated": 0,
         "n_ref_chars": 319,
         "error_samples": [
@@ -214,34 +179,35 @@
             "key": "06016401 [ตกแถว]",
             "gt": "บังคับ",
             "pred": ""
-          },
-          {
-            "key": "06046443 หรือ 06046444 [ตกแถว]",
-            "gt": "บังคับ",
-            "pred": ""
           }
         ]
       },
       "prereq": {
         "label": "วิชาบังคับก่อน",
-        "n_items": 55,
-        "cer": 0.0,
+        "n_items": 56,
+        "cer": 0.026846,
         "wer": null,
-        "exact_match_acc": 1.0,
-        "n_sub": 0,
+        "exact_match_acc": 0.982143,
+        "n_sub": 5,
         "n_del": 0,
-        "n_ins": 0,
+        "n_ins": 3,
         "n_missing": 0,
         "n_hallucinated": 0,
-        "n_ref_chars": 293,
-        "error_samples": []
+        "n_ref_chars": 298,
+        "error_samples": [
+          {
+            "key": "90642012",
+            "gt": "ไม่มี",
+            "pred": "90641008"
+          }
+        ]
       },
       "flexible": {
         "label": "ปี/ภาคยืดหยุ่น",
-        "n_items": 55,
+        "n_items": 56,
         "cer": 0.571429,
         "wer": null,
-        "exact_match_acc": 0.709091,
+        "exact_match_acc": 0.714286,
         "n_sub": 0,
         "n_del": 0,
         "n_ins": 64,
@@ -260,11 +226,6 @@
             "pred": "3/1, 3/2, 4/1"
           },
           {
-            "key": "06046418",
-            "gt": "3/1, 3/2",
-            "pred": "3/1, 3/2, 4/1"
-          },
-          {
             "key": "06046419",
             "gt": "3/1, 3/2",
             "pred": "3/1, 3/2, 4/1"
@@ -273,23 +234,27 @@
             "key": "06046420",
             "gt": "3/1, 3/2",
             "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06046421",
+            "gt": "3/1, 3/2",
+            "pred": "3/1, 3/2, 4/1"
           }
         ]
       }
     },
-    "overall_micro_cer": 0.087707,
+    "overall_micro_cer": 0.041279,
     "alignment": {
-      "matched": 55,
-      "missed": 2,
+      "matched": 56,
+      "missed": 1,
       "spurious": 2,
-      "precision": 0.9649,
-      "recall": 0.9649,
-      "f1": 0.9649,
+      "precision": 0.9655,
+      "recall": 0.9825,
+      "f1": 0.9739,
       "gt_total": 57,
-      "pred_total": 57,
+      "pred_total": 58,
       "missed_codes": [
-        "06016401",
-        "06046443 หรือ 06046444"
+        "06016401"
       ],
       "spurious_codes": [
         "06046443",
@@ -298,7 +263,7 @@
     },
     "internal_check": {
       "ok": true,
-      "n_courses": 57,
+      "n_courses": 58,
       "n_duplicate_keys": 0,
       "credits_by_term": {
         "1/1": 15,
