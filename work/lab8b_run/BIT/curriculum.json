@@ -1,19 +1,19 @@
 {
   "program": {
     "program_id": "BIT",
-    "name_th": "เทคโนโลยีสารสนเทศทางธุรกิจ",
+    "name_th": "เทคโนโลยีสารสนเทศทางธุรกิจ (สหกิจศึกษา)",
     "name_en": "Business Information Technology (BIT)",
-    "degree": null,
+    "degree": "วท.บ. (เทคโนโลยีสารสนเทศทางธุรกิจ)",
     "total_credits": 126,
     "years": 4
   },
   "study_plans": [
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "program_id": "BIT",
-      "name_th": "เทคโนโลยีสารสนเทศทางธุรกิจ",
+      "name_th": "เทคโนโลยีสารสนเทศทางธุรกิจ (สหกิจศึกษา)",
       "name_en": "Business Information Technology (BIT)",
-      "plan_type": "single"
+      "plan_type": "coop"
     }
   ],
   "courses": [
@@ -704,7 +704,7 @@
   ],
   "plan": [
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 1,
       "semester": 1,
       "code": "06036100",
@@ -713,7 +713,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 1,
       "semester": 1,
       "code": "06036101",
@@ -722,7 +722,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 1,
       "semester": 1,
       "code": "06036118",
@@ -731,7 +731,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 1,
       "semester": 1,
       "code": "96641001",
@@ -740,7 +740,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 1,
       "semester": 1,
       "code": "96641003",
@@ -749,7 +749,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 1,
       "semester": 1,
       "code": "96644007",
@@ -758,7 +758,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 1,
       "semester": 1,
       "code": "96644042",
@@ -767,7 +767,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 1,
       "semester": 2,
       "code": "06036102",
@@ -776,7 +776,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 1,
       "semester": 2,
       "code": "06036109",
@@ -785,7 +785,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 1,
       "semester": 2,
       "code": "06036119",
@@ -794,7 +794,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 1,
       "semester": 2,
       "code": "06036125",
@@ -803,7 +803,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 1,
       "semester": 2,
       "code": "96644008",
@@ -812,7 +812,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 1,
       "semester": 2,
       "code": "96641002",
@@ -821,7 +821,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06036103",
@@ -830,7 +830,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06036104",
@@ -839,7 +839,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06036105",
@@ -848,7 +848,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06036117",
@@ -857,7 +857,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06036120",
@@ -866,7 +866,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06036122",
@@ -875,7 +875,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06036108",
@@ -884,7 +884,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06036111",
@@ -893,7 +893,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06036112",
@@ -902,7 +902,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06036113",
@@ -911,7 +911,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06036124",
@@ -920,7 +920,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06036107",
@@ -929,7 +929,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06036110",
@@ -938,7 +938,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06036114",
@@ -947,7 +947,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06036121",
@@ -956,7 +956,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06036123",
@@ -965,7 +965,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 3,
       "semester": 2,
       "code": "06036106",
@@ -974,7 +974,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 3,
       "semester": 2,
       "code": "06036116",
@@ -983,7 +983,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 3,
       "semester": 2,
       "code": "96643021",
@@ -992,7 +992,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 4,
       "semester": 1,
       "code": "06036115",
@@ -1001,7 +1001,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 4,
       "semester": 1,
       "code": "96642033",
@@ -1010,7 +1010,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 4,
       "semester": 2,
       "code": "06036147",
@@ -1019,7 +1019,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 4,
       "semester": 2,
       "code": "06036148",
@@ -1030,7 +1030,7 @@
   ],
   "elective_slots": [
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 2,
       "semester": 2,
       "slot_name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป สำหรับหลักสูตรนานาชาติ 1",
@@ -1041,7 +1041,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 3,
       "semester": 1,
       "slot_name_th": "ELECTIVE IN LANGUAGE AND COMMUNICATION หรือ",
@@ -1052,7 +1052,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 3,
       "semester": 2,
       "slot_name_th": "หรือ",
@@ -1063,7 +1063,7 @@
       "note": "หมวดวิชาเฉพาะ | เลือก"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 3,
       "semester": 2,
       "slot_name_th": "วิชาเลือกเสรี 1",
@@ -1074,7 +1074,7 @@
       "note": "หมวดวิชาเลือกเสรี | เลือก"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 4,
       "semester": 1,
       "slot_name_th": "หรือ",
@@ -1085,7 +1085,7 @@
       "note": "หมวดวิชาเฉพาะ | เลือก"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 4,
       "semester": 1,
       "slot_name_th": "วิชาเลือกเสรี 2",
@@ -1096,7 +1096,7 @@
       "note": "หมวดวิชาเลือกเสรี | เลือก"
     },
     {
-      "plan_id": "BIT_DEFAULT",
+      "plan_id": "BIT_COOP",
       "year": 4,
       "semester": 1,
       "slot_name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป สำหรับหลักสูตรนานาชาติ 2",

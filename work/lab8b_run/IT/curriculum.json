@@ -1,19 +1,19 @@
 {
   "program": {
     "program_id": "IT",
-    "name_th": "เทคโนโลยีสารสนเทศ",
+    "name_th": "เทคโนโลยีสารสนเทศ (สหกิจศึกษา)",
     "name_en": "Information Technology (IT)",
-    "degree": null,
+    "degree": "วท.บ. (เทคโนโลยีสารสนเทศ)",
     "total_credits": 129,
     "years": 4
   },
   "study_plans": [
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "program_id": "IT",
-      "name_th": "เทคโนโลยีสารสนเทศ",
+      "name_th": "เทคโนโลยีสารสนเทศ (สหกิจศึกษา)",
       "name_en": "Information Technology (IT)",
-      "plan_type": "single"
+      "plan_type": "coop"
     }
   ],
   "courses": [
@@ -1220,7 +1220,7 @@
   ],
   "plan": [
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "06016401",
@@ -1229,7 +1229,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "06016402",
@@ -1238,7 +1238,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "06016411",
@@ -1247,7 +1247,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "06066303",
@@ -1256,7 +1256,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "90641001",
@@ -1265,7 +1265,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "90641003",
@@ -1274,7 +1274,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 1,
       "code": "90644007",
@@ -1283,7 +1283,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 2,
       "code": "06016408",
@@ -1292,7 +1292,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 2,
       "code": "06066001",
@@ -1301,7 +1301,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 2,
       "code": "06066101",
@@ -1310,7 +1310,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 2,
       "code": "06066301",
@@ -1319,7 +1319,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 2,
       "code": "90641002",
@@ -1328,7 +1328,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 1,
       "semester": 2,
       "code": "90644008",
@@ -1337,7 +1337,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06016403",
@@ -1346,7 +1346,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06016409",
@@ -1355,7 +1355,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06016413",
@@ -1364,7 +1364,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06066000",
@@ -1373,7 +1373,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06066300",
@@ -1382,7 +1382,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 1,
       "code": "06066304",
@@ -1391,7 +1391,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016405",
@@ -1400,7 +1400,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016410",
@@ -1409,7 +1409,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016412",
@@ -1418,7 +1418,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06066302",
@@ -1427,7 +1427,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016414",
@@ -1436,7 +1436,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016415",
@@ -1445,7 +1445,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016419",
@@ -1454,7 +1454,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016420",
@@ -1463,7 +1463,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016424",
@@ -1472,7 +1472,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 2,
       "semester": 2,
       "code": "06016425",
@@ -1481,7 +1481,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016404",
@@ -1490,7 +1490,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06066102",
@@ -1499,7 +1499,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016416",
@@ -1508,7 +1508,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016417",
@@ -1517,7 +1517,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016418",
@@ -1526,7 +1526,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016421",
@@ -1535,7 +1535,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016422",
@@ -1544,7 +1544,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016423",
@@ -1553,7 +1553,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016426",
@@ -1562,7 +1562,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "code": "06016427",
@@ -1571,7 +1571,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 2,
       "code": "06016481",
@@ -1580,7 +1580,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 2,
       "code": "06016482",
@@ -1589,7 +1589,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 1,
       "code": "06016406",
@@ -1598,7 +1598,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 1,
       "code": "90643021",
@@ -1607,7 +1607,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 2,
       "code": "06016407",
@@ -1616,7 +1616,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 2,
       "code": "06066100",
@@ -1625,7 +1625,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 2,
       "code": "90642033",
@@ -1634,7 +1634,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 2,
       "code": "90644042",
@@ -1645,7 +1645,7 @@
   ],
   "elective_slots": [
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 3,
       "semester": 1,
       "slot_name_th": "วิชาเลือกหมวดภาษาและการสื่อสาร",
@@ -1656,7 +1656,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 1,
       "slot_name_th": "วิชาเลือกทางเทคโนโลยีสารสนเทศ 1",
@@ -1667,7 +1667,7 @@
       "note": "หมวดวิชาเฉพาะ | เลือก"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 1,
       "slot_name_th": "วิชาเลือก หมวดศึกษาทั่วไป 1",
@@ -1678,7 +1678,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 1,
       "slot_name_th": "วิชาเลอืกเสรี 1",
@@ -1689,7 +1689,7 @@
       "note": "หมวดวิชาเลือกเสรี | เลือก"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 1,
       "slot_name_th": "วิชาเลอืกเสรี 2",
@@ -1700,7 +1700,7 @@
       "note": "หมวดวิชาเลือกเสรี | เลือก"
     },
     {
-      "plan_id": "IT_DEFAULT",
+      "plan_id": "IT_COOP",
       "year": 4,
       "semester": 2,
       "slot_name_th": "วิชาเลือก หมวดศึกษาทั่วไป 2",

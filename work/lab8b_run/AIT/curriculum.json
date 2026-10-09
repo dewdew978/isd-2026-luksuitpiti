@@ -3,13 +3,13 @@
     "program_id": "AIT",
     "name_th": "เทคโนโลยีปัญญาประดิษฐ์",
     "name_en": "Artificial Intelligence Technology (AIT)",
-    "degree": null,
+    "degree": "วท.บ. (เทคโนโลยีปัญญาประดิษฐ์)",
     "total_credits": 120,
     "years": 4
   },
   "study_plans": [
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "program_id": "AIT",
       "name_th": "เทคโนโลยีปัญญาประดิษฐ์",
       "name_en": "Artificial Intelligence Technology (AIT)",
@@ -620,7 +620,7 @@
   ],
   "plan": [
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 1,
       "semester": 1,
       "code": "06046400",
@@ -629,7 +629,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 1,
       "semester": 1,
       "code": "06046402",
@@ -638,7 +638,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 1,
       "semester": 1,
       "code": "06066000",
@@ -647,7 +647,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 1,
       "semester": 1,
       "code": "06066001",
@@ -656,7 +656,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 1,
       "semester": 1,
       "code": "06066303",
@@ -665,7 +665,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 1,
       "semester": 1,
       "code": "90641008",
@@ -674,7 +674,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 1,
       "semester": 2,
       "code": "06046401",
@@ -683,7 +683,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 1,
       "semester": 2,
       "code": "06046403",
@@ -692,7 +692,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 1,
       "semester": 2,
       "code": "06066301",
@@ -701,7 +701,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 1,
       "semester": 2,
       "code": "06046404",
@@ -710,7 +710,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 1,
       "semester": 2,
       "code": "90641007",
@@ -719,7 +719,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 1,
       "semester": 2,
       "code": "90641004",
@@ -728,7 +728,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 2,
       "semester": 1,
       "code": "06066300",
@@ -737,7 +737,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 2,
       "semester": 1,
       "code": "06046405",
@@ -746,7 +746,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 2,
       "semester": 1,
       "code": "06046406",
@@ -755,7 +755,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 2,
       "semester": 1,
       "code": "06046409",
@@ -764,7 +764,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 2,
       "semester": 1,
       "code": "06046413",
@@ -773,7 +773,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 2,
       "semester": 1,
       "code": "90641009",
@@ -782,7 +782,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 2,
       "semester": 2,
       "code": "06046407",
@@ -791,7 +791,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 2,
       "semester": 2,
       "code": "06046408",
@@ -800,7 +800,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 2,
       "semester": 2,
       "code": "06046410",
@@ -809,7 +809,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 2,
       "semester": 2,
       "code": "06046412",
@@ -818,7 +818,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 2,
       "semester": 2,
       "code": "06046411",
@@ -827,7 +827,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 2,
       "semester": 2,
       "code": "90641010",
@@ -836,7 +836,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 2,
       "semester": 2,
       "code": "90641005",
@@ -845,7 +845,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 3,
       "semester": 1,
       "code": "06046415",
@@ -854,7 +854,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 3,
       "semester": 1,
       "code": "06046414",
@@ -863,7 +863,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 3,
       "semester": 1,
       "code": "90642012",
@@ -872,7 +872,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 3,
       "semester": 1,
       "code": "06046440",
@@ -881,7 +881,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 3,
       "semester": 2,
       "code": "06046441",
@@ -890,7 +890,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 3,
       "semester": 2,
       "code": "90641006",
@@ -899,7 +899,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 4,
       "semester": 1,
       "code": "06046442",
@@ -908,7 +908,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 4,
       "semester": 2,
       "code": "06046443",
@@ -917,7 +917,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 4,
       "semester": 2,
       "code": "06046444",
@@ -928,7 +928,7 @@
   ],
   "elective_slots": [
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 1,
       "semester": 2,
       "slot_name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป",
@@ -939,7 +939,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 3,
       "semester": 1,
       "slot_name_th": "วิชาเลือกเทคโนโลยีปญัญาประดิษฐ์เฉพาะทาง",
@@ -950,7 +950,7 @@
       "note": "หมวดวิชาเฉพาะ | เลือก"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 3,
       "semester": 2,
       "slot_name_th": "วิชาเลือกเทคโนโลยีปญัญาประดิษฐ์เฉพาะทาง",
@@ -961,7 +961,7 @@
       "note": "หมวดวิชาเฉพาะ | เลือก"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 3,
       "semester": 2,
       "slot_name_th": "วิชาเลือกเสรี 1",
@@ -972,7 +972,7 @@
       "note": "หมวดวิชาเลือกเสรี | เลือก"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 4,
       "semester": 1,
       "slot_name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป",
@@ -983,7 +983,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 4,
       "semester": 1,
       "slot_name_th": "วิชาเลือกด้านภาษาและการสื่อสาร",
@@ -994,7 +994,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
     },
     {
-      "plan_id": "AIT_DEFAULT",
+      "plan_id": "AIT_SINGLE",
       "year": 4,
       "semester": 1,
       "slot_name_th": "วิชาเลือกเสรี 2",

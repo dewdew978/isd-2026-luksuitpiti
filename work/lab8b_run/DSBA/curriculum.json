@@ -1,19 +1,19 @@
 {
   "program": {
     "program_id": "DSBA",
-    "name_th": "วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ",
+    "name_th": "วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ (สหกิจศึกษา)",
     "name_en": "Data Science and Business Analytics (DSBA)",
-    "degree": null,
+    "degree": "วท.บ. (วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ)",
     "total_credits": 132,
     "years": 4
   },
   "study_plans": [
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "program_id": "DSBA",
-      "name_th": "วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ",
+      "name_th": "วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ (สหกิจศึกษา)",
       "name_en": "Data Science and Business Analytics (DSBA)",
-      "plan_type": "single"
+      "plan_type": "coop"
     }
   ],
   "courses": [
@@ -968,7 +968,7 @@
   ],
   "plan": [
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 1,
       "code": "06026200",
@@ -977,7 +977,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 1,
       "code": "06026202",
@@ -986,7 +986,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 1,
       "code": "06066101",
@@ -995,7 +995,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 1,
       "code": "06066303",
@@ -1004,7 +1004,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 1,
       "code": "90641001",
@@ -1013,7 +1013,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 1,
       "code": "90641003",
@@ -1022,7 +1022,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 1,
       "code": "90644007",
@@ -1031,7 +1031,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 2,
       "code": "06026201",
@@ -1040,7 +1040,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 2,
       "code": "06026203",
@@ -1049,7 +1049,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 2,
       "code": "06026205",
@@ -1058,7 +1058,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 2,
       "code": "06066001",
@@ -1067,7 +1067,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 2,
       "code": "90641002",
@@ -1076,7 +1076,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 2,
       "code": "90642033",
@@ -1085,7 +1085,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 1,
       "semester": 2,
       "code": "90644008",
@@ -1094,7 +1094,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 2,
       "semester": 1,
       "code": "06026206",
@@ -1103,7 +1103,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 2,
       "semester": 1,
       "code": "06066000",
@@ -1112,7 +1112,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 2,
       "semester": 1,
       "code": "06066300",
@@ -1121,7 +1121,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 2,
       "semester": 1,
       "code": "06066302",
@@ -1130,7 +1130,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 2,
       "semester": 1,
       "code": "06066304",
@@ -1139,7 +1139,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 2,
       "semester": 2,
       "code": "06026204",
@@ -1148,7 +1148,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 2,
       "semester": 2,
       "code": "06026207",
@@ -1157,7 +1157,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 2,
       "semester": 2,
       "code": "06026208",
@@ -1166,7 +1166,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 2,
       "semester": 2,
       "code": "06026209",
@@ -1175,7 +1175,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 2,
       "semester": 2,
       "code": "06026210",
@@ -1184,7 +1184,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 2,
       "semester": 2,
       "code": "06066102",
@@ -1193,7 +1193,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 2,
       "semester": 2,
       "code": "06066301",
@@ -1202,7 +1202,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 3,
       "semester": 1,
       "code": "06026211",
@@ -1211,7 +1211,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 3,
       "semester": 1,
       "code": "06026212",
@@ -1220,7 +1220,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 3,
       "semester": 1,
       "code": "90644042",
@@ -1229,7 +1229,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 3,
       "semester": 2,
       "code": "06026213",
@@ -1238,7 +1238,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 3,
       "semester": 2,
       "code": "06026214",
@@ -1247,7 +1247,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 3,
       "semester": 2,
       "code": "06066100",
@@ -1256,7 +1256,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 3,
       "semester": 2,
       "code": "90643021",
@@ -1265,7 +1265,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 4,
       "semester": 1,
       "code": "06026215",
@@ -1274,7 +1274,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 4,
       "semester": 2,
       "code": "06026259",
@@ -1283,7 +1283,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 4,
       "semester": 2,
       "code": "06026260",
@@ -1294,7 +1294,7 @@
   ],
   "elective_slots": [
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 2,
       "semester": 1,
       "slot_name_th": "วิชาเลือกด้านภาษาและการสื่อสาร",
@@ -1305,7 +1305,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 3,
       "semester": 1,
       "slot_name_th": "วิชาเลือกกลุ่มวิทยาการข้อมูล 1",
@@ -1316,7 +1316,7 @@
       "note": "หมวดวิชาเฉพาะ | เลือก"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 3,
       "semester": 1,
       "slot_name_th": "วิชาเลือกกลุ่มวิทยาการข้อมูล 2",
@@ -1327,7 +1327,7 @@
       "note": "หมวดวิชาเฉพาะ | เลือก"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 3,
       "semester": 1,
       "slot_name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป",
@@ -1338,7 +1338,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 3,
       "semester": 2,
       "slot_name_th": "วิชาเลือกกลุ่มวิทยาการข้อมูล 3",
@@ -1349,7 +1349,7 @@
       "note": "หมวดวิชาเฉพาะ | เลือก"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 3,
       "semester": 2,
       "slot_name_th": "วิชาเลือกกลุ่มวิทยาการข้อมูล 4",
@@ -1360,7 +1360,7 @@
       "note": "หมวดวิชาเฉพาะ | เลือก"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 4,
       "semester": 1,
       "slot_name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป",
@@ -1371,7 +1371,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 4,
       "semester": 1,
       "slot_name_th": "วิชาเลือกเสรี 1",
@@ -1382,7 +1382,7 @@
       "note": "หมวดวิชาเลือกเสรี | เลือก"
     },
     {
-      "plan_id": "DSBA_DEFAULT",
+      "plan_id": "DSBA_COOP",
       "year": 4,
       "semester": 1,
       "slot_name_th": "วิชาเลือกเสรี 2",

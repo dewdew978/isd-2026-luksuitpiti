@@ -82,6 +82,30 @@
           ],
           "default": null,
           "title": "Description Th"
+        },
+        "pdf_pages": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pdf Pages"
+        },
+        "printed_pages": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Printed Pages"
         }
       },
       "required": [
@@ -92,9 +116,116 @@
       "title": "Course",
       "type": "object"
     },
+    "ElectiveSlot": {
+      "description": "ช่องวิชาเลือกในแผนการศึกษา (เช่น 06026xxx, xxxxxxxx)",
+      "properties": {
+        "plan_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Plan Id"
+        },
+        "year": {
+          "maximum": 8,
+          "minimum": 1,
+          "title": "Year",
+          "type": "integer"
+        },
+        "semester": {
+          "maximum": 3,
+          "minimum": 1,
+          "title": "Semester",
+          "type": "integer"
+        },
+        "slot_name_th": {
+          "title": "Slot Name Th",
+          "type": "string"
+        },
+        "slot_name_en": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Slot Name En"
+        },
+        "code_pattern": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Code Pattern"
+        },
+        "credits": {
+          "maximum": 12,
+          "minimum": 0,
+          "title": "Credits",
+          "type": "integer"
+        },
+        "credit_options": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Credit Options"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        }
+      },
+      "required": [
+        "year",
+        "semester",
+        "slot_name_th",
+        "credits"
+      ],
+      "title": "ElectiveSlot",
+      "type": "object"
+    },
     "PlanItem": {
       "description": "หนึ่งบรรทัดในแผนการศึกษา\n\nalt_group คือกลไกจัดการ \"วิชาเลือกอย่างใดอย่างหนึ่ง\"\nเล่มหลักสูตรเขียนว่า  06026259 หรือ 06026260\nเราแตกเป็นสองแถวที่มี alt_group เดียวกัน\nเวลานับหน่วยกิตจึงนับ alt_group ละครั้งเดียว ไม่นับซ้ำ\n\nนี่คือบทเรียนตรงจาก Lab 7B: กฎตรวจที่ไม่รู้จักกรณีนี้\nจะเตือนผิดทุกครั้งที่เจอวิชาเลือก จนนักศึกษาเลิกอ่านคำเตือน",
       "properties": {
+        "plan_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Plan Id"
+        },
         "year": {
           "maximum": 8,
           "minimum": 1,
@@ -231,12 +362,61 @@
       ],
       "title": "Program",
       "type": "object"
+    },
+    "StudyPlan": {
+      "description": "แผนการศึกษา (เช่น แผนสหกิจศึกษา, แผนปกติ)",
+      "properties": {
+        "plan_id": {
+          "title": "Plan Id",
+          "type": "string"
+        },
+        "program_id": {
+          "title": "Program Id",
+          "type": "string"
+        },
+        "name_th": {
+          "title": "Name Th",
+          "type": "string"
+        },
+        "name_en": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Name En"
+        },
+        "plan_type": {
+          "default": "single",
+          "title": "Plan Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "plan_id",
+        "program_id",
+        "name_th"
+      ],
+      "title": "StudyPlan",
+      "type": "object"
     }
   },
   "description": "เอกสารทั้งเล่มหนึ่งฉบับ",
   "properties": {
     "program": {
       "$ref": "#/$defs/Program"
+    },
+    "study_plans": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/StudyPlan"
+      },
+      "title": "Study Plans",
+      "type": "array"
     },
     "courses": {
       "default": [],
@@ -252,6 +432,14 @@
         "$ref": "#/$defs/PlanItem"
       },
       "title": "Plan",
+      "type": "array"
+    },
+    "elective_slots": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/ElectiveSlot"
+      },
+      "title": "Elective Slots",
       "type": "array"
     },
     "prerequisites": {

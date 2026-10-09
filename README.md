@@ -137,6 +137,15 @@ python src/ocr_system/lab8b_curriculum_db.py load-regulations -i work/lab7b_run/
 # python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/AIT/curriculum.json -d work/lab8b_run/AIT/curriculum.db --replace
 ```
 
+> **ทางลัด**: สามารถรันกระบวนการทั้งหมดของ Lab 8B ข้างต้น (สร้าง Schema, นำเข้า 4 หลักสูตร, โหลดข้อบังคับ, และตรวจ Verify) อัตโนมัติในคำสั่งเดียวด้วย:
+> ```bash
+> # รันครบทั้ง 4 หลักสูตรและตรวจ Verify 7 กฎทันที (ข้ามการรัน LLM Eval เพื่อความรวดเร็ว)
+> python run_lab8b.py --skip-lab7 --skip-eval
+> 
+> # หรือรันครบวงจรพร้อมประเมินผลชุดคำถามทองด้วย Qwen (ต้องเปิด Ollama)
+> python run_lab8b.py --skip-lab7
+> ```
+
 #### ค. ตรวจสอบความถูกต้องของฐานข้อมูล (Consistency Verification 7 กฎ):
 ```bash
 python src/ocr_system/lab8b_curriculum_db.py verify -d work/lab8b_run/curriculum.db -o work/lab8b_run/verify.json

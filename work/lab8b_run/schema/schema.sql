@@ -10,26 +10,52 @@ CREATE TABLE IF NOT EXISTS program (
     years         INTEGER NOT NULL CHECK (years BETWEEN 1 AND 8)
 );
 
+CREATE TABLE IF NOT EXISTS study_plan (
+    plan_id       TEXT PRIMARY KEY,
+    program_id    TEXT NOT NULL REFERENCES program(program_id),
+    name_th       TEXT NOT NULL,
+    name_en       TEXT,
+    plan_type     TEXT NOT NULL CHECK (plan_type IN ('coop', 'no_coop', 'single')),
+    UNIQUE (plan_id, program_id)
+);
+
 CREATE TABLE IF NOT EXISTS course (
-    code           TEXT PRIMARY KEY,
+    code           TEXT PRIMARY KEY CHECK (code GLOB '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
     name_th        TEXT NOT NULL,
     name_en        TEXT,
     credits        INTEGER NOT NULL CHECK (credits BETWEEN 0 AND 12),
     lecture_h      INTEGER,
     lab_h          INTEGER,
     self_h         INTEGER,
-    description_th TEXT
+    description_th TEXT,
+    pdf_pages      TEXT,
+    printed_pages  TEXT
+);
+
+CREATE TABLE IF NOT EXISTS elective_slot (
+    id             INTEGER PRIMARY KEY AUTOINCREMENT,
+    plan_id        TEXT NOT NULL REFERENCES study_plan(plan_id),
+    year           INTEGER NOT NULL CHECK (year BETWEEN 1 AND 8),
+    semester       INTEGER NOT NULL CHECK (semester BETWEEN 1 AND 3),
+    slot_name_th   TEXT NOT NULL,
+    slot_name_en   TEXT,
+    code_pattern   TEXT,
+    credits        INTEGER NOT NULL CHECK (credits BETWEEN 0 AND 12),
+    credit_options TEXT,
+    note           TEXT
 );
 
 CREATE TABLE IF NOT EXISTS plan_item (
     id         INTEGER PRIMARY KEY AUTOINCREMENT,
-    program_id TEXT NOT NULL REFERENCES program(program_id),
+    plan_id    TEXT NOT NULL,
+    program_id TEXT NOT NULL,
     year       INTEGER NOT NULL CHECK (year BETWEEN 1 AND 8),
     semester   INTEGER NOT NULL CHECK (semester BETWEEN 1 AND 3),
-    code       TEXT NOT NULL,
+    code       TEXT NOT NULL REFERENCES course(code),
     credits    INTEGER NOT NULL CHECK (credits BETWEEN 0 AND 12),
     alt_group  TEXT,
-    note       TEXT
+    note       TEXT,
+    FOREIGN KEY (plan_id, program_id) REFERENCES study_plan(plan_id, program_id)
 );
 
 CREATE TABLE IF NOT EXISTS prerequisite (
@@ -39,44 +65,50 @@ CREATE TABLE IF NOT EXISTS prerequisite (
     PRIMARY KEY (code, requires, kind)
 );
 
+CREATE TABLE IF NOT EXISTS program_course (
+    program_id TEXT NOT NULL REFERENCES program(program_id),
+    code       TEXT NOT NULL REFERENCES course(code),
+    PRIMARY KEY (program_id, code)
+);
+
 CREATE INDEX IF NOT EXISTS ix_plan_sem ON plan_item(year, semester);
 CREATE INDEX IF NOT EXISTS ix_plan_code ON plan_item(code);
+CREATE INDEX IF NOT EXISTS ix_plan_plan_id ON plan_item(plan_id);
+CREATE INDEX IF NOT EXISTS ix_slot_plan ON elective_slot(plan_id, year, semester);
 
--- VIEW ทำให้การถามคำถามง่ายขึ้นมาก
--- แทนที่ LLM จะต้อง JOIN เองทุกครั้ง เราเตรียมตารางแบนไว้ให้
--- นี่คือเหตุผลที่ VIEW มีอยู่ในโลก: ซ่อนความซับซ้อนของการ normalize
 CREATE VIEW IF NOT EXISTS v_plan AS
-SELECT p.id, p.program_id, p.year, p.semester, p.code, c.name_th, c.name_en,
-       p.credits, p.alt_group, p.note
+SELECT p.id, sp.plan_id, sp.plan_type, p.program_id, p.year, p.semester,
+       p.code, c.name_th, c.name_en, p.credits, p.alt_group, p.note,
+       c.pdf_pages, c.printed_pages, 0 AS is_elective_slot
 FROM plan_item p
+JOIN study_plan sp ON sp.plan_id = p.plan_id
 LEFT JOIN course c ON c.code = p.code
-ORDER BY CASE WHEN p.program_id LIKE 'DSBA%' THEN 0 ELSE 1 END, p.id;
 
--- VIEW ที่สองนี้สำคัญกว่าที่เห็น
---
--- ถ้าให้ LLM เขียน SUM(credits) FROM v_plan เอง มันจะได้คำตอบผิด
--- เพราะวิชาเลือก "A หรือ B" มีสองแถว แต่ต้องนับหน่วยกิตครั้งเดียว
--- ปี 2 เทอม 1 จะได้ 12 แทนที่จะเป็น 9
---
--- ทางแก้ที่ผิดคือ ไปเขียนใน prompt ว่า "อย่าลืมหักวิชาเลือกออก"
--- เพราะ prompt เป็นการขอร้อง โมเดลจะลืมเป็นบางครั้ง แล้วเราจะจับไม่ได้
---
--- ทางแก้ที่ถูกคือ ย้ายตรรกะนี้มาไว้ใน VIEW
--- แล้ว LLM แค่ SELECT ธรรมดา ไม่มีโอกาสทำผิดเลย
--- หลักการ: อะไรที่ต้อง "ถูกเสมอ" ให้เขียนเป็นโค้ด ไม่ใช่เขียนเป็นคำสั่งให้ AI
+UNION ALL
+
+SELECT e.id + 100000 AS id, sp.plan_id, sp.plan_type, sp.program_id, e.year, e.semester,
+       e.code_pattern AS code, e.slot_name_th AS name_th, e.slot_name_en AS name_en,
+       e.credits, NULL AS alt_group, e.note,
+       NULL AS pdf_pages, NULL AS printed_pages, 1 AS is_elective_slot
+FROM elective_slot e
+JOIN study_plan sp ON sp.plan_id = e.plan_id;
+
 CREATE VIEW IF NOT EXISTS v_semester_credits AS
-SELECT program_id, year, semester, SUM(credits) AS credits, COUNT(*) AS n_courses
+SELECT plan_id, program_id, year, semester, SUM(credits) AS credits, SUM(n_courses) AS n_courses
 FROM (
-    SELECT program_id, year, semester,
-           COALESCE(alt_group, 'x' || id) AS grp,
-           MAX(credits) AS credits
+    SELECT plan_id, program_id, year, semester, MAX(credits) AS credits, 1 AS n_courses
     FROM plan_item
-    GROUP BY program_id, year, semester, COALESCE(alt_group, 'x' || id)
-)
-GROUP BY program_id, year, semester
-ORDER BY CASE WHEN program_id LIKE 'DSBA%' THEN 0 ELSE 1 END, program_id;
+    GROUP BY plan_id, program_id, year, semester, COALESCE(alt_group, 'x' || id)
 
--- ตารางข้อบังคับและกฎระเบียบการศึกษา (Academic Regulations)
+    UNION ALL
+
+    SELECT plan_id,
+           (SELECT program_id FROM study_plan WHERE study_plan.plan_id = elective_slot.plan_id) AS program_id,
+           year, semester, credits, 1 AS n_courses
+    FROM elective_slot
+)
+GROUP BY plan_id, program_id, year, semester;
+
 CREATE TABLE IF NOT EXISTS regulation (
     id              INTEGER PRIMARY KEY AUTOINCREMENT,
     program_id      TEXT DEFAULT 'ALL',
