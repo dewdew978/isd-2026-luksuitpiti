@@ -2,7 +2,7 @@
 
 from typing import Any
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 
 class AskRequest(BaseModel):
@@ -28,10 +28,21 @@ class CourseCreate(BaseModel):
     description_th: str | None = None
     pdf_pages: str | None = None
     printed_pages: str | None = None
+    program_id: str | None = Field(default=None, max_length=20, description="รหัสสาขา เช่น DSBA, BIT, IT, AIT")
+    plan_id: str | None = Field(default=None, max_length=50, description="รหัสแผนการศึกษา เช่น DSBA_COOP, IT_NON_COOP")
+    year: int | None = Field(default=None, ge=1, le=8, description="ชั้นปี")
+    semester: int | None = Field(default=None, ge=1, le=3, description="ภาคการศึกษา")
+
+    @model_validator(mode="after")
+    def validate_program_plan_fields(self) -> "CourseCreate":
+        if self.program_id and self.program_id.strip() and self.program_id.strip().upper() != "NONE":
+            if self.year is None or self.semester is None:
+                raise ValueError("กรุณาระบุชั้นปี (year) และภาคการศึกษา (semester) เมื่อกำหนดหลักสูตร")
+        return self
 
 
 class CourseResponse(CourseCreate):
-    pass
+    programs: list[str] = Field(default_factory=list, description="รายชื่อสาขาที่วิชานี้สังกัด")
 
 
 class HealthResponse(BaseModel):
@@ -43,7 +54,30 @@ class HealthResponse(BaseModel):
     lab8b_module: str
 
 
+class StudyPlanResponse(BaseModel):
+    plan_id: str
+    program_id: str
+    name_th: str
+    name_en: str | None = None
+    plan_type: str | None = None
+
+
+class ElectiveSlotResponse(BaseModel):
+    id: int
+    plan_id: str
+    year: int
+    semester: int
+    slot_name_th: str
+    slot_name_en: str | None = None
+    code_pattern: str | None = None
+    credits: int
+    credit_options: str | None = None
+    note: str | None = None
+
+
 class PlanItemResponse(BaseModel):
+    plan_id: str | None = None
+    plan_type: str | None = None
     program_id: str | None = None
     year: int
     semester: int
@@ -56,9 +90,11 @@ class PlanItemResponse(BaseModel):
     self_h: int | None = None
     alt_group: str | None = None
     note: str | None = None
+    is_elective_slot: int = 0
 
 
 class PlanSummaryResponse(BaseModel):
+    plan_id: str | None = None
     program_id: str | None = None
     year: int
     semester: int
@@ -68,10 +104,12 @@ class PlanSummaryResponse(BaseModel):
 
 class StatsResponse(BaseModel):
     program_id: str | None = None
-    total_courses: int
-    total_credits: int
-    total_lecture_hours: int
-    total_lab_hours: int
+    program_name_th: str | None = None
+    program_total_credits: int | None = Field(default=None, description="หน่วยกิตรวมตามที่หลักสูตรประกาศ")
+    total_courses: int = Field(description="จำนวนรายวิชาไม่ซ้ำ")
+    total_credits: int = Field(description="ผลรวมหน่วยกิตของชุดรายวิชาไม่ซ้ำ")
+    total_lecture_hours: int = 0
+    total_lab_hours: int = 0
     total_self_hours: int = 0
 
 

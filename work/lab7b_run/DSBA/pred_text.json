@@ -3,38 +3,6 @@
   "plan": "coop",
   "courses": [
     {
-      "code": "90644xxx",
-      "name_th": "วิชาเลือกด้านภาษาและการสื่อสาร*",
-      "name_en": null,
-      "credits": "3(3-0-6)",
-      "year": 0,
-      "semester": 0,
-      "category": "หมวดวิชาศึกษาทั่วไป",
-      "type": "เลือก",
-      "prerequisite": "ไม่มี",
-      "flexible_year_semester": "3/1, 3/2, 4/1",
-      "note": null,
-      "alt_group": null,
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
-      "code": "9064xxxx",
-      "name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป*",
-      "name_en": null,
-      "credits": "3(3-0-6)",
-      "year": 0,
-      "semester": 0,
-      "category": "หมวดวิชาศึกษาทั่วไป",
-      "type": "เลือก",
-      "prerequisite": "ไม่มี",
-      "flexible_year_semester": "3/1, 3/2, 4/1",
-      "note": null,
-      "alt_group": null,
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
       "code": "06026216",
       "name_th": "ปัญญาประดิษฐ์",
       "name_en": "ARTIFICIAL INTELLIGENCE",
@@ -100,7 +68,7 @@
     },
     {
       "code": "06026220",
-      "name_th": "การทำเหมืองข้อมูลกระบวนการ",
+      "name_th": "การทำเหืมองข้อมูลกระบวนการ",
       "name_en": "PROCESS MINING",
       "credits": "3(3-0-6)",
       "year": 0,
@@ -181,7 +149,7 @@
     {
       "code": "06026225",
       "name_th": "การเรียนรู้เชิงลึกสำหรับการวิเคราะห์ภาพและวีดิโอทางการ",
-      "name_en": "DEEP LEARNING IN MEDICAL IMAGE AND VIDEO",
+      "name_en": "DEEP LEARNING IN MEDICAL IMAGE AND VIDEO ANALYSIS Introduction to concepts and principles of artificial neural network and deep learning techniques, applying deep learning for medical image and video analysis problems such as detection, segmentation, recognition, and analysis, characteristics and types of medical image and video, challenges in medical image and video computing.",
       "credits": "3(2-2-5)",
       "year": 0,
       "semester": 0,
@@ -723,6 +691,38 @@
       "printed_pages": "20;70;339;354"
     },
     {
+      "code": "06026259",
+      "name_th": "สหกิจศึกษาทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ",
+      "name_en": "COOPERATIVE EDUCATION IN DATA SCIENCE AND BUSINESS ANALYTICS",
+      "credits": "6(0-35-0)",
+      "year": 0,
+      "semester": 0,
+      "category": "หมวดวิชาเฉพาะ",
+      "type": "เลือก",
+      "prerequisite": "ไม่มี",
+      "flexible_year_semester": "3/1, 3/2, 4/1",
+      "note": null,
+      "alt_group": "alt_coop_0_0",
+      "pdf_pages": "25;39;75;344;359",
+      "printed_pages": "20;34;70;339;354"
+    },
+    {
+      "code": "06026260",
+      "name_th": "สหกิจศึกษาต่างประเทศทางวิทยาการข้อมูลและการวิเคราะห์",
+      "name_en": "OVERSEA COOPERATIVE EDUCATION IN DATA SCIENCE AND BUSINESS ANALYTICS",
+      "credits": "6(0-35-0)",
+      "year": 0,
+      "semester": 0,
+      "category": "หมวดวิชาเฉพาะ",
+      "type": "เลือก",
+      "prerequisite": "ไม่มี",
+      "flexible_year_semester": "3/1, 3/2, 4/1",
+      "note": null,
+      "alt_group": "alt_coop_0_0",
+      "pdf_pages": "25;39;75;344;359",
+      "printed_pages": "20;34;70;339;354"
+    },
+    {
       "code": "06026200",
       "name_th": "แคลคูลัส 1",
       "name_en": "CALCULUS 1",
@@ -788,7 +788,7 @@
     },
     {
       "code": "90641001",
-      "name_th": "โรงเรียนสร้างเสน่ห์",
+      "name_th": "โรงเรียนสร้างเส่นห์",
       "name_en": "CHARM SCHOOL",
       "credits": "2(1-2-3)",
       "year": 1,
@@ -1237,7 +1237,7 @@
     {
       "code": "90644042",
       "name_th": "กลุ่มวิชาที่กำหนดโดยคณะ*",
-      "name_en": "PROFESSIONAL COMMUNICATION AND",
+      "name_en": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
       "credits": "3(3-0-6)",
       "year": 3,
       "semester": 1,
@@ -1411,8 +1411,8 @@
       "printed_pages": null
     },
     {
-      "code": "06026259",
-      "name_th": "สหกิจศึกษาทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ",
+      "code": "06026259 หรือ 06026260",
+      "name_th": "สหกิจศึกษาทางวิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ หรือ สหกิจศึกษาต่างประเทศทางวิทยาการข้อมูลและการ",
       "name_en": "COOPERATIVE EDUCATION IN DATA SCIENCE AND",
       "credits": "6(0-35-0)",
       "year": 4,
@@ -1423,34 +1423,18 @@
       "flexible_year_semester": null,
       "note": null,
       "alt_group": "alt_coop_4_2",
-      "pdf_pages": "25;39;75;344;359",
-      "printed_pages": "20;34;70;339;354"
-    },
-    {
-      "code": "06026260",
-      "name_th": "สหกิจศึกษาต่างประเทศทางวิทยาการข้อมูลและการ",
-      "name_en": "OVERSEA COOPERATIVE EDUCATION IN DATA SCIENCE",
-      "credits": "3(3-0-6)",
-      "year": 4,
-      "semester": 2,
-      "category": "หมวดวิชาเฉพาะ",
-      "type": "บังคับ",
-      "prerequisite": "ไม่มี",
-      "flexible_year_semester": null,
-      "note": null,
-      "alt_group": "alt_coop_4_2",
-      "pdf_pages": "25;39;75;344;359",
-      "printed_pages": "20;34;70;339;354"
+      "pdf_pages": null,
+      "printed_pages": null
     }
   ],
   "_meta": {
     "pipeline": "text",
-    "elapsed_sec": 2.5,
+    "elapsed_sec": 1.5,
     "models": {
       "ocr": "scb10x/typhoon-ocr1.5-3b",
       "text": "qwen3:4b"
     },
     "dpi": 150,
-    "pages_per_chunk": 3
+    "pages_per_chunk": 1
   }
 }

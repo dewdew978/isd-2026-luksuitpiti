@@ -3,10 +3,19 @@
     "program_id": "AIT",
     "name_th": "เทคโนโลยีปัญญาประดิษฐ์",
     "name_en": "Artificial Intelligence Technology (AIT)",
-    "degree": "วิทยาศาสตรบัณฑิต",
+    "degree": null,
     "total_credits": 120,
     "years": 4
   },
+  "study_plans": [
+    {
+      "plan_id": "AIT_DEFAULT",
+      "program_id": "AIT",
+      "name_th": "เทคโนโลยีปัญญาประดิษฐ์",
+      "name_en": "Artificial Intelligence Technology (AIT)",
+      "plan_type": "single"
+    }
+  ],
   "courses": [
     {
       "code": "06046416",
@@ -34,7 +43,7 @@
     },
     {
       "code": "06046418",
-      "name_th": "การระบุตำแหน่งและการสร้างแผนที่ของหุ่นยนต์",
+      "name_th": "การระบุตำแห่นงและการสร้างแผนที่ของหุ่นยนต์",
       "name_en": "ROBOT LOCALIZATION AND MAPPING",
       "credits": 3,
       "lecture_h": 3,
@@ -201,6 +210,30 @@
       "printed_pages": "16;35;297"
     },
     {
+      "code": "06046443",
+      "name_th": "สหกิจศึกษาทางเทคโนโลยีปัญญาประดิษฐ์",
+      "name_en": "(COOPERATIVE EDUCATION IN ARTIFICIAL INTELLIGIENCE TECHNOLOGY)",
+      "credits": 6,
+      "lecture_h": 3,
+      "lab_h": 45,
+      "self_h": 6,
+      "description_th": null,
+      "pdf_pages": "22;26;40;303",
+      "printed_pages": "17;21;35;298"
+    },
+    {
+      "code": "06046444",
+      "name_th": "สหกิจศึกษาต่างประเทศทางเทคโนโลยีปัญญาประดิษฐ์",
+      "name_en": "OVERSEA COOPERATIVE EDUCATION IN ARTIFICIAL INTELLIGIENCE TECHNOLOGY",
+      "credits": 6,
+      "lecture_h": 3,
+      "lab_h": 45,
+      "self_h": 6,
+      "description_th": null,
+      "pdf_pages": "22;26;40;304",
+      "printed_pages": "17;21;35;299"
+    },
+    {
       "code": "06046400",
       "name_th": "แคลคูลัส 1",
       "name_en": "CALCULUS 1",
@@ -214,7 +247,7 @@
     },
     {
       "code": "06046402",
-      "name_th": "พีชคณิตเชิงเสน้",
+      "name_th": "พีชคณิตเชิงเส้น",
       "name_en": "LINEAR ALGEBRA",
       "credits": 3,
       "lecture_h": 3,
@@ -238,7 +271,7 @@
     },
     {
       "code": "06066001",
-      "name_th": "ความน่าจะเปน็ และสถิติ",
+      "name_th": "ความน่าจะเป็น และสถิติ",
       "name_en": "PROBABILITY AND STATISTICS",
       "credits": 3,
       "lecture_h": 3,
@@ -345,18 +378,6 @@
       "printed_pages": "13;18"
     },
     {
-      "code": "90649028",
-      "name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป           3 (x-x-x)",
-      "name_en": "GENERAL EDUCATION COURSES",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
       "code": "06066300",
       "name_th": "แนวคิดระบบฐานข้อมูล",
       "name_en": "DATABASE SYSTEM CONCEPTS",
@@ -370,7 +391,7 @@
     },
     {
       "code": "06046405",
-      "name_th": "การเรียนรู้ของเครื่องเชิงความนา่ จะเปน็",
+      "name_th": "การเรียนรู้ของเครื่องเชิงความน่าจะเป็น",
       "name_en": "PROBABILISTIC MACHINE LEARNING",
       "credits": 3,
       "lecture_h": 3,
@@ -406,7 +427,7 @@
     },
     {
       "code": "06046413",
-      "name_th": "ปัญญาประดิษฐ์และอินเทอร์เน็ตประสานสรรพสงิ่",
+      "name_th": "ปัญญาประดิษฐ์และอินเทอร์เน็ตประสานสรรพสิ่ง",
       "name_en": "ARTIFICIAL INTELLIGIENCE AND INTERNET OF THING",
       "credits": 3,
       "lecture_h": 3,
@@ -526,7 +547,7 @@
     },
     {
       "code": "06046414",
-      "name_th": "การประมวลผลภาษาธรรมชาตดิ ้วยการเรียนรู้อย่างเชิงลึก",
+      "name_th": "การประมวลผลภาษาธรรมชาตดิ้วยการเรียนรู้อย่างเชิงลึก",
       "name_en": "NATURAL LANGUAGE PROCESSING WITH DEEP LEARNING",
       "credits": 3,
       "lecture_h": 3,
@@ -549,20 +570,8 @@
       "printed_pages": "14;20;31"
     },
     {
-      "code": "06049045",
-      "name_th": "วิชาเลือกเทคโนโลยีปญั ญาประดิษฐ์เฉพาะทาง",
-      "name_en": "ELECTIVE IN ARTIFICIAL INTELLIGENCE SPECIALIZATION",
-      "credits": 6,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
       "code": "06046440",
-      "name_th": "วิชาสัมมนาปัญญาประดษิ ฐ ์",
+      "name_th": "วิชาสัมมนาปัญญาประดษิฐ์",
       "name_en": "SEMINAR IN ARTIFICIAL INTELLIGENCE",
       "credits": 3,
       "lecture_h": 2,
@@ -573,20 +582,8 @@
       "printed_pages": "17;20;35;297"
     },
     {
-      "code": "06049047",
-      "name_th": "วิชาเลือกเทคโนโลยีปญั ญาประดิษฐ์เฉพาะทาง",
-      "name_en": "ELECTIVE IN ARTIFICIAL INTELLIGENCE SPECIALIZATION",
-      "credits": 6,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
       "code": "06046441",
-      "name_th": "โครงงานเทคโนโลยีปญั ญาประดิษฐ์ 1",
+      "name_th": "โครงงานเทคโนโลยีปญัญาประดิษฐ์ 1",
       "name_en": "PROJECT IN ARTIFICIAL INTELLIGENCE TECHNOLOGY 1",
       "credits": 3,
       "lecture_h": 3,
@@ -609,20 +606,8 @@
       "printed_pages": "13;20"
     },
     {
-      "code": "99999050",
-      "name_th": "วิชาเลือกเสรี 1                       3 (x-x-x)",
-      "name_en": "FREE ELECTIVE COURSE 1",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
       "code": "06046442",
-      "name_th": "โครงงานเทคโนโลยีปญั ญาประดิษฐ์ 2",
+      "name_th": "โครงงานเทคโนโลยีปญัญาประดิษฐ์ 2",
       "name_en": "PROJECT IN ARTIFICIAL INTELLIGENCE TECHNOLOGY 2",
       "credits": 3,
       "lecture_h": 3,
@@ -631,70 +616,11 @@
       "description_th": null,
       "pdf_pages": "22;26;40;303",
       "printed_pages": "17;21;35;298"
-    },
-    {
-      "code": "90649052",
-      "name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป           3 (x-x-x)",
-      "name_en": "GENERAL EDUCATION COURSES",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
-      "code": "90649053",
-      "name_th": "วิชาเลือกด้านภาษาและการสื่อสาร         3 (x-x-x)",
-      "name_en": "LANGUAGE AND COMMUNICATION COURSES",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
-      "code": "99999054",
-      "name_th": "วิชาเลือกเสรี 2                       3 (x-x-x)",
-      "name_en": "FREE ELECTIVE COURSE 2",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
-      "code": "06046443",
-      "name_th": "สหกิจศึกษาทางเทคโนโลยีปัญญาประดษิ ฐ์",
-      "name_en": "COOPERATIVE EDUCATION IN ARTIFICIAL",
-      "credits": 6,
-      "lecture_h": 3,
-      "lab_h": 45,
-      "self_h": 6,
-      "description_th": null,
-      "pdf_pages": "22;26;40;303",
-      "printed_pages": "17;21;35;298"
-    },
-    {
-      "code": "06046444",
-      "name_th": "สหกิจศึกษาต่างประเทศทางเทคโนโลยีปัญญาประดิษฐ์",
-      "name_en": "OVERSEA COOPERATIVE EDUCATION IN ARTIFICIAL INTELLIGIENCE TECHNOLOGY",
-      "credits": 6,
-      "lecture_h": 3,
-      "lab_h": 45,
-      "self_h": 6,
-      "description_th": null,
-      "pdf_pages": "22;26;40;304",
-      "printed_pages": "17;21;35;299"
     }
   ],
   "plan": [
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 1,
       "semester": 1,
       "code": "06046400",
@@ -703,6 +629,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 1,
       "semester": 1,
       "code": "06046402",
@@ -711,6 +638,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 1,
       "semester": 1,
       "code": "06066000",
@@ -719,6 +647,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 1,
       "semester": 1,
       "code": "06066001",
@@ -727,6 +656,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 1,
       "semester": 1,
       "code": "06066303",
@@ -735,6 +665,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 1,
       "semester": 1,
       "code": "90641008",
@@ -743,6 +674,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 1,
       "semester": 2,
       "code": "06046401",
@@ -751,6 +683,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 1,
       "semester": 2,
       "code": "06046403",
@@ -759,6 +692,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 1,
       "semester": 2,
       "code": "06066301",
@@ -767,6 +701,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 1,
       "semester": 2,
       "code": "06046404",
@@ -775,6 +710,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 1,
       "semester": 2,
       "code": "90641007",
@@ -783,6 +719,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 1,
       "semester": 2,
       "code": "90641004",
@@ -791,14 +728,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "year": 1,
-      "semester": 2,
-      "code": "90649028",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
-    },
-    {
+      "plan_id": "AIT_DEFAULT",
       "year": 2,
       "semester": 1,
       "code": "06066300",
@@ -807,6 +737,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 2,
       "semester": 1,
       "code": "06046405",
@@ -815,6 +746,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 2,
       "semester": 1,
       "code": "06046406",
@@ -823,6 +755,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 2,
       "semester": 1,
       "code": "06046409",
@@ -831,6 +764,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 2,
       "semester": 1,
       "code": "06046413",
@@ -839,6 +773,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 2,
       "semester": 1,
       "code": "90641009",
@@ -847,6 +782,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 2,
       "semester": 2,
       "code": "06046407",
@@ -855,6 +791,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 2,
       "semester": 2,
       "code": "06046408",
@@ -863,6 +800,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 2,
       "semester": 2,
       "code": "06046410",
@@ -871,6 +809,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 2,
       "semester": 2,
       "code": "06046412",
@@ -879,6 +818,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 2,
       "semester": 2,
       "code": "06046411",
@@ -887,6 +827,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 2,
       "semester": 2,
       "code": "90641010",
@@ -895,6 +836,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 2,
       "semester": 2,
       "code": "90641005",
@@ -903,6 +845,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 3,
       "semester": 1,
       "code": "06046415",
@@ -911,6 +854,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 3,
       "semester": 1,
       "code": "06046414",
@@ -919,6 +863,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 3,
       "semester": 1,
       "code": "90642012",
@@ -927,14 +872,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "year": 3,
-      "semester": 1,
-      "code": "06049045",
-      "credits": 6,
-      "alt_group": null,
-      "note": "หมวดวิชาเฉพาะ | เลือก"
-    },
-    {
+      "plan_id": "AIT_DEFAULT",
       "year": 3,
       "semester": 1,
       "code": "06046440",
@@ -943,14 +881,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "year": 3,
-      "semester": 2,
-      "code": "06049047",
-      "credits": 6,
-      "alt_group": null,
-      "note": "หมวดวิชาเฉพาะ | เลือก"
-    },
-    {
+      "plan_id": "AIT_DEFAULT",
       "year": 3,
       "semester": 2,
       "code": "06046441",
@@ -959,6 +890,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 3,
       "semester": 2,
       "code": "90641006",
@@ -967,14 +899,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "year": 3,
-      "semester": 2,
-      "code": "99999050",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาเลือกเสรี | เลือก"
-    },
-    {
+      "plan_id": "AIT_DEFAULT",
       "year": 4,
       "semester": 1,
       "code": "06046442",
@@ -983,30 +908,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "year": 4,
-      "semester": 1,
-      "code": "90649052",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
-    },
-    {
-      "year": 4,
-      "semester": 1,
-      "code": "90649053",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
-    },
-    {
-      "year": 4,
-      "semester": 1,
-      "code": "99999054",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาเลือกเสรี | เลือก"
-    },
-    {
+      "plan_id": "AIT_DEFAULT",
       "year": 4,
       "semester": 2,
       "code": "06046443",
@@ -1015,12 +917,92 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "AIT_DEFAULT",
       "year": 4,
       "semester": 2,
       "code": "06046444",
       "credits": 6,
       "alt_group": "alt_coop_4_2",
       "note": "หมวดวิชาเฉพาะ | บังคับ"
+    }
+  ],
+  "elective_slots": [
+    {
+      "plan_id": "AIT_DEFAULT",
+      "year": 1,
+      "semester": 2,
+      "slot_name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป",
+      "slot_name_en": "GENERAL EDUCATION COURSES",
+      "code_pattern": "9064xxxx",
+      "credits": 3,
+      "credit_options": "3(x-x-x)",
+      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
+    },
+    {
+      "plan_id": "AIT_DEFAULT",
+      "year": 3,
+      "semester": 1,
+      "slot_name_th": "วิชาเลือกเทคโนโลยีปญัญาประดิษฐ์เฉพาะทาง",
+      "slot_name_en": "ELECTIVE IN ARTIFICIAL INTELLIGENCE SPECIALIZATION",
+      "code_pattern": "060464xx",
+      "credits": 6,
+      "credit_options": "6(3-0-6)",
+      "note": "หมวดวิชาเฉพาะ | เลือก"
+    },
+    {
+      "plan_id": "AIT_DEFAULT",
+      "year": 3,
+      "semester": 2,
+      "slot_name_th": "วิชาเลือกเทคโนโลยีปญัญาประดิษฐ์เฉพาะทาง",
+      "slot_name_en": "ELECTIVE IN ARTIFICIAL INTELLIGENCE SPECIALIZATION",
+      "code_pattern": "060464xx",
+      "credits": 6,
+      "credit_options": "6(3-0-6)",
+      "note": "หมวดวิชาเฉพาะ | เลือก"
+    },
+    {
+      "plan_id": "AIT_DEFAULT",
+      "year": 3,
+      "semester": 2,
+      "slot_name_th": "วิชาเลือกเสรี 1",
+      "slot_name_en": "FREE ELECTIVE COURSE 1",
+      "code_pattern": "xxxxxxxx",
+      "credits": 3,
+      "credit_options": "3(x-x-x)",
+      "note": "หมวดวิชาเลือกเสรี | เลือก"
+    },
+    {
+      "plan_id": "AIT_DEFAULT",
+      "year": 4,
+      "semester": 1,
+      "slot_name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป",
+      "slot_name_en": "GENERAL EDUCATION COURSES",
+      "code_pattern": "9064xxxx",
+      "credits": 3,
+      "credit_options": "3(x-x-x)",
+      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
+    },
+    {
+      "plan_id": "AIT_DEFAULT",
+      "year": 4,
+      "semester": 1,
+      "slot_name_th": "วิชาเลือกด้านภาษาและการสื่อสาร",
+      "slot_name_en": "LANGUAGE AND COMMUNICATION COURSES",
+      "code_pattern": "90644xxx",
+      "credits": 3,
+      "credit_options": "3(x-x-x)",
+      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
+    },
+    {
+      "plan_id": "AIT_DEFAULT",
+      "year": 4,
+      "semester": 1,
+      "slot_name_th": "วิชาเลือกเสรี 2",
+      "slot_name_en": "FREE ELECTIVE COURSE 2",
+      "code_pattern": "xxxxxxxx",
+      "credits": 3,
+      "credit_options": "3(x-x-x)",
+      "note": "หมวดวิชาเลือกเสรี | เลือก"
     }
   ],
   "prerequisites": [
@@ -1042,6 +1024,11 @@
     {
       "code": "06046406",
       "requires": "06046402",
+      "kind": "pre"
+    },
+    {
+      "code": "90642012",
+      "requires": "90641008",
       "kind": "pre"
     }
   ]

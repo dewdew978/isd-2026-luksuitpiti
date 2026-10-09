@@ -3,7 +3,7 @@
     "question": "หลักสูตรนี้มีทั้งหมดกี่หน่วยกิต",
     "expect": {
       "type": "value",
-      "value": 135
+      "value": 132
     }
   },
   {
@@ -115,14 +115,14 @@
     "question": "ปี 1 เทอม 1 เรียนกี่หน่วยกิต",
     "expect": {
       "type": "value",
-      "value": 21
+      "value": 18
     }
   },
   {
     "question": "ปี 1 เทอม 1 เรียนกี่วิชา",
     "expect": {
       "type": "value",
-      "value": 8
+      "value": 7
     }
   },
   {
@@ -300,7 +300,7 @@
     "question": "ปี 2 เทอม 1 เรียนกี่หน่วยกิต",
     "expect": {
       "type": "value",
-      "value": 15
+      "value": 18
     }
   },
   {

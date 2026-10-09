@@ -1,13 +1,94 @@
 {
   "program": {
     "program_id": "BIT",
-    "name_th": "เทคโนโลยีสารสนเทศทางธุรกิจ (สหกิจศึกษา)",
+    "name_th": "เทคโนโลยีสารสนเทศทางธุรกิจ",
     "name_en": "Business Information Technology (BIT)",
-    "degree": "วิทยาศาสตรบัณฑิต",
+    "degree": null,
     "total_credits": 126,
     "years": 4
   },
+  "study_plans": [
+    {
+      "plan_id": "BIT_DEFAULT",
+      "program_id": "BIT",
+      "name_th": "เทคโนโลยีสารสนเทศทางธุรกิจ",
+      "name_en": "Business Information Technology (BIT)",
+      "plan_type": "single"
+    }
+  ],
   "courses": [
+    {
+      "code": "06036145",
+      "name_th": "โครงงานทางด้านเทคโนโลยีสารสนเทศเชิงธุรกิจ 1",
+      "name_en": "PROJECT IN BUSINESS INFORMATION TECHNOLOGY 1",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 9,
+      "self_h": 6,
+      "description_th": null,
+      "pdf_pages": "22;29;76;256;269",
+      "printed_pages": "17;24;71;251;264"
+    },
+    {
+      "code": "06036146",
+      "name_th": "โครงงานทางด้านเทคโนโลยีสารสนเทศเชิงธุรกิจ 2",
+      "name_en": "PROJECT IN BUSINESS INFORMATION TECHNOLOGY 2",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 9,
+      "self_h": 6,
+      "description_th": null,
+      "pdf_pages": "23;29;76;256;269",
+      "printed_pages": "18;24;71;251;264"
+    },
+    {
+      "code": "06036126",
+      "name_th": "วิศวกรรมความต้องการ",
+      "name_en": "REQUIREMENT ENGINEERING",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null,
+      "pdf_pages": "23;75;249;272",
+      "printed_pages": "18;70;244;267"
+    },
+    {
+      "code": "06036127",
+      "name_th": "ระบบฐานข้อมูลขั้นสูง",
+      "name_en": "ADVANCED DATABASE SYSTEMS",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null,
+      "pdf_pages": "23;75;249;272",
+      "printed_pages": "18;70;244;267"
+    },
+    {
+      "code": "06036128",
+      "name_th": "การเรียนรู้ของเครื่องจักร",
+      "name_en": "MACHINE LEARNING",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null,
+      "pdf_pages": "23;75;250;273",
+      "printed_pages": "18;70;245;268"
+    },
+    {
+      "code": "06036129",
+      "name_th": "การกำกับดูแล้ดานเทคโนโลยีสารสนเทศ",
+      "name_en": "INFORMATION TECHNOLOGY GOVERNANCE",
+      "credits": 3,
+      "lecture_h": 3,
+      "lab_h": 0,
+      "self_h": 6,
+      "description_th": null,
+      "pdf_pages": "23;75;250;273",
+      "printed_pages": "18;70;245;268"
+    },
     {
       "code": "06036130",
       "name_th": "เทคโนโลยีเชิงอ็อบเจกต์",
@@ -142,7 +223,7 @@
     },
     {
       "code": "06036141",
-      "name_th": "เครื่องมือและเทคนิคสำหรับการตลาดเชิงดิจิทัล",
+      "name_th": "เครื่อืงมอและเทคินคสำหรับการตลาดเชิงดิจิทัล",
       "name_en": "DIGITAL MARKETING TOOLS AND TECHNIQUES",
       "credits": 3,
       "lecture_h": 3,
@@ -166,7 +247,7 @@
     },
     {
       "code": "06036143",
-      "name_th": "การเก็บความต้องการและสร้างต้นแบบในด้านยูเอ็กซ์ยูไอ",
+      "name_th": "การเก็บความต้องการและสร้างต้นแบบใน้ดานยูเอ็กซ์ยูไอ",
       "name_en": "UX/UI REQUIREMENT AND PROTOTYPING",
       "credits": 3,
       "lecture_h": 3,
@@ -189,8 +270,32 @@
       "printed_pages": "20;71;250;267"
     },
     {
+      "code": "06036147",
+      "name_th": "สหกิจศึกษา",
+      "name_en": "COOPERATIVE EDUCATION",
+      "credits": 6,
+      "lecture_h": 3,
+      "lab_h": 35,
+      "self_h": 6,
+      "description_th": null,
+      "pdf_pages": "25;35;76;257;274",
+      "printed_pages": "20;30;71;252;269"
+    },
+    {
+      "code": "06036148",
+      "name_th": "สหกิจศึกษาต่างประเทศ",
+      "name_en": "OVERSEA COOPERATIVE EDUCATION",
+      "credits": 6,
+      "lecture_h": 3,
+      "lab_h": 35,
+      "self_h": 6,
+      "description_th": null,
+      "pdf_pages": "25;35;76;257;274",
+      "printed_pages": "20;30;71;252;269"
+    },
+    {
       "code": "06036100",
-      "name_th": "06036100",
+      "name_th": "พื้นฐานทางด้านเทคโนโลยีสารสนเทศ",
       "name_en": "INFORMATION TECHNOLOGY FUNDAMENTALS",
       "credits": 3,
       "lecture_h": 2,
@@ -202,7 +307,7 @@
     },
     {
       "code": "06036101",
-      "name_th": "06036101",
+      "name_th": "คณิตศาสตร์สำหรับธุรกิจ",
       "name_en": "MATHEMATICS FOR BUSINESS",
       "credits": 3,
       "lecture_h": 3,
@@ -214,7 +319,7 @@
     },
     {
       "code": "06036118",
-      "name_th": "06036118",
+      "name_th": "การแก้ปัญหาทางด้านเทคโนโลยีสารสนเทศ",
       "name_en": "PROBLEM SOLVING IN INFORMATION TECHNOLOGY",
       "credits": 3,
       "lecture_h": 2,
@@ -226,7 +331,7 @@
     },
     {
       "code": "96641001",
-      "name_th": "96641001",
+      "name_th": "โรงเรียนสรางเสนห์",
       "name_en": "CHARM SCHOOL",
       "credits": 2,
       "lecture_h": 1,
@@ -238,7 +343,7 @@
     },
     {
       "code": "96641003",
-      "name_th": "96641003",
+      "name_th": "กีฬาและนันทนาการ",
       "name_en": "SPORTS AND RECREATIONAL ACTIVITIES",
       "credits": 1,
       "lecture_h": 3,
@@ -250,7 +355,7 @@
     },
     {
       "code": "96644007",
-      "name_th": "96644007",
+      "name_th": "ภาษาอังกฤษพื้นฐาน 1",
       "name_en": "FOUNDATION ENGLISH 1",
       "credits": 3,
       "lecture_h": 3,
@@ -262,7 +367,7 @@
     },
     {
       "code": "96644042",
-      "name_th": "การสื่อสารและการนำเสนออยางมืออาชีพ",
+      "name_th": "การสื่อสารและการนำเสนออยางืมออาชีพ",
       "name_en": "PROFESSIONAL COMMUNICATION AND PRESENTATION",
       "credits": 3,
       "lecture_h": 3,
@@ -274,7 +379,7 @@
     },
     {
       "code": "06036102",
-      "name_th": "06036102",
+      "name_th": "การวิเคราะห์เชิงสถิติสำหรับธุรกิจ",
       "name_en": "STATISTICAL ANALYSIS FOR BUSINESS",
       "credits": 3,
       "lecture_h": 3,
@@ -286,7 +391,7 @@
     },
     {
       "code": "06036109",
-      "name_th": "06036109",
+      "name_th": "กระบวนการและโมเดลทางธุรกิจ",
       "name_en": "BUSINESS PROCESSES AND BUSINESS MODEL",
       "credits": 3,
       "lecture_h": 3,
@@ -298,7 +403,7 @@
     },
     {
       "code": "06036119",
-      "name_th": "06036119",
+      "name_th": "พื้นฐานการเขียนโปรแกรม",
       "name_en": "PROGRAMMING FUNDAMENTALS",
       "credits": 3,
       "lecture_h": 2,
@@ -310,7 +415,7 @@
     },
     {
       "code": "06036125",
-      "name_th": "06036125",
+      "name_th": "สถาปัตยกรรมคอมพิวเตอร์และระบบปฏิบัติการ",
       "name_en": "COMPUTER ARCHITECTURE AND OPERATING SYSTEM",
       "credits": 3,
       "lecture_h": 2,
@@ -322,7 +427,7 @@
     },
     {
       "code": "96644008",
-      "name_th": "96644008",
+      "name_th": "ภาษาอังกฤษพื้นฐาน 2",
       "name_en": "FOUNDATION ENGLISH 2",
       "credits": 3,
       "lecture_h": 3,
@@ -334,7 +439,7 @@
     },
     {
       "code": "96641002",
-      "name_th": "96641002",
+      "name_th": "ความฉลาดทางดิจิทัล",
       "name_en": "DIGITAL INTELLIGENCE QUOTIENT",
       "credits": 3,
       "lecture_h": 3,
@@ -358,7 +463,7 @@
     },
     {
       "code": "06036104",
-      "name_th": "06036104",
+      "name_th": "องค์กรและการจัดการ",
       "name_en": "MANAGEMENT AND ORGANIZATIONS",
       "credits": 3,
       "lecture_h": 3,
@@ -370,7 +475,7 @@
     },
     {
       "code": "06036105",
-      "name_th": "06036105",
+      "name_th": "บัญชีการเงินสำหรับผู้มิใช่นักบัญชี",
       "name_en": "FINANCIAL ACCOUNTING FOR NON-ACCOUNTANTS",
       "credits": 3,
       "lecture_h": 3,
@@ -382,7 +487,7 @@
     },
     {
       "code": "06036117",
-      "name_th": "06036117",
+      "name_th": "อัจฉริยะทางธุรกิจและข้อมูลขนาดใหญ่",
       "name_en": "BUSINESS INTELLIGENCE AND BIG DATA",
       "credits": 3,
       "lecture_h": 3,
@@ -394,7 +499,7 @@
     },
     {
       "code": "06036120",
-      "name_th": "06036120",
+      "name_th": "หลักการโครงสร้างข้อมูลและอัลกอริทึม",
       "name_en": "DATA STRUCTURES AND ALGORITHMS PRINCIPLES",
       "credits": 3,
       "lecture_h": 3,
@@ -406,7 +511,7 @@
     },
     {
       "code": "06036122",
-      "name_th": "06036122",
+      "name_th": "การสื่อสารด้วยภาพสำหรับธุรกิจ",
       "name_en": "VISUAL COMMUNICATION FOR BUSINESS",
       "credits": 3,
       "lecture_h": 2,
@@ -418,7 +523,7 @@
     },
     {
       "code": "06036108",
-      "name_th": "06036108",
+      "name_th": "เศรษฐศาสตร์เทคโนโลยีสารสนเทศ",
       "name_en": "ECONOMICS OF INFORMATION TECHNOLOGY",
       "credits": 3,
       "lecture_h": 3,
@@ -430,7 +535,7 @@
     },
     {
       "code": "06036111",
-      "name_th": "06036111",
+      "name_th": "เทคโนโลยีดิจิทัลสำหรับธุรกิจ",
       "name_en": "DIGITAL TECHNOLOGY FOR BUSINESS",
       "credits": 3,
       "lecture_h": 3,
@@ -442,7 +547,7 @@
     },
     {
       "code": "06036112",
-      "name_th": "06036112",
+      "name_th": "แนวคิดระบบฐานข้อมูล",
       "name_en": "DATABASE SYSTEM CONCEPTS",
       "credits": 3,
       "lecture_h": 2,
@@ -454,7 +559,7 @@
     },
     {
       "code": "06036113",
-      "name_th": "06036113",
+      "name_th": "การออกแบบส่วนต่อประสานกับมนุษย์",
       "name_en": "HUMAN INTERFACE DESIGN",
       "credits": 3,
       "lecture_h": 3,
@@ -477,20 +582,8 @@
       "printed_pages": "18;23;28;70;243;265"
     },
     {
-      "code": "96649039",
-      "name_th": "96649039",
-      "name_en": "GE ELECTIVE COURSE REQUIREMENT 1",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
       "code": "06036107",
-      "name_th": "06036107",
+      "name_th": "การบริหารโครงการเทคโนโลยีสารสนเทศ",
       "name_en": "INFORMATION TECHNOLOGY PROJECT MANAGEMENT",
       "credits": 3,
       "lecture_h": 3,
@@ -502,7 +595,7 @@
     },
     {
       "code": "06036110",
-      "name_th": "06036110",
+      "name_th": "การวางแผนทรัพยากรองค์กร",
       "name_en": "ENTERPRISE RESOURCE PLANNING",
       "credits": 3,
       "lecture_h": 3,
@@ -514,7 +607,7 @@
     },
     {
       "code": "06036114",
-      "name_th": "06036114",
+      "name_th": "การพัฒนาเว็บแอปพลิเคชันโดยใช้เฟรมเวิร์ก",
       "name_en": "WEB APPLICATION DEVELOPMENT USING FRAMEWORKS",
       "credits": 3,
       "lecture_h": 2,
@@ -538,7 +631,7 @@
     },
     {
       "code": "06036123",
-      "name_th": "06036123",
+      "name_th": "เทคโนโลยีกลุ่มเมฆ",
       "name_en": "CLOUD TECHNOLOGY",
       "credits": 3,
       "lecture_h": 3,
@@ -547,18 +640,6 @@
       "description_th": null,
       "pdf_pages": "23;28;33;75;248;270;273",
       "printed_pages": "18;23;28;70;243;265;268"
-    },
-    {
-      "code": "96649045",
-      "name_th": "ELECTIVE IN LANGUAGE AND COMMUNICATION  หรือ 3 (2-2-5)",
-      "name_en": "Elective Course (Placeholder)",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
     },
     {
       "code": "06036106",
@@ -574,7 +655,7 @@
     },
     {
       "code": "06036116",
-      "name_th": "06036116",
+      "name_th": "การตลาดเชิงดิจิทัล",
       "name_en": "DIGITAL MARKETING",
       "credits": 3,
       "lecture_h": 2,
@@ -586,7 +667,7 @@
     },
     {
       "code": "96643021",
-      "name_th": "ผูประกอบการสมัยใหม่",
+      "name_th": "ผูประกอบการสมัยให่ม",
       "name_en": "MODERN ENTREPRENEURS",
       "credits": 3,
       "lecture_h": 3,
@@ -597,32 +678,8 @@
       "printed_pages": "16;24;29;262"
     },
     {
-      "code": "06039049",
-      "name_th": "หรือ",
-      "name_en": "ELECTIVE COURSE IN BUSINESS INFORMATION",
-      "credits": 3,
-      "lecture_h": 2,
-      "lab_h": 2,
-      "self_h": 5,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
-      "code": "99999050",
-      "name_th": "99999050",
-      "name_en": "FREE ELECTIVE COURSE 1",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
       "code": "06036115",
-      "name_th": "06036115",
+      "name_th": "ความมั่นคงของระบบสารสนเทศ",
       "name_en": "INFORMATION SYSTEM SECURITY",
       "credits": 3,
       "lecture_h": 3,
@@ -634,7 +691,7 @@
     },
     {
       "code": "96642033",
-      "name_th": "กฎหมายสำหรับคนรุนใหม่",
+      "name_th": "กฎหมายสำหรับคนรุนให่ม",
       "name_en": "LAW FOR NEW GENERATION",
       "credits": 3,
       "lecture_h": 3,
@@ -643,70 +700,11 @@
       "description_th": null,
       "pdf_pages": "21;29;35;267",
       "printed_pages": "16;24;30;262"
-    },
-    {
-      "code": "06039053",
-      "name_th": "หรือ",
-      "name_en": "ELECTIVE COURSE IN BUSINESS INFORMATION",
-      "credits": 3,
-      "lecture_h": 2,
-      "lab_h": 2,
-      "self_h": 5,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
-      "code": "99999054",
-      "name_th": "99999054",
-      "name_en": "FREE ELECTIVE COURSE 2",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
-      "code": "96649055",
-      "name_th": "96649055",
-      "name_en": "GE ELECTIVE COURSE REQUIREMENT 2",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": "วิชาเลือกตามโครงสร้างหลักสูตร (รหัสตัวแทน)",
-      "pdf_pages": null,
-      "printed_pages": null
-    },
-    {
-      "code": "06036147",
-      "name_th": "สหกิจศึกษา",
-      "name_en": "COOPERATIVE EDUCATION",
-      "credits": 6,
-      "lecture_h": 3,
-      "lab_h": 35,
-      "self_h": 6,
-      "description_th": null,
-      "pdf_pages": "25;35;76;257;274",
-      "printed_pages": "20;30;71;252;269"
-    },
-    {
-      "code": "06036148",
-      "name_th": "สหกิจศึกษาต่างประเทศ",
-      "name_en": "OVERSEA COOPERATIVE EDUCATION",
-      "credits": 3,
-      "lecture_h": 3,
-      "lab_h": 0,
-      "self_h": 6,
-      "description_th": null,
-      "pdf_pages": "25;35;76;257;274",
-      "printed_pages": "20;30;71;252;269"
     }
   ],
   "plan": [
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 1,
       "semester": 1,
       "code": "06036100",
@@ -715,6 +713,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 1,
       "semester": 1,
       "code": "06036101",
@@ -723,6 +722,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 1,
       "semester": 1,
       "code": "06036118",
@@ -731,6 +731,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 1,
       "semester": 1,
       "code": "96641001",
@@ -739,6 +740,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 1,
       "semester": 1,
       "code": "96641003",
@@ -747,6 +749,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 1,
       "semester": 1,
       "code": "96644007",
@@ -755,6 +758,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 1,
       "semester": 1,
       "code": "96644042",
@@ -763,6 +767,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 1,
       "semester": 2,
       "code": "06036102",
@@ -771,6 +776,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 1,
       "semester": 2,
       "code": "06036109",
@@ -779,6 +785,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 1,
       "semester": 2,
       "code": "06036119",
@@ -787,6 +794,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 1,
       "semester": 2,
       "code": "06036125",
@@ -795,6 +803,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 1,
       "semester": 2,
       "code": "96644008",
@@ -803,6 +812,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 1,
       "semester": 2,
       "code": "96641002",
@@ -811,6 +821,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 2,
       "semester": 1,
       "code": "06036103",
@@ -819,6 +830,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 2,
       "semester": 1,
       "code": "06036104",
@@ -827,6 +839,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 2,
       "semester": 1,
       "code": "06036105",
@@ -835,6 +848,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 2,
       "semester": 1,
       "code": "06036117",
@@ -843,6 +857,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 2,
       "semester": 1,
       "code": "06036120",
@@ -851,6 +866,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 2,
       "semester": 1,
       "code": "06036122",
@@ -859,6 +875,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 2,
       "semester": 2,
       "code": "06036108",
@@ -867,6 +884,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 2,
       "semester": 2,
       "code": "06036111",
@@ -875,6 +893,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 2,
       "semester": 2,
       "code": "06036112",
@@ -883,6 +902,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 2,
       "semester": 2,
       "code": "06036113",
@@ -891,6 +911,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 2,
       "semester": 2,
       "code": "06036124",
@@ -899,14 +920,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "year": 2,
-      "semester": 2,
-      "code": "96649039",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
-    },
-    {
+      "plan_id": "BIT_DEFAULT",
       "year": 3,
       "semester": 1,
       "code": "06036107",
@@ -915,6 +929,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 3,
       "semester": 1,
       "code": "06036110",
@@ -923,6 +938,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 3,
       "semester": 1,
       "code": "06036114",
@@ -931,6 +947,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 3,
       "semester": 1,
       "code": "06036121",
@@ -939,6 +956,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 3,
       "semester": 1,
       "code": "06036123",
@@ -947,14 +965,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
-      "year": 3,
-      "semester": 1,
-      "code": "96649045",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
-    },
-    {
+      "plan_id": "BIT_DEFAULT",
       "year": 3,
       "semester": 2,
       "code": "06036106",
@@ -963,6 +974,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 3,
       "semester": 2,
       "code": "06036116",
@@ -971,6 +983,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 3,
       "semester": 2,
       "code": "96643021",
@@ -979,22 +992,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "year": 3,
-      "semester": 2,
-      "code": "06039049",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาเฉพาะ | เลือก"
-    },
-    {
-      "year": 3,
-      "semester": 2,
-      "code": "99999050",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาเลือกเสรี | เลือก"
-    },
-    {
+      "plan_id": "BIT_DEFAULT",
       "year": 4,
       "semester": 1,
       "code": "06036115",
@@ -1003,6 +1001,7 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 4,
       "semester": 1,
       "code": "96642033",
@@ -1011,30 +1010,7 @@
       "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
     },
     {
-      "year": 4,
-      "semester": 1,
-      "code": "06039053",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาเฉพาะ | เลือก"
-    },
-    {
-      "year": 4,
-      "semester": 1,
-      "code": "99999054",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาเลือกเสรี | เลือก"
-    },
-    {
-      "year": 4,
-      "semester": 1,
-      "code": "96649055",
-      "credits": 3,
-      "alt_group": null,
-      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
-    },
-    {
+      "plan_id": "BIT_DEFAULT",
       "year": 4,
       "semester": 2,
       "code": "06036147",
@@ -1043,15 +1019,105 @@
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     },
     {
+      "plan_id": "BIT_DEFAULT",
       "year": 4,
       "semester": 2,
       "code": "06036148",
-      "credits": 3,
+      "credits": 6,
       "alt_group": "alt_coop_4_2",
       "note": "หมวดวิชาเฉพาะ | บังคับ"
     }
   ],
+  "elective_slots": [
+    {
+      "plan_id": "BIT_DEFAULT",
+      "year": 2,
+      "semester": 2,
+      "slot_name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป สำหรับหลักสูตรนานาชาติ 1",
+      "slot_name_en": "GE ELECTIVE COURSE REQUIREMENT 1",
+      "code_pattern": "9664xxxx",
+      "credits": 3,
+      "credit_options": "3(3-0-6)",
+      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
+    },
+    {
+      "plan_id": "BIT_DEFAULT",
+      "year": 3,
+      "semester": 1,
+      "slot_name_th": "ELECTIVE IN LANGUAGE AND COMMUNICATION หรือ",
+      "slot_name_en": null,
+      "code_pattern": "96644XXX",
+      "credits": 3,
+      "credit_options": "3(2-2-5)",
+      "note": "หมวดวิชาศึกษาทั่วไป | บังคับ"
+    },
+    {
+      "plan_id": "BIT_DEFAULT",
+      "year": 3,
+      "semester": 2,
+      "slot_name_th": "หรือ",
+      "slot_name_en": "ELECTIVE COURSE IN BUSINESS INFORMATION",
+      "code_pattern": "06036xxx",
+      "credits": 3,
+      "credit_options": "3(2-2-5)",
+      "note": "หมวดวิชาเฉพาะ | เลือก"
+    },
+    {
+      "plan_id": "BIT_DEFAULT",
+      "year": 3,
+      "semester": 2,
+      "slot_name_th": "วิชาเลือกเสรี 1",
+      "slot_name_en": "FREE ELECTIVE COURSE 1",
+      "code_pattern": "xxxxxxxx",
+      "credits": 3,
+      "credit_options": "3(3-0-6)",
+      "note": "หมวดวิชาเลือกเสรี | เลือก"
+    },
+    {
+      "plan_id": "BIT_DEFAULT",
+      "year": 4,
+      "semester": 1,
+      "slot_name_th": "หรือ",
+      "slot_name_en": "ELECTIVE COURSE IN BUSINESS INFORMATION",
+      "code_pattern": "06036xxx",
+      "credits": 3,
+      "credit_options": "3(2-2-5)",
+      "note": "หมวดวิชาเฉพาะ | เลือก"
+    },
+    {
+      "plan_id": "BIT_DEFAULT",
+      "year": 4,
+      "semester": 1,
+      "slot_name_th": "วิชาเลือกเสรี 2",
+      "slot_name_en": "FREE ELECTIVE COURSE 2",
+      "code_pattern": "xxxxxxxx",
+      "credits": 3,
+      "credit_options": "3(3-0-6)",
+      "note": "หมวดวิชาเลือกเสรี | เลือก"
+    },
+    {
+      "plan_id": "BIT_DEFAULT",
+      "year": 4,
+      "semester": 1,
+      "slot_name_th": "วิชาเลือกหมวดวิชาศึกษาทั่วไป สำหรับหลักสูตรนานาชาติ 2",
+      "slot_name_en": "GE ELECTIVE COURSE REQUIREMENT 2",
+      "code_pattern": "9664xxxx",
+      "credits": 3,
+      "credit_options": "3(3-0-6)",
+      "note": "หมวดวิชาศึกษาทั่วไป | เลือก"
+    }
+  ],
   "prerequisites": [
+    {
+      "code": "06036146",
+      "requires": "06036145",
+      "kind": "pre"
+    },
+    {
+      "code": "06036127",
+      "requires": "06036112",
+      "kind": "pre"
+    },
     {
       "code": "06036122",
       "requires": "06036119",

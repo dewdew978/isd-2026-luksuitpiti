@@ -1,0 +1,362 @@
+{
+  "text": {
+    "tokenizer": "pythainlp/newmm",
+    "attributes": {
+      "code": {
+        "label": "รหัสวิชา",
+        "n_items": 108,
+        "cer": 0.041096,
+        "wer": null,
+        "exact_match_acc": 0.972222,
+        "n_sub": 0,
+        "n_del": 36,
+        "n_ins": 0,
+        "n_missing": 3,
+        "n_hallucinated": 0,
+        "n_ref_chars": 876,
+        "error_samples": [
+          {
+            "key": "06016418 [ตกแถว]",
+            "gt": "06016418",
+            "pred": ""
+          },
+          {
+            "key": "060164xx [ตกแถว]",
+            "gt": "060164xx",
+            "pred": ""
+          },
+          {
+            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
+            "gt": "06016481\nหรือ\n06016482",
+            "pred": ""
+          }
+        ]
+      },
+      "name_th": {
+        "label": "ชื่อวิชา (ไทย) ⭐",
+        "n_items": 108,
+        "cer": 0.060394,
+        "wer": 0.248996,
+        "exact_match_acc": 0.666667,
+        "n_sub": 66,
+        "n_del": 119,
+        "n_ins": 5,
+        "n_missing": 3,
+        "n_hallucinated": 0,
+        "n_ref_chars": 3146,
+        "error_samples": [
+          {
+            "key": "90641001",
+            "gt": "โรงเรียนสร้างเสน่ห์",
+            "pred": "โรงเรียนสร้างเส่นห์"
+          },
+          {
+            "key": "06066301",
+            "gt": "โครงสร้างข้อมูลและอัลกอรึทึม",
+            "pred": "โครงสร้างข้อมูลและอัลกอริทึม"
+          },
+          {
+            "key": "90641002",
+            "gt": "ความฉลาดทางดิจิทัล",
+            "pred": "ความฉลาดทางดิจทิัล"
+          },
+          {
+            "key": "06016403",
+            "gt": "เทคโนโลยีสื่อประสม",
+            "pred": "เทคโนโลยีสอื่ประสม"
+          },
+          {
+            "key": "06016409",
+            "gt": "การประมวลผลทางกายภาพ",
+            "pred": "การประมวลทางกายภาพ"
+          }
+        ]
+      },
+      "name_en": {
+        "label": "ชื่อวิชา (อังกฤษ) ⭐",
+        "n_items": 108,
+        "cer": 0.395311,
+        "wer": 0.384434,
+        "exact_match_acc": 0.916667,
+        "n_sub": 3,
+        "n_del": 188,
+        "n_ins": 1023,
+        "n_missing": 5,
+        "n_hallucinated": 0,
+        "n_ref_chars": 3071,
+        "error_samples": [
+          {
+            "key": "060164xx",
+            "gt": "ELECTIVE COURSE IN INFORMATION TECHNOLOGY 3",
+            "pred": "None"
+          },
+          {
+            "key": "06016428",
+            "gt": "MICROSERVICE DESIGN AND DEVELOPMENT",
+            "pred": "MICROSERVICE DESIGN AND DEVELOPMENT Introduction to microservices, evolutionary architect, monolith, service-oriented architecture and microservice, decomposition strategies and design, inter-process communication, queueing and routing, command query responsibility segregation, service discovery, application metrics, circuit breaker, observability, Microservice Development"
+          },
+          {
+            "key": "06016431",
+            "gt": "MOBILE DEVICE PROGRAMMING",
+            "pred": "MOBILE DEVICE PROGRAMMING Introduction to technology and the programming of applications for mobile computing including devices i.e. smart phones, pads, and tablets, developing mobile applications and using device emulators for coding and testing."
+          },
+          {
+            "key": "06016447",
+            "gt": "FUNDAMENTAL GAME DEVELOPMENT WITH GAME ENGINE",
+            "pred": "DEVELOPMENT WITH GAME ENGINE Fundamental of Augmented Reality, Virtual Reality and Mixed Reality, Mathematical of Motion and Physics in Extended Reality Worlds, Human Visual Perception, Game Engine, VR Programming, Tracking Techniques, Interaction Techniques"
+          },
+          {
+            "key": "06016467",
+            "gt": "IMAGE TRANSFORMATION AND RECOGNITION",
+            "pred": "IMAGE TRANSFORMATION AND RECOGNITION Introduction to digital image processing for binary, gray and color images, local image filtering, dimensionality reduction, transformation, discrete Fourier transform, principal components analysis, linear discriminant analysis, 2D wavelet transform, bi- dimensional empirical mode decomposition, 2D empirical wavelet transform and handcraft-based and learning-based approaches."
+          }
+        ]
+      },
+      "credits": {
+        "label": "หน่วยกิต",
+        "n_items": 108,
+        "cer": 0.103522,
+        "wer": null,
+        "exact_match_acc": 0.916667,
+        "n_sub": 12,
+        "n_del": 85,
+        "n_ins": 0,
+        "n_missing": 3,
+        "n_hallucinated": 0,
+        "n_ref_chars": 937,
+        "error_samples": [
+          {
+            "key": "060164xx",
+            "gt": "3(3-0-6) หรือ 3(2-2-5) หรือ 3(0-6-3)",
+            "pred": "3(3-0-6)หรือ3(2-2-5)"
+          },
+          {
+            "key": "06016428",
+            "gt": "3(2-2-5)",
+            "pred": "3(3-0-6)"
+          },
+          {
+            "key": "06016430",
+            "gt": "3(2-2-5)",
+            "pred": "3(3-0-6)"
+          },
+          {
+            "key": "06016447",
+            "gt": "3(2-2-5)",
+            "pred": "3(3-0-6)"
+          },
+          {
+            "key": "06016425",
+            "gt": "3(3-0-6)",
+            "pred": "3(2-2-5)"
+          }
+        ]
+      },
+      "year_sem": {
+        "label": "ปี/ภาค",
+        "n_items": 108,
+        "cer": 0.027778,
+        "wer": null,
+        "exact_match_acc": 0.972222,
+        "n_sub": 0,
+        "n_del": 9,
+        "n_ins": 0,
+        "n_missing": 3,
+        "n_hallucinated": 0,
+        "n_ref_chars": 324,
+        "error_samples": [
+          {
+            "key": "06016418 [ตกแถว]",
+            "gt": "3/1",
+            "pred": ""
+          },
+          {
+            "key": "060164xx [ตกแถว]",
+            "gt": "3/2",
+            "pred": ""
+          },
+          {
+            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
+            "gt": "0/0",
+            "pred": ""
+          }
+        ]
+      },
+      "category": {
+        "label": "หมวดวิชา",
+        "n_items": 108,
+        "cer": 0.026387,
+        "wer": null,
+        "exact_match_acc": 0.972222,
+        "n_sub": 0,
+        "n_del": 39,
+        "n_ins": 0,
+        "n_missing": 3,
+        "n_hallucinated": 0,
+        "n_ref_chars": 1478,
+        "error_samples": [
+          {
+            "key": "06016418 [ตกแถว]",
+            "gt": "หมวดวิชาเฉพาะ",
+            "pred": ""
+          },
+          {
+            "key": "060164xx [ตกแถว]",
+            "gt": "หมวดวิชาเฉพาะ",
+            "pred": ""
+          },
+          {
+            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
+            "gt": "หมวดวิชาเฉพาะ",
+            "pred": ""
+          }
+        ]
+      },
+      "ctype": {
+        "label": "บังคับ/เลือก",
+        "n_items": 108,
+        "cer": 0.037543,
+        "wer": null,
+        "exact_match_acc": 0.962963,
+        "n_sub": 5,
+        "n_del": 16,
+        "n_ins": 1,
+        "n_missing": 3,
+        "n_hallucinated": 0,
+        "n_ref_chars": 586,
+        "error_samples": [
+          {
+            "key": "060164xx",
+            "gt": "เลือก",
+            "pred": "บังคับ"
+          },
+          {
+            "key": "06016418 [ตกแถว]",
+            "gt": "บังคับ",
+            "pred": ""
+          },
+          {
+            "key": "060164xx [ตกแถว]",
+            "gt": "เลือก",
+            "pred": ""
+          },
+          {
+            "key": "06016481\nหรือ\n06016482 [ตกแถว]",
+            "gt": "เลือก",
+            "pred": ""
+          }
+        ]
+      },
+      "prereq": {
+        "label": "วิชาบังคับก่อน",
+        "n_items": 105,
+        "cer": 0.035088,
+        "wer": null,
+        "exact_match_acc": 0.971429,
+        "n_sub": 14,
+        "n_del": 0,
+        "n_ins": 6,
+        "n_missing": 0,
+        "n_hallucinated": 0,
+        "n_ref_chars": 570,
+        "error_samples": [
+          {
+            "key": "06016418",
+            "gt": "ไม่มี",
+            "pred": "06016408"
+          },
+          {
+            "key": "06016432",
+            "gt": "06016413",
+            "pred": "06066304"
+          },
+          {
+            "key": "06016421",
+            "gt": "ไม่มี",
+            "pred": "06016413"
+          }
+        ]
+      },
+      "flexible": {
+        "label": "ปี/ภาคยืดหยุ่น",
+        "n_items": 105,
+        "cer": 0.363636,
+        "wer": null,
+        "exact_match_acc": 0.495238,
+        "n_sub": 212,
+        "n_del": 0,
+        "n_ins": 0,
+        "n_missing": 0,
+        "n_hallucinated": 0,
+        "n_ref_chars": 583,
+        "error_samples": [
+          {
+            "key": "06016428",
+            "gt": "3/2, 4/1, 4/2",
+            "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06016429",
+            "gt": "3/2, 4/1, 4/2",
+            "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06016430",
+            "gt": "3/2, 4/1, 4/2",
+            "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06016431",
+            "gt": "3/2, 4/1, 4/2",
+            "pred": "3/1, 3/2, 4/1"
+          },
+          {
+            "key": "06016432",
+            "gt": "3/2, 4/1, 4/2",
+            "pred": "3/1, 3/2, 4/1"
+          }
+        ]
+      }
+    },
+    "overall_micro_cer": 0.158932,
+    "alignment": {
+      "matched": 105,
+      "missed": 3,
+      "spurious": 5,
+      "precision": 0.9545,
+      "recall": 0.9722,
+      "f1": 0.9633,
+      "gt_total": 108,
+      "pred_total": 110,
+      "missed_codes": [
+        "06016418",
+        "060164xx",
+        "06016481\nหรือ\n06016482"
+      ],
+      "spurious_codes": [
+        "06016428",
+        "06016430",
+        "06016447",
+        "06016481",
+        "06016482"
+      ]
+    },
+    "internal_check": {
+      "ok": true,
+      "n_courses": 110,
+      "n_duplicate_keys": 0,
+      "credits_by_term": {
+        "1/1": 18,
+        "1/2": 18,
+        "2/1": 18,
+        "2/2": 18,
+        "3/1": 18,
+        "3/2": 12,
+        "4/1": 15,
+        "4/2": 9
+      },
+      "total_credits_fixed_terms": 126,
+      "issues": []
+    }
+  }
+}

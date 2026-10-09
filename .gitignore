@@ -13,3 +13,6 @@ outputs/debug/
 .env
 *.env
 !.env.example
+
+# Backups
+*.bak

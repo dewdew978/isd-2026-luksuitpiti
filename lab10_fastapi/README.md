@@ -193,13 +193,16 @@ python -m uvicorn lab10_fastapi.transcript_app.main:app --reload --host 127.0.0.
 | ------ | ------------------- | ------------------------------------------------------------- |
 | GET    | `/api/health`       | ตรวจ DB และ Ollama                                             |
 | GET    | `/api/program`      | อ่านข้อมูลหลักสูตร                                              |
-| GET    | `/api/courses`      | อ่าน/ค้นหารายวิชา                                             |
-| POST   | `/api/courses`      | เพิ่มรายวิชาลง SQLite                                           |
+| GET    | `/api/courses`      | อ่าน/ค้นหารายวิชา (รองรับตัวกรอง search, program_id)            |
+| POST   | `/api/courses`      | เพิ่มรายวิชาลง SQLite (พร้อม Dynamic Plan Validation)           |
 | GET    | `/api/courses/{code}/prerequisites` | เช็คเงื่อนไขวิชานี้ (วิชาบังคับก่อน / วิชาที่ต้องเรียนต่อ)         |
-| GET    | `/api/plan`         | อ่านแผนการเรียนรายปี/เทอม/สาขา                               |
+| GET    | `/api/study-plans`  | อ่านรายการแผนการศึกษา (coop / no_coop / single)               |
+| GET    | `/api/elective-slots` | อ่านรายการสล็อตวิชาเลือกในแต่ละชั้นปี/ภาคเรียน                   |
+| GET    | `/api/plan`         | อ่านแผนการเรียนรายปี/เทอม/สาขา (จาก v_plan)                    |
 | GET    | `/api/plan/summary` | ดึงสรุปหน่วยกิตและจำนวนวิชาแต่ละเทอม (จาก v_semester_credits) |
+| GET    | `/api/regulations`  | อ่าน/ค้นหากฎระเบียบและข้อบังคับการศึกษา สจล.                    |
 | GET    | `/api/stats`        | สรุปภาพรวมสถิติรายวิชา/หน่วยกิต/ชม.                           |
-| POST   | `/api/ask`          | ให้ Qwen สร้าง SQL และตอบคำถาม                                 |
+| POST   | `/api/ask`          | ให้ Qwen สร้าง SQL, สรุปคำตอบ และดึงเลขหน้าอ้างอิง              |
 
 ### Transcript API
 
@@ -236,7 +239,11 @@ http://127.0.0.1:8000/api/courses/06026201/prerequisites
   "lecture_h": 3,
   "lab_h": 0,
   "self_h": 6,
-  "description_th": "ข้อมูลตัวอย่างสำหรับทดสอบ POST"
+  "description_th": "ข้อมูลตัวอย่างสำหรับทดสอบ POST",
+  "program_id": "DSBA",
+  "plan_id": "DSBA_NON_COOP",
+  "year": 1,
+  "semester": 1
 }
 ```
 

@@ -9,11 +9,11 @@
     "n_rows": 1,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT total_credits FROM program WHERE program_id = 'AIT' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"120 หน่วยกิต\"}",
-    "answer": "120 หน่วยกิต",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.6
+    "answer_model_output": "{\"answer\": \"137 หน่วยกิต\"}",
+    "answer": "137 หน่วยกิต",
+    "correct": false,
+    "why": "ไม่พบค่า 120 (ได้ ['137'])",
+    "seconds": 2.1
   },
   {
     "question": "หลักสูตร AIT ใช้เวลาเรียนกี่ปี",
@@ -29,7 +29,7 @@
     "answer": "4 ปี",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.4
+    "seconds": 1.8
   },
   {
     "question": "วิชา 06016401 ในหลักสูตร AIT มีกี่หน่วยกิต",
@@ -45,7 +45,7 @@
     "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
     "correct": false,
     "why": "ไม่พบค่า 3 (ได้ [])",
-    "seconds": 0.9
+    "seconds": 1.1
   },
   {
     "question": "วิชา 06016401 ในหลักสูตร AIT เรียนชั้นปีที่เท่าไร",
@@ -53,10 +53,10 @@
       "type": "value",
       "value": 1
     },
-    "sql": "SELECT year FROM plan_item WHERE program_id = 'AIT' AND code = '06016401' LIMIT 1",
+    "sql": "SELECT year FROM plan_item WHERE code = '06016401' AND program_id = 'AIT' LIMIT 1",
     "n_rows": 0,
     "error": null,
-    "sql_model_output": "{\"sql\": \"SELECT year FROM plan_item WHERE program_id = 'AIT' AND code = '06016401' LIMIT 1\"}",
+    "sql_model_output": "{\"sql\": \"SELECT year FROM plan_item WHERE code = '06016401' AND program_id = 'AIT' LIMIT 1\"}",
     "answer_model_output": null,
     "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
     "correct": false,
@@ -77,7 +77,7 @@
     "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
     "correct": false,
     "why": "ไม่พบค่า 1 (ได้ [])",
-    "seconds": 0.8
+    "seconds": 1.0
   },
   {
     "question": "วิชา 06046400 มีกี่หน่วยกิต",
@@ -86,14 +86,14 @@
       "value": 3
     },
     "sql": "SELECT credits FROM course WHERE code = '06046400' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT credits FROM course WHERE code = '06046400' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"3 หน่วยกิต\"}",
-    "answer": "3 หน่วยกิต",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.4
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 3 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06046400 เรียนชั้นปีที่เท่าไร",
@@ -102,14 +102,14 @@
       "value": 1
     },
     "sql": "SELECT year FROM plan_item WHERE code = '06046400' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT year FROM plan_item WHERE code = '06046400' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"ปีที่ 1\"}",
-    "answer": "ปีที่ 1",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.5
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 1 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06046400 เรียนภาคการศึกษาใด",
@@ -118,14 +118,14 @@
       "value": 1
     },
     "sql": "SELECT semester FROM plan_item WHERE code = '06046400' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT semester FROM plan_item WHERE code = '06046400' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"ภาคการศึกษา 1\"}",
-    "answer": "ภาคการศึกษา 1",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.5
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 1 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06046402 มีกี่หน่วยกิต",
@@ -134,14 +134,14 @@
       "value": 3
     },
     "sql": "SELECT credits FROM course WHERE code = '06046402' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT credits FROM course WHERE code = '06046402' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"3 หน่วยกิต\"}",
-    "answer": "3 หน่วยกิต",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.4
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 3 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06046402 เรียนชั้นปีที่เท่าไร",
@@ -150,14 +150,14 @@
       "value": 1
     },
     "sql": "SELECT year FROM plan_item WHERE code = '06046402' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT year FROM plan_item WHERE code = '06046402' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"ปีที่ 1\"}",
-    "answer": "ปีที่ 1",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.5
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 1 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06046402 เรียนภาคการศึกษาใด",
@@ -166,14 +166,14 @@
       "value": 1
     },
     "sql": "SELECT semester FROM plan_item WHERE code = '06046402' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT semester FROM plan_item WHERE code = '06046402' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"ภาคการศึกษา 1\"}",
-    "answer": "ภาคการศึกษา 1",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.3
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 1 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06066000 มีกี่หน่วยกิต",
@@ -182,14 +182,14 @@
       "value": 3
     },
     "sql": "SELECT credits FROM course WHERE code = '06066000' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT credits FROM course WHERE code = '06066000' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"3 หน่วยกิต\"}",
-    "answer": "3 หน่วยกิต",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.4
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 3 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06066000 เรียนชั้นปีที่เท่าไร",
@@ -198,14 +198,14 @@
       "value": 1
     },
     "sql": "SELECT year FROM plan_item WHERE code = '06066000' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT year FROM plan_item WHERE code = '06066000' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"ปีที่ 1\"}",
-    "answer": "ปีที่ 1",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.5
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 1 (ได้ [])",
+    "seconds": 0.9
   },
   {
     "question": "วิชา 06066000 เรียนภาคการศึกษาใด",
@@ -214,14 +214,14 @@
       "value": 1
     },
     "sql": "SELECT semester FROM plan_item WHERE code = '06066000' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT semester FROM plan_item WHERE code = '06066000' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"ภาคการศึกษาที่ 1\"}",
-    "answer": "ภาคการศึกษาที่ 1",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.7
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 1 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06046401 มีกี่หน่วยกิต",
@@ -230,14 +230,14 @@
       "value": 3
     },
     "sql": "SELECT credits FROM course WHERE code = '06046401' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT credits FROM course WHERE code = '06046401' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"3 หน่วยกิต\"}",
-    "answer": "3 หน่วยกิต",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.5
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 3 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06046401 เรียนชั้นปีที่เท่าไร",
@@ -246,14 +246,14 @@
       "value": 1
     },
     "sql": "SELECT year FROM plan_item WHERE code = '06046401' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT year FROM plan_item WHERE code = '06046401' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"ปีที่ 1\"}",
-    "answer": "ปีที่ 1",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.3
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 1 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06046401 เรียนภาคการศึกษาใด",
@@ -262,14 +262,14 @@
       "value": 2
     },
     "sql": "SELECT semester FROM plan_item WHERE code = '06046401' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT semester FROM plan_item WHERE code = '06046401' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"ภาคการศึกษาที่ 2\"}",
-    "answer": "ภาคการศึกษาที่ 2",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.4
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 2 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06046403 มีกี่หน่วยกิต",
@@ -278,14 +278,14 @@
       "value": 3
     },
     "sql": "SELECT credits FROM course WHERE code = '06046403' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT credits FROM course WHERE code = '06046403' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"3 หน่วยกิต\"}",
-    "answer": "3 หน่วยกิต",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.5
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 3 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06046403 เรียนชั้นปีที่เท่าไร",
@@ -294,14 +294,14 @@
       "value": 1
     },
     "sql": "SELECT year FROM plan_item WHERE code = '06046403' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT year FROM plan_item WHERE code = '06046403' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"ปีที่ 1\"}",
-    "answer": "ปีที่ 1",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.6
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 1 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06046403 เรียนภาคการศึกษาใด",
@@ -310,14 +310,14 @@
       "value": 2
     },
     "sql": "SELECT semester FROM plan_item WHERE code = '06046403' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT semester FROM plan_item WHERE code = '06046403' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"ภาคการศึกษาที่ 2\"}",
-    "answer": "ภาคการศึกษาที่ 2",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.5
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 2 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06066301 ในหลักสูตร AIT มีกี่หน่วยกิต",
@@ -326,14 +326,14 @@
       "value": 3
     },
     "sql": "SELECT credits FROM course WHERE code = '06066301' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT credits FROM course WHERE code = '06066301' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"3 หน่วยกิต\"}",
-    "answer": "3 หน่วยกิต",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.5
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 3 (ได้ [])",
+    "seconds": 0.9
   },
   {
     "question": "วิชา 06066301 ในหลักสูตร AIT เรียนชั้นปีที่เท่าไร",
@@ -341,15 +341,15 @@
       "type": "value",
       "value": 1
     },
-    "sql": "SELECT year FROM plan_item WHERE program_id = 'AIT' AND code = '06066301' LIMIT 1",
-    "n_rows": 1,
+    "sql": "SELECT year FROM plan_item WHERE code = '06066301' AND program_id = 'AIT' LIMIT 1",
+    "n_rows": 0,
     "error": null,
-    "sql_model_output": "{\"sql\": \"SELECT year FROM plan_item WHERE program_id = 'AIT' AND code = '06066301' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"ปีที่ 1\"}",
-    "answer": "ปีที่ 1",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.7
+    "sql_model_output": "{\"sql\": \"SELECT year FROM plan_item WHERE code = '06066301' AND program_id = 'AIT' LIMIT 1\"}",
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 1 (ได้ [])",
+    "seconds": 1.0
   },
   {
     "question": "วิชา 06066301 ในหลักสูตร AIT เรียนภาคการศึกษาใด",
@@ -358,14 +358,14 @@
       "value": 2
     },
     "sql": "SELECT semester FROM plan_item WHERE program_id = 'AIT' AND code = '06066301' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT semester FROM plan_item WHERE program_id = 'AIT' AND code = '06066301' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"ภาคการศึกษาที่ 2\"}",
-    "answer": "ภาคการศึกษาที่ 2",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.7
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 2 (ได้ [])",
+    "seconds": 0.9
   },
   {
     "question": "วิชา 06046401 ต้องเรียนวิชาใดมาก่อน",
@@ -374,14 +374,14 @@
       "value": "06046400"
     },
     "sql": "SELECT requires FROM prerequisite WHERE code = '06046401' AND kind = 'pre' LIMIT 200",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT requires FROM prerequisite WHERE code = '06046401' AND kind = 'pre'\" }",
-    "answer_model_output": "{\"answer\": \"วิชา 06046400\"}",
-    "answer": "วิชา 06046400",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.8
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 06046400 (ได้ [])",
+    "seconds": 0.8
   },
   {
     "question": "วิชา 06046405 ต้องเรียนวิชาใดมาก่อน",
@@ -397,7 +397,7 @@
     "answer": "06066001",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.6
+    "seconds": 1.5
   },
   {
     "question": "วิชา 06046406 ต้องเรียนวิชาใดมาก่อน",
@@ -413,7 +413,7 @@
     "answer": "วิชา 06046401, 06046402",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.8
+    "seconds": 2.0
   },
   {
     "question": "วิชา 06046404 มีกี่หน่วยกิต",
@@ -422,14 +422,14 @@
       "value": 3
     },
     "sql": "SELECT credits FROM course WHERE code = '06046404' LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT credits FROM course WHERE code = '06046404' LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"3 หน่วยกิต\"}",
-    "answer": "3 หน่วยกิต",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.5
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 3 (ได้ [])",
+    "seconds": 0.9
   },
   {
     "question": "วิชา 06046408 มีกี่หน่วยกิต",
@@ -445,7 +445,7 @@
     "answer": "3 หน่วยกิต",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.3
+    "seconds": 1.8
   },
   {
     "question": "หลักสูตร AIT ปี 1 เทอม 1 เรียนกี่หน่วยกิต",
@@ -454,14 +454,14 @@
       "value": 18
     },
     "sql": "SELECT credits FROM v_semester_credits WHERE program_id = 'AIT' AND year = 1 AND semester = 1 LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT credits FROM v_semester_credits WHERE program_id = 'AIT' AND year = 1 AND semester = 1 LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"15 หน่วยกิต\"}",
-    "answer": "15 หน่วยกิต",
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
     "correct": false,
-    "why": "ไม่พบค่า 18 (ได้ ['15'])",
-    "seconds": 1.5
+    "why": "ไม่พบค่า 18 (ได้ [])",
+    "seconds": 1.2
   },
   {
     "question": "หลักสูตร AIT ปี 1 เทอม 2 เรียนกี่หน่วยกิต",
@@ -470,14 +470,14 @@
       "value": 16
     },
     "sql": "SELECT credits FROM v_semester_credits WHERE program_id = 'AIT' AND year = 1 AND semester = 2 LIMIT 1",
-    "n_rows": 1,
+    "n_rows": 0,
     "error": null,
     "sql_model_output": "{\"sql\": \"SELECT credits FROM v_semester_credits WHERE program_id = 'AIT' AND year = 1 AND semester = 2 LIMIT 1\"}",
-    "answer_model_output": "{\"answer\": \"16 หน่วยกิต\"}",
-    "answer": "16 หน่วยกิต",
-    "correct": true,
-    "why": "ตรง",
-    "seconds": 1.5
+    "answer_model_output": null,
+    "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
+    "correct": false,
+    "why": "ไม่พบค่า 16 (ได้ [])",
+    "seconds": 1.0
   },
   {
     "question": "วิชา 06046405 มีกี่หน่วยกิต",
@@ -493,7 +493,7 @@
     "answer": "3 หน่วยกิต",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.4
+    "seconds": 1.8
   },
   {
     "question": "วิชา 06046405 เรียนชั้นปีที่เท่าไร",
@@ -509,7 +509,7 @@
     "answer": "ปีที่ 2",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.4
+    "seconds": 2.0
   },
   {
     "question": "วิชา 06046405 เรียนภาคการศึกษาใด",
@@ -525,7 +525,7 @@
     "answer": "ภาคการศึกษา 1",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.3
+    "seconds": 1.8
   },
   {
     "question": "วิชา 06046406 มีกี่หน่วยกิต",
@@ -541,7 +541,7 @@
     "answer": "3 หน่วยกิต",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.4
+    "seconds": 1.7
   },
   {
     "question": "วิชา 06046407 มีกี่หน่วยกิต",
@@ -557,7 +557,7 @@
     "answer": "3 หน่วยกิต",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.4
+    "seconds": 1.7
   },
   {
     "question": "วิชา 06046407 เรียนชั้นปีที่เท่าไร",
@@ -573,7 +573,7 @@
     "answer": "ปีที่ 2",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.3
+    "seconds": 1.7
   },
   {
     "question": "วิชา 06046407 เรียนภาคการศึกษาใด",
@@ -589,7 +589,7 @@
     "answer": "ภาคการศึกษาที่ 2",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.4
+    "seconds": 1.9
   },
   {
     "question": "วิชา 06046410 มีกี่หน่วยกิต",
@@ -605,7 +605,7 @@
     "answer": "3 หน่วยกิต",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.4
+    "seconds": 1.7
   },
   {
     "question": "วิชา 06046415 มีกี่หน่วยกิต",
@@ -621,7 +621,7 @@
     "answer": "3 หน่วยกิต",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.3
+    "seconds": 1.8
   },
   {
     "question": "วิชา 06046415 เรียนชั้นปีที่เท่าไร",
@@ -637,7 +637,7 @@
     "answer": "ปีที่ 3",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.3
+    "seconds": 1.8
   },
   {
     "question": "วิชา 06046441 มีกี่หน่วยกิต",
@@ -653,7 +653,7 @@
     "answer": "3 หน่วยกิต",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.4
+    "seconds": 1.7
   },
   {
     "question": "วิชา 06046443 มีกี่หน่วยกิต",
@@ -669,7 +669,7 @@
     "answer": "6",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.2
+    "seconds": 1.5
   },
   {
     "question": "หลักสูตร AIT ปี 2 เทอม 1 เรียนกี่หน่วยกิต",
@@ -685,7 +685,7 @@
     "answer": "18 หน่วยกิต",
     "correct": true,
     "why": "ตรง",
-    "seconds": 1.6
+    "seconds": 1.8
   },
   {
     "question": "วิชา 88888888 ในหลักสูตร AIT มีกี่หน่วยกิต",
@@ -701,7 +701,7 @@
     "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
     "correct": true,
     "why": "ตอบว่าไม่พบตามที่ควร",
-    "seconds": 0.7
+    "seconds": 0.9
   },
   {
     "question": "ปี 7 เทอม 1 ในหลักสูตร AIT เรียนวิชาอะไรบ้าง",
@@ -709,14 +709,14 @@
       "type": "none",
       "value": null
     },
-    "sql": "SELECT c.name_th, c.name_en FROM v_plan p JOIN course c ON p.code = c.code WHERE p.program_id = 'AIT' AND p.year = 7 AND p.semester = 1 LIMIT 1",
+    "sql": "SELECT name_th, name_en, code, credits, year, semester, alt_group, note FROM v_plan WHERE program_id = 'AIT' AND year = 7 AND semester = 1 LIMIT 1",
     "n_rows": 0,
     "error": null,
-    "sql_model_output": "{\"sql\": \"SELECT c.name_th, c.name_en FROM v_plan p JOIN course c ON p.code = c.code WHERE p.program_id = 'AIT' AND p.year = 7 AND p.semester = 1 LIMIT 1\"}",
+    "sql_model_output": "{\"sql\": \"SELECT name_th, name_en, code, credits, year, semester, alt_group, note FROM v_plan WHERE program_id = 'AIT' AND year = 7 AND semester = 1 LIMIT 1\"}",
     "answer_model_output": null,
     "answer": "ไม่พบข้อมูลนี้ในเล่มหลักสูตร",
     "correct": true,
     "why": "ตอบว่าไม่พบตามที่ควร",
-    "seconds": 1.2
+    "seconds": 1.3
   }
 ]

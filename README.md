@@ -50,7 +50,7 @@ pip install -r requirements.txt
 ---
 
 ### 3. การเตรียมฐานข้อมูลหลักสูตร (Database Setup)
-> **หมายเหตุ**: โปรเจกต์มีฐานข้อมูล SQLite สำเร็จรูปที่ผ่านการสกัดครบทั้ง 284 รายวิชาและผ่านการตรวจ 7 กฎบันทึกไว้ที่ `work/lab8b_run/curriculum.db` เรียบร้อยแล้ว **สามารถข้ามไปขั้นตอนที่ 4 เพื่อเปิดรันเว็บแอปพลิเคชันได้ทันที**
+> **หมายเหตุ**: โปรเจกต์มีฐานข้อมูล SQLite สำเร็จรูปที่ผ่านการสกัดครบทั้ง 263 รายวิชา (262 แผนการเรียน, 59 elective slots, 11 regulations, 26 prerequisites) และผ่านการตรวจสอบความสอดคล้อง (Consistency Verification) ครบ 7 กฎ 100% บันทึกไว้ที่ `work/lab8b_run/curriculum.db` (รวมทั้งฐานข้อมูลเดี่ยว 4 สาขาที่ `work/lab8b_run/{DSBA,BIT,IT,AIT}/curriculum.db`) เรียบร้อยแล้ว **สามารถข้ามไปขั้นตอนที่ 4 เพื่อเปิดรันเว็บแอปพลิเคชันได้ทันที**
 
 หากต้องการสั่งรันกระบวนการสกัดใหม่จากเล่มหลักสูตร PDF ต้นฉบับ (Cold-Start Reproduction):
 
@@ -110,39 +110,71 @@ python src/ocr_system/lab7b_curriculum.py --extract-regulations -i data/input/fu
 
 ---
 
-#### ข. แปลงและนำเข้าฐานข้อมูล SQLite กลางด้วย Lab 8B:
+#### ข. แปลงและนำเข้าฐานข้อมูล SQLite ด้วย Lab 8B (Option 2: Full Separation Architecture):
 ```bash
-# สร้าง Schema
+# 1. สร้าง Schema กลาง
 python src/ocr_system/lab8b_curriculum_db.py schema -o work/lab8b_run/schema
 
-# แปลงผลลัพธ์เข้า Schema Lab 8B
-python src/ocr_system/lab8b_curriculum_db.py import-lab7b -i lab7_final/output/DSBA/pred_text.json -o work/lab8b_run/DSBA/curriculum.json --program-id DSBA --program-name "วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ (สหกิจศึกษา)" --name-en "Data Science and Business Analytics (DSBA)" --total-credits 135 --years 4
+# 2. แปลงผลลัพธ์จาก Lab 7B เข้าสู่ Schema Lab 8B (Option 2)
+python src/ocr_system/lab8b_curriculum_db.py import-lab7b -i lab7_final/output/DSBA/pred_text.json -o work/lab8b_run/DSBA/curriculum.json --program-id DSBA --program-name "วิทยาการข้อมูลและการวิเคราะห์เชิงธุรกิจ (สหกิจศึกษา)" --name-en "Data Science and Business Analytics (DSBA)" --total-credits 132 --years 4
 python src/ocr_system/lab8b_curriculum_db.py import-lab7b -i lab7_final/output/BIT/pred_text.json -o work/lab8b_run/BIT/curriculum.json --program-id BIT --program-name "เทคโนโลยีสารสนเทศทางธุรกิจ (สหกิจศึกษา)" --name-en "Business Information Technology (BIT)" --total-credits 126 --years 4
 python src/ocr_system/lab8b_curriculum_db.py import-lab7b -i lab7_final/output/IT/pred_text.json -o work/lab8b_run/IT/curriculum.json --program-id IT --program-name "เทคโนโลยีสารสนเทศ (สหกิจศึกษา)" --name-en "Information Technology (IT)" --total-credits 129 --years 4
 python src/ocr_system/lab8b_curriculum_db.py import-lab7b -i lab7_final/output/AIT/pred_text.json -o work/lab8b_run/AIT/curriculum.json --program-id AIT --program-name "เทคโนโลยีปัญญาประดิษฐ์" --name-en "Artificial Intelligence Technology (AIT)" --total-credits 120 --years 4
 
-# โหลดข้อมูลรายวิชาเข้าฐานข้อมูลกลาง
+# 3. โหลดข้อมูลรายวิชาเข้าฐานข้อมูลกลาง (Unified Database: 263 รายวิชา, 7 แผน)
 python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/DSBA/curriculum.json -d work/lab8b_run/curriculum.db --replace
 python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/BIT/curriculum.json -d work/lab8b_run/curriculum.db
 python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/IT/curriculum.json -d work/lab8b_run/curriculum.db
 python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/AIT/curriculum.json -d work/lab8b_run/curriculum.db
 
-# โหลดข้อบังคับการศึกษา (Regulations) เข้าตาราง regulation ในฐานข้อมูล
+# 4. โหลดข้อบังคับการศึกษา (Regulations) เข้าตาราง regulation
 python src/ocr_system/lab8b_curriculum_db.py load-regulations -i work/lab7b_run/regulations.json -d work/lab8b_run/curriculum.db
+
+# (ทางเลือก) โหลดฐานข้อมูลเดี่ยวแยกแต่ละสาขาวิชา (Isolated Program Databases)
+# python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/DSBA/curriculum.json -d work/lab8b_run/DSBA/curriculum.db --replace
+# python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/BIT/curriculum.json -d work/lab8b_run/BIT/curriculum.db --replace
+# python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/IT/curriculum.json -d work/lab8b_run/IT/curriculum.db --replace
+# python src/ocr_system/lab8b_curriculum_db.py load -i work/lab8b_run/AIT/curriculum.json -d work/lab8b_run/AIT/curriculum.db --replace
 ```
 
 #### ค. ตรวจสอบความถูกต้องของฐานข้อมูล (Consistency Verification 7 กฎ):
 ```bash
 python src/ocr_system/lab8b_curriculum_db.py verify -d work/lab8b_run/curriculum.db -o work/lab8b_run/verify.json
 ```
-*(ผลการตรวจสอบ: ผ่านครบ 7 จาก 7 ข้อ 100%)*
+**ผลการตรวจสอบ (ผ่านครบ 7 จาก 7 ข้อ 100%):**
+```text
+  [ผ่าน  ] CHK1  หน่วยกิตรวมของแผน = หน่วยกิตที่หลักสูตรประกาศ
+           AIT_SINGLE: 120/120 | BIT_COOP: 126/126 | BIT_NON_COOP: 126/126 | DSBA_COOP: 132/132 | DSBA_NON_COOP: 132/132 | IT_COOP: 129/129 | IT_NON_COOP: 129/129
+  [ผ่าน  ] CHK2  ทุกรหัสวิชาในแผน มีคำอธิบายรายวิชา (ครบทุกรหัส 263 วิชา)
+  [ผ่าน  ] CHK3  รหัสวิชาเป็นตัวเลข 8 หลักทุกรายการ
+  [ผ่าน  ] CHK4  หน่วยกิตในแผน ตรงกับคำอธิบายรายวิชา
+  [ผ่าน  ] CHK5  วิชาบังคับก่อน อยู่ภาคเรียนก่อนวิชาที่อ้างถึง
+  [ผ่าน  ] CHK6  ไม่มีวิชาซ้ำในภาคเรียนเดียวกัน
+  [ผ่าน  ] CHK7  หน่วยกิตต่อภาคเรียนอยู่ระหว่าง 9–22 หน่วยกิต
+```
+
+#### ง. การประเมินผลชุดคำถามทดสอบ Text-to-SQL (NL2SQL Benchmark):
+ระบบผ่านการประเมินผลชุดคำถาม Gold Questions รวม 180 คำถาม (โครงสร้างหลักสูตร, แผนการเรียน, วิชาเลือก, วิชาบังคับก่อน และข้อบังคับการศึกษา):
+```bash
+# รันการประเมินผล Text-to-SQL อัตโนมัติบนฐานข้อมูลกลาง
+python src/ocr_system/lab8b_curriculum_db.py eval -d work/lab8b_run/curriculum.db -q work/lab8b_run/gold_questions.json -o work/lab8b_run/eval_result.json --model qwen3:4b
+```
+**สรุปผลการประเมิน (Evaluation Metrics):**
+- **SQL Syntax Validity**: **100.0%** (180/180 คำถามสร้าง SQL ที่ถูกต้องตามไวยากรณ์ SQLite)
+- **Answer Correctness (Unified Database)**: **95.0%** (171/180 คำถาม)
+- **Per-Program Correctness (Isolated Databases)**:
+  - **BIT**: **100.0%** (45/45 ข้อ)
+  - **IT**: **100.0%** (45/45 ข้อ)
+  - **DSBA**: **91.1%** (41/45 ข้อ)
+  - **AIT**: **88.9%** (40/45 ข้อ)
+  - *เฉลี่ยรวม 4 สาขาวิชา: **95.0%** (171/180 ข้อ)*
 
 ---
 
 ### 4. ขั้นตอนการสั่งรัน Web Application (FastAPI + Modern Web UI)
 สั่งรันเว็บเซิร์ฟเวอร์ด้วยคำสั่ง:
 ```bash
-uvicorn lab10_fastapi.curriculum_app.main:app --host 127.0.0.1 --port 8000 --reload
+python -m uvicorn lab10_fastapi.curriculum_app.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
 ---
@@ -155,7 +187,7 @@ uvicorn lab10_fastapi.curriculum_app.main:app --host 127.0.0.1 --port 8000 --rel
    - **ระบบ Grounded Citation Badge**: แสดงป้ายเลขหน้าอ้างอิงจริง `[อ้างอิงหน้า x]` วางเคียงข้างป้าย `[Success]` เหนือกล่องคำตอบอย่างเป็นระเบียบ (เช่น รายวิชาอ้างอิงหน้า 17, ข้อบังคับอ้างอิงหน้า 98 ข้อ 25.2.2, โครงสร้างหลักสูตรอ้างอิงหมวดที่ 3)
 2. **หน้าโครงสร้างหลักสูตรและรายวิชาทั้งหมด (Course Catalog & Regulations)**:
    - URL: [http://127.0.0.1:8000/courses](http://127.0.0.1:8000/courses) หรือ [http://127.0.0.1:8000/static/courses.html](http://127.0.0.1:8000/static/courses.html)
-   - ฟีเจอร์: ตรวจสอบรายวิชาทั้งหมด 284 วิชา ค้นหารหัส/ชื่อวิชา ตรวจสอบวิชาบังคับก่อน (Prerequisites) และดูข้อบังคับการศึกษา สจล.
+   - ฟีเจอร์: ตรวจสอบรายวิชาทั้งหมด 263 วิชา ค้นหารหัส/ชื่อวิชา ตรวจสอบวิชาบังคับก่อน (Prerequisites) และดูข้อบังคับการศึกษา สจล.
 3. **หน้า Interactive API Documentation (Swagger UI)**:
    - URL: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
    - ฟีเจอร์: ทดสอบเรียกใช้งาน API Endpoint ทุกเส้นได้โดยตรง
@@ -164,11 +196,11 @@ uvicorn lab10_fastapi.curriculum_app.main:app --host 127.0.0.1 --port 8000 --rel
 
 ### 6. ตัวอย่างคำถามทดสอบการทำงานของระบบ (Test Queries)
 - **คำถามเชิงโครงสร้าง**:
-  - `หลักสูตร DSBA มีกี่หน่วยกิต` $\rightarrow$ ตอบ `135` (`[อ้างอิง: หมวดที่ 3]`)
+  - `หลักสูตร DSBA มีกี่หน่วยกิต` $\rightarrow$ ตอบ `132` (`[อ้างอิง: หมวดที่ 3]`)
   - `วิชา 06026216 คือวิชาอะไร` $\rightarrow$ ตอบ `ปัญญาประดิษฐ์` (`[อ้างอิงหน้า 17]`)
   - `วิชา 06026241 ต้องเรียนวิชาใดมาก่อน`
 - **คำถามเชิงความสัมพันธ์และแผนการศึกษา**:
-  - `ปี 1 เทอม 1 เรียนกี่หน่วยกิต` $\rightarrow$ ตอบ `21` (`[อ้างอิง: หมวดที่ 3]`)
+  - `ปี 1 เทอม 1 เรียนกี่หน่วยกิต` $\rightarrow$ ตอบ `18` (`[อ้างอิง: หมวดที่ 3]`)
   - `ปี 2 เทอม 1 สาขา DSBA เรียนวิชาอะไรบ้าง`
   - `หลักสูตร IT มีวิชากี่ตัว`
 - **คำถามเชิงข้อบังคับการศึกษา (Regulations)**:
@@ -607,10 +639,18 @@ lab10_fastapi/curriculum_app/static/
 4. **Error**: แสดงกล่องเตือนสีแดง แจ้งรายละเอียดข้อผิดพลาดและข้อแนะนำสิ่งที่ผู้ใช้ควรดำเนินการแก้ไข
 
 ### API Contract สรุป
-| Endpoint | Method | Request Body / Param | Response 200 OK | Response Error |
+| Endpoint | Method | Request Body / Param | Response Success | Response Error |
 | :--- | :---: | :--- | :--- | :--- |
-| `/api/ask` | POST | `{"question": "string"}` | `{"question", "sql", "rows", "answer"}` | `422` (Invalid/SQL Error), `503` (Ollama/DB offline) |
-| `/api/courses/{code}/prerequisites` | GET | `code`: รหัสวิชา 8 หลัก | `{"code", "name_th", "requires", "required_by"}` | `404` (ไม่พบรายวิชา) |
-| `/api/health` | GET | - | `{"status", "database_ready", "ollama_ready", "model"}` | `200` (Status: degraded if not ready) |
+| `/api/ask` | POST | `{"question": "string"}` | `200` (`question`, `sql`, `rows`, `answer`, `sources`) | `422` (Invalid/SQL Error), `503` (Ollama/DB offline) |
+| `/api/courses` | GET | `search`, `program_id`, `limit`, `offset` | `200` (List of CourseResponse + `programs`) | `503` (DB offline) |
+| `/api/courses` | POST | `CourseCreate` (พร้อม `plan_id` Dynamic Check) | `201` (CourseResponse + `plan_id`) | `422` (ขาด `plan_id` ในสาขาหลายแผน), `409` (รหัสซ้ำ) |
+| `/api/courses/{code}/prerequisites` | GET | `code`: รหัสวิชา 8 หลัก | `200` (`code`, `name_th`, `requires`, `required_by`) | `404` (ไม่พบรายวิชา), `503` (DB offline) |
+| `/api/study-plans` | GET | `program_id`, `plan_id` | `200` (List of StudyPlan: `plan_type` = coop/no_coop/single) | `503` (DB offline) |
+| `/api/elective-slots` | GET | `plan_id`, `year`, `semester` | `200` (List of ElectiveSlotResponse) | `503` (DB offline) |
+| `/api/plan` | GET | `program_id`, `plan_id`, `year`, `semester` | `200` (List of PlanItemResponse จาก `v_plan`) | `503` (DB offline) |
+| `/api/plan/summary` | GET | `program_id`, `plan_id`, `year`, `semester` | `200` (List of PlanSummaryResponse จาก `v_semester_credits`) | `503` (DB offline) |
+| `/api/regulations` | GET | `category`, `search`, `limit` | `200` (List of RegulationResponse) | `503` (DB offline) |
+| `/api/health` | GET | - | `200` (`status`, `database_ready`, `ollama_ready`, `model`) | `200` (Status degraded if not ready) |
 
 > ดูรายละเอียดสัญญา API Contract และตัวอย่าง payload ฉบับสมบูรณ์ได้ที่ [lab10_fastapi/curriculum_app/README.md](lab10_fastapi/curriculum_app/README.md)
+
