@@ -1,0 +1,359 @@
+{
+  "courses": {
+    "AIT": {
+      "AIT": {
+        "file": "AIT",
+        "gt_fixed_course_count": 49,
+        "codes_found": 48,
+        "codes_missing": [
+          "06016401"
+        ],
+        "code_recall": 0.9795918367346939,
+        "credits_exact_match": 33,
+        "credits_checked": 48
+      },
+      "AIT - หมวดศึกษาทั่วไป": {
+        "file": "AIT - หมวดศึกษาทั่วไป",
+        "gt_fixed_course_count": 266,
+        "codes_found": 191,
+        "codes_missing": [
+          "90641001",
+          "90641002",
+          "90641003",
+          "90642004",
+          "90642005",
+          "90642006",
+          "90642007",
+          "90642008",
+          "90642009",
+          "90642010",
+          "90642013",
+          "90642015",
+          "90642016",
+          "90642017",
+          "90642019",
+          "90642023",
+          "90642027",
+          "90642033",
+          "90642039",
+          "90642052",
+          "90642064",
+          "90642065",
+          "90642066",
+          "90642067",
+          "90642068",
+          "90642069",
+          "90642070",
+          "90642071",
+          "90642072",
+          "90642073",
+          "90642075",
+          "90642076",
+          "90642077",
+          "90642078",
+          "90642079",
+          "90642092",
+          "90642098",
+          "90642100",
+          "90642101",
+          "90642104",
+          "90642105",
+          "90642111",
+          "90642119",
+          "90642121",
+          "90642132",
+          "90642133",
+          "90642139",
+          "90642141",
+          "90642151",
+          "90642153",
+          "90642155",
+          "90643003",
+          "90643004",
+          "90643009",
+          "90643011",
+          "90643017",
+          "90643022",
+          "90643023",
+          "90643028",
+          "90643033",
+          "90644004",
+          "90644005",
+          "90644006",
+          "90644007",
+          "90644008",
+          "90644020",
+          "90644021",
+          "90644034",
+          "90644035",
+          "90644038",
+          "90644046",
+          "90644048",
+          "90644052",
+          "90644062",
+          "90644066"
+        ],
+        "code_recall": 0.7180451127819549,
+        "credits_exact_match": 138,
+        "credits_checked": 191
+      }
+    },
+    "IT": {
+      "IT coop": {
+        "file": "IT coop",
+        "gt_fixed_course_count": 98,
+        "codes_found": 98,
+        "codes_missing": [],
+        "code_recall": 1.0,
+        "credits_exact_match": 97,
+        "credits_checked": 98
+      },
+      "IT no_coop": {
+        "file": "IT no_coop",
+        "gt_fixed_course_count": 98,
+        "codes_found": 98,
+        "codes_missing": [],
+        "code_recall": 1.0,
+        "credits_exact_match": 97,
+        "credits_checked": 98
+      },
+      "IT - หมวดศึกษาทั่วไป": {
+        "file": "IT - หมวดศึกษาทั่วไป",
+        "gt_fixed_course_count": 266,
+        "codes_found": 266,
+        "codes_missing": [],
+        "code_recall": 1.0,
+        "credits_exact_match": 262,
+        "credits_checked": 266
+      }
+    },
+    "DSBA": {
+      "DSBA coop": {
+        "file": "DSBA coop",
+        "gt_fixed_course_count": 80,
+        "codes_found": 79,
+        "codes_missing": [
+          "06016401"
+        ],
+        "code_recall": 0.9875,
+        "credits_exact_match": 77,
+        "credits_checked": 79
+      },
+      "DSBA no_coop": {
+        "file": "DSBA no_coop",
+        "gt_fixed_course_count": 80,
+        "codes_found": 79,
+        "codes_missing": [
+          "06016401"
+        ],
+        "code_recall": 0.9875,
+        "credits_exact_match": 77,
+        "credits_checked": 79
+      },
+      "DSBA - หมวดศึกษาทั่วไป": {
+        "file": "DSBA - หมวดศึกษาทั่วไป",
+        "gt_fixed_course_count": 266,
+        "codes_found": 266,
+        "codes_missing": [],
+        "code_recall": 1.0,
+        "credits_exact_match": 263,
+        "credits_checked": 266
+      }
+    },
+    "BIT": {
+      "BIT coop": {
+        "file": "BIT coop",
+        "gt_fixed_course_count": 55,
+        "codes_found": 55,
+        "codes_missing": [],
+        "code_recall": 1.0,
+        "credits_exact_match": 53,
+        "credits_checked": 54
+      },
+      "BIT no_coop": {
+        "file": "BIT no_coop",
+        "gt_fixed_course_count": 55,
+        "codes_found": 55,
+        "codes_missing": [],
+        "code_recall": 1.0,
+        "credits_exact_match": 53,
+        "credits_checked": 54
+      },
+      "BIT - หมวดศึกษาทั่วไป": {
+        "file": "BIT - หมวดศึกษาทั่วไป",
+        "gt_fixed_course_count": 266,
+        "codes_found": 266,
+        "codes_missing": [],
+        "code_recall": 1.0,
+        "credits_exact_match": 263,
+        "credits_checked": 266
+      }
+    }
+  },
+  "rules": {
+    "AIT": [
+      {
+        "category": "เกณฑ์การสำเร็จการศึกษา",
+        "field": "หน่วยกิตขั้นต่ำที่ต้องเรียนจบ",
+        "ground_truth": "120",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์การสำเร็จการศึกษา",
+        "field": "GPA สะสมขั้นต่ำ",
+        "ground_truth": "<2.00",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์เกียรตินิยม",
+        "field": "GPA อันดับ 1 เหรียญทอง",
+        "ground_truth": "<3.75",
+        "match": false
+      },
+      {
+        "category": "เกณฑ์เกียรตินิยม",
+        "field": "GPA อันดับ 1",
+        "ground_truth": "<3.50",
+        "match": false
+      },
+      {
+        "category": "เกณฑ์การลงทะเบียน",
+        "field": "หน่วยกิตขั้นต่ำ/ภาคปกติ",
+        "ground_truth": "9",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์การลงทะเบียน",
+        "field": "หน่วยกิตสูงสุด/ภาคปกติ",
+        "ground_truth": "22",
+        "match": true
+      }
+    ],
+    "IT": [
+      {
+        "category": "เกณฑ์การสำเร็จการศึกษา",
+        "field": "หน่วยกิตขั้นต่ำที่ต้องเรียนจบ",
+        "ground_truth": "129",
+        "match": false
+      },
+      {
+        "category": "เกณฑ์การสำเร็จการศึกษา",
+        "field": "GPA สะสมขั้นต่ำ",
+        "ground_truth": "<2.00",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์เกียรตินิยม",
+        "field": "GPA อันดับ 1 เหรียญทอง",
+        "ground_truth": "<3.75",
+        "match": false
+      },
+      {
+        "category": "เกณฑ์เกียรตินิยม",
+        "field": "GPA อันดับ 1",
+        "ground_truth": "<3.50",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์เกียรตินิยม",
+        "field": "GPA อันดับ 2",
+        "ground_truth": "<3.25",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์การลงทะเบียน",
+        "field": "หน่วยกิตขั้นต่ำ/ภาคปกติ",
+        "ground_truth": "9",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์การลงทะเบียน",
+        "field": "หน่วยกิตสูงสุด/ภาคปกติ",
+        "ground_truth": "22",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์การลงทะเบียน",
+        "field": "หน่วยกิตสูงสุดกรณีพิเศษ",
+        "ground_truth": ">= 27",
+        "match": true
+      }
+    ],
+    "DSBA": [
+      {
+        "category": "เกณฑ์การสำเร็จการศึกษา",
+        "field": "หน่วยกิตขั้นต่ำที่ต้องเรียนจบ",
+        "ground_truth": "132",
+        "match": false
+      },
+      {
+        "category": "เกณฑ์การสำเร็จการศึกษา",
+        "field": "GPA สะสมขั้นต่ำ",
+        "ground_truth": "<2.00",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์เกียรตินิยม",
+        "field": "GPA อันดับ 1 เหรียญทอง",
+        "ground_truth": "<3.75",
+        "match": false
+      },
+      {
+        "category": "เกณฑ์เกียรตินิยม",
+        "field": "GPA อันดับ 1",
+        "ground_truth": "<3.50",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์การลงทะเบียน",
+        "field": "หน่วยกิตขั้นต่ำ/ภาคปกติ",
+        "ground_truth": "9",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์การลงทะเบียน",
+        "field": "หน่วยกิตสูงสุด/ภาคปกติ",
+        "ground_truth": "22",
+        "match": true
+      }
+    ],
+    "BIT": [
+      {
+        "category": "เกณฑ์การสำเร็จการศึกษา",
+        "field": "หน่วยกิตขั้นต่ำที่ต้องเรียนจบ",
+        "ground_truth": "126",
+        "match": false
+      },
+      {
+        "category": "เกณฑ์การสำเร็จการศึกษา",
+        "field": "GPA สะสมขั้นต่ำ",
+        "ground_truth": "<2.00",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์เกียรตินิยม",
+        "field": "GPA อันดับ 1 เหรียญทอง",
+        "ground_truth": "<3.75",
+        "match": false
+      },
+      {
+        "category": "เกณฑ์เกียรตินิยม",
+        "field": "GPA อันดับ 1",
+        "ground_truth": "<3.50",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์การลงทะเบียน",
+        "field": "หน่วยกิตขั้นต่ำ/ภาคปกติ",
+        "ground_truth": "9",
+        "match": true
+      },
+      {
+        "category": "เกณฑ์การลงทะเบียน",
+        "field": "หน่วยกิตสูงสุด/ภาคปกติ",
+        "ground_truth": "22",
+        "match": true
+      }
+    ]
+  }
+}
